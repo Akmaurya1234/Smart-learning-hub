@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Learning Hub</title>
+    <link href="logo3.png" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- CSS Styling -->
+    <style>
+          body {
+            overflow-y: hidden;
+        }
+    </style>
+</head>
+
+<body>
+     <!-- Top Navbar -->
+     <header class="navbar">
+        <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+        <h1 class="site-title">
+          <i class="fas fa-book-reader"></i>
+          <span><strong>Smart</strong> Learning Hub</span>
+        </h1>
+
+        <div class="search-container">
+            <input type="text" class="search-box" id="search" placeholder="Search study materials...">
+            <span class="search-icon" id="search-icon"><i class="fas fa-search"></i></span>
+          </div>
+
+        <!-- Nav Menu for Large Screens -->
+        <nav class="nav-menu">
+            <ul class="nav-icons">
+              <li><a href="index.html" title="Home"><i class="fas fa-home" style="color:#fff;"></i></a></li>
+              <li><a href="htmlpage.html" title="HTML"><i class="fab fa-html5" style="color:#e34c26;"></i></a></li>
+              <li><a href="css.html" title="CSS"><i class="fab fa-css3-alt" style="color:#264de4;"></i></a></li>
+              <li><a href="javascript.html" title="JavaScript"><i class="fab fa-js-square" style="color:#f0db4f;"></i></a></li>
+              <li><a href="c.html" title="C"><i class="fas fa-code" style="color:#00bcd4;"></i></a></li>
+              <li><a href="java.html" title="Java"><i class="fab fa-java" style="color:#f89820;"></i></a></li>
+              <li><a href="python.html" title="Python"><i class="fab fa-python" style="color:#3776ab;"></i></a></li>
+              <li><a href="c++quiz.html" title="Quizzes"><i class="fas fa-question-circle" style="color:#ffcc00;"></i></a></li>
+              <li><a href="c++note.html" title="Notes"><i class="fas fa-sticky-note" style="color:#29b6f6;"></i></a></li>
+            </ul>
+          </nav>
+
+        </nav>
+    </header>
+
+    <nav class="sidebar" id="sidebar">
+        <ul>
+          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="htmlpage.html"><i class="fab fa-html5"></i> HTML</a></li>
+          <li><a href="css.html"><i class="fab fa-css3-alt"></i> CSS</a></li>
+          <li><a href="javascript.html"><i class="fab fa-js-square"></i> JavaScript</a></li>
+          <li><a href="c.html"><i class="fas fa-code"></i> C</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle"><i class="fas fa-laptop-code"></i></i> C++ Topics ⌵</a>
+            <ul class="dropdown-menu">
+              <li><a href=""><i class="fas fa-book-open"></i> Introduction</a></li>
+              <li><a href="cpp-setup.html"><i class="fas fa-tools"></i> Setup and Installation</a></li>
+              <li><a href="cpp-syntax.html"><i class="fas fa-code"></i> Syntax</a></li>
+              <li><a href="cpp-variables.html"><i class="fas fa-database"></i> Variables & Data Types</a></li>
+              <li><a href="cpp-operators.html"><i class="fas fa-calculator"></i> Operators</a></li>
+              <li><a href="cpp-conditions.html"><i class="fas fa-code-branch"></i> Conditional Statements</a></li>
+              <li><a href="cpp-loops.html"><i class="fas fa-sync-alt"></i> Loops</a></li>
+              <li><a href="cpp-functions.html"><i class="fas fa-cogs"></i> Functions</a></li>
+              <li><a href="cpp-arrays.html"><i class="fas fa-layer-group"></i> Arrays</a></li>
+              <li><a href="cpp-pointers.html"><i class="fas fa-mouse-pointer"></i> Pointers</a></li>
+              <li><a href="cpp-strings.html"><i class="fas fa-font"></i> Strings</a></li>
+              <li><a href="cpp-structures.html"><i class="fas fa-cube"></i> Structures</a></li>
+              <li><a href="cpp-oop.html"><i class="fas fa-puzzle-piece"></i> Object-Oriented Programming</a></li>
+              <li><a href="cpp-classes.html"><i class="fas fa-layer-group"></i> Classes & Objects</a></li>
+              <li><a href="cpp-inheritance.html"><i class="fas fa-sitemap"></i> Inheritance</a></li>
+              <li><a href="cpp-polymorphism.html"><i class="fas fa-random"></i> Polymorphism</a></li>
+              <li><a href="cpp-encapsulation.html"><i class="fas fa-lock"></i> Encapsulation</a></li>
+              <li><a href="cpp-abstraction.html"><i class="fas fa-eye-slash"></i> Abstraction</a></li>
+              <li><a href="cpp-exceptions.html"><i class="fas fa-exclamation-triangle"></i> Exception Handling</a></li>
+              <li><a href="cpp-filehandling.html"><i class="fas fa-file-alt"></i> File Handling</a></li>
+            </ul>
+          </li>
+      
+          <li><a href="java.html"><i class="fab fa-java"></i> Java</a></li>
+          <li><a href="python.html"><i class="fab fa-python"></i> Python</a></li>
+          <li><a href="cquiz.html"><i class="fas fa-question-circle"></i> Quizzes</a></li>
+          <li><a href="cnote.html"><i class="fas fa-sticky-note"></i> Notes</a></li>
+        </ul>
+      </nav>
+      
+
+    <!-- Main Content with Left Menu & Right Output Section -->
+    <div class="main-container">
+        <!-- Left Section: Menu -->
+<aside class="left-menu">
+    <h2><i class="fas fa-laptop-code"></i> C++ Topics</h2>
+    <ul>
+      <li><a href="cpp-introduction.html"><i class="fas fa-book-open"></i> Introduction</a></li>
+      <li><a href="cpp-setup.html"><i class="fas fa-tools"></i> Setup and Installation</a></li>
+      <li><a href="cpp-syntax.html"><i class="fas fa-code"></i> Syntax</a></li>
+      <li><a href="cpp-variables.html"><i class="fas fa-database"></i> Variables & Data Types</a></li>
+      <li><a href="cpp-operators.html"><i class="fas fa-calculator"></i> Operators</a></li>
+      <li><a href="cpp-conditions.html"><i class="fas fa-code-branch"></i> Conditional Statements</a></li>
+      <li><a href="cpp-loops.html"><i class="fas fa-sync-alt"></i> Loops</a></li>
+      <li><a href="cpp-functions.html"><i class="fas fa-cogs"></i> Functions</a></li>
+      <li><a href="cpp-arrays.html"><i class="fas fa-layer-group"></i> Arrays</a></li>
+      <li><a href="cpp-pointers.html"><i class="fas fa-mouse-pointer"></i> Pointers</a></li>
+      <li><a href="cpp-strings.html"><i class="fas fa-font"></i> Strings</a></li>
+      <li><a href="cpp-structures.html"><i class="fas fa-cube"></i> Structures</a></li>
+      <li><a href="cpp-oop.html"><i class="fas fa-puzzle-piece"></i> Object-Oriented Programming</a></li>
+      <li><a href="cpp-classes.html"><i class="fas fa-layer-group"></i> Classes & Objects</a></li>
+      <li><a href="cpp-inheritance.html"><i class="fas fa-sitemap"></i> Inheritance</a></li>
+      <li><a href="cpp-polymorphism.html"><i class="fas fa-random"></i> Polymorphism</a></li>
+      <li><a href="cpp-encapsulation.html"><i class="fas fa-lock"></i> Encapsulation</a></li>
+      <li><a href="cpp-abstraction.html"><i class="fas fa-eye-slash"></i> Abstraction</a></li>
+      <li><a href="cpp-exceptions.html"><i class="fas fa-exclamation-triangle"></i> Exception Handling</a></li>
+      <li><a href="cpp-filehandling.html"><i class="fas fa-file-alt"></i> File Handling</a></li>
+    </ul>
+  </aside>
+  
+        <!-- Right Section: Output -->
+        <section class="right-output" id="content-area">
+            <h2>Welcome to C++ Tutorials</h2>
+            <p>Select a topic from the left menu to see its content here.</p>
+
+
+
+         <!-- 1. Introduction -->
+<div class="tag" data-code="#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; &quot;Hello, C++!&quot;;
+    return 0;
+}">
+  <h2>Introduction to C++</h2>
+  <p>C++ is a powerful general-purpose programming language. It supports procedural, object-oriented, and generic programming:</p>
+  <ul>
+    <li><strong>History:</strong> Developed by Bjarne Stroustrup as an extension of C.</li>
+    <li><strong>Features:</strong> Supports OOP, memory management, and performance optimization.</li>
+    <li><strong>Uses:</strong> Used in system/software development, game engines, drivers, and more.</li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<!-- 2. Setup and Installation -->
+<div class="tag" data-code="// This is a basic C++ program
+#include &lt;iostream&gt;
+
+int main() {
+    std::cout &lt;&lt; &quot;C++ setup complete!&quot;;
+    return 0;
+}">
+  <h2>Setup and Installation</h2>
+  <p>To run C++ programs, you need a compiler and a code editor or IDE:</p>
+  <ul>
+    <li><strong>Compiler:</strong> Install g++ via MinGW (Windows) or terminal (Linux/macOS).</li>
+    <li><strong>IDE:</strong> Use Code::Blocks, Visual Studio, or online platforms like Replit.</li>
+    <li><strong>Run:</strong> Compile with <code>g++ file.cpp -o output</code>, then run the executable.</li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<!-- 3. Syntax -->
+<div class="tag" data-code="#include &lt;iostream&gt;
+int main() {
+    std::cout &lt;&lt; &quot;Hello&quot;;
+    return 0;
+}">
+  <h2>Syntax</h2>
+  <p>C++ syntax is similar to C, but includes enhancements for object-oriented programming:</p>
+  <ul>
+    <li><strong>Semicolon:</strong> Each statement ends with <code>;</code></li>
+    <li><strong>Braces:</strong> Code blocks are enclosed in <code>{ }</code></li>
+    <li><strong>Main Function:</strong> Entry point of any C++ program is <code>int main()</code></li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<!-- 4. Variables & Data Types -->
+<div class="tag" data-code="int age = 20;
+float pi = 3.14;
+char grade = 'A';">
+  <h2>Variables & Data Types</h2>
+  <p>Variables are used to store data, and each has a data type:</p>
+  <ul>
+    <li><strong>int:</strong> Stores integers, e.g., <code>int x = 10;</code></li>
+    <li><strong>float/double:</strong> For decimal values, e.g., <code>float pi = 3.14;</code></li>
+    <li><strong>char:</strong> Stores single characters, e.g., <code>char grade = 'A';</code></li>
+    <li><strong>string:</strong> For text (requires <code>&lt;string&gt;</code> header)</li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<!-- 5. Operators -->
+<div class="tag" data-code="int sum = a + b;
+bool result = (a > b);">
+  <h2>Operators</h2>
+  <p>Operators perform operations on variables and values:</p>
+  <ul>
+    <li><strong>Arithmetic:</strong> <code>+, -, *, /, %</code></li>
+    <li><strong>Relational:</strong> <code>==, !=, &gt;, &lt;, &gt;=, &lt;=</code></li>
+    <li><strong>Logical:</strong> <code>&amp;&amp;, ||, !</code></li>
+    <li><strong>Assignment:</strong> <code>=, +=, -=, *=</code></li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<!-- 6. Conditional Statements -->
+<div class="tag" data-code="if (x &gt; 0) {
+    cout &lt;&lt; &quot;Positive&quot;;
+} else {
+    cout &lt;&lt; &quot;Negative&quot;;
+}">
+  <h2>Conditional Statements</h2>
+  <p>Used to make decisions based on conditions:</p>
+  <ul>
+    <li><strong>if:</strong> Executes a block if condition is true</li>
+    <li><strong>else:</strong> Executes if condition is false</li>
+    <li><strong>else if:</strong> Checks multiple conditions</li>
+    <li><strong>switch:</strong> Selects one of many blocks to execute</li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<!-- 7. Loops -->
+<div class="tag" data-code="for (int i = 0; i &lt; 5; i++) {
+    cout &lt;&lt; i;
+}">
+  <h2>Loops</h2>
+  <p>Loops allow repeating code blocks:</p>
+  <ul>
+    <li><strong>for:</strong> Loop with initialization, condition, and increment</li>
+    <li><strong>while:</strong> Loop based on a condition</li>
+    <li><strong>do-while:</strong> Executes block at least once</li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<!-- 8. Functions -->
+<div class="tag" data-code="int add(int a, int b) {
+    return a + b;
+}">
+  <h2>Functions</h2>
+  <p>Functions are reusable blocks of code that perform specific tasks:</p>
+  <ul>
+    <li><strong>Declaration:</strong> <code>int add(int, int);</code></li>
+    <li><strong>Definition:</strong> Contains the actual code</li>
+    <li><strong>Calling:</strong> <code>add(5, 10);</code></li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<!-- 9. Arrays -->
+<div class="tag" data-code="int arr[5] = {1, 2, 3, 4, 5};">
+  <h2>Arrays in C++</h2>
+  <p>An array in C++ is a collection of elements of the same data type stored in contiguous memory locations:</p>
+  <ul>
+    <li><strong>Declaration:</strong> <code>int arr[5];</code></li>
+    <li><strong>Initialization:</strong> <code>int arr[] = {1, 2, 3};</code></li>
+    <li><strong>Access:</strong> <code>arr[0]</code></li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+
+<!-- 10. Pointers -->
+<div class="tag" data-code="int x = 10;
+int* ptr = &x;">
+  <h2>Pointers</h2>
+  <p>Pointers are variables that store the memory address of another variable:</p>
+  <ul>
+    <li><strong>Declaration:</strong> <code>int* ptr;</code></li>
+    <li><strong>Address-of Operator:</strong> <code>&amp;x</code> gives the address of <code>x</code></li>
+    <li><strong>Dereferencing:</strong> <code>*ptr</code> accesses the value at that address</li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<!-- 11. Strings -->
+<div class="tag" data-code="#include &lt;string&gt;
+string name = &quot;John&quot;;">
+  <h2>Strings</h2>
+  <p>C++ has two types of strings: C-style (char arrays) and <code>string</code> class from STL:</p>
+  <ul>
+    <li><strong>Declaration:</strong> <code>string str = &quot;Hello&quot;;</code></li>
+    <li><strong>Concatenation:</strong> <code>str1 + str2</code></li>
+    <li><strong>Functions:</strong> <code>length(), substr(), find()</code></li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<!-- 12. Structures -->
+<div class="tag" data-code="struct Person {
+    string name;
+    int age;
+};">
+  <h2>Structures</h2>
+  <p>Structures are user-defined data types that group variables of different types:</p>
+  <ul>
+    <li><strong>Declaration:</strong> <code>struct Name { ... };</code></li>
+    <li><strong>Usage:</strong> <code>Person p;</code></li>
+    <li><strong>Access:</strong> <code>p.name = &quot;John&quot;;</code></li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<!-- 13. Object-Oriented Programming -->
+<div class="tag" data-code="class Car {
+public:
+    void drive() {
+        cout &lt;&lt; &quot;Driving&quot;;
+    }
+};">
+  <h2>Object-Oriented Programming</h2>
+  <p>OOP allows you to structure code using classes and objects:</p>
+  <ul>
+    <li><strong>Encapsulation:</strong> Hides internal state</li>
+    <li><strong>Abstraction:</strong> Shows only essential details</li>
+    <li><strong>Inheritance:</strong> Reuse existing classes</li>
+    <li><strong>Polymorphism:</strong> Same interface, different implementation</li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<!-- 14. Classes & Objects -->
+<div class="tag" data-code="class Student {
+public:
+    string name;
+    void display() {
+        cout &lt;&lt; name;
+    }
+};">
+  <h2>Classes & Objects</h2>
+  <p>Classes are blueprints for creating objects:</p>
+  <ul>
+    <li><strong>Class:</strong> Defined using <code>class</code> keyword</li>
+    <li><strong>Object:</strong> Instance of a class</li>
+    <li><strong>Access:</strong> <code>obj.method()</code> or <code>obj.variable</code></li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<!-- 15. Inheritance -->
+<div class="tag" data-code="class Animal {
+public:
+    void speak() { cout &lt;&lt; &quot;Sound&quot;; }
+};
+
+class Dog : public Animal {
+};">
+  <h2>Inheritance</h2>
+  <p>Inheritance allows one class to acquire the properties of another:</p>
+  <ul>
+    <li><strong>Base Class:</strong> The original class</li>
+    <li><strong>Derived Class:</strong> Inherits from base class using <code>:</code></li>
+    <li><strong>Access:</strong> Public, protected, private inheritance</li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<!-- 16. Polymorphism -->
+<div class="tag" data-code="class Animal {
+public:
+    virtual void sound() {
+        cout &lt;&lt; &quot;Some sound&quot;;
+    }
+};
+
+class Cat : public Animal {
+public:
+    void sound() override {
+        cout &lt;&lt; &quot;Meow&quot;;
+    }
+};">
+  <h2>Polymorphism</h2>
+  <p>Polymorphism allows functions to behave differently based on context:</p>
+  <ul>
+    <li><strong>Compile-time:</strong> Function overloading, operator overloading</li>
+    <li><strong>Run-time:</strong> Using virtual functions and inheritance</li>
+    <li><strong>Override:</strong> Derived class redefines base class method</li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<!-- 17. Encapsulation -->
+<div class="tag" data-code="class Account {
+private:
+    int balance;
+
+public:
+    void setBalance(int b) { balance = b; }
+    int getBalance() { return balance; }
+};">
+  <h2>Encapsulation</h2>
+  <p>Encapsulation binds data and methods that manipulate it within a class:</p>
+  <ul>
+    <li><strong>Private members:</strong> Hidden from outside access</li>
+    <li><strong>Public methods:</strong> Used to access private data</li>
+    <li><strong>Secure:</strong> Helps protect object integrity</li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<!-- 18. Abstraction -->
+<div class="tag" data-code="class Shape {
+public:
+    virtual void draw() = 0; // Pure virtual function
+};">
+  <h2>Abstraction</h2>
+  <p>Abstraction hides complex implementation and shows only essentials:</p>
+  <ul>
+    <li><strong>Abstract class:</strong> Contains at least one pure virtual function</li>
+    <li><strong>Interface:</strong> Only method declarations, no body</li>
+    <li><strong>Implementation:</strong> Provided by derived classes</li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<!-- 19. Exception Handling -->
+<div class="tag" data-code="try {
+    throw 10;
+} catch (int e) {
+    cout &lt;&lt; &quot;Exception: &quot; &lt;&lt; e;
+}">
+  <h2>Exception Handling</h2>
+  <p>Exception handling is used to catch and manage runtime errors:</p>
+  <ul>
+    <li><strong>try:</strong> Wraps code that might cause an exception</li>
+    <li><strong>catch:</strong> Handles exceptions</li>
+    <li><strong>throw:</strong> Generates an exception</li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<!-- 20. File Handling -->
+<div class="tag" data-code="#include &lt;fstream&gt;
+
+ofstream file(&quot;demo.txt&quot;);
+file &lt;&lt; &quot;Hello file!&quot;;
+file.close();">
+  <h2>File Handling</h2>
+  <p>C++ provides file stream classes to handle file input and output:</p>
+  <ul>
+    <li><strong>ofstream:</strong> Write to files</li>
+    <li><strong>ifstream:</strong> Read from files</li>
+    <li><strong>fstream:</strong> Read/write both</li>
+    <li><strong>Functions:</strong> <code>open(), close(), is_open()</code></li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+    </section>
+    </div>
+
+
+      <!-- Live Editor Modal -->
+      <div id="modalOverlay"></div>
+      <div id="liveEditorModal">
+        <span class="close-btn">&times;</span> <!-- Close Button -->
+        <h2>Try it Yourself</h2>
+        <textarea id="editorArea">// Your example code goes here</textarea>
+        <br>
+        <button id="runEditorBtn">Run Code</button>
+        <iframe id="editorOutput"></iframe>
+      </div>
+      </section>
+    </div>
+
+    <footer>
+      <button class="assistant-btn" id="btn">🎤</button>
+      <img src="voice.gif" alt="voice" id="voice">
+      <button id="bttn"><span id="content">..</span></button>
+    
+      <!-- Game Index Button with Custom Image Icon -->
+      <a href="game.html" class="game-icon-btn">
+        <i class="fas fa-gamepad"></i> <!-- Font Awesome Game Icon -->
+      </a>
+    </footer>
+
+    <!-- JavaScript for Loading Content -->
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdownToggle = document.querySelector(".dropdown-toggle");
+
+            dropdownToggle.addEventListener("click", function (event) {
+                event.preventDefault();
+                this.parentElement.classList.toggle("active");
+            });
+        });
+
+        function loadContent(topic) {
+            const contentArea = document.getElementById("content-area");
+            contentArea.innerHTML = `<h2>${topic.replace('-', ' ')}</h2><p>Content for ${topic} will appear here.</p>`;
+        }
+  // Selecting elements
+const modalOverlay = document.getElementById('modalOverlay');
+const liveEditorModal = document.getElementById('liveEditorModal');
+const editorArea = document.getElementById('editorArea');
+const runEditorBtn = document.getElementById('runEditorBtn');
+const editorOutput = document.getElementById('editorOutput');
+const closeBtn = document.querySelector('.close-btn'); // Close Button
+
+// Function to open modal with code
+function openModal(exampleCode) {
+  // Clear previous output
+  const doc = editorOutput.contentWindow.document;
+  doc.open();
+  doc.write(''); // Clear previous output
+  doc.close();
+
+  // Set code in textarea
+  editorArea.value = exampleCode;
+
+  // Show modal
+  liveEditorModal.style.display = "block";
+  modalOverlay.style.display = "block";
+
+  // Add animation class
+  setTimeout(() => {
+    liveEditorModal.classList.add("active");
+    modalOverlay.classList.add("active");
+  }, 10);
+}
+
+// Function to close modal
+function closeModal() {
+  liveEditorModal.classList.remove("active");
+  modalOverlay.classList.remove("active");
+
+  setTimeout(() => {
+    liveEditorModal.style.display = "none";
+    modalOverlay.style.display = "none";
+  }, 300);
+}
+
+// Attach click events to all try buttons
+document.querySelectorAll('.try-btn').forEach(button => {
+  button.addEventListener('click', function (e) {
+    e.stopPropagation();
+    const exampleCode = this.parentElement.getAttribute('data-code');
+    openModal(exampleCode);
+  });
+});
+
+runEditorBtn.addEventListener('click', function (e) {
+  e.stopPropagation();
+  const code = editorArea.value;
+  const iframe = editorOutput;
+  const doc = iframe.contentDocument || iframe.contentWindow.document;
+
+  try {
+    const hasHTML = /<html|<body|<head/i.test(code);
+
+    if (hasHTML) {
+      doc.open();
+      doc.write(code);
+      doc.close();
+    } else {
+      doc.open();
+      doc.write(`
+        <body>
+          <script>
+            try {
+              ${code}
+            } catch (error) {
+              document.body.innerHTML = "<pre style='color: red;'>⚠️ You wrote wrong code. Correct it to run properly.<br><br>💡 Tip: Add valid HTML structure like &lt;html&gt; or &lt;body&gt; if needed.<br><br>Error: " + error.message + "</pre>";
+              console.error(error);
+            }
+          <\/script>
+        </body>
+      `);
+      doc.close();
+    }
+  } catch (error) {
+    doc.open();
+    doc.write(`
+      <pre style="color: red; padding: 10px;">
+        ⚠️ You wrote wrong code. Correct it to run properly.<br><br>
+        💡 Tip: Add valid HTML structure like &lt;html&gt; or &lt;body&gt; if needed.<br><br>
+        Error: ${error.message}
+      </pre>
+    `);
+    doc.close();
+    console.error(error);
+  }
+});
+
+
+// Hide modal on overlay click
+modalOverlay.addEventListener('click', closeModal);
+
+// Close modal when close button is clicked
+closeBtn.addEventListener('click', closeModal);
+
+// Prevent closing modal when clicking inside modal
+liveEditorModal.addEventListener('click', function (e) {
+  e.stopPropagation();
+});
+
+
+  </script>
+  <script src="game.js"></script>
+  <script src="script.js"></script>
+  <script src="assistant.js"></script>
+</body>
+
+</html>

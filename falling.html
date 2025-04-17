@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A1 Study Materials</title>
+    <link href="logo1.png" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
+  <style>
+  
+
+ /* Game Section - Full width */
+#gameSection {
+  width: 100%;
+  margin-top: 100px; /* Navbar se 70px neeche */
+  padding: 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Game Title Box */
+.game5 {
+  background: #1a1a1a;
+  padding: 0px;
+  color: #00ffff;
+  box-shadow: 0 2px 10px rgba(0, 255, 255, 0.2);
+  width: 50%;
+  max-width: 1200px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Title Styling */
+.game-title {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Subtitle Styling */
+.game-subtitle {
+  font-size: 18px;
+  font-weight: normal;
+  color: #ddd;
+  margin-top: 5px;
+}
+
+/* Question Box */
+#questionBox {
+  text-align: center;
+  font-size: 22px;
+  margin-top: 20px;
+  padding: 10px;
+  color: #ffffff;
+  width: 90%;
+}
+
+/* Falling Area (for dropping answers) */
+#fallingArea {
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  height: 50vh; /* Adjusted height */
+  overflow: hidden;
+}
+
+/* Falling Answer Styles */
+.answer {
+  position: absolute;
+  top: 0;
+  animation: fall 6s linear forwards;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 6px 10px;
+  background: #222;
+  color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #0ff;
+  transition: transform 0.3s;
+}
+
+/* Falling Animation */
+@keyframes fall {
+  to {
+    top: 100%;
+    opacity: 0.8;
+  }
+}
+
+/* Input Section */
+#inputSection {
+  text-align: center;
+  margin-top: 20px;
+  width: 90%;
+}
+
+/* Answer Input Field */
+#userAnswer {
+  padding: 12px;
+  width: 50%; /* Full width */
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  outline: none;
+  background: #222;
+  color: #00ffff;
+  box-shadow: 0 0 10px #00ffff44;
+}
+
+/* Score Display */
+#scoreBox {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 20px;
+  color: #0ff;
+  width: 90%;
+}
+
+  </style>
+</head>
+<body class="typing-game-body">
+    
+  <!-- Top Navbar -->
+  <header class="navbar">
+    <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+    <h1 class="site-title">
+      <i class="fas fa-book-reader"></i>
+      <span><strong>Smart</strong> Learning Hub</span>
+    </h1>
+    
+    <div class="search-container">
+      <input type="text" class="search-box" id="search" placeholder="Search study materials...">
+      <span class="search-icon" id="search-icon"><i class="fas fa-search"></i></span>
+    </div>
+  
+
+    <!-- Nav Menu for Large Screens -->
+    <nav class="nav-menu">
+        <ul class="nav-icons">
+          <li><a href="index.html" title="Home"><i class="fas fa-home" style="color:#fff;"></i></a></li>
+          <li><a href="htmlpage.html" title="HTML"><i class="fab fa-html5" style="color:#e34c26;"></i></a></li>
+          <li><a href="css.html" title="CSS"><i class="fab fa-css3-alt" style="color:#264de4;"></i></a></li>
+          <li><a href="javascript.html" title="JavaScript"><i class="fab fa-js-square" style="color:#f0db4f;"></i></a></li>
+          <li><a href="c.html" title="C"><i class="fas fa-code" style="color:#00bcd4;"></i></a></li>
+          <li><a href="c++.html" title="C++"><i class="fas fa-laptop-code" style="color:#a259ff;"></i></a></li>
+          <li><a href="java.html" title="Java"><i class="fab fa-java" style="color:#f89820;"></i></a></li>
+          <li><a href="python.html" title="Python"><i class="fab fa-python" style="color:#3776ab;"></i></a></li>
+          <li><a href="allnotes.html" title="Quizzes"><i class="fas fa-question-circle" style="color:#ffcc00;"></i></a></li>
+          <li><a href="allnotes.html" title="Notes"><i class="fas fa-sticky-note" style="color:#29b6f6;"></i></a></li>
+          
+        </ul>
+    
+    </nav>
+  </header>
+
+  <!-- Sidebar Navigation (Hidden by Default) -->
+  <nav class="sidebar" id="sidebar">
+      <ul>
+  <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+  <li><a href="htmlpage.html"><i class="fab fa-html5"></i> HTML</a></li>
+  <li><a href="css.html"><i class="fab fa-css3-alt"></i> CSS</a></li>
+  <li><a href="javascript.html"><i class="fab fa-js-square"></i> JavaScript</a></li>
+  <li><a href="c.html"><i class="fas fa-code"></i> C</a></li>
+  <li><a href="c++.html"><i class="fas fa-laptop-code"></i> C++</a></li>
+  <li><a href="java.html"><i class="fab fa-java"></i> Java</a></li>
+  <li><a href="python.html"><i class="fab fa-python"></i> Python</a></li>
+  <li><a href="allquizzes.html"><i class="fas fa-question-circle"></i> Quizzes</a></li>
+  <li><a href="allnotes.html"><i class="fas fa-sticky-note"></i> Notes</a></li>
+      </ul>
+  
+  </nav>
+  <section id="gameSection">
+ <div class="game5">
+    <h1 class="game-title">Catch & Type</h1>
+    <p class="game-subtitle">Type the falling code snippets as fast as you can!</p>
+</div>
+
+  <div id="questionBox">Loading question...</div>
+  <div id="fallingArea"></div>
+
+  <div id="inputSection">
+    <input type="text" id="userAnswer" placeholder="Type your answer and press Enter..." autocomplete="off" />
+  </div>
+
+  <div id="scoreBox">Score: <span id="points">0</span></div>
+
+ 
+  <footer>
+    <button class="assistant-btn" id="btn">🎤</button>
+    <img src="voice.gif" alt="voice" id="voice">
+    <button id="bttn"><span id="content">..</span></button>
+  
+    <!-- Game Index Button with Custom Image Icon -->
+    <a href="game.html" class="game-icon-btn">
+      <i class="fas fa-gamepad"></i> <!-- Font Awesome Game Icon -->
+    </a>
+  </footer>
+  
+
+
+
+</section>
+  <script>
+    const questions = [
+      { q: "What is the correct HTML tag for inserting a line break?", a: "<br>" },
+      { q: "Which CSS property changes the text color?", a: "color" },
+      { q: "Which keyword is used to declare a variable in JavaScript?", a: "let" },
+      { q: "Which language uses #include?", a: "C" },
+      { q: "Which symbol is used to define comments in Python?", a: "#" },
+      { q: "Which loop is guaranteed to run at least once?", a: "do-while" },
+      { q: "Which tag is used to display image in HTML?", a: "<img>" },
+      { q: "Which keyword defines a function in Python?", a: "def" },
+      { q: "Which operator is used for comparison?", a: "==" },
+      { q: "What is the file extension for a Java file?", a: ".java" }
+    ];
+
+    let current = 0;
+    let score = 0;
+    let answerTimeout;
+    const fallingArea = document.getElementById("fallingArea");
+    const questionBox = document.getElementById("questionBox");
+    const points = document.getElementById("points");
+    const input = document.getElementById("userAnswer");
+
+    function randomPosition() {
+      return Math.floor(Math.random() * (fallingArea.offsetWidth - 100));
+    }
+
+    function createFalling(answer, isCorrect, delay) {
+      setTimeout(() => {
+        const el = document.createElement("div");
+        el.classList.add("answer");
+        el.style.left = randomPosition() + "px";
+        el.textContent = answer;
+        el.dataset.correct = isCorrect;
+        fallingArea.appendChild(el);
+
+        setTimeout(() => {
+          if (fallingArea.contains(el)) {
+            fallingArea.removeChild(el);
+          }
+        }, 6000);
+      }, delay);
+    }
+
+    function nextQuestion() {
+      clearTimeout(answerTimeout);
+      input.value = "";
+      fallingArea.innerHTML = "";
+
+      current = Math.floor(Math.random() * questions.length);
+      questionBox.textContent = questions[current].q;
+
+      const correct = questions[current].a;
+      const wrong = ["div", "style", "for", "if", "else", "main", "<hr>", "void", "const", "public", "print", "scanf", "println"];
+
+      const wrong1 = wrong[Math.floor(Math.random() * wrong.length)];
+      const wrong2 = wrong[Math.floor(Math.random() * wrong.length)];
+
+      const delays = [300, 700, 1000];
+      const allAnswers = [
+        { text: correct, correct: true },
+        { text: wrong1, correct: false },
+        { text: wrong2, correct: false }
+      ];
+
+      // Shuffle answers
+      allAnswers.sort(() => Math.random() - 0.5);
+
+      allAnswers.forEach((ans, i) => {
+        createFalling(ans.text, ans.correct, delays[i]);
+      });
+
+      answerTimeout = setTimeout(() => {
+        nextQuestion(); // auto next question
+      }, 6000);
+    }
+
+    input.addEventListener("keyup", function (e) {
+      if (e.key === "Enter") {
+        const typed = input.value.trim();
+        const correctAnswer = questions[current].a;
+        if (typed.toLowerCase() === correctAnswer.toLowerCase()) {
+          score += 10;
+          points.textContent = score;
+          clearTimeout(answerTimeout);
+          nextQuestion();
+        }
+      }
+    });
+
+    nextQuestion();
+  </script>
+<script src="game.js"></script>
+<script src="script.js"></script>
+<script src="assistant.js"></script>
+</body>
+</html>

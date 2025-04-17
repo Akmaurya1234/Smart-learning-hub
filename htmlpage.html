@@ -1,0 +1,2981 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Learning Hub</title>
+  <link href="logo3.png" rel="shortcut icon" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- CSS Styling -->
+  <style>
+    body {
+      overflow-y: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ✅ Top Navbar -->
+  <header class="navbar">
+    <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+    <h1 class="site-title">
+      <i class="fas fa-book-reader"></i>
+      <span><strong>Smart </strong> Learning Hub</span>
+    </h1>
+
+    <div class="search-container">
+      <input type="text" class="search-box" id="search" placeholder="Search study materials...">
+      <span class="search-icon" id="search-icon"><i class="fas fa-search"></i></span>
+    </div>
+
+    <nav class="nav-menu">
+      <ul class="nav-icons">
+        <li><a href="index.html" title="Home"><i class="fas fa-home" style="color:#fff;"></i></a></li>
+        <li><a href="css.html" title="CSS"><i class="fab fa-css3-alt" style="color:#264de4;"></i></a></li>
+        <li><a href="javascript.html" title="JavaScript"><i class="fab fa-js-square" style="color:#f0db4f;"></i></a>
+        </li>
+        <li><a href="c.html" title="C"><i class="fas fa-code" style="color:#00bcd4;"></i></a></li>
+        <li><a href="c++.html" title="C++"><i class="fas fa-laptop-code" style="color:#a259ff;"></i></a></li>
+        <li><a href="java.html" title="Java"><i class="fab fa-java" style="color:#f89820;"></i></a></li>
+        <li><a href="python.html" title="Python"><i class="fab fa-python" style="color:#3776ab;"></i></a></li>
+        <li><a href="htmlquiz.html" title="Quizzes"><i class="fas fa-question-circle" style="color:#ffcc00;"></i></a>
+        </li>
+        <li><a href="htmlnote.html" title="Notes"><i class="fas fa-sticky-note" style="color:#29b6f6;"></i></a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <!-- ✅ Sidebar Navigation -->
+  <nav class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle"><i class="fab fa-html5"></i> HTML Topics ⌵</a>
+        <ul class="dropdown-menu">
+          <li><a href="#intro"><i class="fas fa-book-open"></i> Introduction</a></li>
+          <li><a href="#basichtml"><i class="fas fa-font"></i> HTML Basics</a></li>
+          <li><a href="#elements"><i class="fas fa-cogs"></i> HTML Elements</a></li>
+          <li><a href="#attributes"><i class="fas fa-wrench"></i> HTML Attributes</a></li>
+          <li><a href="#headings"><i class="fas fa-heading"></i> HTML Headings</a></li>
+          <li><a href="#paragraph"><i class="fas fa-paragraph"></i> HTML Paragraphs</a></li>
+          <li><a href="#link"><i class="fas fa-link"></i> HTML Links</a></li>
+          <li><a href="#image"><i class="fas fa-image"></i> HTML Images</a></li>
+          <li><a href="#table"><i class="fas fa-table"></i> HTML Tables</a></li>
+          <li><a href="#form"><i class="fas fa-clipboard"></i> HTML Forms</a></li>
+          <li><a href="#tags"><i class="fas fa-tags"></i> HTML Tags</a></li>
+          <li><a href="#responsive"><i class="fas fa-mobile-alt"></i> Responsive HTML</a></li>
+        </ul>
+      </li>
+      <li><a href="css.html"><i class="fab fa-css3-alt"></i> CSS</a></li>
+      <li><a href="javascript.html"><i class="fab fa-js-square"></i> JavaScript</a></li>
+      <li><a href="c.html"><i class="fas fa-code"></i> C</a></li>
+      <li><a href="c++.html"><i class="fas fa-laptop-code"></i> C++</a></li>
+      <li><a href="java.html"><i class="fab fa-java"></i> Java</a></li>
+      <li><a href="python.html"><i class="fab fa-python"></i> Python</a></li>
+      <li><a href="htmlquiz.html"><i class="fas fa-question-circle"></i> Quizzes</a></li>
+      <li><a href="htmlnote.html"><i class="fas fa-sticky-note"></i> Notes</a></li>
+    </ul>
+  </nav>
+
+
+  <footer>
+    <button class="assistant-btn" id="btn">🎤</button>
+    <img src="voice.gif" alt="voice" id="voice">
+    <button id="bttn"><span id="content">..</span></button>
+
+    <!-- Game Index Button with Custom Image Icon -->
+    <a href="game.html" class="game-icon-btn">
+      <i class="fas fa-gamepad"></i> <!-- Font Awesome Game Icon -->
+    </a>
+  </footer>
+
+
+  <!-- Main Content with Left Menu & Right Output Section -->
+  <div class="main-container">
+    <aside class="left-menu">
+      <h2><i class="fab fa-html5"></i> HTML Topics</h2>
+      <ul>
+        <li><a href="#intro"><i class="fas fa-book-open"></i> Introduction</a></li>
+        <li><a href="#basichtml"><i class="fas fa-font"></i> HTML Basics</a></li>
+        <li><a href="#elements"><i class="fas fa-cogs"></i> HTML Elements</a></li>
+        <li><a href="#attributes"><i class="fas fa-wrench"></i> HTML Attributes</a></li>
+        <li><a href="#headings"><i class="fas fa-heading"></i> HTML Headings</a></li>
+        <li><a href="#paragraph"><i class="fas fa-paragraph"></i> HTML Paragraphs</a></li>
+        <li><a href="#link"><i class="fas fa-link"></i> HTML Links</a></li>
+        <li><a href="#image"><i class="fas fa-image"></i> HTML Images</a></li>
+        <li><a href="#table"><i class="fas fa-table"></i> HTML Tables</a></li>
+        <li><a href="#form"><i class="fas fa-clipboard"></i> HTML Forms</a></li>
+        <li><a href="#tags"><i class="fas fa-tags"></i> HTML Tags</a></li>
+        <li><a href="#responsive"><i class="fas fa-mobile-alt"></i> Responsive HTML</a></li>
+      </ul>
+    </aside>
+
+    <!-- Right Section: Output -->
+    <section class="right-output" id="content-area">
+      <h2>Welcome to HTML Tutorials</h2>
+      <p>Select a topic from the left menu to see its content here.</p>
+
+      <div class="tree-container hidden" id="studentSection">
+        <button onclick="changeProfession()"
+          style="float:right; margin-bottom:10px; background:#444; color:white; padding:5px 10px; border:none; border-radius:6px; cursor:pointer;">
+          Change Profession
+        </button>
+
+
+        <!----- Introduction -->
+        <div id="intro" class="rightside-content">
+          <h2>HTML</h2>
+          <p>HTML is also know as a (Hyper Text Markup Language) and it is the standard
+            markup langauge used to create web pages.
+            It's the backbone of a website providing the structure and content that the web browser renders to
+            the
+            user</p>
+          <ul type="square" id="ul1">
+            <li>Stands for HyperText Markup Language.</li>
+            <li>HyperText: Link between web pages.</li>
+            <li>Markup Language: Text between tags which defines structure.</li>
+            <li>It is a language to create web pages.</li>
+            <li>HTML defines how the web page looks and how to display content with the help of elements.</li>
+            <li>It forms or defines the structure of our Web Page.</li>
+            <li>Need to save your file with html extension.</li>
+          </ul>
+
+          <h2>HTML Features:</h2>
+          <ul type="square" id="ul1">
+            <li>The learning curve is very easy (easy to modify).</li>
+            <li>Create effective presentations.</li>
+            <li>Add links wherein we can add reference.</li>
+            <li>It is a language to create web pages.</li>
+            <li>Add links wherein we can add references.</li>
+            <li>Can display documents on platforms like Mac, Windows, Linux etc.</li>
+            <li>Add videos, graphics and audios making it more attractive.</li>
+            <li>Case insensitive language.</li>
+          </ul>
+
+          <h2>HTML Editors:</h2>
+          <ul type="square" id="ul1">
+            <li>Notepad </li>
+            <li>Notepad++</li>
+            <li>Atom</li>
+            <li>Sublime Text.</li>
+            <li>VS code.</li>
+          </ul>
+
+          <h2>HTML Versions:</h2>
+          <table>
+            <tr>
+              <th>Version</th>
+              <th>Year</th>
+            </tr>
+            <tr>
+              <td>HTML 1.0</td>
+              <td>1991</td>
+            </tr>
+            <tr>
+              <td>HTML 2.0</td>
+              <td>1995</td>
+            </tr>
+            <tr>
+              <td>HTML 3.0</td>
+              <td>1997</td>
+            </tr>
+            <tr>
+              <td>HTML 4.0</td>
+              <td>1999</td>
+            </tr>
+            <tr>
+              <td>HTML 5.0</td>
+              <td>2014</td>
+            </tr>
+          </table>
+          <h2>What is markup language ?</h2>
+          <p>It is type of computer language used to make the text. It can turned a text in
+            to images, tables and list.</p>
+        </div>
+
+        <!--- Basic Html  -->
+
+        <div id="basichtml" class="rightside-content">
+          <h2>Basic HTML Concepts:</h2>
+          <ol type="1">
+            <li><b>Tags:</b> HTML uses tags (<>) to define elements.</li>
+            <li><b>Elements:</b> Represented by tags, elements are the building blocks of HTML(e.g., headings,
+              paragraph, images).</li>
+            <li><b>Attributes:</b> Provide additional information about an element (e.g., src for images, href
+              for
+              links).</li>
+            <li><b>Nested Elements:</b> Elements can be nested inside others to create complex structures.</li>
+          </ol>
+
+          <h2>Why learn HTML ?</h2>
+          <ol type="1">
+            <li>Build websites and web applications.</li>
+            <li>Create mobile and desktop applications.</li>
+            <li>Develop email templates and newsletters.</li>
+            <li>Enhanse career prospects in web development and digital marketing.</li>
+          </ol>
+
+
+          <!-- <!DOCTYPE> Tag -->
+          <section>
+            <center>
+              <h2>Document Structure Tags</h2>
+            </center>
+            <div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h2&gt;This is a valid HTML5 page.&lt;/h2&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+              <h2>1. &lt;!DOCTYPE&gt; Declaration</h2>
+              <p>
+                The <b>&lt;!DOCTYPE&gt;</b> declaration defines the <b>document type and version</b> of HTML.
+                It ensures proper rendering across browsers. In <b>HTML5</b>, it is written as <b>&lt;!DOCTYPE
+                  html&gt;</b>.
+              </p>
+
+              <button class="try-btn">Try it Yourself</button>
+            </div>
+
+
+            <!-- <html> Tag -->
+            <div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;title&gt;HTML Root Example&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;Everything is inside the &amp;lt;html&amp;gt; tag.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+              <h2>2. &lt;html&gt; Root Element</h2>
+              <p>
+                The <b>&lt;html&gt;</b> tag is the root of every HTML document. It <b>encloses all other elements</b>
+                and typically includes the <code>lang</code> attribute to specify the document language.
+              </p>
+              <button class="try-btn">Try it Yourself</button>
+            </div>
+
+            <!-- <head> Tag -->
+            <div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Meta Example&lt;/title&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;Learning HTML Head&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;Check the document head for meta tags.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+              <h2>3. &lt;head&gt; Section</h2>
+              <p>
+                The <b>&lt;head&gt;</b> tag contains <b>meta-information</b> about the document, such as the title,
+                character encoding, styles, and scripts.
+              </p>
+              <button class="try-btn">Try it Yourself</button>
+            </div>
+
+            <!-- <title> Tag -->
+            <div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My Custom Title&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;Look at the browser tab for the title!&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+              <h2>4. &lt;title&gt; Tag</h2>
+              <p>
+                The <b>&lt;title&gt;</b> tag defines the <b>webpage title</b>, which appears in the browser tab and
+                helps with SEO.
+              </p>
+              <button class="try-btn">Try it Yourself</button>
+            </div>
+
+            <!-- <body> Tag -->
+            <div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Body Example&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h2&gt;Welcome to My Website&lt;/h2&gt;
+    &lt;p&gt;This content is inside the body tag.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+              <h2>5. &lt;body&gt; Tag</h2>
+              <p>
+                The <b>&lt;body&gt;</b> tag holds all the <b>visible content</b> of the webpage, including text, images,
+                and interactive elements.
+              </p>
+              <button class="try-btn">Try it Yourself</button>
+            </div>
+        </div>
+
+
+        <!---- Html Elements -->
+        <div id="elements" class="rightside-content">
+          <div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;HTML Element Example&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;This is a paragraph inside a body.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+            <h2>What is an HTML Element?</h2>
+            <p>
+              An <b>HTML element</b> is a fundamental part of a webpage. It consists of a <b>start tag, some content,
+                and an end tag</b>.
+            </p>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Block-Level Elements -->
+          <div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Block Elements&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h2&gt;This is a Heading&lt;/h2&gt;
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+    &lt;div style="background: lightgray; padding: 10px;"&gt;This is a div.&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+            <h2>1. Block-Level Elements</h2>
+            <p>
+              Block-level elements always start on a new line and span the full width available. Common examples
+              include:
+            </p>
+            <ul>
+              <li><code>&lt;div&gt;</code> – Defines a division or section</li>
+              <li><code>&lt;p&gt;</code> – Represents a paragraph</li>
+              <li><code>&lt;h1&gt; to &lt;h6&gt;</code> – Headings</li>
+              <li><code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code> – Lists</li>
+            </ul>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Inline Elements -->
+          <div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Inline Elements&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;This is &lt;span style="color: red;"&gt;inline text&lt;/span&gt; inside a paragraph.&lt;/p&gt;
+    &lt;p&gt;Visit &lt;a href="#"&gt;this link&lt;/a&gt; to learn more.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+            <h2>2. Inline Elements</h2>
+            <p>
+              Inline elements do not begin on a new line. They occupy only as much width as necessary. Common inline
+              elements include:
+            </p>
+            <ul>
+              <li><code>&lt;span&gt;</code> – Inline container for styling</li>
+              <li><code>&lt;a&gt;</code> – Creates a hyperlink</li>
+              <li><code>&lt;strong&gt;</code> – Bold text</li>
+              <li><code>&lt;em&gt;</code> – Italic text</li>
+            </ul>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Empty Elements -->
+          <div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Empty Elements&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;This is a paragraph.&lt;br&gt; This is after a line break.&lt;/p&gt;
+    &lt;hr&gt;
+    &lt;img src="https://via.placeholder.com/150" alt="Placeholder Image"&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+            <h2>3. Empty Elements</h2>
+            <p>
+              Empty elements do not have any content or closing tags. They are self-contained. Examples include:
+            </p>
+            <ul>
+              <li><code>&lt;br&gt;</code> – Line break</li>
+              <li><code>&lt;hr&gt;</code> – Horizontal rule</li>
+              <li><code>&lt;img&gt;</code> – Image element</li>
+            </ul>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+
+          <h2>What is Tag ?</h2>
+          <p>Tag is a light weight of command of HTML and any type of changes are performed
+            by the use of these tags. We should always use to open tag and close tag.</p>
+
+          <h2>Types of Tags</h3>
+            <h3>Container Tag :</h3>
+            <p>Tag that containce many other tags under it are known as container tag. HTML is the biggest
+              container
+              tag.</p>
+            <h3>Ambeded Tag : </h3>
+            <p>Tag that are used under container tags are called Ambeded tags. They don't contain any other tag
+              under it.</p>
+            <h3>Open Tag :</h3>
+            <p>Tag without closing tags are known as open tag.
+              hr and br tags are without closing tag</p>
+            <h3>Closing Tag :</h3>
+            <p>Tag with closing tags are known as paired tag.</p>
+
+        </div>
+
+
+        <!---- Html Attributes -->
+
+        <div id="attributes" class="rightside-content">
+          <center>
+            <h2 align="center">Complete List of HTML Attributes</h2>
+          </center>
+
+          <h2>BODY (Page Body) Tag Attributes</h2>
+          <table border="1" width="100%">
+            <tr>
+              <th>Attribute Name</th>
+              <th>Value</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>bgcolor</td>
+              <td>color name / Hex</td>
+              <td>Defines the background color of the page (deprecated)</td>
+            </tr>
+            <tr>
+              <td>background</td>
+              <td>image URL</td>
+              <td>Sets an image as the background (deprecated)</td>
+            </tr>
+            <tr>
+              <td>text</td>
+              <td>color name / Hex</td>
+              <td>Sets the text color of the page (deprecated)</td>
+            </tr>
+            <tr>
+              <td>link</td>
+              <td>color name / Hex</td>
+              <td>Sets the color of unvisited links (deprecated)</td>
+            </tr>
+            <tr>
+              <td>vlink</td>
+              <td>color name / Hex</td>
+              <td>Sets the color of visited links (deprecated)</td>
+            </tr>
+            <tr>
+              <td>alink</td>
+              <td>color name / Hex</td>
+              <td>Sets the color of active links (deprecated)</td>
+            </tr>
+            <tr>
+              <td>onload</td>
+              <td>JavaScript</td>
+              <td>Executes a script when the page loads</td>
+            </tr>
+            <tr>
+              <td>onunload</td>
+              <td>JavaScript</td>
+              <td>Executes a script when the page is unloaded</td>
+            </tr>
+            <tr>
+              <td>onresize</td>
+              <td>JavaScript</td>
+              <td>Executes a script when the window is resized</td>
+            </tr>
+            <tr>
+              <td>onmousemove</td>
+              <td>JavaScript</td>
+              <td>Executes a script when the mouse moves</td>
+            </tr>
+            <tr>
+              <td>onmouseover</td>
+              <td>JavaScript</td>
+              <td>Executes a script when the mouse hovers</td>
+            </tr>
+            <tr>
+              <td>onmouseout</td>
+              <td>JavaScript</td>
+              <td>Executes a script when the mouse leaves</td>
+            </tr>
+            <tr>
+              <td>onmousedown</td>
+              <td>JavaScript</td>
+              <td>Executes a script when the mouse button is pressed</td>
+            </tr>
+            <tr>
+              <td>onmouseup</td>
+              <td>JavaScript</td>
+              <td>Executes a script when the mouse button is released</td>
+            </tr>
+            <tr>
+              <td>onkeydown</td>
+              <td>JavaScript</td>
+              <td>Executes a script when a key is pressed</td>
+            </tr>
+            <tr>
+              <td>onkeyup</td>
+              <td>JavaScript</td>
+              <td>Executes a script when a key is released</td>
+            </tr>
+            <tr>
+              <td>onkeypress</td>
+              <td>JavaScript</td>
+              <td>Executes a script when a key is pressed and released</td>
+            </tr>
+          </table>
+          <h2>Font Tag Attributes</h2>
+          <table border="1" width="100%">
+            <tr>
+              <td>color</td>
+              <td>color name</td>
+              <td>Defines the color of text</td>
+            </tr>
+            <tr>
+              <td>face</td>
+              <td>font name</td>
+              <td>Defines the font style</td>
+            </tr>
+            <tr>
+              <td>size</td>
+              <td>1-7</td>
+              <td>Defines the font size</td>
+            </tr>
+          </table>
+
+          <h2>HR (Horizontal Rule) Tag Attributes</h2>
+          <table border="1" width="100%">
+            <tr>
+              <th>Attribute Name</th>
+              <th>Value</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>align</td>
+              <td>left / right / center</td>
+              <td>Defines the alignment of the horizontal line (deprecated).</td>
+            </tr>
+            <tr>
+              <td>color</td>
+              <td>color name / Hex</td>
+              <td>Defines the color of the horizontal line (deprecated).</td>
+            </tr>
+            <tr>
+              <td>size</td>
+              <td>numeric</td>
+              <td>Defines the thickness (height) of the horizontal line (deprecated).</td>
+            </tr>
+            <tr>
+              <td>width</td>
+              <td>px / %</td>
+              <td>Defines the width of the horizontal line (deprecated).</td>
+            </tr>
+            <tr>
+              <td>noshade</td>
+              <td>Boolean</td>
+              <td>Makes the line solid without a 3D effect (deprecated).</td>
+            </tr>
+          </table>
+
+          <h2>UL (Unordered List) & OL (Ordered List) Tag Attributes</h2>
+          <table border="1" width="100%">
+            <tr>
+              <th>Tag</th>
+              <th>Attribute Name</th>
+              <th>Value</th>
+              <th>Description</th>
+            </tr>
+
+            <!-- UL (Unordered List) Attributes -->
+            <tr>
+              <td>&lt;ul&gt;</td>
+              <td>type</td>
+              <td>disc / circle / square</td>
+              <td>Defines the bullet style</td>
+            </tr>
+            <tr>
+              <td>&lt;ul&gt;</td>
+              <td>compact</td>
+              <td>Boolean</td>
+              <td>Reduces the spacing between list items (deprecated)</td>
+            </tr>
+
+            <!-- OL (Ordered List) Attributes -->
+            <tr>
+              <td>&lt;ol&gt;</td>
+              <td>type</td>
+              <td>1 / A / a / I / i</td>
+              <td>Defines the numbering style</td>
+            </tr>
+            <tr>
+              <td>&lt;ol&gt;</td>
+              <td>start</td>
+              <td>numeric</td>
+              <td>Defines the starting number of the list</td>
+            </tr>
+            <tr>
+              <td>&lt;ol&gt;</td>
+              <td>reversed</td>
+              <td>Boolean</td>
+              <td>Displays the list in reverse order</td>
+            </tr>
+            <tr>
+              <td>&lt;ol&gt;</td>
+              <td>compact</td>
+              <td>Boolean</td>
+              <td>Reduces the spacing between list items (deprecated)</td>
+            </tr>
+
+            <!-- LI (List Item) Attributes -->
+            <tr>
+              <td>&lt;li&gt;</td>
+              <td>value</td>
+              <td>numeric</td>
+              <td>Defines a specific number for an item in an ordered list</td>
+            </tr>
+            <tr>
+              <td>&lt;li&gt;</td>
+              <td>type</td>
+              <td>disc / circle / square (for UL) <br> 1 / A / a / I / i (for OL)</td>
+              <td>Defines the style of a specific list item</td>
+            </tr>
+          </table>
+
+          <h2>Frameset Tag Attributes</h2>
+          <table border="1" width="100%">
+            <tr>
+              <th>Tag</th>
+              <th>Attribute Name</th>
+              <th>Value</th>
+              <th>Description</th>
+            </tr>
+
+            <!-- Frameset Attributes -->
+            <tr>
+              <td>&lt;frameset&gt;</td>
+              <td>rows</td>
+              <td>numeric / % / *</td>
+              <td>Defines the number of rows</td>
+            </tr>
+            <tr>
+              <td>&lt;frameset&gt;</td>
+              <td>cols</td>
+              <td>numeric / % / *</td>
+              <td>Defines the number of columns</td>
+            </tr>
+            <tr>
+              <td>&lt;frameset&gt;</td>
+              <td>border</td>
+              <td>numeric</td>
+              <td>Defines the border thickness</td>
+            </tr>
+            <tr>
+              <td>&lt;frameset&gt;</td>
+              <td>bordercolor</td>
+              <td>color name / Hex</td>
+              <td>Defines the color of the border</td>
+            </tr>
+            <tr>
+              <td>&lt;frameset&gt;</td>
+              <td>frameborder</td>
+              <td>0 / 1</td>
+              <td>Enables or disables the border</td>
+            </tr>
+            <tr>
+              <td>&lt;frameset&gt;</td>
+              <td>framespacing</td>
+              <td>numeric</td>
+              <td>Defines the spacing between frames</td>
+            </tr>
+
+            <!-- Frame Attributes -->
+            <tr>
+              <td>&lt;frame&gt;</td>
+              <td>src</td>
+              <td>URL</td>
+              <td>Defines the URL of the page to be displayed</td>
+            </tr>
+            <tr>
+              <td>&lt;frame&gt;</td>
+              <td>name</td>
+              <td>text</td>
+              <td>Assigns a name to the frame</td>
+            </tr>
+            <tr>
+              <td>&lt;frame&gt;</td>
+              <td>scrolling</td>
+              <td>yes / no / auto</td>
+              <td>Defines whether the scrollbar appears</td>
+            </tr>
+            <tr>
+              <td>&lt;frame&gt;</td>
+              <td>noresize</td>
+              <td>Boolean</td>
+              <td>Prevents resizing of the frame</td>
+            </tr>
+            <tr>
+              <td>&lt;frame&gt;</td>
+              <td>marginwidth</td>
+              <td>numeric</td>
+              <td>Defines horizontal margin inside the frame</td>
+            </tr>
+            <tr>
+              <td>&lt;frame&gt;</td>
+              <td>marginheight</td>
+              <td>numeric</td>
+              <td>Defines vertical margin inside the frame</td>
+            </tr>
+            <tr>
+              <td>&lt;frame&gt;</td>
+              <td>longdesc</td>
+              <td>URL</td>
+              <td>Provides a link to a long description</td>
+            </tr>
+
+            <!-- NoFrames Attributes -->
+            <tr>
+              <td>&lt;noframes&gt;</td>
+              <td>N/A</td>
+              <td>N/A</td>
+              <td>Defines alternative content for browsers that do not support frames</td>
+            </tr>
+          </table>
+
+          <h2>Table Tag Attributes</h2>
+          <table border="1" width="100%">
+            <tr>
+              <th>Tag</th>
+              <th>Attribute Name</th>
+              <th>Value</th>
+              <th>Description</th>
+            </tr>
+
+            <!-- Table Attributes -->
+            <tr>
+              <td>&lt;table&gt;</td>
+              <td>border</td>
+              <td>numeric</td>
+              <td>Defines the thickness of the table border</td>
+            </tr>
+            <tr>
+              <td>&lt;table&gt;</td>
+              <td>bgcolor</td>
+              <td>color name / Hex</td>
+              <td>Defines the background color of the table</td>
+            </tr>
+            <tr>
+              <td>&lt;table&gt;</td>
+              <td>width</td>
+              <td>px / %</td>
+              <td>Defines the width of the table</td>
+            </tr>
+            <tr>
+              <td>&lt;table&gt;</td>
+              <td>height</td>
+              <td>px / %</td>
+              <td>Defines the height of the table</td>
+            </tr>
+            <tr>
+              <td>&lt;table&gt;</td>
+              <td>align</td>
+              <td>left / right / center</td>
+              <td>Defines the alignment of the table</td>
+            </tr>
+            <tr>
+              <td>&lt;table&gt;</td>
+              <td>cellspacing</td>
+              <td>numeric</td>
+              <td>Defines the space between table cells</td>
+            </tr>
+            <tr>
+              <td>&lt;table&gt;</td>
+              <td>cellpadding</td>
+              <td>numeric</td>
+              <td>Defines the space inside a cell</td>
+            </tr>
+            <tr>
+              <td>&lt;table&gt;</td>
+              <td>bordercolor</td>
+              <td>color name / Hex</td>
+              <td>Defines the color of the table border</td>
+            </tr>
+            <tr>
+              <td>&lt;table&gt;</td>
+              <td>frame</td>
+              <td>void, above, below, hsides, vsides, lhs, rhs, box, border</td>
+              <td>Defines which part of the table border is visible</td>
+            </tr>
+            <tr>
+              <td>&lt;table&gt;</td>
+              <td>rules</td>
+              <td>none, groups, rows, cols, all</td>
+              <td>Defines how internal table borders appear</td>
+            </tr>
+            <tr>
+              <td>&lt;table&gt;</td>
+              <td>summary</td>
+              <td>text</td>
+              <td>Provides a summary of the table (for accessibility)</td>
+            </tr>
+
+            <!-- TR (Table Row) Attributes -->
+            <tr>
+              <td>&lt;tr&gt;</td>
+              <td>align</td>
+              <td>left / right / center</td>
+              <td>Defines alignment of row content</td>
+            </tr>
+            <tr>
+              <td>&lt;tr&gt;</td>
+              <td>bgcolor</td>
+              <td>color name / Hex</td>
+              <td>Defines background color of the row</td>
+            </tr>
+            <tr>
+              <td>&lt;tr&gt;</td>
+              <td>valign</td>
+              <td>top / middle / bottom / baseline</td>
+              <td>Defines vertical alignment of row content</td>
+            </tr>
+
+            <!-- TD (Table Data Cell) Attributes -->
+            <tr>
+              <td>&lt;td&gt;</td>
+              <td>colspan</td>
+              <td>numeric</td>
+              <td>Merges multiple columns into a single column</td>
+            </tr>
+            <tr>
+              <td>&lt;td&gt;</td>
+              <td>rowspan</td>
+              <td>numeric</td>
+              <td>Merges multiple rows into a single row</td>
+            </tr>
+            <tr>
+              <td>&lt;td&gt;</td>
+              <td>align</td>
+              <td>left / right / center</td>
+              <td>Defines horizontal alignment of cell content</td>
+            </tr>
+            <tr>
+              <td>&lt;td&gt;</td>
+              <td>valign</td>
+              <td>top / middle / bottom / baseline</td>
+              <td>Defines vertical alignment of cell content</td>
+            </tr>
+            <tr>
+              <td>&lt;td&gt;</td>
+              <td>bgcolor</td>
+              <td>color name / Hex</td>
+              <td>Defines background color of the cell</td>
+            </tr>
+            <tr>
+              <td>&lt;td&gt;</td>
+              <td>nowrap</td>
+              <td>Boolean</td>
+              <td>Prevents text from wrapping inside the cell</td>
+            </tr>
+
+            <!-- TH (Table Header Cell) Attributes -->
+            <tr>
+              <td>&lt;th&gt;</td>
+              <td>align</td>
+              <td>left / right / center</td>
+              <td>Defines horizontal alignment of header content</td>
+            </tr>
+            <tr>
+              <td>&lt;th&gt;</td>
+              <td>valign</td>
+              <td>top / middle / bottom / baseline</td>
+              <td>Defines vertical alignment of header content</td>
+            </tr>
+            <tr>
+              <td>&lt;th&gt;</td>
+              <td>bgcolor</td>
+              <td>color name / Hex</td>
+              <td>Defines background color of the header cell</td>
+            </tr>
+
+            <!-- Caption Tag Attributes -->
+            <tr>
+              <td>&lt;caption&gt;</td>
+              <td>align</td>
+              <td>top / bottom / left / right</td>
+              <td>Defines caption position</td>
+            </tr>
+
+            <!-- COL & COLGROUP Attributes -->
+            <tr>
+              <td>&lt;col&gt;</td>
+              <td>span</td>
+              <td>numeric</td>
+              <td>Defines number of columns affected</td>
+            </tr>
+            <tr>
+              <td>&lt;col&gt;</td>
+              <td>width</td>
+              <td>px / %</td>
+              <td>Defines width of the column</td>
+            </tr>
+            <tr>
+              <td>&lt;col&gt;</td>
+              <td>align</td>
+              <td>left / right / center</td>
+              <td>Defines text alignment in column</td>
+            </tr>
+            <tr>
+              <td>&lt;col&gt;</td>
+              <td>valign</td>
+              <td>top / middle / bottom / baseline</td>
+              <td>Defines vertical alignment of column</td>
+            </tr>
+          </table>
+
+          <h2>MARQUEE (Scrolling Text) Tag Attributes</h2>
+          <table border="1" width="100%">
+            <tr>
+              <th>Attribute Name</th>
+              <th>Value</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>behavior</td>
+              <td>scroll / slide / alternate</td>
+              <td>Defines the scrolling behavior of the text.</td>
+            </tr>
+            <tr>
+              <td>direction</td>
+              <td>left / right / up / down</td>
+              <td>Defines the direction of scrolling text.</td>
+            </tr>
+            <tr>
+              <td>scrollamount</td>
+              <td>numeric</td>
+              <td>Defines the speed of scrolling text.</td>
+            </tr>
+            <tr>
+              <td>scrolldelay</td>
+              <td>numeric</td>
+              <td>Adds a delay in scrolling.</td>
+            </tr>
+            <tr>
+              <td>loop</td>
+              <td>numeric / infinite</td>
+              <td>Defines how many times the text should scroll.</td>
+            </tr>
+            <tr>
+              <td>bgcolor</td>
+              <td>color name / Hex</td>
+              <td>Defines the background color of the marquee.</td>
+            </tr>
+            <tr>
+              <td>width</td>
+              <td>px / %</td>
+              <td>Defines the width of the marquee.</td>
+            </tr>
+            <tr>
+              <td>height</td>
+              <td>px / %</td>
+              <td>Defines the height of the marquee.</td>
+            </tr>
+            <tr>
+              <td>hspace</td>
+              <td>numeric</td>
+              <td>Defines horizontal space around the marquee.</td>
+            </tr>
+            <tr>
+              <td>vspace</td>
+              <td>numeric</td>
+              <td>Defines vertical space around the marquee.</td>
+            </tr>
+          </table>
+
+          <h2>IMG (Image) Tag Attributes</h2>
+          <table border="1" width="100%">
+            <tr>
+              <th>Attribute Name</th>
+              <th>Value</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>src</td>
+              <td>image URL</td>
+              <td>Specifies the image source</td>
+            </tr>
+            <tr>
+              <td>alt</td>
+              <td>text</td>
+              <td>Alternative text if image is not displayed</td>
+            </tr>
+            <tr>
+              <td>width</td>
+              <td>px / %</td>
+              <td>Defines the width of the image</td>
+            </tr>
+            <tr>
+              <td>height</td>
+              <td>px / %</td>
+              <td>Defines the height of the image</td>
+            </tr>
+            <tr>
+              <td>title</td>
+              <td>text</td>
+              <td>Tooltip text when hovered</td>
+            </tr>
+            <tr>
+              <td>align</td>
+              <td>left / right / middle</td>
+              <td>Defines alignment of the image (deprecated)</td>
+            </tr>
+            <tr>
+              <td>border</td>
+              <td>numeric</td>
+              <td>Defines border thickness (deprecated)</td>
+            </tr>
+            <tr>
+              <td>hspace</td>
+              <td>numeric</td>
+              <td>Defines horizontal spacing (deprecated)</td>
+            </tr>
+            <tr>
+              <td>vspace</td>
+              <td>numeric</td>
+              <td>Defines vertical spacing (deprecated)</td>
+            </tr>
+            <tr>
+              <td>loading</td>
+              <td>lazy / eager</td>
+              <td>Defines how image loads (lazy = loads when needed)</td>
+            </tr>
+            <tr>
+              <td>decoding</td>
+              <td>sync / async / auto</td>
+              <td>Specifies how the browser decodes the image</td>
+            </tr>
+            <tr>
+              <td>referrerpolicy</td>
+              <td>no-referrer / origin / unsafe-url</td>
+              <td>Controls how browser sends referrer info</td>
+            </tr>
+            <tr>
+              <td>usemap</td>
+              <td>#mapname</td>
+              <td>Links the image to a client-side image map</td>
+            </tr>
+            <tr>
+              <td>ismap</td>
+              <td>Boolean</td>
+              <td>Makes the image a server-side image map</td>
+            </tr>
+            <tr>
+              <td>crossorigin</td>
+              <td>anonymous / use-credentials</td>
+              <td>Handles CORS (Cross-Origin Resource Sharing)</td>
+            </tr>
+            <tr>
+              <td>longdesc</td>
+              <td>URL</td>
+              <td>Provides a URL to a detailed image description (deprecated)</td>
+            </tr>
+          </table>
+          <h2>INPUT (Form Input) Tag Attributes</h2>
+          <table border="1" width="100%">
+            <tr>
+              <th>Attribute Name</th>
+              <th>Value</th>
+              <th>Description</th>
+            </tr>
+
+            <!-- Type Attribute (All Input Types) -->
+            <tr>
+              <td rowspan="22">type</td>
+              <td>text</td>
+              <td>Single-line text input</td>
+            </tr>
+            <tr>
+              <td>password</td>
+              <td>Masked text input for passwords</td>
+            </tr>
+            <tr>
+              <td>email</td>
+              <td>For email input with validation</td>
+            </tr>
+            <tr>
+              <td>url</td>
+              <td>For website URL input</td>
+            </tr>
+            <tr>
+              <td>tel</td>
+              <td>For telephone number input</td>
+            </tr>
+            <tr>
+              <td>number</td>
+              <td>Numeric input (allows min/max/step)</td>
+            </tr>
+            <tr>
+              <td>range</td>
+              <td>Slider input for numeric range</td>
+            </tr>
+            <tr>
+              <td>date</td>
+              <td>Calendar date picker</td>
+            </tr>
+            <tr>
+              <td>datetime-local</td>
+              <td>Local date & time picker</td>
+            </tr>
+            <tr>
+              <td>month</td>
+              <td>Month & year selector</td>
+            </tr>
+            <tr>
+              <td>week</td>
+              <td>Week number selector</td>
+            </tr>
+            <tr>
+              <td>time</td>
+              <td>Time picker</td>
+            </tr>
+            <tr>
+              <td>search</td>
+              <td>Search box with clear button</td>
+            </tr>
+            <tr>
+              <td>color</td>
+              <td>Color picker</td>
+            </tr>
+            <tr>
+              <td>file</td>
+              <td>File upload button</td>
+            </tr>
+            <tr>
+              <td>image</td>
+              <td>Submit button with an image</td>
+            </tr>
+            <tr>
+              <td>radio</td>
+              <td>Single-choice radio button</td>
+            </tr>
+            <tr>
+              <td>checkbox</td>
+              <td>Multiple-choice checkbox</td>
+            </tr>
+            <tr>
+              <td>submit</td>
+              <td>Form submission button</td>
+            </tr>
+            <tr>
+              <td>reset</td>
+              <td>Reset button for form fields</td>
+            </tr>
+            <tr>
+              <td>button</td>
+              <td>Clickable button</td>
+            </tr>
+            <tr>
+              <td>hidden</td>
+              <td>Hidden input field</td>
+            </tr>
+
+            <!-- Other Input Attributes -->
+            <tr>
+              <td>name</td>
+              <td>text</td>
+              <td>Identifies the input field</td>
+            </tr>
+            <tr>
+              <td>id</td>
+              <td>text</td>
+              <td>Unique identifier for the input</td>
+            </tr>
+            <tr>
+              <td>value</td>
+              <td>text</td>
+              <td>Pre-filled input value</td>
+            </tr>
+            <tr>
+              <td>placeholder</td>
+              <td>text</td>
+              <td>Hint text inside the field</td>
+            </tr>
+            <tr>
+              <td>maxlength</td>
+              <td>numeric</td>
+              <td>Maximum character length</td>
+            </tr>
+            <tr>
+              <td>minlength</td>
+              <td>numeric</td>
+              <td>Minimum character length</td>
+            </tr>
+            <tr>
+              <td>size</td>
+              <td>numeric</td>
+              <td>Defines width in character units</td>
+            </tr>
+            <tr>
+              <td>required</td>
+              <td>Boolean</td>
+              <td>Field must be filled</td>
+            </tr>
+            <tr>
+              <td>readonly</td>
+              <td>Boolean</td>
+              <td>Field is not editable</td>
+            </tr>
+            <tr>
+              <td>disabled</td>
+              <td>Boolean</td>
+              <td>Disables the input field</td>
+            </tr>
+            <tr>
+              <td>checked</td>
+              <td>Boolean</td>
+              <td>Preselects radio/checkbox</td>
+            </tr>
+            <tr>
+              <td>autofocus</td>
+              <td>Boolean</td>
+              <td>Focuses the field on page load</td>
+            </tr>
+            <tr>
+              <td>multiple</td>
+              <td>Boolean</td>
+              <td>Allows multiple file selection</td>
+            </tr>
+            <tr>
+              <td>pattern</td>
+              <td>Regex</td>
+              <td>Validation pattern for input</td>
+            </tr>
+            <tr>
+              <td>step</td>
+              <td>numeric</td>
+              <td>Increment for numeric inputs</td>
+            </tr>
+            <tr>
+              <td>min</td>
+              <td>numeric</td>
+              <td>Minimum value for number/date</td>
+            </tr>
+            <tr>
+              <td>max</td>
+              <td>numeric</td>
+              <td>Maximum value for number/date</td>
+            </tr>
+            <tr>
+              <td>autocomplete</td>
+              <td>on / off</td>
+              <td>Enables/disables autofill</td>
+            </tr>
+            <tr>
+              <td>spellcheck</td>
+              <td>true / false</td>
+              <td>Enables spellchecking</td>
+            </tr>
+            <tr>
+              <td>dir</td>
+              <td>ltr / rtl / auto</td>
+              <td>Text direction inside input</td>
+            </tr>
+            <tr>
+              <td>list</td>
+              <td>datalist ID</td>
+              <td>Connects input with predefined options</td>
+            </tr>
+            <tr>
+              <td>form</td>
+              <td>form ID</td>
+              <td>Associates input with a form</td>
+            </tr>
+            <tr>
+              <td>formaction</td>
+              <td>URL</td>
+              <td>Overrides form's action URL (for submit buttons)</td>
+            </tr>
+            <tr>
+              <td>formenctype</td>
+              <td>application/x-www-form-urlencoded, multipart/form-data, text/plain</td>
+              <td>Overrides form encoding (for submit buttons)</td>
+            </tr>
+            <tr>
+              <td>formmethod</td>
+              <td>get / post</td>
+              <td>Overrides form method (for submit buttons)</td>
+            </tr>
+            <tr>
+              <td>formnovalidate</td>
+              <td>Boolean</td>
+              <td>Disables form validation (for submit buttons)</td>
+            </tr>
+            <tr>
+              <td>formtarget</td>
+              <td>_self / _blank / _parent / _top</td>
+              <td>Specifies where to open submitted form</td>
+            </tr>
+          </table>
+        </div>
+
+        <!---- Html Tags -->
+
+        <div id="tags" class="rightside-content">
+          <center>
+            <h2 align="center">Complete List of HTML Tags</h2>
+          </center>
+
+          <!-- Tag 1: <html> -->
+          <div class="tag" data-code='&lt;html lang="en"&gt;
+    &lt;head&gt;&lt;/head&gt;
+    &lt;body&gt;&lt;/body&gt;
+  &lt;/html&gt;'>
+            <h2>&lt;html&gt;</h2>
+            <p>
+              The <code>&lt;html&gt;</code> tag is the root element of an HTML document. It wraps all other HTML
+              elements.
+              It defines the document type and language attributes which help browsers and search engines.
+              All metadata, styles, scripts, and visible content are enclosed within the <code>&lt;html&gt;</code> tag.
+              It ensures proper rendering and interpretation of the HTML document.
+              Including the lang attribute improves accessibility and SEO.
+            </p>
+            <pre>&lt;html lang="en"&gt;
+    &lt;head&gt;&lt;/head&gt;
+    &lt;body&gt;&lt;/body&gt;
+  &lt;/html&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 2: <head> -->
+          <div class="tag" data-code='&lt;head&gt;
+    &lt;title&gt;My Page&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+  &lt;/head&gt;'>
+            <h2>&lt;head&gt;</h2>
+            <p>
+              The <code>&lt;head&gt;</code> tag contains metadata about the HTML document.
+              It includes information like the document title, character encoding, viewport settings, and links to
+              external resources.
+              This section is not displayed on the webpage, but it is essential for SEO and proper rendering.
+              Styles and scripts can be linked or embedded inside the head.
+              Using the head tag correctly helps in organizing document information.
+            </p>
+            <pre>&lt;head&gt;
+    &lt;title&gt;My Page&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+  &lt;/head&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 3: <body> -->
+          <div class="tag" data-code='&lt;body&gt;
+    &lt;p&gt;Hello, World!&lt;/p&gt;
+  &lt;/body&gt;'>
+            <h2>&lt;body&gt;</h2>
+            <p>
+              The <code>&lt;body&gt;</code> tag contains all the visible content of an HTML document.
+              Everything you see on a webpage—text, images, videos, forms, etc.—is placed inside the body.
+              This section is rendered by the browser and is the primary area for user interaction.
+              Well-structured body content improves accessibility and SEO.
+              JavaScript can be placed here to enhance interactivity.
+            </p>
+            <pre>&lt;body&gt;
+    &lt;p&gt;Hello, World!&lt;/p&gt;
+  &lt;/body&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 4: <h1> to <h6> -->
+          <div class="tag" data-code='&lt;h1&gt;Main Heading&lt;/h1&gt;
+  &lt;h2&gt;Subheading&lt;/h2&gt;' id="headings">
+            <h2>&lt;h1&gt; to &lt;h6&gt;</h2>
+            <p>
+              Heading tags (<code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>) define the structure and hierarchy of
+              content.
+              <code>&lt;h1&gt;</code> is the largest and most important heading; subsequent headings decrease in size.
+              They are crucial for both user readability and SEO, as search engines use headings to understand content
+              structure.
+              Proper use of headings helps in organizing the document logically.
+              It is recommended to use only one <code>&lt;h1&gt;</code> per page.
+            </p>
+            <pre>&lt;h1&gt;Main Heading&lt;/h1&gt;
+  &lt;h2&gt;Subheading&lt;/h2&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 5: <p> -->
+          <div class="tag" data-code='&lt;p&gt;This is a paragraph.&lt;/p&gt;' id="paragraph">
+            <h2>&lt;p&gt;</h2>
+            <p>
+              The <code>&lt;p&gt;</code> tag is used to define paragraphs in HTML.
+              It automatically creates a block of text with spacing before and after.
+              This tag is essential for breaking up large amounts of text into readable sections.
+              You can style paragraphs using CSS to adjust spacing, alignment, and font properties.
+              It is one of the most commonly used elements in HTML documents.
+            </p>
+            <pre>&lt;p&gt;This is a paragraph.&lt;/p&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 6: <a> -->
+          <div class="tag" data-code='&lt;a href="https://www.example.com" target="_blank"&gt;Visit Example&lt;/a&gt;'
+            id="link">
+            <h2>&lt;a&gt;</h2>
+            <p>
+              The <code>&lt;a&gt;</code> tag creates hyperlinks, allowing users to navigate between web pages.
+              It requires the href attribute to specify the destination URL.
+              The target attribute (like target="_blank") can be used to open links in a new tab.
+              This tag can wrap text, images, or other elements.
+              Using descriptive link text improves accessibility and SEO.
+            </p>
+            <pre>&lt;a href="https://www.example.com" target="_blank"&gt;Visit Example&lt;/a&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 7: <img> -->
+          <div class="tag" data-code='&lt;img src="https://via.placeholder.com/150" alt="Sample Image" width="150"&gt;'
+            id="image">
+            <h2>&lt;img&gt;</h2>
+            <p>
+              The <code>&lt;img&gt;</code> tag is used to display images on a webpage.
+              It requires the src attribute to specify the image URL and the alt attribute for accessibility.
+              Alt text helps search engines understand the image and aids screen readers.
+              You can control image dimensions with width and height attributes.
+              Styling can further adjust the image’s appearance using CSS.
+            </p>
+            <pre>&lt;img src="https://via.placeholder.com/150" alt="Sample Image" width="150"&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 8: <div> -->
+          <div class="tag" data-code='&lt;div&gt;This is a container&lt;/div&gt;'>
+            <h2>&lt;div&gt;</h2>
+            <p>
+              The <code>&lt;div&gt;</code> tag is a block-level container used to group other elements.
+              It does not inherently change the presentation of content, but it is widely used for layout and styling.
+              Developers use divs to structure a page into sections.
+              With CSS, divs can be styled, positioned, and manipulated.
+              They help in organizing complex web pages.
+            </p>
+            <pre>&lt;div&gt;This is a container&lt;/div&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 9: <span> -->
+          <div class="tag" data-code='&lt;span style="color: red;"&gt;This text is red&lt;/span&gt;'>
+            <h2>&lt;span&gt;</h2>
+            <p>
+              The <code>&lt;span&gt;</code> tag is an inline container used to group text or elements for styling
+              purposes.
+              Unlike <code>&lt;div&gt;</code>, it does not start on a new line.
+              It is ideal for styling small portions of text within a block.
+              Using CSS, you can change the color, font, and other properties of the span.
+              It is useful for applying specific formatting to parts of a sentence.
+            </p>
+            <pre>&lt;span style="color: red;"&gt;This text is red&lt;/span&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 10: <ul>, <ol>, <li> -->
+          <div class="tag" data-code='&lt;ul&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+  &lt;/ul&gt;'>
+            <h2>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</h2>
+            <p>
+              The <code>&lt;ul&gt;</code> tag creates an unordered list with bullet points.
+              The <code>&lt;ol&gt;</code> tag creates an ordered list with numbers.
+              Each list item is defined by the <code>&lt;li&gt;</code> tag.
+              Lists help structure content in a clear and organized manner.
+              They are especially useful for navigation menus, instructions, or grouped data.
+            </p>
+            <pre>&lt;ul&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+  &lt;/ul&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 11: <form> -->
+          <div class="tag" data-code='&lt;form action="/submit" method="POST"&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;
+    &lt;input type="submit" value="Submit"&gt;
+  &lt;/form&gt;' id="form">
+            <h2>&lt;form&gt;</h2>
+            <p>
+              The <code>&lt;form&gt;</code> tag is used to define an HTML form for user input. It contains various input
+              elements like text fields, checkboxes, radio buttons, and buttons.
+              The action attribute specifies where to send the form data, and the method attribute defines how to send
+              it (GET or POST).
+              Forms are essential for submitting user data, such as login forms, surveys, and sign-up forms.
+            </p>
+            <pre>&lt;form action="/submit" method="POST"&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;
+    &lt;input type="submit" value="Submit"&gt;
+  &lt;/form&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 12: <input> -->
+          <div class="tag" data-code='&lt;input type="text" id="username" name="username"&gt;'>
+            <h2>&lt;input&gt;</h2>
+            <p>
+              The <code>&lt;input&gt;</code> tag is used to create interactive controls in a form, such as text fields,
+              checkboxes, radio buttons, and submit buttons.
+              The type attribute specifies the type of input, such as text, password, radio, checkbox, etc.
+              This tag is commonly used in forms to collect user input.
+              It is one of the most versatile tags in HTML and can accept various data types based on the type
+              attribute.
+            </p>
+            <pre>&lt;input type="text" id="username" name="username"&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 13: <button> -->
+          <div class="tag" data-code='&lt;button type="button"&gt;Click Me&lt;/button&gt;'>
+            <h2>&lt;button&gt;</h2>
+            <p>
+              The <code>&lt;button&gt;</code> tag is used to create clickable buttons in HTML. The type attribute can be
+              set to button, submit, or reset.
+              The button can trigger form submissions, reset form fields, or perform other JavaScript actions when
+              clicked.
+              It is an essential part of user interactivity on web pages.
+              You can style buttons using CSS to customize their appearance.
+            </p>
+            <pre>&lt;button type="button"&gt;Click Me&lt;/button&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 14: <select> -->
+          <div class="tag" data-code='&lt;select name="cars"&gt;
+    &lt;option value="volvo"&gt;Volvo&lt;/option&gt;
+    &lt;option value="saab"&gt;Saab&lt;/option&gt;
+    &lt;option value="mercedes"&gt;Mercedes&lt;/option&gt;
+  &lt;/select&gt;'>
+            <h2>&lt;select&gt;</h2>
+            <p>
+              The <code>&lt;select&gt;</code> tag is used to create a dropdown list. It contains
+              <code>&lt;option&gt;</code> elements, each representing a choice in the list.
+              The name attribute identifies the dropdown, and each option has a value that is submitted when the form is
+              submitted.
+              It is commonly used for selecting options like countries, payment methods, or preferences.
+            </p>
+            <pre>&lt;select name="cars"&gt;
+    &lt;option value="volvo"&gt;Volvo&lt;/option&gt;
+    &lt;option value="saab"&gt;Saab&lt;/option&gt;
+    &lt;option value="mercedes"&gt;Mercedes&lt;/option&gt;
+  &lt;/select&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 15: <option> -->
+          <div class="tag" data-code='&lt;select&gt;
+    &lt;option value="apple"&gt;Apple&lt;/option&gt;
+    &lt;option value="banana"&gt;Banana&lt;/option&gt;
+  &lt;/select&gt;'>
+            <h2>&lt;option&gt;</h2>
+            <p>
+              The <code>&lt;option&gt;</code> tag is used inside a <code>&lt;select&gt;</code> tag to define the
+              individual options in a dropdown list.
+              Each <code>&lt;option&gt;</code> element has a value attribute, which is sent when the form is submitted.
+              The text inside the <code>&lt;option&gt;</code> tag is the visible label in the dropdown list.
+            </p>
+            <pre>&lt;select&gt;
+    &lt;option value="apple"&gt;Apple&lt;/option&gt;
+    &lt;option value="banana"&gt;Banana&lt;/option&gt;
+  &lt;/select&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 16: <textarea> -->
+          <div class="tag" data-code='&lt;textarea rows="4" cols="50"&gt;Default text&lt;/textarea&gt;'>
+            <h2>&lt;textarea&gt;</h2>
+            <p>
+              The <code>&lt;textarea&gt;</code> tag is used to create a multi-line text input field, allowing users to
+              enter large amounts of text.
+              It is commonly used for comments, feedback, or any other area requiring more than a single line of text.
+              The rows and cols attributes define the visible size of the textarea.
+              You can also set a default value inside the textarea.
+            </p>
+            <pre>&lt;textarea rows="4" cols="50"&gt;Default text&lt;/textarea&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 17: <table> -->
+          <div class="tag" data-code='&lt;table border="1"&gt;
+    &lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Age&lt;/th&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;John&lt;/td&gt;&lt;td&gt;30&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;' id="table">
+            <h2>&lt;table&gt;</h2>
+            <p>
+              The <code>&lt;table&gt;</code> tag is used to create a table structure in HTML. It is often used for
+              displaying tabular data.
+              Tables are organized into rows using the <code>&lt;tr&gt;</code> tag, and columns are defined with
+              <code>&lt;td&gt;</code> (table data) or <code>&lt;th&gt;</code> (table header).
+              Tables can have a border using the border attribute or styled using CSS.
+            </p>
+            <pre>&lt;table border="1"&gt;
+    &lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Age&lt;/th&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;John&lt;/td&gt;&lt;td&gt;30&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 18: <tr> -->
+          <div class="tag" data-code='&lt;table&gt;
+    &lt;tr&gt;&lt;td&gt;Item 1&lt;/td&gt;&lt;td&gt;Price 1&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Item 2&lt;/td&gt;&lt;td&gt;Price 2&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;'>
+            <h2>&lt;tr&gt;</h2>
+            <p>
+              The <code>&lt;tr&gt;</code> tag is used to define a row in an HTML table. Inside a table row, you can
+              place table headers <code>&lt;th&gt;</code> or table data <code>&lt;td&gt;</code> elements.
+              It is an essential part of creating tabular data layouts in HTML.
+            </p>
+            <pre>&lt;table&gt;
+    &lt;tr&gt;&lt;td&gt;Item 1&lt;/td&gt;&lt;td&gt;Price 1&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Item 2&lt;/td&gt;&lt;td&gt;Price 2&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 19: <td> -->
+          <div class="tag" data-code='&lt;table&gt;
+    &lt;tr&gt;&lt;td&gt;Apple&lt;/td&gt;&lt;td&gt;10&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;'>
+            <h2>&lt;td&gt;</h2>
+            <p>
+              The <code>&lt;td&gt;</code> tag defines a cell in a table. It is used inside a <code>&lt;tr&gt;</code>
+              (table row) to hold data for a particular column.
+              It is essential for populating the table with content such as text, numbers, or images.
+            </p>
+            <pre>&lt;table&gt;
+    &lt;tr&gt;&lt;td&gt;Apple&lt;/td&gt;&lt;td&gt;10&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 20: <th> -->
+          <div class="tag" data-code='&lt;table&gt;
+    &lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Age&lt;/th&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;John&lt;/td&gt;&lt;td&gt;30&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;'>
+            <h2>&lt;th&gt;</h2>
+            <p>
+              The <code>&lt;th&gt;</code> tag is used to define a table header cell. It differs from
+              <code>&lt;td&gt;</code> (table data) by displaying text in bold and centered by default.
+              Header cells are typically used at the top of each column to describe the data in that column.
+            </p>
+            <pre>&lt;table&gt;
+    &lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Age&lt;/th&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;John&lt;/td&gt;&lt;td&gt;30&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 21: <caption> -->
+          <div class="tag" data-code='&lt;table&gt;
+    &lt;caption&gt;Student List&lt;/caption&gt;
+    &lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Grade&lt;/th&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Alice&lt;/td&gt;&lt;td&gt;A&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;'>
+            <h2>&lt;caption&gt;</h2>
+            <p>
+              The <code>&lt;caption&gt;</code> tag is used to provide a title or description for a table. It is placed
+              directly after the <code>&lt;table&gt;</code> tag.
+              It helps provide context to the data in the table, improving accessibility and readability.
+            </p>
+            <pre>&lt;table&gt;
+    &lt;caption&gt;Student List&lt;/caption&gt;
+    &lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Grade&lt;/th&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Alice&lt;/td&gt;&lt;td&gt;A&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 22: <div> -->
+          <div class="tag" data-code='&lt;div class="container"&gt;
+    &lt;p&gt;This is a paragraph inside a div.&lt;/p&gt;
+  &lt;/div&gt;'>
+            <h2>&lt;div&gt;</h2>
+            <p>
+              The <code>&lt;div&gt;</code> tag is used to group content together and apply styles to it as a block-level
+              element.
+              It does not have any specific meaning, but it is commonly used for layout purposes or to group related
+              content.
+              Divs are used frequently for creating sections of a webpage, such as headers, footers, or containers for
+              other elements.
+            </p>
+            <pre>&lt;div class="container"&gt;
+    &lt;p&gt;This is a paragraph inside a div.&lt;/p&gt;
+  &lt;/div&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 23: <span> -->
+          <div class="tag" data-code='&lt;span class="highlight"&gt;This is a highlighted text&lt;/span&gt;'>
+            <h2>&lt;span&gt;</h2>
+            <p>
+              The <code>&lt;span&gt;</code> tag is an inline container used to style a portion of text or other inline
+              elements without breaking the flow of the content.
+              It does not have any inherent styling or functionality, but it is useful for applying CSS classes or
+              attributes to specific parts of a text.
+              The <code>&lt;span&gt;</code> tag is commonly used within paragraphs, links, or other inline elements.
+            </p>
+            <pre>&lt;span class="highlight"&gt;This is a highlighted text&lt;/span&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 24: <iframe> -->
+          <div class="tag"
+            data-code='&lt;iframe src="https://www.example.com" width="600" height="400"&gt;&lt;/iframe&gt;'>
+            <h2>&lt;iframe&gt;</h2>
+            <p>
+              The <code>&lt;iframe&gt;</code> tag is used to embed another document within the current HTML page. It is
+              commonly used for displaying videos, maps, or other web pages.
+              The src attribute specifies the URL of the document to be embedded, and you can also control the width and
+              height of the iframe.
+            </p>
+            <pre>&lt;iframe src="https://www.example.com" width="600" height="400"&gt;&lt;/iframe&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 25: <audio> -->
+          <div class="tag" data-code='&lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mp3"&gt;
+    Your browser does not support the audio element.
+  &lt;/audio&gt;'>
+            <h2>&lt;audio&gt;</h2>
+            <p>
+              The <code>&lt;audio&gt;</code> tag is used to embed audio content in a web page. The controls attribute
+              provides playback controls such as play, pause, and volume control.
+              You can specify multiple sources for different audio formats, such as MP3, Ogg, or WAV, using the
+              <code>&lt;source&gt;</code> tag.
+            </p>
+            <pre>&lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mp3"&gt;
+    Your browser does not support the audio element.
+  &lt;/audio&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 26: <video> -->
+          <div class="tag" data-code='&lt;video width="320" height="240" controls&gt;
+    &lt;source src="movie.mp4" type="video/mp4"&gt;
+    Your browser does not support the video element.
+  &lt;/video&gt;'>
+            <h2>&lt;video&gt;</h2>
+            <p>
+              The <code>&lt;video&gt;</code> tag is used to embed a video file on a web page. It can contain one or more
+              <code>&lt;source&gt;</code> tags for different video formats.
+              The controls attribute adds controls for playback, such as play, pause, and volume control.
+              You can also specify the width and height of the video.
+            </p>
+            <pre>&lt;video width="320" height="240" controls&gt;
+    &lt;source src="movie.mp4" type="video/mp4"&gt;
+    Your browser does not support the video element.
+  &lt;/video&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 27: <link> -->
+          <div class="tag" data-code='&lt;link rel="stylesheet" href="styles.css"&gt;'>
+            <h2>&lt;link&gt;</h2>
+            <p>
+              The <code>&lt;link&gt;</code> tag is used to link external resources like stylesheets (CSS files), icons,
+              or web fonts to an HTML document.
+              It is typically placed inside the <code>&lt;head&gt;</code> section of the page.
+              The rel attribute specifies the relationship between the current document and the linked resource.
+            </p>
+            <pre>&lt;link rel="stylesheet" href="styles.css"&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 28: <meta> -->
+          <div class="tag" data-code='&lt;meta charset="UTF-8"&gt;'>
+            <h2>&lt;meta&gt;</h2>
+            <p>
+              The <code>&lt;meta&gt;</code> tag provides metadata about an HTML document, such as the character set,
+              page description, keywords, and author.
+              It is placed in the <code>&lt;head&gt;</code> section of the HTML document and does not display any
+              content on the page itself.
+              The <code>&lt;meta&gt;</code> tag is commonly used for setting the character encoding (e.g., UTF-8) and
+              defining the viewport for responsive web design.
+            </p>
+            <pre>&lt;meta charset="UTF-8"&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 29: <br> -->
+          <div class="tag" data-code='This is a line break<br>Here is the new line after the break'>
+            <h2>&lt;br&gt;</h2>
+            <p>
+              The <code>&lt;br&gt;</code> tag is used to insert a line break within text. It is an empty or self-closing
+              tag and does not require an end tag.
+              It’s often used in situations where you want to force content onto a new line, like in poems, addresses,
+              or when formatting text within a paragraph.
+            </p>
+            <pre>This is a line break<br>Here is the new line after the break</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 30: <strong> -->
+          <div class="tag" data-code='&lt;strong&gt;Important text&lt;/strong&gt;'>
+            <h2>&lt;strong&gt;</h2>
+            <p>
+              The <code>&lt;strong&gt;</code> tag is used to define important text. By default, text inside the
+              <code>&lt;strong&gt;</code> tag is displayed in bold.
+              It is semantically used to indicate that the text has strong emphasis or importance, often for
+              accessibility purposes like screen readers.
+            </p>
+            <pre>&lt;strong&gt;Important text&lt;/strong&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 31: <em> -->
+          <div class="tag" data-code='&lt;em&gt;Emphasized text&lt;/em&gt;'>
+            <h2>&lt;em&gt;</h2>
+            <p>
+              The <code>&lt;em&gt;</code> tag is used to emphasize text, typically displayed in italics.
+              It indicates that the enclosed text should be emphasized or stressed, which can be useful for context or
+              importance.
+            </p>
+            <pre>&lt;em&gt;Emphasized text&lt;/em&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 32: <code> -->
+          <div class="tag" data-code='&lt;code&gt;console.log("Hello World")&lt;/code&gt;'>
+            <h2>&lt;code&gt;</h2>
+            <p>
+              The <code>&lt;code&gt;</code> tag is used to define a piece of computer code. It is typically rendered in
+              a monospace font.
+              It is most often used to highlight code snippets within documentation, tutorials, or articles.
+            </p>
+            <pre>&lt;code&gt;console.log("Hello World")&lt;/code&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 33: <pre> -->
+          <div class="tag"
+            data-code='&lt;pre&gt;This is preformatted text. It preserves spacing and new lines.&lt;/pre&gt;'>
+            <h2>&lt;pre&gt;</h2>
+            <p>
+              The <code>&lt;pre&gt;</code> tag is used to define preformatted text. Text inside the
+              <code>&lt;pre&gt;</code> tag is displayed with whitespace and line breaks preserved,
+              unlike regular HTML content where multiple spaces are collapsed into one. It is often used for displaying
+              code, poetry, or any content where formatting matters.
+            </p>
+            <pre>&lt;pre&gt;This is preformatted text. It preserves spacing and new lines.&lt;/pre&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 34: <blockquote> -->
+          <div class="tag" data-code='&lt;blockquote&gt;This is a blockquote from a famous person.&lt;/blockquote&gt;'>
+            <h2>&lt;blockquote&gt;</h2>
+            <p>
+              The <code>&lt;blockquote&gt;</code> tag is used to define a block of text that is a quotation from another
+              source.
+              The text is typically indented, and it can contain other elements such as <code>&lt;p&gt;</code> or
+              <code>&lt;cite&gt;</code>.
+            </p>
+            <pre>&lt;blockquote&gt;This is a blockquote from a famous person.&lt;/blockquote&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 35: <cite> -->
+          <div class="tag" data-code='&lt;cite&gt;The Great Gatsby&lt;/cite&gt;'>
+            <h2>&lt;cite&gt;</h2>
+            <p>
+              The <code>&lt;cite&gt;</code> tag is used to define the title of a creative work like a book, movie, or
+              song. It is usually displayed in italics.
+              It is most commonly used within a <code>&lt;blockquote&gt;</code> or in reference to other cited works.
+            </p>
+            <pre>&lt;cite&gt;The Great Gatsby&lt;/cite&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 36: <mark> -->
+          <div class="tag" data-code='&lt;mark&gt;Highlighted text&lt;/mark&gt;'>
+            <h2>&lt;mark&gt;</h2>
+            <p>
+              The <code>&lt;mark&gt;</code> tag is used to highlight parts of text. By default, the highlighted text is
+              displayed with a yellow background.
+              It is often used to indicate relevant or important content, like search results or keywords in a document.
+            </p>
+            <pre>&lt;mark&gt;Highlighted text&lt;/mark&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 37: <del> -->
+          <div class="tag" data-code='&lt;del&gt;This is deleted text&lt;/del&gt;'>
+            <h2>&lt;del&gt;</h2>
+            <p>
+              The <code>&lt;del&gt;</code> tag is used to indicate that a portion of text has been deleted or is no
+              longer relevant.
+              It is typically rendered with a strikethrough effect to visually indicate removal or modification of
+              content.
+            </p>
+            <pre>&lt;del&gt;This is deleted text&lt;/del&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 38: <ins> -->
+          <div class="tag" data-code='&lt;ins&gt;This is inserted text&lt;/ins&gt;'>
+            <h2>&lt;ins&gt;</h2>
+            <p>
+              The <code>&lt;ins&gt;</code> tag is used to represent text that has been inserted into a document. It is
+              typically rendered with an underline.
+              It is often used to indicate content that has been added or updated, and is typically paired with the
+              <code>&lt;del&gt;</code> tag to show both the deleted and inserted content.
+            </p>
+            <pre>&lt;ins&gt;This is inserted text&lt;/ins&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 39: <sub> -->
+          <div class="tag" data-code='H<sub>2</sub>O'>
+            <h2>&lt;sub&gt;</h2>
+            <p>
+              The <code>&lt;sub&gt;</code> tag is used to define subscript text, which is rendered slightly below the
+              normal line of text.
+              It is commonly used in mathematical formulas or chemical formulas.
+            </p>
+            <pre>H&lt;sub&gt;2&lt;/sub&gt;O</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 40: <sup> -->
+          <div class="tag" data-code='X<sup>2</sup>'>
+            <h2>&lt;sup&gt;</h2>
+            <p>
+              The <code>&lt;sup&gt;</code> tag is used to define superscript text, which is rendered slightly above the
+              normal line of text.
+              It is commonly used for exponents in mathematical expressions or footnotes in text.
+            </p>
+            <pre>X&lt;sup&gt;2&lt;/sup&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+          <!-- Tag 41: <iframe> -->
+          <div class="tag" data-code='&lt;iframe src="https://www.example.com"&gt;&lt;/iframe&gt;'>
+            <h2>&lt;iframe&gt;</h2>
+            <p>
+              The <code>&lt;iframe&gt;</code> tag is used to embed another HTML document within the current document. It
+              is often used for embedding external content such as videos, maps, or websites.
+            </p>
+            <pre>&lt;iframe src="https://www.example.com"&gt;&lt;/iframe&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 42: <object> -->
+          <div class="tag" data-code='&lt;object data="movie.swf"&gt;&lt;/object&gt;'>
+            <h2>&lt;object&gt;</h2>
+            <p>
+              The <code>&lt;object&gt;</code> tag is used to embed objects such as images, audio, videos, or other media
+              files. It can be used for interactive content and is highly customizable.
+            </p>
+            <pre>&lt;object data="movie.swf"&gt;&lt;/object&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 43: <embed> -->
+          <div class="tag" data-code='&lt;embed src="animation.swf"&gt;'>
+            <h2>&lt;embed&gt;</h2>
+            <p>
+              The <code>&lt;embed&gt;</code> tag is used to embed multimedia content such as audio, video, or
+              interactive files into a webpage. It is often used for Flash animations or embedded media.
+            </p>
+            <pre>&lt;embed src="animation.swf"&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 44: <audio> -->
+          <div class="tag"
+            data-code='&lt;audio controls&gt;&lt;source src="audio.mp3" type="audio/mp3"&gt;&lt;/audio&gt;'>
+            <h2>&lt;audio&gt;</h2>
+            <p>
+              The <code>&lt;audio&gt;</code> tag is used to embed audio content such as music or sound effects into a
+              webpage. It supports different audio formats like MP3, Ogg, and WAV.
+            </p>
+            <pre>&lt;audio controls&gt;&lt;source src="audio.mp3" type="audio/mp3"&gt;&lt;/audio&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 45: <video> -->
+          <div class="tag"
+            data-code='&lt;video width="320" height="240" controls&gt;&lt;source src="movie.mp4" type="video/mp4"&gt;&lt;/video&gt;'>
+            <h2>&lt;video&gt;</h2>
+            <p>
+              The <code>&lt;video&gt;</code> tag is used to embed a video file in a webpage. It allows users to play
+              videos directly within the browser. You can include multiple sources for compatibility across browsers.
+            </p>
+            <pre>&lt;video width="320" height="240" controls&gt;&lt;source src="movie.mp4" type="video/mp4"&gt;&lt;/video&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 46: <progress> -->
+          <div class="tag" data-code='&lt;progress value="70" max="100"&gt;&lt;/progress&gt;'>
+            <h2>&lt;progress&gt;</h2>
+            <p>
+              The <code>&lt;progress&gt;</code> tag is used to display a progress bar indicating the completion status
+              of a task. It has attributes for value and maximum range.
+            </p>
+            <pre>&lt;progress value="70" max="100"&gt;&lt;/progress&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 47: <meter> -->
+          <div class="tag" data-code='&lt;meter value="0.6"&gt;&lt;/meter&gt;'>
+            <h2>&lt;meter&gt;</h2>
+            <p>
+              The <code>&lt;meter&gt;</code> tag represents a scalar measurement within a known range, such as disk
+              usage or the level of a gauge. It is often used for displaying performance or resource usage.
+            </p>
+            <pre>&lt;meter value="0.6"&gt;&lt;/meter&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 48: <details> -->
+          <div class="tag"
+            data-code='&lt;details&gt;&lt;summary&gt;Click to view details&lt;/summary&gt;Details content goes here&lt;/details&gt;'>
+            <h2>&lt;details&gt;</h2>
+            <p>
+              The <code>&lt;details&gt;</code> tag is used to create a collapsible section. The
+              <code>&lt;summary&gt;</code> tag is used to define the visible heading of the section, and the content is
+              revealed when the section is clicked.
+            </p>
+            <pre>&lt;details&gt;&lt;summary&gt;Click to view details&lt;/summary&gt;Details content goes here&lt;/details&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 49: <summary> -->
+          <div class="tag" data-code='&lt;summary&gt;This is a summary&lt;/summary&gt;'>
+            <h2>&lt;summary&gt;</h2>
+            <p>
+              The <code>&lt;summary&gt;</code> tag is used in conjunction with the <code>&lt;details&gt;</code> tag to
+              define the heading or summary of a collapsible section.
+            </p>
+            <pre>&lt;summary&gt;This is a summary&lt;/summary&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 50: <span> -->
+          <div class="tag" data-code='&lt;span&gt;This is inline text&lt;/span&gt;'>
+            <h2>&lt;span&gt;</h2>
+            <p>
+              The <code>&lt;span&gt;</code> tag is used to group inline elements for styling purposes without
+              introducing block-level elements. It does not change the flow of the content and can be styled using CSS.
+            </p>
+            <pre>&lt;span&gt;This is inline text&lt;/span&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 51: <div> -->
+          <div class="tag" data-code='&lt;div&gt;This is a block-level element&lt;/div&gt;'>
+            <h2>&lt;div&gt;</h2>
+            <p>
+              The <code>&lt;div&gt;</code> tag is a block-level element used to group content together. It is typically
+              used for layout purposes, allowing you to apply styles to multiple elements as a unit.
+            </p>
+            <pre>&lt;div&gt;This is a block-level element&lt;/div&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 52: <section> -->
+          <div class="tag"
+            data-code='&lt;section&gt;&lt;h2&gt;Section Title&lt;/h2&gt;&lt;p&gt;This is a section of content&lt;/p&gt;&lt;/section&gt;'>
+            <h2>&lt;section&gt;</h2>
+            <p>
+              The <code>&lt;section&gt;</code> tag is used to define sections of content, such as chapters or groups of
+              related content. It is a semantic element that helps structure the webpage into distinct sections.
+            </p>
+            <pre>&lt;section&gt;&lt;h2&gt;Section Title&lt;/h2&gt;&lt;p&gt;This is a section of content&lt;/p&gt;&lt;/section&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 53: <article> -->
+          <div class="tag"
+            data-code='&lt;article&gt;&lt;h2&gt;Article Title&lt;/h2&gt;&lt;p&gt;This is an article&lt;/p&gt;&lt;/article&gt;'>
+            <h2>&lt;article&gt;</h2>
+            <p>
+              The <code>&lt;article&gt;</code> tag is used to define independent, self-contained content, such as news
+              articles, blog posts, or other types of content that could be distributed independently.
+            </p>
+            <pre>&lt;article&gt;&lt;h2&gt;Article Title&lt;/h2&gt;&lt;p&gt;This is an article&lt;/p&gt;&lt;/article&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+          <!-- Tag 54: <footer> -->
+          <div class="tag" data-code='&lt;footer&gt;This is the footer content&lt;/footer&gt;'>
+            <h2>&lt;footer&gt;</h2>
+            <p>
+              The <code>&lt;footer&gt;</code> tag defines the footer section of a document or section. It typically
+              contains information like copyright details, contact information, or links to legal statements.
+            </p>
+            <pre>&lt;footer&gt;This is the footer content&lt;/footer&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 55: <header> -->
+          <div class="tag"
+            data-code='&lt;header&gt;&lt;h1&gt;Header Title&lt;/h1&gt;&lt;p&gt;This is the header section&lt;/p&gt;&lt;/header&gt;'>
+            <h2>&lt;header&gt;</h2>
+            <p>
+              The <code>&lt;header&gt;</code> tag defines the introductory content or navigational links for a section
+              or page. It often contains elements like titles, logos, or navigation menus.
+            </p>
+            <pre>&lt;header&gt;&lt;h1&gt;Header Title&lt;/h1&gt;&lt;p&gt;This is the header section&lt;/p&gt;&lt;/header&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 56: <main> -->
+          <div class="tag" data-code='&lt;main&gt;This is the main content of the page&lt;/main&gt;'>
+            <h2>&lt;main&gt;</h2>
+            <p>
+              The <code>&lt;main&gt;</code> tag specifies the main content of a document. There should be only one
+              <code>&lt;main&gt;</code> element in a document, and it should not contain header, footer, or sidebar
+              elements.
+            </p>
+            <pre>&lt;main&gt;This is the main content of the page&lt;/main&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 57: <mark> -->
+          <div class="tag" data-code='&lt;mark&gt;Highlighted text&lt;/mark&gt;'>
+            <h2>&lt;mark&gt;</h2>
+            <p>
+              The <code>&lt;mark&gt;</code> tag is used to highlight text, typically for indicating search results or
+              important information.
+            </p>
+            <pre>&lt;mark&gt;Highlighted text&lt;/mark&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 58: <bdi> -->
+          <div class="tag" data-code='&lt;bdi&gt;Some text&lt;/bdi&gt;'>
+            <h2>&lt;bdi&gt;</h2>
+            <p>
+              The <code>&lt;bdi&gt;</code> tag isolates text that may be formatted in a different direction than the
+              surrounding text. This is useful for mixed language content.
+            </p>
+            <pre>&lt;bdi&gt;Some text&lt;/bdi&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 59: <bdo> -->
+          <div class="tag" data-code='&lt;bdo dir="rtl"&gt;This text is right-to-left&lt;/bdo&gt;'>
+            <h2>&lt;bdo&gt;</h2>
+            <p>
+              The <code>&lt;bdo&gt;</code> tag allows you to override the default text direction. The <code>dir</code>
+              attribute can be used to set the text direction to "ltr" (left-to-right) or "rtl" (right-to-left).
+            </p>
+            <pre>&lt;bdo dir="rtl"&gt;This text is right-to-left&lt;/bdo&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 60: <wbr> -->
+          <div class="tag" data-code='&lt;wbr&gt;'>
+            <h2>&lt;wbr&gt;</h2>
+            <p>
+              The <code>&lt;wbr&gt;</code> tag is used to suggest a line break opportunity in text. It does not force a
+              break, but allows one if needed for better text wrapping.
+            </p>
+            <pre>&lt;wbr&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 61: <cite> -->
+          <div class="tag" data-code='&lt;cite&gt;Citation Source&lt;/cite&gt;'>
+            <h2>&lt;cite&gt;</h2>
+            <p>
+              The <code>&lt;cite&gt;</code> tag is used to reference the source of a quotation, artwork, book, or other
+              work. It is often used to mark references in academic or literary contexts.
+            </p>
+            <pre>&lt;cite&gt;Citation Source&lt;/cite&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 62: <q> -->
+          <div class="tag" data-code='&lt;q&gt;This is a quoted text&lt;/q&gt;'>
+            <h2>&lt;q&gt;</h2>
+            <p>
+              The <code>&lt;q&gt;</code> tag is used to represent short inline quotations. The browser automatically
+              adds quotation marks around the text.
+            </p>
+            <pre>&lt;q&gt;This is a quoted text&lt;/q&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 63: <blockquote> -->
+          <div class="tag" data-code='&lt;blockquote&gt;This is a long quotation&lt;/blockquote&gt;'>
+            <h2>&lt;blockquote&gt;</h2>
+            <p>
+              The <code>&lt;blockquote&gt;</code> tag is used to represent longer quotations from other sources.
+              Typically, blockquotes are displayed in a separate block with indentations.
+            </p>
+            <pre>&lt;blockquote&gt;This is a long quotation&lt;/blockquote&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 64: <dfn> -->
+          <div class="tag" data-code='&lt;dfn&gt;Term&lt;/dfn&gt;'>
+            <h2>&lt;dfn&gt;</h2>
+            <p>
+              The <code>&lt;dfn&gt;</code> tag is used to define a term. It typically works with a <code>title</code>
+              attribute or in contexts where you define new terminology in a document.
+            </p>
+            <pre>&lt;dfn&gt;Term&lt;/dfn&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 65: <address> -->
+          <div class="tag" data-code='&lt;address&gt;123 Main Street&lt;/address&gt;'>
+            <h2>&lt;address&gt;</h2>
+            <p>
+              The <code>&lt;address&gt;</code> tag is used to define contact information for the author or owner of a
+              document or article. It is usually placed at the bottom of the content or in the footer.
+            </p>
+            <pre>&lt;address&gt;123 Main Street&lt;/address&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 66: <b> -->
+          <div class="tag" data-code='&lt;b&gt;Bold text&lt;/b&gt;'>
+            <h2>&lt;b&gt;</h2>
+            <p>
+              The <code>&lt;b&gt;</code> tag is used to apply bold formatting to text. Unlike
+              <code>&lt;strong&gt;</code>, it does not indicate any semantic importance or emphasis.
+            </p>
+            <pre>&lt;b&gt;Bold text&lt;/b&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 67: <i> -->
+          <div class="tag" data-code='&lt;i&gt;Italic text&lt;/i&gt;'>
+            <h2>&lt;i&gt;</h2>
+            <p>
+              The <code>&lt;i&gt;</code> tag is used to apply italic formatting to text. Like the <code>&lt;b&gt;</code>
+              tag, it is a presentational element that does not imply any semantic meaning.
+            </p>
+            <pre>&lt;i&gt;Italic text&lt;/i&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 68: <u> -->
+          <div class="tag" data-code='&lt;u&gt;Underlined text&lt;/u&gt;'>
+            <h2>&lt;u&gt;</h2>
+            <p>
+              The <code>&lt;u&gt;</code> tag is used to underline text. It is generally not used for indicating
+              emphasis, as it is typically reserved for other kinds of meaning.
+            </p>
+            <pre>&lt;u&gt;Underlined text&lt;/u&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+          <!-- Tag 69: <s> -->
+          <div class="tag" data-code='&lt;s&gt;Strikethrough text&lt;/s&gt;'>
+            <h2>&lt;s&gt;</h2>
+            <p>
+              The <code>&lt;s&gt;</code> tag is used to represent text that is no longer correct or relevant and is
+              therefore struck through. It is typically used for indicating outdated content.
+            </p>
+            <pre>&lt;s&gt;Strikethrough text&lt;/s&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 70: <strike> -->
+          <div class="tag" data-code='&lt;strike&gt;Strike-through text&lt;/strike&gt;'>
+            <h2>&lt;strike&gt;</h2>
+            <p>
+              The <code>&lt;strike&gt;</code> tag represents text that is visually struck through, but it is now
+              considered outdated in favor of using <code>&lt;s&gt;</code> or CSS styling.
+            </p>
+            <pre>&lt;strike&gt;Strike-through text&lt;/strike&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 71: <small> -->
+          <div class="tag" data-code='&lt;small&gt;Small text&lt;/small&gt;'>
+            <h2>&lt;small&gt;</h2>
+            <p>
+              The <code>&lt;small&gt;</code> tag is used to decrease the size of the text. It is often used for fine
+              print or disclaimers.
+            </p>
+            <pre>&lt;small&gt;Small text&lt;/small&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 72: <sub> -->
+          <div class="tag" data-code='&lt;sub&gt;Subscript text&lt;/sub&gt;'>
+            <h2>&lt;sub&gt;</h2>
+            <p>
+              The <code>&lt;sub&gt;</code> tag is used for text that is displayed as subscript. It’s commonly used in
+              mathematical or scientific notations.
+            </p>
+            <pre>&lt;sub&gt;Subscript text&lt;/sub&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 73: <sup> -->
+          <div class="tag" data-code='&lt;sup&gt;Superscript text&lt;/sup&gt;'>
+            <h2>&lt;sup&gt;</h2>
+            <p>
+              The <code>&lt;sup&gt;</code> tag is used for superscript text. This is often used for exponents in math or
+              for footnotes.
+            </p>
+            <pre>&lt;sup&gt;Superscript text&lt;/sup&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 74: <time> -->
+          <div class="tag" data-code='&lt;time datetime="2025-04-01"&gt;April 1, 2025&lt;/time&gt;'>
+            <h2>&lt;time&gt;</h2>
+            <p>
+              The <code>&lt;time&gt;</code> tag is used to represent a specific time or date. The <code>datetime</code>
+              attribute is used to store the machine-readable date or time.
+            </p>
+            <pre>&lt;time datetime="2025-04-01"&gt;April 1, 2025&lt;/time&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 75: <u> -->
+          <div class="tag" data-code='&lt;u&gt;Underlined text&lt;/u&gt;'>
+            <h2>&lt;u&gt;</h2>
+            <p>
+              The <code>&lt;u&gt;</code> tag is used to underline text. It is not used to convey emphasis, and is
+              generally reserved for styling purposes.
+            </p>
+            <pre>&lt;u&gt;Underlined text&lt;/u&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 76: <var> -->
+          <div class="tag" data-code='&lt;var&gt;x = 10&lt;/var&gt;'>
+            <h2>&lt;var&gt;</h2>
+            <p>
+              The <code>&lt;var&gt;</code> tag is used to represent a variable in mathematical expressions or
+              programming examples.
+            </p>
+            <pre>&lt;var&gt;x = 10&lt;/var&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 77: <wbr> -->
+          <div class="tag" data-code='&lt;wbr&gt;'>
+            <h2>&lt;wbr&gt;</h2>
+            <p>
+              The <code>&lt;wbr&gt;</code> tag represents a possible line-break point in text. It suggests a place where
+              a break could happen if needed.
+            </p>
+            <pre>&lt;wbr&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 78: <hgroup> -->
+          <div class="tag"
+            data-code='&lt;hgroup&gt;&lt;h1&gt;Main Header&lt;/h1&gt;&lt;h2&gt;Sub Header&lt;/h2&gt;&lt;/hgroup&gt;'>
+            <h2>&lt;hgroup&gt;</h2>
+            <p>
+              The <code>&lt;hgroup&gt;</code> tag is used to group a set of <code>&lt;h1&gt;</code> to
+              <code>&lt;h6&gt;</code> elements for a common heading structure.
+            </p>
+            <pre>&lt;hgroup&gt;&lt;h1&gt;Main Header&lt;/h1&gt;&lt;h2&gt;Sub Header&lt;/h2&gt;&lt;/hgroup&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 79: <rp> -->
+          <div class="tag" data-code='&lt;rp&gt;( )&lt;/rp&gt;'>
+            <h2>&lt;rp&gt;</h2>
+            <p>
+              The <code>&lt;rp&gt;</code> tag is used to provide fallback text for browsers that do not support ruby
+              annotations. It's often used alongside <code>&lt;ruby&gt;</code> for East Asian typography.
+            </p>
+            <pre>&lt;rp&gt;( )&lt;/rp&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 80: <rt> -->
+          <div class="tag" data-code='&lt;rt&gt;Ruby Text&lt;/rt&gt;'>
+            <h2>&lt;rt&gt;</h2>
+            <p>
+              The <code>&lt;rt&gt;</code> tag is used inside a <code>&lt;ruby&gt;</code> element to define the
+              pronunciation of East Asian characters.
+            </p>
+            <pre>&lt;rt&gt;Ruby Text&lt;/rt&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+          <!-- Tag 81: <ruby> -->
+          <div class="tag" data-code='&lt;ruby&gt;漢字&lt;rt&gt;Kanji&lt;/rt&gt;&lt;/ruby&gt;'>
+            <h2>&lt;ruby&gt;</h2>
+            <p>
+              The <code>&lt;ruby&gt;</code> tag is used to represent ruby annotations, typically used in East Asian
+              typography to show pronunciation or translation.
+            </p>
+            <pre>&lt;ruby&gt;漢字&lt;rt&gt;Kanji&lt;/rt&gt;&lt;/ruby&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 82: <samp> -->
+          <div class="tag" data-code='&lt;samp&gt;System output&lt;/samp&gt;'>
+            <h2>&lt;samp&gt;</h2>
+            <p>
+              The <code>&lt;samp&gt;</code> tag represents output from a computer program or system.
+            </p>
+            <pre>&lt;samp&gt;System output&lt;/samp&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 83: <section> -->
+          <div class="tag" data-code='&lt;section&gt;This is a section&lt;/section&gt;'>
+            <h2>&lt;section&gt;</h2>
+            <p>
+              The <code>&lt;section&gt;</code> tag is used to define a section in a document. It is typically used to
+              group content logically.
+            </p>
+            <pre>&lt;section&gt;This is a section&lt;/section&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 84: <select> -->
+          <div class="tag"
+            data-code='&lt;select&gt;&lt;option&gt;Option 1&lt;/option&gt;&lt;option&gt;Option 2&lt;/option&gt;&lt;/select&gt;'>
+            <h2>&lt;select&gt;</h2>
+            <p>
+              The <code>&lt;select&gt;</code> tag is used to define a dropdown list of options in forms.
+            </p>
+            <pre>&lt;select&gt;&lt;option&gt;Option 1&lt;/option&gt;&lt;option&gt;Option 2&lt;/option&gt;&lt;/select&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 85: <small> -->
+          <div class="tag" data-code='&lt;small&gt;This is small text&lt;/small&gt;'>
+            <h2>&lt;small&gt;</h2>
+            <p>
+              The <code>&lt;small&gt;</code> tag is used to display smaller text. It’s often used for disclaimers or
+              legal text.
+            </p>
+            <pre>&lt;small&gt;This is small text&lt;/small&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 86: <span> -->
+          <div class="tag" data-code='&lt;span&gt;Inline text&lt;/span&gt;'>
+            <h2>&lt;span&gt;</h2>
+            <p>
+              The <code>&lt;span&gt;</code> tag is used to group inline elements for styling purposes or for applying
+              specific functionality.
+            </p>
+            <pre>&lt;span&gt;Inline text&lt;/span&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 87: <strong> -->
+          <div class="tag" data-code='&lt;strong&gt;Important text&lt;/strong&gt;'>
+            <h2>&lt;strong&gt;</h2>
+            <p>
+              The <code>&lt;strong&gt;</code> tag is used to indicate that the text is of strong importance, typically
+              rendered as bold.
+            </p>
+            <pre>&lt;strong&gt;Important text&lt;/strong&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 88: <style> -->
+          <div class="tag" data-code='&lt;style&gt;body { background-color: #f0f0f0; }&lt;/style&gt;'>
+            <h2>&lt;style&gt;</h2>
+            <p>
+              The <code>&lt;style&gt;</code> tag is used to define internal CSS styles in an HTML document.
+            </p>
+            <pre>&lt;style&gt;body { background-color: #f0f0f0; }&lt;/style&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 89: <sub> -->
+          <div class="tag" data-code='&lt;sub&gt;Subscript&lt;/sub&gt;'>
+            <h2>&lt;sub&gt;</h2>
+            <p>
+              The <code>&lt;sub&gt;</code> tag is used to define subscript text, which is typically used in chemical
+              formulas and mathematical equations.
+            </p>
+            <pre>&lt;sub&gt;Subscript&lt;/sub&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 90: <summary> -->
+          <div class="tag"
+            data-code='&lt;details&gt;&lt;summary&gt;Click to see more&lt;/summary&gt;Content&lt;/details&gt;'>
+            <h2>&lt;summary&gt;</h2>
+            <p>
+              The <code>&lt;summary&gt;</code> tag is used within the <code>&lt;details&gt;</code> tag to provide a
+              heading for additional details that can be revealed or hidden.
+            </p>
+            <pre>&lt;details&gt;&lt;summary&gt;Click to see more&lt;/summary&gt;Content&lt;/details&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 91: <sup> -->
+          <div class="tag" data-code='&lt;sup&gt;Superscript&lt;/sup&gt;'>
+            <h2>&lt;sup&gt;</h2>
+            <p>
+              The <code>&lt;sup&gt;</code> tag is used to define superscript text, commonly used for powers or
+              footnotes.
+            </p>
+            <pre>&lt;sup&gt;Superscript&lt;/sup&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 92: <table> -->
+          <div class="tag"
+            data-code='&lt;table&gt;&lt;tr&gt;&lt;td&gt;Cell 1&lt;/td&gt;&lt;td&gt;Cell 2&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;'>
+            <h2>&lt;table&gt;</h2>
+            <p>
+              The <code>&lt;table&gt;</code> tag is used to define a table. It is often used for displaying data in a
+              grid or matrix format.
+            </p>
+            <pre>&lt;table&gt;&lt;tr&gt;&lt;td&gt;Cell 1&lt;/td&gt;&lt;td&gt;Cell 2&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 93: <tbody> -->
+          <div class="tag"
+            data-code='&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Row 1&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;'>
+            <h2>&lt;tbody&gt;</h2>
+            <p>
+              The <code>&lt;tbody&gt;</code> tag is used to group the body content in a table. It contains rows and data
+              cells.
+            </p>
+            <pre>&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Row 1&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 94: <td> -->
+          <div class="tag" data-code='&lt;table&gt;&lt;tr&gt;&lt;td&gt;Cell&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;'>
+            <h2>&lt;td&gt;</h2>
+            <p>
+              The <code>&lt;td&gt;</code> tag is used to define a data cell in a table. It is used within the
+              <code>&lt;tr&gt;</code> tag, which defines a row.
+            </p>
+            <pre>&lt;table&gt;&lt;tr&gt;&lt;td&gt;Cell&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 95: <textarea> -->
+          <div class="tag" data-code='&lt;textarea&gt;Enter text here&lt;/textarea&gt;'>
+            <h2>&lt;textarea&gt;</h2>
+            <p>
+              The <code>&lt;textarea&gt;</code> tag is used to define a multi-line text input control, allowing the user
+              to enter longer text.
+            </p>
+            <pre>&lt;textarea&gt;Enter text here&lt;/textarea&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 96: <tfoot> -->
+          <div class="tag"
+            data-code='&lt;table&gt;&lt;tfoot&gt;&lt;tr&gt;&lt;td&gt;Footer&lt;/td&gt;&lt;/tr&gt;&lt;/tfoot&gt;&lt;/table&gt;'>
+            <h2>&lt;tfoot&gt;</h2>
+            <p>
+              The <code>&lt;tfoot&gt;</code> tag is used to group footer content in a table.
+            </p>
+            <pre>&lt;table&gt;&lt;tfoot&gt;&lt;tr&gt;&lt;td&gt;Footer&lt;/td&gt;&lt;/tr&gt;&lt;/tfoot&gt;&lt;/table&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 97: <th> -->
+          <div class="tag" data-code='&lt;table&gt;&lt;tr&gt;&lt;th&gt;Header&lt;/th&gt;&lt;/tr&gt;&lt;/table&gt;'>
+            <h2>&lt;th&gt;</h2>
+            <p>
+              The <code>&lt;th&gt;</code> tag is used to define a table header cell, which typically contains headings
+              for columns or rows.
+            </p>
+            <pre>&lt;table&gt;&lt;tr&gt;&lt;th&gt;Header&lt;/th&gt;&lt;/tr&gt;&lt;/table&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 98: <thead> -->
+          <div class="tag"
+            data-code='&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Header&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;/table&gt;'>
+            <h2>&lt;thead&gt;</h2>
+            <p>
+              The <code>&lt;thead&gt;</code> tag is used to group the header content in a table.
+            </p>
+            <pre>&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Header&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;/table&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 99: <tfoot> -->
+          <div class="tag"
+            data-code='&lt;table&gt;&lt;tfoot&gt;&lt;tr&gt;&lt;td&gt;Footer&lt;/td&gt;&lt;/tr&gt;&lt;/tfoot&gt;&lt;/table&gt;'>
+            <h2>&lt;tfoot&gt;</h2>
+            <p>
+              The <code>&lt;tfoot&gt;</code> tag is used to group footer content in a table.
+            </p>
+            <pre>&lt;table&gt;&lt;tfoot&gt;&lt;tr&gt;&lt;td&gt;Footer&lt;/td&gt;&lt;/tr&gt;&lt;/tfoot&gt;&lt;/table&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+
+          <!-- Tag 100: <tr> -->
+          <div class="tag" data-code='&lt;table&gt;&lt;tr&gt;&lt;td&gt;Row&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;'>
+            <h2>&lt;tr&gt;</h2>
+            <p>
+              The <code>&lt;tr&gt;</code> tag is used to define a row in a table.
+            </p>
+            <pre>&lt;table&gt;&lt;tr&gt;&lt;td&gt;Row&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</pre>
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+        </div>
+        <div id="responsive" class="rightside-content">
+
+          <!-- Responsive HTML -->
+          <div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Responsive Page&lt;/title&gt;
+    &lt;style&gt;
+      body {
+        font-family: Arial;
+        padding: 20px;
+      }
+      .box {
+        width: 100%;
+        padding: 20px;
+        background-color: #444;
+        color: white;
+        text-align: center;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h2&gt;Responsive Design Example&lt;/h2&gt;
+    &lt;div class="box"&gt;
+      Resize the browser window to see the effect!
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+            <h2>📱 Responsive HTML</h2>
+            <p>
+              Responsive HTML means designing your webpage so it <b>adapts to different screen sizes</b> — mobile,
+              tablet, desktop.
+              It ensures that users have a good experience on <b>any device</b>.
+            </p>
+            <p><b>How to Make HTML Responsive?</b></p>
+            <ul>
+              <li>Use <code>&lt;meta name="viewport"&gt;</code> tag</li>
+              <li>Use percentage widths instead of fixed px</li>
+              <li>Use CSS media queries</li>
+              <li>Use flexible images and content</li>
+            </ul>
+
+            <button class="try-btn">Try it Yourself</button>
+          </div>
+        </div>
+      </div>
+
+      <!--------- teacher section--------->
+
+
+      <div class="tree-container hidden" id="teacherSection">
+        <button onclick="changeProfession()"
+          style="float:right; margin-bottom:10px; background:#444; color:white; padding:5px 10px; border:none; border-radius:6px; cursor:pointer;">
+          Change Profession
+        </button>
+        <div id="html tree" class="rightside-content">
+          <h2>HTML Tree</h2>
+          <ul class="tree">
+            <li><span class="tag" data-info="Defines HTML version/type."> &lt;!DOCTYPE html&gt; </span></li>
+            <li class="arrow"><span class="tag" data-info="Root element of every HTML document."> &lt;html&gt; </span>
+              <ul class="tree hidden">
+                <!-- Head Section -->
+                <li class="arrow"><span class="tag" data-info="Metadata, title, links, scripts."> &lt;head&gt; </span>
+                  <ul class="tree hidden">
+                    <li><span class="tag" data-info="Defines the character encoding for the document, ensuring proper display of characters in all languages."> &lt;meta charset="UTF-8"&gt; </span></li>
+                    <li><span class="tag" data-info="Sets the viewport properties for responsive web design."> &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt; </span></li>
+                    <li><span class="tag" data-info="The title tag defines the title of the webpage that appears in the browser tab or window."> &lt;title&gt;My Page Title&lt;/title&gt; </span></li>
+                    <li><span class="tag" data-info="This tag is used to link external stylesheets to the document."> &lt;link rel="stylesheet" href="style.css"&gt; </span></li>
+                    <li><span class="tag" data-info="Internal CSS style block that allows you to add CSS rules within an HTML document."> &lt;style&gt;body { font-family: Arial, sans-serif; }&lt;/style&gt; </span></li>
+                    <li><span class="tag" data-info="Metadata tag that provides additional information about the page."> &lt;meta name="description" content="This is my webpage"&gt; </span></li>
+                    <li><span class="tag" data-info="Used to include external JavaScript files or define inline JavaScript."> &lt;script src="app.js"&gt;&lt;/script&gt; </span></li>
+                  </ul>
+                </li>
+          
+                <!-- Body Section -->
+                <li class="arrow"><span class="tag" data-info="Visible content of the page."> &lt;body&gt; </span>
+                  <ul class="tree hidden">
+          
+                    <!-- Layout Tags -->
+                    <li><span class="tag" data-info="Header/banner of the page."> &lt;header&gt; </span></li>
+                    <li><span class="tag" data-info="Navigation links (menus)."> &lt;nav&gt; </span></li>
+                    <li class="arrow"><span class="tag" data-info="Main section of page."> &lt;main&gt; </span>
+                      <ul class="tree hidden">
+                        <li><span class="tag" data-info="Logical grouping of content."> &lt;section&gt; </span></li>
+                        <li><span class="tag" data-info="Independent content unit like post or article."> &lt;article&gt; </span></li>
+                        <li><span class="tag" data-info="Sidebar or non-primary content."> &lt;aside&gt; </span></li>
+                        <li><span class="tag" data-info="Generic block element."> &lt;div&gt; </span></li>
+                        <li><span class="tag" data-info="Paragraph of text."> &lt;p&gt; </span></li>
+                        <li><span class="tag" data-info="Headings (levels h1 to h6)."> &lt;h1&gt; to &lt;h6&gt; </span></li>
+                        <li><span class="tag" data-info="Bold text."> &lt;b&gt;, &lt;strong&gt; </span></li>
+                        <li><span class="tag" data-info="Italic/emphasis."> &lt;i&gt;, &lt;em&gt; </span></li>
+                        <li><span class="tag" data-info="Line break."> &lt;br&gt; </span></li>
+                        <li><span class="tag" data-info="Horizontal rule."> &lt;hr&gt; </span></li>
+                        <li><span class="tag" data-info="Anchor (link)."> &lt;a&gt; </span></li>
+                        <li><span class="tag" data-info="Image."> &lt;img&gt; </span></li>
+                        <li><span class="tag" data-info="Audio playback."> &lt;audio&gt; </span></li>
+                        <li><span class="tag" data-info="Video playback."> &lt;video&gt; </span></li>
+                        <li><span class="tag" data-info="Embed another web page or media."> &lt;iframe&gt; </span></li>
+                        <li><span class="tag" data-info="Canvas for drawing."> &lt;canvas&gt; </span></li>
+                        <li><span class="tag" data-info="Vector graphics."> &lt;svg&gt; </span></li>
+          
+                        <!-- List -->
+                        <li class="arrow"><span class="tag" data-info="Unordered/ordered lists."> &lt;ul&gt; / &lt;ol&gt; </span>
+                          <ul class="tree hidden">
+                            <li><span class="tag" data-info="List item."> &lt;li&gt; </span></li>
+                          </ul>
+                        </li>
+          
+                         <!-- Definition List -->
+      <li class="arrow"><span class="tag" data-info="Definition list for terms and definitions."> &lt;dl&gt; </span>
+        <ul class="tree hidden">
+          <li><span class="tag" data-info="Term in a definition list."> &lt;dt&gt; </span></li>
+          <li><span class="tag" data-info="Definition in a definition list."> &lt;dd&gt; </span></li>
+        </ul>
+      </li>
+                        <!-- Table -->
+                        <li class="arrow"><span class="tag" data-info="Table data layout."> &lt;table&gt; </span>
+                          <ul class="tree hidden">
+                            <li><span class="tag" data-info="Table head."> &lt;thead&gt; </span></li>
+                            <li><span class="tag" data-info="Table body."> &lt;tbody&gt; </span></li>
+                            <li><span class="tag" data-info="Table row."> &lt;tr&gt; </span></li>
+                            <li><span class="tag" data-info="Table header cell."> &lt;th&gt; </span></li>
+                            <li><span class="tag" data-info="Table data cell."> &lt;td&gt; </span></li>
+                          </ul>
+                        </li>
+          
+                        <!-- Form -->
+                        <li class="arrow"><span class="tag" data-info="User input form."> &lt;form&gt; </span>
+                          <ul class="tree hidden">
+                            <li><span class="tag" data-info="Text input field."> &lt;input type="text"&gt; </span></li>
+                            <li><span class="tag" data-info="Password input."> &lt;input type="password"&gt; </span></li>
+                            <li><span class="tag" data-info="Radio button."> &lt;input type="radio"&gt; </span></li>
+                            <li><span class="tag" data-info="Checkbox input."> &lt;input type="checkbox"&gt; </span></li>
+                            <li><span class="tag" data-info="File uploader."> &lt;input type="file"&gt; </span></li>
+                              <!-- HTML5 Form Elements -->
+     
+          <li><span class="tag" data-info="Text input field."> &lt;input type="text" name="name"&gt; </span></li>
+          <li><span class="tag" data-info="Password input."> &lt;input type="password" name="password"&gt; </span></li>
+          <li><span class="tag" data-info="Email input."> &lt;input type="email" name="email"&gt; </span></li>
+          <li><span class="tag" data-info="Date input."> &lt;input type="date" name="dob"&gt; </span></li>
+          <li><span class="tag" data-info="Color input for picking colors."> &lt;input type="color"&gt; </span></li>
+          <li><span class="tag" data-info="Number input with optional range."> &lt;input type="number"&gt; </span></li>
+          <li><span class="tag" data-info="URL input field."> &lt;input type="url"&gt; </span></li>
+          <li><span class="tag" data-info="Tel (telephone) input field."> &lt;input type="tel"&gt; </span></li>
+          <li><span class="tag" data-info="Radio button input."> &lt;input type="radio" name="gender"&gt; </span></li>
+          <li><span class="tag" data-info="Checkbox input."> &lt;input type="checkbox" name="subscribe"&gt; </span></li>
+          <li><span class="tag" data-info="File upload input."> &lt;input type="file" name="file"&gt; </span></li>
+          <li><span class="tag" data-info="Hidden input (no visible field)."> &lt;input type="hidden" name="user_id"&gt; </span></li>
+          <li><span class="tag" data-info="Submit button for form submission."> &lt;input type="submit" value="Submit"&gt; </span></li>
+      
+                            <li><span class="tag" data-info="Label for input."> &lt;label&gt; </span></li>
+                            <li><span class="tag" data-info="Dropdown selector."> &lt;select&gt; </span></li>
+                            <li><span class="tag" data-info="Options inside select."> &lt;option&gt; </span></li>
+                            <li><span class="tag" data-info="Multiline text input."> &lt;textarea&gt; </span></li>
+                            <li><span class="tag" data-info="Form submit button."> &lt;input type="submit"&gt; </span></li>
+                          </ul>
+                        </li>
+          
+                        <!-- Interactive -->
+                        <li><span class="tag" data-info="Clickable button."> &lt;button&gt; </span></li>
+                        <li><span class="tag" data-info="Dialog/modal popup."> &lt;dialog&gt; </span></li>
+                        <li><span class="tag" data-info="Progress bar."> &lt;progress&gt; </span></li>
+                        <li><span class="tag" data-info="Measurement scale."> &lt;meter&gt; </span></li>
+                        <li><span class="tag" data-info="Popover or tooltip for extra information."> &lt;details&gt; </span></li>
+                        <li><span class="tag" data-info="For grouping content for accessibility."> &lt;figure&gt; </span></li>
+                        <li><span class="tag" data-info="Text highlighting or marking."> &lt;mark&gt; </span></li>
+                        <li><span class="tag" data-info="Used for custom templating."> &lt;template&gt; </span></li>
+                        <li><span class="tag" data-info="Defines a list of elements to be grouped."> &lt;datalist&gt; </span></li>
+                      </ul>
+                    </li>
+
+      <!-- Scripts Section -->
+      <li class="arrow"><span class="tag" data-info="Defines external or internal JavaScript code."> &lt;script&gt; </span>
+        <ul class="tree hidden">
+          <li><span class="tag" data-info="JavaScript block for inline code."> &lt;script&gt;alert('Hello!')&lt;/script&gt; </span></li>
+          <li><span class="tag" data-info="External script file reference."> &lt;script src="app.js"&gt;&lt;/script&gt; </span></li>
+        </ul>
+      </li>
+
+      <!-- Meta Tags for SEO -->
+      <li><span class="tag" data-info="Meta tag for keywords."> &lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt; </span></li>
+      <li><span class="tag" data-info="Meta tag for author."> &lt;meta name="author" content="Your Name"&gt; </span></li>
+
+      <!-- Footer Section -->
+      <li><span class="tag" data-info="Footer content and copyright."> &lt;footer&gt; </span></li>
+      
+                  </ul>
+                </li>
+              </ul>
+          </li>
+          </ul>
+          
+        </div>
+
+         <!-- 🔵 Explanation Box -->
+      <div id="infoBox">
+        <h3>🔵 Tag Explanation</h3>
+        <p>Hover over any tag to see the explanation here.</p>
+      </div>
+
+      </div>
+      <!-- ===== POPUP for Profession Selection ===== -->
+      <div class="popup-overlay" id="professionPopup">
+        <div class="popup-box">
+          <h1>Select Your Profession</h1>
+          <select id="professionSelect">
+            <option value="">-- Choose --</option>
+            <option value="student">Student</option>
+            <option value="teacher">Teacher</option>
+          </select>
+          <button onclick="submitProfession()">Continue</button>
+        </div>
+      </div>
+
+     
+
+      <!-- Live Editor Modal -->
+      <div id="modalOverlay"></div>
+      <div id="liveEditorModal">
+        <span class="close-btn">&times;</span> <!-- Close Button -->
+        <h2>Try it Yourself</h2>
+        <textarea id="editorArea">// Your example code goes here</textarea>
+        <br>
+        <button id="runEditorBtn">Run Code</button>
+        <iframe id="editorOutput"></iframe>
+      </div>
+    </section>
+  </div>
+
+
+
+
+
+  <!-- JavaScript -->
+  <script>
+
+document.addEventListener("DOMContentLoaded", function () {
+      const dropdownToggle = document.querySelector(".dropdown-toggle");
+
+      dropdownToggle.addEventListener("click", function (event) {
+        event.preventDefault();
+        this.parentElement.classList.toggle("active");
+      });
+    });
+
+    function loadContent(topic) {
+      const contentArea = document.getElementById("content-area");
+      contentArea.innerHTML = `<h2>${topic.replace(
+        "-",
+        " "
+      )}</h2><p>Content for ${topic} will appear here.</p>`;
+    }
+
+
+
+    // Selecting elements
+    const modalOverlay = document.getElementById('modalOverlay');
+    const liveEditorModal = document.getElementById('liveEditorModal');
+    const editorArea = document.getElementById('editorArea');
+    const runEditorBtn = document.getElementById('runEditorBtn');
+    const editorOutput = document.getElementById('editorOutput');
+    const closeBtn = document.querySelector('.close-btn'); // Close Button
+
+    function openModal(exampleCode) {
+      // Clear previous output
+      const doc = editorOutput.contentWindow.document;
+      doc.open();
+      doc.write(''); // Clear the previous output
+      doc.close();
+
+      // Update textarea with new code and show modal
+      editorArea.value = exampleCode;
+      liveEditorModal.style.display = "block";
+      modalOverlay.style.display = "block";
+
+      // Add animation class after a slight delay
+      setTimeout(() => {
+        liveEditorModal.classList.add("active");
+        modalOverlay.classList.add("active");
+      }, 10);
+
+    }
+
+    // Function to close modal
+    function closeModal() {
+      liveEditorModal.classList.remove("active");
+      modalOverlay.classList.remove("active");
+
+      // Delay hiding modal for smooth transition
+      setTimeout(() => {
+        liveEditorModal.style.display = "none";
+        modalOverlay.style.display = "none";
+      }, 300);
+    }
+
+    // Event listeners on all "Try it Yourself" buttons
+    document.querySelectorAll('.try-btn').forEach(button => {
+      button.addEventListener('click', function (e) {
+        e.stopPropagation();
+        const exampleCode = this.parentElement.getAttribute('data-code'); // Fetch code from data attribute
+        openModal(exampleCode);
+      });
+    });
+
+    // Run the code inside the editor
+    runEditorBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      const code = editorArea.value;
+      const doc = editorOutput.contentWindow.document;
+      doc.open();
+      doc.write(code);
+      doc.close();
+    });
+
+    // Hide modal on overlay click
+    modalOverlay.addEventListener('click', closeModal);
+
+    // Close modal when close button is clicked
+    closeBtn.addEventListener('click', closeModal);
+
+    // Prevent modal from closing when clicking inside it
+    liveEditorModal.addEventListener('click', function (e) {
+      e.stopPropagation();
+    });
+
+  </script>
+  <script src="game.js"></script>
+  <script src="script.js"></script>
+  <script src="assistant.js"></script>
+</body>
+
+</html>

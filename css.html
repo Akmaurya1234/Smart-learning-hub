@@ -1,0 +1,3283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Learning Hub</title>
+  <link href="logo3.png" rel="shortcut icon" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- CSS Styling -->
+  <style>
+    body {
+      overflow-y: hidden;
+    }
+
+  </style>
+</head>
+
+<body>
+ <!-- Top Navbar -->
+ <header class="navbar">
+  <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+  <h1 class="site-title">
+    <i class="fas fa-book-reader"></i>
+    <span><strong>Smart</strong> Learning Hub</span>
+  </h1>
+  
+  <div class="search-container">
+    <input type="text" class="search-box" id="search" placeholder="Search study materials...">
+    <span class="search-icon" id="search-icon"><i class="fas fa-search"></i></span>
+  </div>
+
+
+  <!-- Nav Menu for Large Screens -->
+  <nav class="nav-menu">
+      <ul class="nav-icons">
+        <li><a href="index.html" title="Home"><i class="fas fa-home" style="color:#fff;"></i></a></li>
+        <li><a href="htmlpage.html" title="HTML"><i class="fab fa-html5" style="color:#e34c26;"></i></a></li>
+        <li><a href="javascript.html" title="JavaScript"><i class="fab fa-js-square" style="color:#f0db4f;"></i></a></li>
+        <li><a href="c.html" title="C"><i class="fas fa-code" style="color:#00bcd4;"></i></a></li>
+        <li><a href="c++.html" title="C++"><i class="fas fa-laptop-code" style="color:#a259ff;"></i></a></li>
+        <li><a href="java.html" title="Java"><i class="fab fa-java" style="color:#f89820;"></i></a></li>
+        <li><a href="python.html" title="Python"><i class="fab fa-python" style="color:#3776ab;"></i></a></li>
+        <li><a href="cssquiz.html" title="Quizzes"><i class="fas fa-question-circle" style="color:#ffcc00;"></i></a></li>
+        <li><a href="cssnote.html" title="Notes"><i class="fas fa-sticky-note" style="color:#29b6f6;"></i></a></li>
+        
+      </ul>
+  
+  </nav>
+</header>
+
+
+  <!-- Sidebar Navigation (Hidden by Default) -->
+  <nav class="sidebar" id="sidebar">
+    <ul>
+    <!-- ✅ Sidebar Navigation with Icons for CSS Topics (No onclick) -->
+<ul>
+  <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+  <li><a href="htmlpage.html"><i class="fab fa-html5"></i> HTML</a></li>
+  
+  <li class="dropdown">
+    <a href="#" class="dropdown-toggle"><i class="fab fa-css3-alt"></i> CSS Topics ⌵</a>
+    <ul class="dropdown-menu">
+      <li><a href="#intro"><i class="fas fa-book-open"></i> Introduction</a></li>
+      <li><a href="#syntax"><i class="fas fa-code"></i> CSS Syntax</a></li>
+      <li><a href="#selectors"><i class="fas fa-mouse-pointer"></i> Selectors</a></li>
+      <li><a href="#properties"><i class="fas fa-paint-brush"></i> CSS Properties</a></li>
+      <li><a href="#specificity"><i class="fas fa-balance-scale"></i> Specificity</a></li>
+      <li><a href="#boxmodel"><i class="fas fa-cube"></i> Box Model</a></li>
+      <li><a href="#display"><i class="fas fa-th-large"></i> Display & Positioning</a></li>
+      <li><a href="#flexbox"><i class="fas fa-stream"></i> Flexbox</a></li>
+      <li><a href="#grid"><i class="fas fa-border-all"></i> Grid</a></li>
+      <li><a href="#animations"><i class="fas fa-film"></i> Animations & Transitions</a></li>
+      <li><a href="#media"><i class="fas fa-mobile-alt"></i> Media Queries</a></li>
+      <li><a href="#variables"><i class="fas fa-sliders-h"></i> CSS Variables</a></li>
+      <li><a href="#preprocessors"><i class="fas fa-cogs"></i> Preprocessors</a></li>
+    </ul>
+  </li>
+
+  <li><a href="javascript.html"><i class="fab fa-js-square"></i> JavaScript</a></li>
+  <li><a href="c.html"><i class="fas fa-code"></i> C</a></li>
+  <li><a href="c++.html"><i class="fas fa-laptop-code"></i> C++</a></li>
+  <li><a href="java.html"><i class="fab fa-java"></i> Java</a></li>
+  <li><a href="python.html"><i class="fab fa-python"></i> Python</a></li>
+  <li><a href="cssquiz.html"><i class="fas fa-question-circle"></i> Quizzes</a></li>
+  <li><a href="cssnote.html"><i class="fas fa-sticky-note"></i> Notes</a></li>
+</ul>
+    </ul>
+  </nav>
+
+  <!-- Main Content with Left Menu & Right Output Section -->
+  <div class="main-container">
+    <!-- Left Section: Menu -->
+    <aside class="left-menu">
+      <h2><i class="fab fa-css3-alt"></i> CSS Topics</h2>
+      <ul>
+        <li><a href="#intro"><i class="fas fa-book-open"></i> Introduction</a></li>
+        <li><a href="#syntax"><i class="fas fa-code"></i> CSS Syntax</a></li>
+        <li><a href="#selectors"><i class="fas fa-mouse-pointer"></i> Selectors</a></li>
+        <li><a href="#properties"><i class="fas fa-paint-brush"></i> CSS Properties</a></li>
+        <li><a href="#specificity"><i class="fas fa-layer-group"></i> Specificity</a></li>
+        <li><a href="#boxmodel"><i class="fas fa-cube"></i> Box Model</a></li>
+        <li><a href="#display"><i class="fas fa-th-large"></i> Display & Positioning</a></li>
+        <li><a href="#flexbox"><i class="fas fa-align-center"></i> Flexbox</a></li>
+        <li><a href="#grid"><i class="fas fa-border-all"></i> Grid</a></li>
+        <li><a href="#animations"><i class="fas fa-magic"></i> Animations & Transitions</a></li>
+        <li><a href="#media"><i class="fas fa-desktop"></i> Media Queries</a></li>
+        <li><a href="#variables"><i class="fas fa-dollar-sign"></i> CSS Variables</a></li>
+        <li><a href="#preprocessors"><i class="fas fa-code-branch"></i> Preprocessors</a></li>
+      </ul>
+    </aside>
+  
+  
+   <!-- Right Section: Output -->
+<section class="right-output" id="content-area">
+  <h2>Welcome to CSS Tutorials</h2>
+  <p>Select a topic from the left menu to see its content here.</p>
+
+  <div class="tree-container hidden" id="studentSection">
+    <button onclick="changeProfession()"
+      style="float:right; margin-bottom:10px; background:#444; color:white; padding:5px 10px; border:none; border-radius:6px; cursor:pointer;">
+      Change Profession
+    </button>
+
+  <!-- Introduction -->
+  <div id="intro" class="rightside-content">
+      <h2>CSS</h2>
+      <p>CSS stands for Cascading Style Sheets. It is used to control the layout and appearance of HTML elements on a webpage. CSS brings life to the structure created by HTML by adding colors, spacing, fonts, and responsive design.</p>
+      <ul type="square" id="ul1">
+          <li>Stands for Cascading Style Sheets.</li>
+          <li>Controls layout, colors, fonts, spacing, and more.</li>
+          <li>Helps separate structure (HTML) from presentation (CSS).</li>
+          <li>Allows responsive design for different devices.</li>
+          <li>Supports animations, transitions, and custom styling.</li>
+          <li>Can be written inline, internally, or externally.</li>
+      </ul>
+
+      <h2>CSS Features:</h2>
+      <ul type="square" id="ul1">
+          <li>Separates content from design for better organization.</li>
+          <li>Provides flexibility and control over layout.</li>
+          <li>Improves load time and maintenance.</li>
+          <li>Supports media queries for responsive design.</li>
+          <li>Enables styling with selectors and pseudo-classes.</li>
+          <li>Animation and transition capabilities.</li>
+          <li>Compatible across modern browsers.</li>
+      </ul>
+
+      <h2>CSS Editors:</h2>
+      <ul type="square" id="ul1">
+          <li>VS Code</li>
+          <li>Sublime Text</li>
+          <li>Atom</li>
+          <li>Brackets</li>
+          <li>Notepad++</li>
+      </ul>
+
+      <h2>CSS Versions:</h2>
+      <table>
+          <tr>
+              <th>Version</th>
+              <th>Year</th>
+          </tr>
+          <tr>
+              <td>CSS 1</td>
+              <td>1996</td>
+          </tr>
+          <tr>
+              <td>CSS 2</td>
+              <td>1998</td>
+          </tr>
+          <tr>
+              <td>CSS 2.1</td>
+              <td>2004</td>
+          </tr>
+          <tr>
+              <td>CSS 3</td>
+              <td>2012</td>
+          </tr>
+      </table>
+
+      <h2>What is a style sheet?</h2>
+      <p>A style sheet is a set of rules used to describe the presentation of HTML content. These rules define how elements appear on screen, in print, or other media.</p>
+  </div>
+
+  <!-- Basic CSS Concepts -->
+  <div id="syntax" class="rightside-content">
+    <center>
+      <h2>CSS Syntax and Usage</h2>
+  </center>
+      <h2>Basic CSS Concepts:</h2>
+      <ol type="1">
+          <li><b>Selectors:</b> Patterns used to select HTML elements for styling.</li>
+          <li><b>Properties:</b> Define what aspect of the element to style (e.g., color, font-size).</li>
+          <li><b>Values:</b> Set the style for the selected element (e.g., red, 16px).</li>
+          <li><b>Declarations:</b> A combination of property and value (e.g., color: blue;).</li>
+      </ol>
+
+      <h2>Why Learn CSS?</h2>
+      <ol type="1">
+          <li>Enhance web pages visually.</li>
+          <li>Create responsive, mobile-friendly designs.</li>
+          <li>Improve user experience and branding.</li>
+          <li>Essential skill for frontend development careers.</li>
+      </ol>
+
+      <!-- CSS Syntax -->
+      
+        
+        <div class="tag" data-code='&lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+          &lt;head&gt;
+            &lt;style&gt;
+              body {
+                background-color: #282c34;
+                color: white;
+                font-family: Arial, sans-serif;
+              }
+              h1 {
+                color: lightblue;
+              }
+            &lt;/style&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;h1&gt;Hello CSS!&lt;/h1&gt;
+            &lt;p&gt;This is a live preview of your CSS code.&lt;/p&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;'>
+        
+          <h2>Basic CSS Syntax</h2>
+          <p>
+            CSS syntax consists of a <b>selector</b> followed by a declaration block.  
+            Each declaration includes a <b>property</b> and a <b>value</b>, separated by a colon (<code>:</code>) and ended with a semicolon (<code>;</code>).  
+            CSS helps you control the style and layout of web elements using these rules.
+          </p>
+        
+          <pre><code>selector {
+          property: value;
+          property: value;
+          }</code></pre>
+        
+          <button class="try-btn">Try it Yourself</button>
+        </div>
+
+
+  <h2>Types of CSS</h2>
+  <h3>1. Inline CSS</h3>
+  <p>Styles are applied directly on the element using the <code>style</code> attribute.</p>
+  <pre><code>&lt;p style="color: red; font-size: 18px;"&gt;This is inline CSS&lt;/p&gt;</code></pre>
+
+  <h3>2. Internal CSS</h3>
+  <p>Styles are written inside a &lt;style&gt; tag within the &lt;head&gt; of an HTML document.</p>
+  <pre><code>&lt;style&gt;
+  p {
+      color: blue;
+      font-size: 16px;
+  }
+&lt;/style&gt;
+</code></pre>
+
+  <h3>3. External CSS</h3>
+  <p>Styles are placed in an external file with a <code>.css</code> extension and linked using the <code>&lt;link&gt;</code> tag.</p>
+  <pre><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
+
+  <h2>CSS Syntax</h2>
+  <p>CSS is written in a set of rules. Each rule consists of a selector and a declaration block.</p>
+  <pre><code>selector {
+  property: value;
+  property: value;
+}</code></pre>
+  <p><b>Example:</b></p>
+  <pre><code>p {
+  color: green;
+  font-size: 20px;
+}</code></pre>
+</div>
+
+<div id="selectors" class="rightside-content">
+  <h2>CSS Selectors</h2>
+  <div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      p {
+        color: orange;
+        font-size: 18px;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;This is a paragraph styled with element selector.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>Element Selector</h2>
+  <p>
+    The element selector targets all HTML elements of a specific type. For example, <code>p</code> selects all paragraph tags.
+  </p>
+  
+  <pre><code>p {
+  color: orange;
+  font-size: 18px;
+}</code></pre>
+  
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      #uniqueTitle {
+        color: crimson;
+        text-align: center;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1 id="uniqueTitle"&gt;This is a unique title&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>ID Selector</h2>
+  <p>
+    The ID selector uses the hash (<code>#</code>) symbol to style a single, unique element.
+  </p>
+
+  <pre><code>#uniqueTitle {
+  color: crimson;
+  text-align: center;
+}</code></pre>
+
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      .highlight {
+        background-color: yellow;
+        padding: 10px;
+        border-radius: 5px;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="highlight"&gt;This div is highlighted using class selector.&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>Class Selector</h2>
+  <p>
+    The class selector uses a dot (<code>.</code>) before the class name. It can be reused across multiple elements.
+  </p>
+
+  <pre><code>.highlight {
+  background-color: yellow;
+  padding: 10px;
+}</code></pre>
+
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      * {
+        font-family: monospace;
+        margin: 0;
+        padding: 0;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h2&gt;Universal Selector&lt;/h2&gt;
+    &lt;p&gt;All elements are affected by this selector.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>Universal Selector</h2>
+  <p>
+    The universal selector (<code>*</code>) targets all elements in the document.
+  </p>
+
+  <pre><code>* {
+  margin: 0;
+  padding: 0;
+}</code></pre>
+
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      h1, h2, p {
+        color: teal;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Heading 1&lt;/h1&gt;
+    &lt;h2&gt;Heading 2&lt;/h2&gt;
+    &lt;p&gt;Paragraph&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>Group Selector</h2>
+  <p>
+    The group selector applies the same styles to multiple elements using commas.
+  </p>
+
+  <pre><code>h1, h2, p {
+  color: teal;
+}</code></pre>
+
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      article p {
+        color: purple;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;article&gt;
+      &lt;p&gt;I am inside an article.&lt;/p&gt;
+    &lt;/article&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>Descendant Selector</h2>
+  <p>
+    This selector targets all elements inside a specific parent.
+  </p>
+
+  <pre><code>article p {
+  color: purple;
+}</code></pre>
+
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      div > p {
+        color: green;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div&gt;
+      &lt;p&gt;Direct child paragraph&lt;/p&gt;
+      &lt;section&gt;&lt;p&gt;Not selected&lt;/p&gt;&lt;/section&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>Child Selector</h2>
+  <p>
+    Selects only **direct** children of an element using <code>&gt;</code>.
+  </p>
+
+  <pre><code>div > p {
+  color: green;
+}</code></pre>
+
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      h1 + p {
+        color: deeppink;
+        font-style: italic;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Main Heading&lt;/h1&gt;
+    &lt;p&gt;This paragraph comes immediately after h1.&lt;/p&gt;
+    &lt;p&gt;This one is not affected.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>Adjacent Sibling Selector</h2>
+  <p>
+    The adjacent sibling selector (<code>+</code>) selects an element that is directly after another specific element, at the same level.
+  </p>
+
+  <pre><code>h1 + p {
+  color: deeppink;
+  font-style: italic;
+}</code></pre>
+
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      h1 ~ p {
+        color: orange;
+        font-weight: bold;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Title&lt;/h1&gt;
+    &lt;div&gt;Not a paragraph&lt;/div&gt;
+    &lt;p&gt;This paragraph is styled because it’s a sibling of h1.&lt;/p&gt;
+    &lt;p&gt;So is this one.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>General Sibling Selector</h2>
+  <p>
+    The general sibling selector (<code>~</code>) selects all elements that are siblings of a specified element and appear **after** it in the DOM.
+  </p>
+
+  <pre><code>h1 ~ p {
+  color: orange;
+  font-weight: bold;
+}</code></pre>
+
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      input[type="text"] {
+        background-color: #333;
+        color: white;
+        border: 2px solid lightblue;
+        padding: 8px;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;input type="text" placeholder="Enter your name"&gt;
+    &lt;input type="password" placeholder="Password"&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>Attribute Selector</h2>
+  <p>
+    Attribute selectors let you target elements based on their attributes and values. They're perfect for form styling.
+  </p>
+
+  <pre><code>input[type="text"] {
+  background-color: #333;
+  color: white;
+  border: 2px solid lightblue;
+}</code></pre>
+
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;style&gt;
+    a[target=&quot;_blank&quot;] {
+      color: red;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;a href=&quot;https://example.com&quot; target=&quot;_blank&quot;&gt;Visit&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>[attribute=value]</h2>
+  <p>Selects element with a specific attribute value.</p>
+  <pre><code>a[target="_blank"] {
+  color: red;
+}</code></pre>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;style&gt;
+    img[src^=&quot;logo&quot;] {
+      border: 2px solid green;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;img src=&quot;logo123.png&quot;&gt;
+&lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>[attribute^=value]</h2>
+  <p>Selects attribute value that starts with something.</p>
+  <pre><code>img[src^="logo"] {
+  border: 2px solid green;
+}</code></pre>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;style&gt;
+    a[href$=&quot;.pdf&quot;] {
+      color: orange;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;a href=&quot;file.pdf&quot;&gt;Download PDF&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>[attribute$=value]</h2>
+  <p>Selects attribute value that ends with something.</p>
+  <pre><code>a[href$=".pdf"] {
+  color: orange;
+}</code></pre>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;style&gt;
+    a[href*=&quot;google&quot;] {
+      text-decoration: underline;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;a href=&quot;https://www.google.com&quot;&gt;Google&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>[attribute*=value]</h2>
+  <p>Selects if attribute contains a value.</p>
+  <pre><code>a[href*="google"] {
+  text-decoration: underline;
+}</code></pre>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;style&gt;
+    p::first-letter {
+      font-size: 2em;
+      color: red;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;Styled first letter.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>::first-letter</h2>
+  <p>Styles only the first letter of the text.</p>
+  <pre><code>p::first-letter {
+  font-size: 2em;
+  color: red;
+}</code></pre>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;style&gt;
+    p::first-line {
+      font-weight: bold;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;This is a very long paragraph to show the first line effect in action.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>::first-line</h2>
+  <p>Styles only the first line of text.</p>
+  <pre><code>p::first-line {
+  font-weight: bold;
+}</code></pre>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;style&gt;
+    input::placeholder {
+      color: #888;
+      font-style: italic;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;input type=&quot;text&quot; placeholder=&quot;Enter your name&quot;&gt;
+&lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>::placeholder Selector</h2>
+  <p>Used to style placeholder text inside input fields.</p>
+  <pre><code>input::placeholder {
+  color: #888;
+  font-style: italic;
+}</code></pre>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;style&gt;
+    input:read-only {
+      background-color: #333;
+      color: #bbb;
+      border: 2px dashed #666;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;input type=&quot;text&quot; value=&quot;You can&#39;t edit this&quot; readonly&gt;
+&lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>:read-only Selector</h2>
+  <p>Styles input fields that are marked as <code>readonly</code>.</p>
+  <pre><code>input:read-only {
+  background-color: #333;
+  color: #bbb;
+}</code></pre>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;style&gt;
+    input:read-write {
+      background-color: #1a1a1a;
+      color: #0f0;
+      border: 2px solid #0f0;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;input type=&quot;text&quot; value=&quot;You can edit this&quot;&gt;
+&lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>:read-write Selector</h2>
+  <p>Targets input fields that the user can modify (not <code>readonly</code>).</p>
+  <pre><code>input:read-write {
+  background-color: black;
+  color: lime;
+}</code></pre>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      button:hover {
+        background-color: limegreen;
+        color: black;
+        transform: scale(1.1);
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;button&gt;Hover Over Me&lt;/button&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>Pseudo-Class Selector</h2>
+  <p>
+    A pseudo-class like <code>:hover</code> applies styles when an element is in a particular state — like when a mouse hovers over it.
+  </p>
+
+  <pre><code>button:hover {
+  background-color: limegreen;
+  color: black;
+}</code></pre>
+
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      p::before {
+        content: "👉 ";
+        color: yellow;
+      }
+      p::after {
+        content: " ✅";
+        color: lightgreen;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;This line is styled with pseudo-elements.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>Pseudo-Element Selector</h2>
+  <p>
+    Pseudo-elements like <code>::before</code> and <code>::after</code> let you insert content before or after an element’s actual content.
+  </p>
+
+  <pre><code>p::before {
+  content: "👉 ";
+  color: yellow;
+}
+
+p::after {
+  content: " ✅";
+  color: lightgreen;
+}</code></pre>
+
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      li:first-child {
+        color: gold;
+        font-weight: bold;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;ul&gt;
+      &lt;li&gt;First Item&lt;/li&gt;
+      &lt;li&gt;Second Item&lt;/li&gt;
+      &lt;li&gt;Third Item&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>:first-child Selector</h2>
+  <p>
+    The <code>:first-child</code> selector targets the first element among a group of siblings.
+  </p>
+
+  <pre><code>li:first-child {
+  color: gold;
+  font-weight: bold;
+}</code></pre>
+
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      li:last-child {
+        color: lightcoral;
+        font-style: italic;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Item One&lt;/li&gt;
+      &lt;li&gt;Item Two&lt;/li&gt;
+      &lt;li&gt;Item Three&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>:last-child Selector</h2>
+  <p>
+    The <code>:last-child</code> selector matches the last child of a parent element.
+  </p>
+
+  <pre><code>li:last-child {
+  color: lightcoral;
+  font-style: italic;
+}</code></pre>
+
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      li:nth-child(2) {
+        background-color: purple;
+        color: white;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Apple&lt;/li&gt;
+      &lt;li&gt;Banana&lt;/li&gt;
+      &lt;li&gt;Cherry&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>:nth-child(n) Selector</h2>
+  <p>
+    Use <code>:nth-child()</code> to select one or more elements based on their order in the parent.
+  </p>
+
+  <pre><code>li:nth-child(2) {
+  background-color: purple;
+  color: white;
+}</code></pre>
+
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      p:not(.special) {
+        color: gray;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;Normal paragraph&lt;/p&gt;
+    &lt;p class="special"&gt;This one has a class&lt;/p&gt;
+    &lt;p&gt;Another normal one&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>:not(selector)</h2>
+  <p>
+    The <code>:not()</code> selector selects everything <b>except</b> the elements that match the given selector.
+  </p>
+
+  <pre><code>p:not(.special) {
+  color: gray;
+}</code></pre>
+
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      input:checked + label {
+        color: lime;
+        font-weight: bold;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;input type="checkbox" id="check1"&gt;
+    &lt;label for="check1"&gt;I agree to terms&lt;/label&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>:checked Selector</h2>
+  <p>
+    The <code>:checked</code> selector targets radio buttons, checkboxes, and options that are checked or selected.
+  </p>
+
+  <pre><code>input:checked + label {
+  color: lime;
+  font-weight: bold;
+}</code></pre>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      input:disabled {
+        background-color: #999;
+        color: #fff;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;input type="text" value="Can not edit" disabled&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>:disabled Selector</h2>
+  <p>
+    The <code>:disabled</code> selector styles input fields that are disabled and not editable.
+  </p>
+
+  <pre><code>input:disabled {
+  background-color: #999;
+  color: #fff;
+}</code></pre>
+
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;style&gt;
+    input:enabled {
+      border: 2px solid #4caf50;
+      background-color: #1e1e1e;
+      color: #4caf50;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;input type=&quot;text&quot; value=&quot;Enabled input&quot;&gt;
+  &lt;br&gt;
+  &lt;input type=&quot;text&quot; value=&quot;Disabled input&quot; disabled&gt;
+&lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>:enabled Selector</h2>
+  <p>Targets all enabled form elements (input, textarea, etc.).</p>
+  <pre><code>input:enabled {
+  border: 2px solid green;
+}</code></pre>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      input:focus {
+        outline: none;
+        border: 2px solid cyan;
+        background-color: #111;
+        color: white;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;input type="text" placeholder="Click here to focus..."&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>:focus Selector</h2>
+  <p>
+    The <code>:focus</code> selector targets input fields when they are focused (clicked or tabbed into).
+  </p>
+
+  <pre><code>input:focus {
+  border: 2px solid cyan;
+  background-color: #111;
+  color: white;
+}</code></pre>
+
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      ::selection {
+        background: orange;
+        color: white;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;Try selecting this text to see the custom selection color.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>::selection Selector</h2>
+  <p>
+    The <code>::selection</code> pseudo-element changes the style of text when it is selected by the user.
+  </p>
+
+  <pre><code>::selection {
+  background: orange;
+  color: white;
+}</code></pre>
+
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      input:valid {
+        border: 2px solid limegreen;
+      }
+      input:invalid {
+        border: 2px solid red;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;input type="email" placeholder="Enter a valid email"&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>:valid / :invalid Selectors</h2>
+  <p>
+    These selectors help validate form inputs. Green border appears for valid inputs and red for invalid ones.
+  </p>
+
+  <pre><code>input:valid {
+  border: 2px solid limegreen;
+}
+input:invalid {
+  border: 2px solid red;
+}</code></pre>
+
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      button:hover {
+        background-color: crimson;
+        color: white;
+        transform: scale(1.1);
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;button&gt;Hover Me!&lt;/button&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>:hover Selector</h2>
+  <p>
+    This selector applies styles when the user hovers over an element with their mouse.
+  </p>
+
+  <pre><code>button:hover {
+  background-color: crimson;
+  color: white;
+  transform: scale(1.1);
+}</code></pre>
+
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      p:empty {
+        width: 100px;
+        height: 30px;
+        background-color: red;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;&lt;/p&gt;
+    &lt;p&gt;I have content.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>:empty Selector</h2>
+  <p>
+    This selector targets elements that have no children — not even text or whitespace.
+  </p>
+
+  <pre><code>p:empty {
+  background-color: red;
+}</code></pre>
+
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      p:only-child {
+        color: gold;
+        font-weight: bold;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div&gt;&lt;p&gt;I am the only child!&lt;/p&gt;&lt;/div&gt;
+    &lt;div&gt;
+      &lt;p&gt;I have siblings&lt;/p&gt;
+      &lt;p&gt;Me too&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>:only-child Selector</h2>
+  <p>
+    Targets an element that is the only child of its parent.
+  </p>
+
+  <pre><code>p:only-child {
+  color: gold;
+  font-weight: bold;
+}</code></pre>
+
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      li:nth-of-type(2) {
+        color: lime;
+        font-weight: bold;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Item 1&lt;/li&gt;
+      &lt;li&gt;Item 2 (highlighted)&lt;/li&gt;
+      &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>:nth-of-type(n) Selector</h2>
+  <p>
+    Targets the nth element of a specific type among siblings.
+  </p>
+
+  <pre><code>li:nth-of-type(2) {
+  color: lime;
+  font-weight: bold;
+}</code></pre>
+
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      body {
+        background-color: #121212;
+        color: white;
+        font-family: Arial, sans-serif;
+      }
+      .box {
+        background-color: #222;
+        padding: 20px;
+        margin: 10px 0;
+        border: 2px solid #444;
+      }
+      p:only-of-type {
+        color: #00ffcc;
+        font-weight: bold;
+        border: 2px dashed #00ffcc;
+        padding: 10px;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h2&gt;:only-of-type Selector Example&lt;/h2&gt;
+    &lt;p&gt;This example highlights any &lt;code&gt;&amp;lt;p&gt;&lt;/code&gt; tag that is the only one among its siblings.&lt;/p&gt;
+
+    &lt;div class="box"&gt;
+      &lt;p&gt;I am the only &lt;p&gt; inside this box!&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class="box"&gt;
+      &lt;p&gt;I am one of two paragraphs, so I won't be selected.&lt;/p&gt;
+      &lt;p&gt;Me neither!&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>:only-of-type Selector</h2>
+  <p>
+    The <code>:only-of-type</code> selector selects an element if it is the **only** one of its type among its siblings.
+    <br>Example: A <code>&lt;p&gt;</code> inside a container where no other <code>&lt;p&gt;</code> exists.
+  </p>
+
+  <pre><code>p:only-of-type {
+  color: cyan;
+  font-weight: bold;
+}</code></pre>
+
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      body {
+        background-color: #121212;
+        color: white;
+        font-family: Arial, sans-serif;
+      }
+      ul {
+        padding-left: 20px;
+      }
+      li:nth-last-child(2) {
+        background-color: #333;
+        color: #00ffff;
+        font-weight: bold;
+        padding: 10px;
+        border-left: 4px solid #00ffff;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h2&gt;:nth-last-child(n) Selector Example&lt;/h2&gt;
+    &lt;p&gt;This highlights the 2nd last &lt;code&gt;&amp;lt;li&gt;&lt;/code&gt; item in a list.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;First Item&lt;/li&gt;
+      &lt;li&gt;Second Item&lt;/li&gt;
+      &lt;li&gt;Third Item&lt;/li&gt;
+      &lt;li&gt;Fourth Item&lt;/li&gt;
+      &lt;li&gt;Fifth Item (Last)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>:nth-last-child(n) Selector</h2>
+  <p>
+    The <code>:nth-last-child(n)</code> selector matches an element that is the <b>n-th child from the end</b> of its parent.
+    <br>Useful for targeting elements counting backwards.
+  </p>
+
+  <pre><code>li:nth-last-child(2) {
+  background-color: #333;
+  color: cyan;
+  font-weight: bold;
+}</code></pre>
+
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      body {
+        background-color: #121212;
+        color: white;
+        font-family: Arial, sans-serif;
+      }
+      .box {
+        padding: 20px;
+        margin: 10px 0;
+        border: 2px solid #444;
+        transition: 0.3s;
+      }
+      .box:target {
+        background-color: #1e90ff;
+        color: #fff;
+        border-color: #00bfff;
+        font-weight: bold;
+      }
+      a {
+        color: #1e90ff;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h2&gt;:target Selector Example&lt;/h2&gt;
+    &lt;p&gt;Click the links to highlight a section using the <code>:target</code> selector:&lt;/p&gt;
+
+    &lt;a href="#box1"&gt;Go to Box 1&lt;/a&gt; |
+    &lt;a href="#box2"&gt;Go to Box 2&lt;/a&gt; |
+    &lt;a href="#box3"&gt;Go to Box 3&lt;/a&gt;
+
+    &lt;div id="box1" class="box"&gt;Box 1&lt;/div&gt;
+    &lt;div id="box2" class="box"&gt;Box 2&lt;/div&gt;
+    &lt;div id="box3" class="box"&gt;Box 3&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>:target Selector</h2>
+  <p>
+    The <code>:target</code> selector is used to style the active target element of a page URL (like <code>#box1</code>).
+    It’s super useful for things like tabs, navigation, or in-page linking with visual effects.
+  </p>
+
+  <pre><code>div:target {
+  background-color: blue;
+  color: white;
+}</code></pre>
+
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      input:required {
+        border: 2px solid red;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;form&gt;
+      &lt;label&gt;Name: &lt;/label&gt;
+      &lt;input type=&quot;text&quot; required&gt;
+    &lt;/form&gt;
+  &lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>:required Selector</h2>
+  <p>Styles fields that are required in a form.</p>
+  <pre><code>input:required {
+  border: 2px solid red;
+}</code></pre>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+</div>
+
+
+
+<div id="specificity" class="rightside-content">
+
+  <div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;style&gt;
+    /* Element Selector – Specificity: 0,0,0,1 */
+    p {
+      color: green;
+    }
+
+    /* Class Selector – Specificity: 0,0,1,0 */
+    .highlight {
+      color: blue;
+    }
+
+    /* ID Selector – Specificity: 0,1,0,0 */
+    #unique {
+      color: red;
+    }
+
+    /* Combination of Class + ID – Specificity: 0,1,1,0 */
+    .highlight#unique {
+      color: orange;
+    }
+
+    /* Inline Style (in HTML tag) – Specificity: 1,0,0,0 (highest) */
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h2&gt;CSS Specificity Explained&lt;/h2&gt;
+  &lt;p&gt;CSS uses a point system to decide which rule wins when multiple selectors apply to the same element.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;b&gt;Element selector (e.g., p)&lt;/b&gt; = 1 point&lt;/li&gt;
+    &lt;li&gt;&lt;b&gt;Class selector (e.g., .highlight)&lt;/b&gt; = 10 points&lt;/li&gt;
+    &lt;li&gt;&lt;b&gt;ID selector (e.g., #unique)&lt;/b&gt; = 100 points&lt;/li&gt;
+    &lt;li&gt;&lt;b&gt;Inline style (style="")&lt;/b&gt; = 1000 points (highest)&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;p class="highlight" id="unique"&gt;
+    This paragraph has both class and ID, so the orange rule wins (class + ID = higher specificity).
+  &lt;/p&gt;
+
+  &lt;!-- Try removing class or ID to test which rule wins --&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>CSS Specificity</h2>
+  <p>
+    CSS Specificity determines which rule is applied when multiple rules target the same element.
+    More specific selectors override less specific ones.
+  </p>
+
+  <pre><code>p {
+  color: green;        /* Element selector (1 point) */
+}
+.highlight {
+  color: blue;         /* Class selector (10 points) */
+}
+#unique {
+  color: red;          /* ID selector (100 points) */
+}
+.highlight#unique {
+  color: orange;       /* Class + ID = 110 points */
+}</code></pre>
+
+  <p>
+    In the above example, the text will be <strong>orange</strong> because <code>.highlight#unique</code> has the highest specificity among them.
+  </p>
+
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+  </div>
+
+
+  <div id="boxmodel" class="rightside-content">
+
+    <div class="tag" data-code='&lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+      &lt;style&gt;
+        body {
+          background-color: #121212;
+          color: white;
+          font-family: Arial, sans-serif;
+          padding: 20px;
+        }
+  
+        .box {
+          width: 200px;
+          padding: 20px;
+          border: 5px solid #1e90ff;
+          margin: 20px auto;
+          background-color: #222;
+          color: white;
+        }
+  
+        .labels {
+          font-size: 14px;
+          color: #aaa;
+          margin-top: 10px;
+        }
+      &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+  
+      &lt;h2&gt;CSS Box Model Example&lt;/h2&gt;
+      &lt;p&gt;This box shows how &lt;strong&gt;margin, border, padding,&lt;/strong&gt; and &lt;strong&gt;content&lt;/strong&gt; work together in the Box Model.&lt;/p&gt;
+  
+      &lt;div class="box"&gt;
+        I am content inside.
+        &lt;div class="labels"&gt;
+          Padding: 20px | Border: 5px | Margin: 20px
+        &lt;/div&gt;
+      &lt;/div&gt;
+  
+    &lt;/body&gt;
+    &lt;/html&gt;'>
+  
+    <h2>CSS Box Model</h2>
+    <p>
+      The <b>Box Model</b> defines how space is handled around elements. Each element has:
+    </p>
+    <ul>
+      <li><b>Content:</b> Actual text/image.</li>
+      <li><b>Padding:</b> Space inside border.</li>
+      <li><b>Border:</b> Surrounds the padding.</li>
+      <li><b>Margin:</b> Outside space of box.</li>
+    </ul>
+  
+    <pre><code>.box {
+    width: 200px;
+    padding: 20px;
+    border: 5px solid #1e90ff;
+    margin: 20px auto;
+  }</code></pre>
+  
+    <p>
+      To control total size easily, use: <code>box-sizing: border-box;</code>  
+      This includes padding and border inside the width.
+    </p>
+  
+    <button class="try-btn">Try it Yourself</button>
+  </div>  
+  </div>
+
+  <div id="display" class="rightside-content">
+
+    <div class="tag" data-code='&lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+      &lt;style&gt;
+        .block {
+          display: block;
+          background: #1e90ff;
+          padding: 10px;
+          margin: 5px 0;
+          color: white;
+        }
+    
+        .inline {
+          display: inline;
+          background: #ff6347;
+          padding: 5px;
+          color: white;
+        }
+    
+        .inline-block {
+          display: inline-block;
+          background: #32cd32;
+          padding: 10px;
+          margin: 5px;
+          color: white;
+        }
+    
+        .none {
+          display: none;
+        }
+      &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;h2&gt;Display Property&lt;/h2&gt;
+      &lt;div class="block"&gt;Block Element&lt;/div&gt;
+      &lt;span class="inline"&gt;Inline Element&lt;/span&gt;
+      &lt;span class="inline"&gt;Another Inline&lt;/span&gt;
+      &lt;div class="inline-block"&gt;Inline-Block&lt;/div&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;'>
+    
+      <h2>CSS Display Property</h2>
+      <p><b>display</b> defines how an element behaves on the page:</p>
+      <ul>
+        <li><code>block</code>: Takes full width, starts on new line (like &lt;div&gt;)</li>
+        <li><code>inline</code>: Stays in line (like &lt;span&gt;), no width/height</li>
+        <li><code>inline-block</code>: Like inline but supports size</li>
+        <li><code>none</code>: Completely hides the element</li>
+      </ul>
+    
+      <pre><code>.block { display: block; }
+    .inline { display: inline; }
+    .inline-block { display: inline-block; }
+    .none { display: none; }</code></pre>
+    
+      <button class="try-btn">Try it Yourself</button>
+    </div>
+    
+    <div class="tag" data-code='&lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+      &lt;style&gt;
+        .container {
+          position: relative;
+          background: #222;
+          height: 200px;
+          padding: 10px;
+          color: white;
+        }
+    
+        .static-box {
+          position: static;
+        }
+    
+        .relative-box {
+          position: relative;
+          top: 10px;
+          left: 20px;
+          background: #1e90ff;
+          padding: 5px;
+        }
+    
+        .absolute-box {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          background: #ff6347;
+          padding: 5px;
+        }
+    
+        .fixed-box {
+          position: fixed;
+          bottom: 10px;
+          right: 10px;
+          background: #32cd32;
+          padding: 5px;
+        }
+      &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    
+      &lt;div class="container"&gt;
+        Container (Relative)
+        &lt;div class="static-box"&gt;Static&lt;/div&gt;
+        &lt;div class="relative-box"&gt;Relative&lt;/div&gt;
+        &lt;div class="absolute-box"&gt;Absolute&lt;/div&gt;
+      &lt;/div&gt;
+    
+      &lt;div class="fixed-box"&gt;Fixed&lt;/div&gt;
+    
+    &lt;/body&gt;
+    &lt;/html&gt;'>
+    
+      <h2>CSS Position Property</h2>
+      <p><b>position</b> controls how an element is placed on the page:</p>
+      <ul>
+        <li><code>static</code>: Default position (normal flow)</li>
+        <li><code>relative</code>: Moves relative to its original place</li>
+        <li><code>absolute</code>: Moves relative to nearest positioned ancestor</li>
+        <li><code>fixed</code>: Stays fixed in viewport (even on scroll)</li>
+        <li><code>sticky</code>: Scrolls with page but sticks when needed</li>
+      </ul>
+    
+      <pre><code>.relative-box {
+      position: relative;
+      top: 10px;
+      left: 20px;
+    }
+    
+    .absolute-box {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }</code></pre>
+    
+      <button class="try-btn">Try it Yourself</button>
+  </div>    
+
+  </div>
+
+  <div id="flexbox" class="rightside-content">
+    <div class="tag" data-code='&lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+      &lt;style&gt;
+        .flex-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 200px;
+          background-color: #222;
+          gap: 10px;
+        }
+        .box {
+          background-color: #1e90ff;
+          padding: 20px;
+          color: white;
+          font-weight: bold;
+        }
+      &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    
+    &lt;h2&gt;Flexbox Centering Example&lt;/h2&gt;
+    &lt;div class="flex-container"&gt;
+      &lt;div class="box"&gt;Box 1&lt;/div&gt;
+      &lt;div class="box"&gt;Box 2&lt;/div&gt;
+      &lt;div class="box"&gt;Box 3&lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;/body&gt;
+    &lt;/html&gt;'>
+  
+    <h2>CSS Flexbox</h2>
+  
+    <p>
+      Flexbox (Flexible Box Layout) is used to arrange elements in a **row or column** efficiently. It makes aligning, spacing, and distributing items easier — even when their size is dynamic.
+    </p>
+  
+    <p><strong>Main Concepts:</strong></p>
+    <ul>
+      <li><b>Flex Container:</b> The parent element (with <code>display: flex</code>).</li>
+      <li><b>Flex Items:</b> The children of the container. These respond to flex properties.</li>
+    </ul>
+  
+    <p><strong>Main Axis & Cross Axis:</strong></p>
+    <ul>
+      <li><b>Main Axis:</b> Direction of items — default is left to right (row).</li>
+      <li><b>Cross Axis:</b> Perpendicular to main axis — top to bottom (column).</li>
+    </ul>
+  
+    <p><strong>Key Properties:</strong></p>
+    <ul>
+      <li><b>display: flex;</b> Turns the container into a flexbox.</li>
+      <li><b>flex-direction:</b> Row (default), row-reverse, column, column-reverse.</li>
+      <li><b>justify-content:</b> Aligns items on the main axis (start, center, space-between...)</li>
+      <li><b>align-items:</b> Aligns items on the cross axis (center, stretch, flex-start...)</li>
+      <li><b>flex-wrap:</b> Allows items to wrap to the next line if needed.</li>
+    </ul>
+  
+    <pre><code>.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .box {
+    background: #1e90ff;
+    padding: 20px;
+    margin: 10px;
+    color: white;
+  }</code></pre>
+  
+    <p><strong>Bonus:</strong> You can use <code>gap</code> to create spacing between items easily!</p>
+  
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  
+  </div>
+
+  <div id="grid" class="rightside-content">
+    <div class="tag" data-code='&lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+      &lt;style&gt;
+        body {
+          background-color: #121212;
+          color: #fff;
+          font-family: Arial, sans-serif;
+        }
+        .grid-container {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 10px;
+          background-color: #1c1c1c;
+          padding: 20px;
+        }
+        .grid-item {
+          background-color: #1e90ff;
+          color: white;
+          font-weight: bold;
+          text-align: center;
+          padding: 20px;
+          border-radius: 8px;
+        }
+      &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    
+    &lt;h2&gt;CSS Grid Example&lt;/h2&gt;
+    
+    &lt;div class="grid-container"&gt;
+      &lt;div class="grid-item"&gt;1&lt;/div&gt;
+      &lt;div class="grid-item"&gt;2&lt;/div&gt;
+      &lt;div class="grid-item"&gt;3&lt;/div&gt;
+      &lt;div class="grid-item"&gt;4&lt;/div&gt;
+      &lt;div class="grid-item"&gt;5&lt;/div&gt;
+      &lt;div class="grid-item"&gt;6&lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;/body&gt;
+    &lt;/html&gt;'>
+    
+      <h2>🔳 CSS Grid Layout</h2>
+    
+      <p>
+        CSS Grid Layout is a two-dimensional system for designing web layouts. It allows you to place items in rows and columns, giving you complete control over your layout structure. It’s perfect when you want a structured layout like a gallery, dashboard, or multi-column design.
+      </p>
+    
+      <h3>🛠 How it works:</h3>
+      <ul>
+        <li><b>display: grid;</b> – Converts a container into a grid layout.</li>
+        <li><b>grid-template-columns:</b> – Defines the number and size of columns.</li>
+        <li><b>grid-template-rows:</b> – (Optional) Defines the height of rows.</li>
+        <li><b>gap:</b> – Adds spacing between items (row and column).</li>
+      </ul>
+    
+      <pre><code>.grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }</code></pre>
+    
+      <p>
+        <b>Explanation:</b>  
+        - The container becomes a grid using <code>display: grid</code>.  
+        - <code>repeat(3, 1fr)</code> means "make 3 equal columns".  
+        - <code>1fr</code> is a flexible unit: each column takes equal share.  
+        - The <code>gap</code> adds spacing between each grid item.
+      </p>
+    
+      <p><b>Output:</b> The items align into a 3-column structure. More items will wrap onto new rows automatically.</p>
+    
+      <button class="try-btn" onclick="openEditor(this)">💻 Try it Yourself</button>
+    </div>
+    
+  </div>
+
+
+  <div id="animations" class="rightside-content">
+    <div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;style&gt;
+    body {
+      background-color: #121212;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: #1e90ff;
+      margin: 40px auto;
+      border-radius: 10px;
+      transition: transform 0.5s ease, background-color 0.5s;
+    }
+
+    .box:hover {
+      transform: scale(1.3) rotate(15deg);
+      background-color: #ff1493;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;CSS Transition Example&lt;/h2&gt;
+
+&lt;div class="box"&gt;&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>🎯 CSS Transitions</h2>
+
+  <p>
+    CSS Transitions allow you to smoothly animate property changes on hover, focus, active, etc. This makes interactions feel more natural and professional.
+  </p>
+
+  <h3>🔧 Syntax:</h3>
+  <pre><code>selector {
+  transition: property duration timing-function delay;
+}</code></pre>
+
+  <ul>
+    <li><b>property</b>: The CSS property you want to animate (e.g., color, transform).</li>
+    <li><b>duration</b>: How long the transition takes (e.g., 0.5s).</li>
+    <li><b>timing-function</b>: The speed curve (e.g., ease, linear, ease-in-out).</li>
+    <li><b>delay</b>: Time before the transition starts (optional).</li>
+  </ul>
+
+  <p><b>Hover Effect Example:</b> The box grows and changes color when you hover over it.</p>
+
+  <button class="try-btn" onclick="openEditor(this)">💻 Try it Yourself</button>
+</div>
+
+<!-- SECOND: ANIMATION -->
+<div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;style&gt;
+    body {
+      background-color: #121212;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    .animate-box {
+      width: 100px;
+      height: 100px;
+      background-color: #00b894;
+      margin: 40px auto;
+      border-radius: 10px;
+      animation: moveIt 2s infinite alternate ease-in-out;
+    }
+
+    @keyframes moveIt {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(150px) rotate(45deg);
+        background-color: #fdcb6e;
+      }
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;CSS Animation Example&lt;/h2&gt;
+
+&lt;div class="animate-box"&gt;&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>🌀 CSS Animations</h2>
+
+  <p>
+    CSS Animations allow you to define complex keyframe-based animations that run automatically or on user interaction. Unlike transitions, animations don’t require a trigger like hover—they can run on page load, loop, and more.
+  </p>
+
+  <h3>📘 Key Concepts:</h3>
+  <ul>
+    <li><b>@keyframes</b>: Defines the animation steps (from → to or %).</li>
+    <li><b>animation-name</b>: The name of the keyframes to apply.</li>
+    <li><b>animation-duration</b>: How long it runs.</li>
+    <li><b>animation-iteration-count</b>: Number of times it runs (e.g., infinite).</li>
+    <li><b>animation-direction</b>: Forward, reverse, alternate, etc.</li>
+    <li><b>animation-timing-function</b>: Speed curve (ease, linear, etc.).</li>
+  </ul>
+
+  <pre><code>@keyframes moveIt {
+  from { transform: translateX(0); }
+  to   { transform: translateX(150px) rotate(45deg); }
+}
+
+.box {
+  animation: moveIt 2s infinite alternate;
+}</code></pre>
+
+  <p><b>Output:</b> The box will move back and forth continuously and rotate while changing color.</p>
+
+  <button class="try-btn" onclick="openEditor(this)">💻 Try it Yourself</button>
+</div>
+  </div>
+
+  <div id="media" class="rightside-content">
+    <div class="tag" data-code='&lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+      &lt;style&gt;
+        body {
+          background-color: #121212;
+          color: #ffffff;
+          font-family: Arial, sans-serif;
+        }
+    
+        .responsive-box {
+          width: 300px;
+          height: 150px;
+          background-color: #1e90ff;
+          margin: 40px auto;
+          text-align: center;
+          line-height: 150px;
+          font-weight: bold;
+          border-radius: 10px;
+          font-size: 20px;
+          transition: 0.5s;
+        }
+    
+        /* Media query for smaller devices */
+        @media (max-width: 600px) {
+          .responsive-box {
+            width: 90%;
+            background-color: #ff6347;
+            font-size: 16px;
+          }
+        }
+      &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    
+    &lt;h2&gt;Media Query Example&lt;/h2&gt;
+    
+    &lt;div class="responsive-box"&gt;
+      Resize Me!
+    &lt;/div&gt;
+    
+    &lt;/body&gt;
+    &lt;/html&gt;'>
+    
+      <h2>📱 CSS Media Queries</h2>
+    
+      <p>
+        Media Queries allow CSS to adapt to different screen sizes and devices. They are the foundation of **responsive design** — ensuring your website looks good on desktops, tablets, and phones.
+      </p>
+    
+      <h3>🔧 Syntax:</h3>
+      <pre><code>@media (condition) {
+      /* CSS rules */
+    }</code></pre>
+    
+      <h3>📘 Common Conditions:</h3>
+      <ul>
+        <li><b>max-width</b>: Trigger if screen width is LESS than value.</li>
+        <li><b>min-width</b>: Trigger if screen width is MORE than value.</li>
+        <li><b>orientation</b>: landscape or portrait.</li>
+        <li><b>max-height</b>, <b>min-height</b>: Similar but for height.</li>
+      </ul>
+    
+      <p>
+        Media Queries are placed either inside a CSS file or inside a &lt;style&gt; tag. You can apply different layouts, colors, fonts, and more based on screen size.
+      </p>
+    
+      <h3>💡 Example Explanation:</h3>
+      <ul>
+        <li>By default, the box is blue and 300px wide.</li>
+        <li>If the screen is smaller than 600px, the box becomes red and adjusts to 90% width with smaller text.</li>
+        <li>Try resizing your browser window to see the effect.</li>
+      </ul>
+    
+      <button class="try-btn" onclick="openEditor(this)">💻 Try it Yourself</button>
+    </div>
+  </div>
+
+  <div id="variables" class="rightside-content">
+
+    <div class="tag" data-code='&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;style&gt;
+    :root {
+      --primary-color: #1e90ff;
+      --secondary-color: #ff6347;
+      --text-color: white;
+      --box-padding: 20px;
+    }
+
+    body {
+      background-color: #121212;
+      color: var(--text-color);
+      font-family: Arial, sans-serif;
+    }
+
+    .box {
+      background-color: var(--primary-color);
+      padding: var(--box-padding);
+      text-align: center;
+      border-radius: 10px;
+      width: 300px;
+      margin: 40px auto;
+      font-size: 20px;
+      transition: 0.3s;
+    }
+
+    .box:hover {
+      background-color: var(--secondary-color);
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;CSS Variable Example&lt;/h2&gt;
+
+&lt;div class="box"&gt;
+  Hover me to change color!
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;'>
+
+  <h2>🎨 CSS Variables (Custom Properties)</h2>
+
+  <p>
+    CSS Variables let you store values (like colors, spacing, fonts) in a reusable and readable way. They make your CSS **cleaner, scalable, and easier to manage** — especially for large projects.
+  </p>
+
+  <h3>🔧 Syntax:</h3>
+  <pre><code>:root {
+  --variable-name: value;
+}
+
+selector {
+  property: var(--variable-name);
+}</code></pre>
+
+  <h3>💡 Example Explanation:</h3>
+  <ul>
+    <li><b>:root</b> is the highest scope, so variables here work globally.</li>
+    <li><b>--primary-color</b> is defined once and used with <code>var(--primary-color)</code>.</li>
+    <li>On <b>hover</b>, the background switches to <code>--secondary-color</code>.</li>
+  </ul>
+
+  <p>This allows you to change your whole website’s theme by modifying just a few values!</p>
+
+  <button class="try-btn" onclick="openEditor(this)">💻 Try it Yourself</button>
+</div>
+
+  </div>
+
+  <div id="preprocessors" class="rightside-content">
+    <div class="tag" data-code='&lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+      &lt;style&gt;
+        body {
+          background-color: #121212;
+          color: #fff;
+          font-family: Arial, sans-serif;
+          padding: 20px;
+        }
+    
+        .box {
+          background-color: #1e90ff;
+          color: white;
+          padding: 20px;
+          border-radius: 10px;
+          width: 300px;
+          margin: 30px auto;
+          font-size: 18px;
+          text-align: center;
+        }
+      &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    
+    &lt;h2&gt;CSS Preprocessor Output Example&lt;/h2&gt;
+    
+    &lt;div class="box"&gt;
+      This box is styled using Preprocessor (compiled CSS)
+    &lt;/div&gt;
+    
+    &lt;/body&gt;
+    &lt;/html&gt;'>
+    
+      <h2>⚙️ CSS Preprocessors (SASS/SCSS/LESS)</h2>
+    
+      <p>
+        A CSS Preprocessor is a special tool that extends regular CSS with additional features like **variables, nesting, functions, mixins, loops**, etc.
+        These tools make your CSS more powerful, organized, and maintainable. You write code in a preprocessor language (like **SCSS**) and compile it to normal CSS.
+      </p>
+    
+      <h3>🛠 Popular Preprocessors:</h3>
+      <ul>
+        <li><b>SASS / SCSS:</b> Most popular. SCSS uses CSS-like syntax.</li>
+        <li><b>LESS:</b> Also supports variables, nesting, mixins.</li>
+        <li><b>Stylus:</b> Less common, but highly customizable.</li>
+      </ul>
+    
+      <h3>🔧 SCSS Example:</h3>
+      <pre><code>// SCSS Code
+    $primary-color: #1e90ff;
+    $text-color: #fff;
+    
+    .box {
+      background-color: $primary-color;
+      color: $text-color;
+      padding: 20px;
+      border-radius: 10px;
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }</code></pre>
+    
+      <h3>✅ Compiled CSS Output:</h3>
+      <pre><code>.box {
+      background-color: #1e90ff;
+      color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .box:hover {
+      background-color: #187bcd;
+    }</code></pre>
+    
+      <p>
+        You write in SCSS → Then compile using tools like <b>Node.js, Sass CLI, Prepros, CodeKit, or VS Code extensions</b> → And get normal CSS.
+      </p>
+    
+      <h3>📦 Why Use Preprocessors?</h3>
+      <ul>
+        <li>✅ Clean & organized code</li>
+        <li>✅ Avoid repetition using mixins</li>
+        <li>✅ Dynamic theming with variables</li>
+        <li>✅ Modular CSS with partials and imports</li>
+        <li>✅ Supports math & logic (if, for, while)</li>
+      </ul>
+    
+      <button class="try-btn" onclick="alert('This is just the compiled output.\nUse a SCSS compiler to test real SCSS code.')">🔁 Try SCSS in Compiler</button>
+    </div>
+    
+
+  </div>
+
+  
+  <div id="properties" class="rightside-content">
+  <center>
+      <h2 align="center">Complete List of CSS Properties</h2>
+  </center>
+
+  <h2>Text & Font Properties</h2>
+  <table border="1" width="100%">
+      <tr>
+          <th>Property Name</th>
+          <th>Value</th>
+          <th>Description</th>
+      </tr>
+      <tr>
+          <td>color</td>
+          <td>color name / hex / rgb</td>
+          <td>Sets the color of the text</td>
+      </tr>
+      <tr>
+          <td>font-family</td>
+          <td>font name(s)</td>
+          <td>Specifies the font of the text</td>
+      </tr>
+      <tr>
+          <td>font-size</td>
+          <td>px / em / rem / %</td>
+          <td>Sets the size of the font</td>
+      </tr>
+      <tr>
+          <td>font-style</td>
+          <td>normal / italic / oblique</td>
+          <td>Sets the style of the font</td>
+      </tr>
+      <tr>
+          <td>font-weight</td>
+          <td>normal / bold / bolder / lighter / 100–900</td>
+          <td>Sets the weight (thickness) of the font</td>
+      </tr>
+      <tr>
+          <td>text-align</td>
+          <td>left / right / center / justify</td>
+          <td>Aligns the text horizontally</td>
+      </tr>
+      <tr>
+          <td>text-decoration</td>
+          <td>none / underline / overline / line-through</td>
+          <td>Adds decoration to text</td>
+      </tr>
+      <tr>
+          <td>text-transform</td>
+          <td>uppercase / lowercase / capitalize / none</td>
+          <td>Controls the capitalization of text</td>
+      </tr>
+      <tr>
+          <td>line-height</td>
+          <td>normal / number / length / %</td>
+          <td>Sets the height of each line of text</td>
+      </tr>
+      <tr>
+          <td>letter-spacing</td>
+          <td>normal / length</td>
+          <td>Controls space between letters</td>
+      </tr>
+      <tr>
+          <td>word-spacing</td>
+          <td>normal / length</td>
+          <td>Controls space between words</td>
+      </tr>
+      <tr>
+          <td>direction</td>
+          <td>ltr / rtl</td>
+          <td>Sets the text direction</td>
+      </tr>
+  </table>
+
+  <h2>Box Model Properties</h2>
+  <table border="1" width="100%">
+      <tr>
+          <th>Property Name</th>
+          <th>Value</th>
+          <th>Description</th>
+      </tr>
+      <tr>
+          <td>width</td>
+          <td>px / % / auto</td>
+          <td>Sets the width of an element</td>
+      </tr>
+      <tr>
+          <td>height</td>
+          <td>px / % / auto</td>
+          <td>Sets the height of an element</td>
+      </tr>
+      <tr>
+          <td>padding</td>
+          <td>px / % / em</td>
+          <td>Sets the space between content and border</td>
+      </tr>
+      <tr>
+          <td>margin</td>
+          <td>px / % / auto</td>
+          <td>Sets the space outside the border</td>
+      </tr>
+      <tr>
+          <td>border</td>
+          <td>width style color</td>
+          <td>Defines the border of an element</td>
+      </tr>
+      <tr>
+          <td>box-sizing</td>
+          <td>content-box / border-box</td>
+          <td>Defines how the total width/height is calculated</td>
+      </tr>
+  </table>
+
+  <h2>Background Properties</h2>
+  <table border="1" width="100%">
+      <tr>
+          <th>Property Name</th>
+          <th>Value</th>
+          <th>Description</th>
+      </tr>
+      <tr>
+          <td>background-color</td>
+          <td>color name / hex / rgba</td>
+          <td>Sets the background color of an element</td>
+      </tr>
+      <tr>
+          <td>background-image</td>
+          <td>url("image.jpg")</td>
+          <td>Sets a background image</td>
+      </tr>
+      <tr>
+          <td>background-repeat</td>
+          <td>repeat / no-repeat / repeat-x / repeat-y</td>
+          <td>Defines how background images are repeated</td>
+      </tr>
+      <tr>
+          <td>background-size</td>
+          <td>cover / contain / auto / length</td>
+          <td>Specifies the size of the background image</td>
+      </tr>
+      <tr>
+          <td>background-position</td>
+          <td>top / right / center / x y</td>
+          <td>Specifies the position of the background image</td>
+      </tr>
+      <tr>
+          <td>background-attachment</td>
+          <td>scroll / fixed / local</td>
+          <td>Determines whether the background scrolls with content</td>
+      </tr>
+  </table>
+
+  <h2>Positioning & Display Properties</h2>
+  <table border="1" width="100%">
+      <tr>
+          <th>Property Name</th>
+          <th>Value</th>
+          <th>Description</th>
+      </tr>
+      <tr>
+          <td>position</td>
+          <td>static / relative / absolute / fixed / sticky</td>
+          <td>Specifies how an element is positioned</td>
+      </tr>
+      <tr>
+          <td>top / right / bottom / left</td>
+          <td>px / %</td>
+          <td>Offsets an element from its positioned container</td>
+      </tr>
+      <tr>
+          <td>display</td>
+          <td>block / inline / inline-block / flex / grid / none</td>
+          <td>Sets how an element is displayed</td>
+      </tr>
+      <tr>
+          <td>z-index</td>
+          <td>number</td>
+          <td>Controls stack order of elements</td>
+      </tr>
+      <tr>
+          <td>float</td>
+          <td>left / right / none</td>
+          <td>Floats elements beside each other</td>
+      </tr>
+      <tr>
+          <td>clear</td>
+          <td>left / right / both / none</td>
+          <td>Specifies what elements can float beside it</td>
+      </tr>
+      <tr>
+          <td>overflow</td>
+          <td>visible / hidden / scroll / auto</td>
+          <td>Controls what happens when content overflows</td>
+      </tr>
+      <tr>
+          <td>visibility</td>
+          <td>visible / hidden</td>
+          <td>Hides or shows elements without changing layout</td>
+      </tr>
+  </table>
+
+  <h2>Flexbox Properties</h2>
+  <table border="1" width="100%">
+      <tr>
+          <th>Property Name</th>
+          <th>Value</th>
+          <th>Description</th>
+      </tr>
+      <tr>
+          <td>display</td>
+          <td>flex</td>
+          <td>Enables flexbox layout on a container</td>
+      </tr>
+      <tr>
+          <td>flex-direction</td>
+          <td>row / row-reverse / column / column-reverse</td>
+          <td>Defines the direction of flex items</td>
+      </tr>
+      <tr>
+          <td>justify-content</td>
+          <td>flex-start / center / space-between / space-around</td>
+          <td>Aligns items horizontally</td>
+      </tr>
+      <tr>
+          <td>align-items</td>
+          <td>stretch / center / flex-start / flex-end</td>
+          <td>Aligns items vertically</td>
+      </tr>
+      <tr>
+          <td>flex-wrap</td>
+          <td>nowrap / wrap / wrap-reverse</td>
+          <td>Controls wrapping of items</td>
+      </tr>
+      <tr>
+          <td>gap</td>
+          <td>px / em / %</td>
+          <td>Sets gap between flex items</td>
+      </tr>
+      <h2>Grid Layout Properties</h2>
+<table border="1" width="100%">
+    <tr>
+        <th>Property Name</th>
+        <th>Value</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>display</td>
+        <td>grid / inline-grid</td>
+        <td>Defines a grid container</td>
+    </tr>
+    <tr>
+        <td>grid-template-columns</td>
+        <td>length / % / auto / repeat()</td>
+        <td>Defines column sizes of the grid</td>
+    </tr>
+    <tr>
+        <td>grid-template-rows</td>
+        <td>length / % / auto</td>
+        <td>Defines row sizes of the grid</td>
+    </tr>
+    <tr>
+        <td>grid-column</td>
+        <td>start / end</td>
+        <td>Specifies a grid item's column start and end positions</td>
+    </tr>
+    <tr>
+        <td>grid-row</td>
+        <td>start / end</td>
+        <td>Specifies a grid item's row start and end positions</td>
+    </tr>
+    <tr>
+        <td>gap</td>
+        <td>length</td>
+        <td>Specifies space between rows and columns</td>
+    </tr>
+    <tr>
+        <td>justify-items</td>
+        <td>start / end / center / stretch</td>
+        <td>Aligns items horizontally inside their grid area</td>
+    </tr>
+    <tr>
+        <td>align-items</td>
+        <td>start / end / center / stretch</td>
+        <td>Aligns items vertically inside their grid area</td>
+    </tr>
+</table>
+
+<h2>Animation Properties</h2>
+<table border="1" width="100%">
+    <tr>
+        <th>Property Name</th>
+        <th>Value</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>animation-name</td>
+        <td>keyframe-name</td>
+        <td>Specifies the name of the @keyframes animation</td>
+    </tr>
+    <tr>
+        <td>animation-duration</td>
+        <td>time (s/ms)</td>
+        <td>Specifies how long the animation should take</td>
+    </tr>
+    <tr>
+        <td>animation-timing-function</td>
+        <td>ease / linear / ease-in / ease-out / cubic-bezier()</td>
+        <td>Defines speed curve of animation</td>
+    </tr>
+    <tr>
+        <td>animation-delay</td>
+        <td>time (s/ms)</td>
+        <td>Delay before animation starts</td>
+    </tr>
+    <tr>
+        <td>animation-iteration-count</td>
+        <td>number / infinite</td>
+        <td>How many times animation should run</td>
+    </tr>
+    <tr>
+        <td>animation-direction</td>
+        <td>normal / reverse / alternate / alternate-reverse</td>
+        <td>Direction in which the animation runs</td>
+    </tr>
+    <tr>
+        <td>animation-fill-mode</td>
+        <td>none / forwards / backwards / both</td>
+        <td>Defines how styles are applied before/after animation</td>
+    </tr>
+</table>
+
+<h2>Transition Properties</h2>
+<table border="1" width="100%">
+    <tr>
+        <th>Property Name</th>
+        <th>Value</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>transition-property</td>
+        <td>all / specific property</td>
+        <td>Specifies which CSS properties should transition</td>
+    </tr>
+    <tr>
+        <td>transition-duration</td>
+        <td>time (s/ms)</td>
+        <td>Duration of the transition</td>
+    </tr>
+    <tr>
+        <td>transition-timing-function</td>
+        <td>ease / linear / ease-in / ease-out / cubic-bezier()</td>
+        <td>Speed curve of transition</td>
+    </tr>
+    <tr>
+        <td>transition-delay</td>
+        <td>time (s/ms)</td>
+        <td>Delay before transition starts</td>
+    </tr>
+</table>
+
+<h2>Transform Properties</h2>
+<table border="1" width="100%">
+    <tr>
+        <th>Property Name</th>
+        <th>Value</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>transform</td>
+        <td>translate / rotate / scale / skew</td>
+        <td>Applies 2D or 3D transformation to element</td>
+    </tr>
+    <tr>
+        <td>transform-origin</td>
+        <td>x-axis y-axis</td>
+        <td>Defines the origin for transformations</td>
+    </tr>
+</table>
+
+<h2>Responsive & Media Queries</h2>
+<table border="1" width="100%">
+    <tr>
+        <th>Property Name</th>
+        <th>Value</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>@media</td>
+        <td>screen and (max-width: 768px)</td>
+        <td>Applies styles conditionally based on screen size</td>
+    </tr>
+</table>
+
+<h2>List Styling Properties</h2>
+<table border="1" width="100%">
+    <tr>
+        <th>Property Name</th>
+        <th>Value</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>list-style-type</td>
+        <td>disc / circle / square / none</td>
+        <td>Defines the marker of a list item</td>
+    </tr>
+    <tr>
+        <td>list-style-position</td>
+        <td>inside / outside</td>
+        <td>Position of list marker relative to content</td>
+    </tr>
+    <tr>
+        <td>list-style-image</td>
+        <td>url("image.png")</td>
+        <td>Uses an image as list marker</td>
+    </tr>
+</table>
+
+<h2>Table Styling Properties</h2>
+<table border="1" width="100%">
+    <tr>
+        <th>Property Name</th>
+        <th>Value</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>border-collapse</td>
+        <td>collapse / separate</td>
+        <td>Specifies whether table borders are collapsed</td>
+    </tr>
+    <tr>
+        <td>border-spacing</td>
+        <td>length</td>
+        <td>Sets space between cells when border-collapse is separate</td>
+    </tr>
+    <tr>
+        <td>empty-cells</td>
+        <td>show / hide</td>
+        <td>Controls display of empty table cells</td>
+    </tr>
+    <tr>
+        <td>table-layout</td>
+        <td>auto / fixed</td>
+        <td>Defines the table's column layout algorithm</td>
+    </tr>
+</table>
+
+<h2>Cursor & Pointer Properties</h2>
+<table border="1" width="100%">
+    <tr>
+        <th>Property Name</th>
+        <th>Value</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>cursor</td>
+        <td>pointer / default / move / wait / text / grab / not-allowed</td>
+        <td>Defines the mouse cursor to be displayed</td>
+    </tr>
+</table>
+
+<h2>Filter & Visual Effects</h2>
+<table border="1" width="100%">
+    <tr>
+        <th>Property Name</th>
+        <th>Value</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>filter</td>
+        <td>blur() / brightness() / contrast() / grayscale()</td>
+        <td>Applies visual effects to elements</td>
+    </tr>
+    <tr>
+        <td>backdrop-filter</td>
+        <td>blur() / brightness()</td>
+        <td>Applies filter to background behind element</td>
+    </tr>
+</table>
+
+<h2>Shadow & Opacity</h2>
+<table border="1" width="100%">
+    <tr>
+        <th>Property Name</th>
+        <th>Value</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>box-shadow</td>
+        <td>h-offset v-offset blur spread color</td>
+        <td>Applies shadow to element's box</td>
+    </tr>
+    <tr>
+        <td>text-shadow</td>
+        <td>h-offset v-offset blur color</td>
+        <td>Applies shadow to text</td>
+    </tr>
+    <tr>
+        <td>opacity</td>
+        <td>0 to 1</td>
+        <td>Sets transparency of element</td>
+    </tr>
+</table>
+
+<h2>Outline Properties</h2>
+<table border="1" width="100%">
+    <tr>
+        <th>Property Name</th>
+        <th>Value</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>outline</td>
+        <td>width style color</td>
+        <td>Draws an outline outside the border</td>
+    </tr>
+    <tr>
+        <td>outline-offset</td>
+        <td>length</td>
+        <td>Sets space between border and outline</td>
+    </tr>
+
+
+    <h2>Flexbox Container Properties</h2>
+    <table border="1" width="100%">
+      <tr>
+        <th>Property Name</th>
+        <th>Value</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>display</td>
+        <td>flex / inline-flex</td>
+        <td>Makes container a flexbox</td>
+      </tr>
+      <tr>
+        <td>flex-direction</td>
+        <td>row / row-reverse / column / column-reverse</td>
+        <td>Defines direction of flex items</td>
+      </tr>
+      <tr>
+        <td>flex-wrap</td>
+        <td>nowrap / wrap / wrap-reverse</td>
+        <td>Allows items to wrap</td>
+      </tr>
+      <tr>
+        <td>justify-content</td>
+        <td>flex-start / center / space-between / space-around / space-evenly</td>
+        <td>Aligns items horizontally</td>
+      </tr>
+      <tr>
+        <td>align-items</td>
+        <td>stretch / center / flex-start / flex-end / baseline</td>
+        <td>Aligns items vertically</td>
+      </tr>
+      <tr>
+        <td>align-content</td>
+        <td>stretch / center / space-between / etc.</td>
+        <td>Aligns multi-line containers</td>
+      </tr>
+      <tr>
+        <td>gap</td>
+        <td>length</td>
+        <td>Spacing between flex items</td>
+      </tr>
+    </table>
+    
+    <h2>Flex Item Properties</h2>
+    <table border="1" width="100%">
+      <tr>
+        <th>Property Name</th>
+        <th>Value</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>flex</td>
+        <td>none / auto / 1 / 0 1 auto</td>
+        <td>Short-hand for grow, shrink, basis</td>
+      </tr>
+      <tr>
+        <td>flex-grow</td>
+        <td>number</td>
+        <td>Defines how item grows</td>
+      </tr>
+      <tr>
+        <td>flex-shrink</td>
+        <td>number</td>
+        <td>Defines how item shrinks</td>
+      </tr>
+      <tr>
+        <td>flex-basis</td>
+        <td>auto / length</td>
+        <td>Default size of flex item</td>
+      </tr>
+      <tr>
+        <td>align-self</td>
+        <td>auto / flex-start / center / etc.</td>
+        <td>Overrides align-items for specific item</td>
+      </tr>
+      <tr>
+        <td>order</td>
+        <td>number</td>
+        <td>Defines order of flex items</td>
+      </tr>
+    </table>
+    
+    <h2>Object & Clip Properties</h2>
+    <table border="1" width="100%">
+      <tr>
+        <th>Property Name</th>
+        <th>Value</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>object-fit</td>
+        <td>fill / contain / cover / scale-down / none</td>
+        <td>How image/video fits in container</td>
+      </tr>
+      <tr>
+        <td>object-position</td>
+        <td>x y</td>
+        <td>Alignment of replaced content (e.g. image)</td>
+      </tr>
+      <tr>
+        <td>clip-path</td>
+        <td>circle(), ellipse(), polygon(), etc.</td>
+        <td>Clips element to a shape</td>
+      </tr>
+    </table>
+    
+    <h2>Multi-column Layout Properties</h2>
+    <table border="1" width="100%">
+      <tr>
+        <th>Property Name</th>
+        <th>Value</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>column-count</td>
+        <td>number</td>
+        <td>Number of columns</td>
+      </tr>
+      <tr>
+        <td>column-gap</td>
+        <td>length</td>
+        <td>Gap between columns</td>
+      </tr>
+      <tr>
+        <td>column-rule</td>
+        <td>width style color</td>
+        <td>Line between columns</td>
+      </tr>
+      <tr>
+        <td>column-span</td>
+        <td>all / none</td>
+        <td>Element spans across columns</td>
+      </tr>
+    </table>
+    
+    <h2>Writing & Direction</h2>
+    <table border="1" width="100%">
+      <tr>
+        <th>Property Name</th>
+        <th>Value</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>writing-mode</td>
+        <td>horizontal-tb / vertical-rl / vertical-lr</td>
+        <td>Sets text direction flow</td>
+      </tr>
+      <tr>
+        <td>direction</td>
+        <td>ltr / rtl</td>
+        <td>Sets left-to-right or right-to-left text</td>
+      </tr>
+    </table>
+    
+    <h2>Visibility & Interaction</h2>
+    <table border="1" width="100%">
+      <tr>
+        <th>Property Name</th>
+        <th>Value</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>visibility</td>
+        <td>visible / hidden / collapse</td>
+        <td>Show/hide without removing layout</td>
+      </tr>
+      <tr>
+        <td>pointer-events</td>
+        <td>auto / none</td>
+        <td>Enables/disables mouse interactions</td>
+      </tr>
+      <tr>
+        <td>user-select</td>
+        <td>auto / none / text / all</td>
+        <td>Allows or prevents text selection</td>
+      </tr>
+    </table>
+    
+    <h2>Miscellaneous Properties</h2>
+    <table border="1" width="100%">
+      <tr>
+        <th>Property Name</th>
+        <th>Value</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>resize</td>
+        <td>none / both / horizontal / vertical</td>
+        <td>Makes elements resizable</td>
+      </tr>
+      <tr>
+        <td>scroll-behavior</td>
+        <td>auto / smooth</td>
+        <td>Scroll behavior for in-page navigation</td>
+      </tr>
+      <tr>
+        <td>will-change</td>
+        <td>transform / opacity / scroll-position</td>
+        <td>Hints browser for future changes</td>
+      </tr>
+    </table>
+    
+    <h2>Logical Properties (for RTL/LTR support)</h2>
+    <table border="1" width="100%">
+      <tr>
+        <th>Property Name</th>
+        <th>Value</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>margin-inline / margin-block</td>
+        <td>length</td>
+        <td>Inline/Block start/end margins</td>
+      </tr>
+      <tr>
+        <td>padding-inline / padding-block</td>
+        <td>length</td>
+        <td>Inline/Block paddings</td>
+      </tr>
+      <tr>
+        <td>inset</td>
+        <td>top right bottom left</td>
+        <td>Shorthand for positioning (logical)</td>
+      </tr>
+    </table>   
+</div>
+</div>
+
+
+
+ <!--------- teacher section--------->
+
+ <div class="tree-container hidden" id="teacherSection">
+  <button onclick="changeProfession()"
+    style="float:right; margin-bottom:10px; background:#444; color:white; padding:5px 10px; border:none; border-radius:6px; cursor:pointer;">
+    Change Profession
+  </button>
+  <div id="html tree" class="rightside-content">
+    <h2>CSS Tree</h2>
+    <ul class="tree">
+      <!-- Universal Selectors -->
+      <li><span class="tag" data-info="Applies to all elements."> * { margin: 0; padding: 0; } </span></li>
+
+      <!-- Element Selectors -->
+      <li><span class="tag" data-info="Selects all paragraphs."> p { color: red; } </span></li>
+      <li><span class="tag" data-info="Selects all headings (h1 to h6)."> h1, h2, h3, h4, h5, h6 { font-family: Arial; } </span></li>
+
+      <!-- Class Selectors -->
+      <li><span class="tag" data-info="Selects elements with the class 'container'."> .container { width: 100%; padding: 20px; } </span></li>
+      <li><span class="tag" data-info="Selects elements with the class 'active'."> .active { background-color: green; } </span></li>
+
+      <!-- ID Selectors -->
+      <li><span class="tag" data-info="Selects the element with ID 'header'."> #header { background-color: blue; } </span></li>
+      <li><span class="tag" data-info="Selects the element with ID 'footer'."> #footer { background-color: black; color: white; } </span></li>
+
+      <!-- Attribute Selectors -->
+      <li><span class="tag" data-info="Selects input elements with type 'text'."> input[type="text"] { border: 1px solid black; } </span></li>
+      <li><span class="tag" data-info="Selects links with a 'href' attribute."> a[href] { color: blue; } </span></li>
+
+      <!-- Pseudo-classes -->
+      <li><span class="tag" data-info="Selects links when hovered over."> a:hover { color: red; } </span></li>
+      <li><span class="tag" data-info="Selects the first child of a parent."> div:first-child { margin-top: 10px; } </span></li>
+      <li><span class="tag" data-info="Selects elements when clicked."> button:active { transform: scale(0.98); } </span></li>
+      <li><span class="tag" data-info="Selects elements when focused."> input:focus { outline: 2px solid blue; } </span></li>
+      <li><span class="tag" data-info="Selects elements that are checked."> input:checked { background-color: yellow; } </span></li>
+
+      <!-- Pseudo-elements -->
+      <li><span class="tag" data-info="Selects the first letter of a paragraph."> p::first-letter { font-size: 2rem; font-weight: bold; } </span></li>
+      <li><span class="tag" data-info="Selects the first line of a paragraph."> p::first-line { color: green; } </span></li>
+      <li><span class="tag" data-info="Selects the content inserted via CSS."> p::before { content: 'Important: '; font-weight: bold; } </span></li>
+
+      <!-- Descendant Selectors -->
+      <li><span class="tag" data-info="Selects paragraphs inside a container."> .container p { margin: 10px; } </span></li>
+      <li><span class="tag" data-info="Selects all list items inside a navigation."> nav ul li { display: inline-block; margin-right: 15px; } </span></li>
+
+      <!-- Child Selectors -->
+      <li><span class="tag" data-info="Selects only the direct children of a div."> div > p { font-size: 14px; } </span></li>
+      <li><span class="tag" data-info="Selects all direct child div elements inside a section."> section > div { margin-top: 20px; } </span></li>
+
+      <!-- Sibling Selectors -->
+      <li><span class="tag" data-info="Selects the next sibling of a div."> div + p { color: blue; } </span></li>
+      <li><span class="tag" data-info="Selects all siblings after a div."> div ~ p { font-size: 18px; } </span></li>
+
+      <!-- Grouping Selectors -->
+      <li><span class="tag" data-info="Applies the same styles to multiple elements."> h1, h2, h3 { margin-bottom: 10px; } </span></li>
+
+      <!-- CSS Properties -->
+      <li><span class="tag" data-info="Sets the background color of an element."> .box { background-color: #f0f0f0; } </span></li>
+      <li><span class="tag" data-info="Sets the font family for text."> .text { font-family: Arial, sans-serif; } </span></li>
+      <li><span class="tag" data-info="Sets the text color of an element."> .color { color: red; } </span></li>
+      <li><span class="tag" data-info="Sets the margin space around an element."> .container { margin: 20px; } </span></li>
+      <li><span class="tag" data-info="Sets the padding inside an element."> .box { padding: 10px; } </span></li>
+      <li><span class="tag" data-info="Sets the width of an element."> .container { width: 100%; } </span></li>
+      <li><span class="tag" data-info="Sets the height of an element."> .box { height: 200px; } </span></li>
+      <li><span class="tag" data-info="Sets the font size."> .text { font-size: 16px; } </span></li>
+
+      <!-- Layout Properties -->
+      <li><span class="tag" data-info="Defines the layout type using Flexbox."> .flex { display: flex; } </span></li>
+      <li><span class="tag" data-info="Defines the grid layout."> .grid { display: grid; grid-template-columns: 1fr 1fr; } </span></li>
+      <li><span class="tag" data-info="Sets the alignment of items in a flex container."> .flex { align-items: center; justify-content: space-between; } </span></li>
+
+      <!-- Box Model Properties -->
+      <li><span class="tag" data-info="Sets the border of an element."> .box { border: 2px solid black; } </span></li>
+      <li><span class="tag" data-info="Sets the box shadow of an element."> .box { box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); } </span></li>
+      <li><span class="tag" data-info="Sets the opacity of an element."> .box { opacity: 0.8; } </span></li>
+
+      <!-- Transitions and Animations -->
+      <li><span class="tag" data-info="Defines a smooth transition effect."> .box { transition: background-color 0.5s ease; } </span></li>
+      <li><span class="tag" data-info="Defines an animation."> @keyframes slideIn { from { transform: translateX(-100%); } to { transform: translateX(0); } } </span></li>
+
+      <!-- Media Queries -->
+      <li><span class="tag" data-info="Applies styles based on screen size."> @media (max-width: 600px) { .container { flex-direction: column; } } </span></li>
+      <li><span class="tag" data-info="Applies styles for screens larger than 768px."> @media (min-width: 768px) { .container { flex-direction: row; } } </span></li>
+
+      <!-- CSS Variables -->
+      <li><span class="tag" data-info="Defines a custom property."> :root { --primary-color: #3498db; } </span></li>
+      <li><span class="tag" data-info="Uses a custom property."> .button { background-color: var(--primary-color); } </span></li>
+
+      <!-- CSS Functions -->
+      <li><span class="tag" data-info="Calculates values with the 'calc' function."> .box { width: calc(100% - 20px); } </span></li>
+      <li><span class="tag" data-info="Uses the 'rgb' function to define colors."> .color { background-color: rgb(255, 0, 0); } </span></li>
+      <li><span class="tag" data-info="Uses the 'rgba' function for transparent colors."> .box { background-color: rgba(0, 0, 0, 0.5); } </span></li>
+
+      <!-- Box Sizing -->
+      <li><span class="tag" data-info="Sets box sizing to include padding and borders in element's total width/height."> * { box-sizing: border-box; } </span></li>
+
+    </ul>
+ </div>
+  <!-- 🔵 Explanation Box -->
+  <div id="infoBox">
+    <h3>🔵 Tag Explanation</h3>
+    <p>Hover over any tag to see the explanation here.</p>
+  </div>
+</div>
+</div></div>
+
+
+
+  <!-- ===== POPUP for Profession Selection ===== -->
+  <div class="popup-overlay" id="professionPopup">
+    <div class="popup-box">
+      <h1>Select Your Profession</h1>
+      <select id="professionSelect">
+        <option value="">-- Choose --</option>
+        <option value="student">Student</option>
+        <option value="teacher">Teacher</option>
+      </select>
+      <button onclick="submitProfession()">Continue</button>
+    </div>
+  </div>
+
+ 
+
+<!-- Live Editor Modal -->
+<div id="modalOverlay"></div>
+<div id="liveEditorModal">
+  <span class="close-btn">&times;</span> <!-- Close Button -->
+  <h2>Try it Yourself</h2>
+  <textarea id="editorArea">// Your example code goes here</textarea>
+  <br>
+  <button id="runEditorBtn">Run Code</button>
+  <iframe id="editorOutput"></iframe>
+</div>
+</section>
+</div>
+  <footer>
+    <button class="assistant-btn" id="btn">🎤</button>
+    <img src="voice.gif" alt="voice" id="voice">
+    <button id="bttn"><span id="content">..</span></button>
+  
+    <!-- Game Index Button with Custom Image Icon -->
+    <a href="game.html" class="game-icon-btn">
+      <i class="fas fa-gamepad"></i> <!-- Font Awesome Game Icon -->
+    </a>
+  </footer>
+
+  
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const dropdownToggle = document.querySelector(".dropdown-toggle");
+
+      dropdownToggle.addEventListener("click", function (event) {
+        event.preventDefault();
+        this.parentElement.classList.toggle("active");
+      });
+    });
+
+    function loadContent(topic) {
+      const contentArea = document.getElementById("content-area");
+      contentArea.innerHTML = `<h2>${topic.replace(
+        "-",
+        " "
+      )}</h2><p>Content for ${topic} will appear here.</p>`;
+    }
+
+
+   
+    // Selecting elements
+const modalOverlay = document.getElementById('modalOverlay');
+const liveEditorModal = document.getElementById('liveEditorModal');
+const editorArea = document.getElementById('editorArea');
+const runEditorBtn = document.getElementById('runEditorBtn');
+const editorOutput = document.getElementById('editorOutput');
+const closeBtn = document.querySelector('.close-btn'); // Close Button
+
+// Function to show modal
+function openModal(exampleCode) {
+    // Clear previous output
+    const doc = editorOutput.contentWindow.document;
+    doc.open();
+    doc.write(''); // Clear the previous output
+    doc.close();
+
+    // Update textarea with new code and show modal
+    editorArea.value = exampleCode;
+    liveEditorModal.style.display = "block";
+    modalOverlay.style.display = "block";
+
+    // Add animation class after a slight delay
+    setTimeout(() => {
+        liveEditorModal.classList.add("active");
+        modalOverlay.classList.add("active");
+    }, 10);
+
+}
+
+// Function to close modal
+function closeModal() {
+    liveEditorModal.classList.remove("active");
+    modalOverlay.classList.remove("active");
+
+    // Delay hiding modal for smooth transition
+    setTimeout(() => {
+        liveEditorModal.style.display = "none";
+        modalOverlay.style.display = "none";
+    }, 300);
+}
+
+// Event listeners on all "Try it Yourself" buttons
+document.querySelectorAll('.try-btn').forEach(button => {
+    button.addEventListener('click', function (e) {
+        e.stopPropagation();
+        const exampleCode = this.parentElement.getAttribute('data-code'); // Fetch code from data attribute
+        openModal(exampleCode);
+    });
+});
+
+// Run the code inside the editor
+runEditorBtn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    const code = editorArea.value;
+    const doc = editorOutput.contentWindow.document;
+    doc.open();
+    doc.write(code);
+    doc.close();
+});
+
+// Hide modal on overlay click
+modalOverlay.addEventListener('click', closeModal);
+
+// Close modal when close button is clicked
+closeBtn.addEventListener('click', closeModal);
+
+// Prevent modal from closing when clicking inside it
+liveEditorModal.addEventListener('click', function (e) {
+    e.stopPropagation();
+});
+  </script>
+ <script src="game.js"></script>
+ <script src="script.js"></script>
+ <script src="assistant.js"></script>
+</body>
+
+</html>

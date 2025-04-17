@@ -1,0 +1,1696 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Learning Hub</title>
+    <link href="logo3.png" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- CSS Styling -->
+    <style>
+      body {
+        overflow-y: hidden;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Top Navbar -->
+ <header class="navbar">
+  <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+  <h1 class="site-title">
+    <i class="fas fa-book-reader"></i>
+    <span><strong>Smart</strong> Learning Hub</span>
+  </h1>
+  
+  <div class="search-container">
+    <input type="text" class="search-box" id="search" placeholder="Search study materials...">
+    <span class="search-icon" id="search-icon"><i class="fas fa-search"></i></span>
+  </div>
+
+
+  <!-- Nav Menu for Large Screens -->
+  <nav class="nav-menu">
+      <ul class="nav-icons">
+        <li><a href="index.html" title="Home"><i class="fas fa-home" style="color:#fff;"></i></a></li>
+        <li><a href="htmlpage.html" title="HTML"><i class="fab fa-html5" style="color:#e34c26;"></i></a></li>
+        <li><a href="css.html" title="CSS"><i class="fab fa-css3-alt" style="color:#264de4;"></i></a></li>
+        <li><a href="c.html" title="C"><i class="fas fa-code" style="color:#00bcd4;"></i></a></li>
+        <li><a href="c++.html" title="C++"><i class="fas fa-laptop-code" style="color:#a259ff;"></i></a></li>
+        <li><a href="java.html" title="Java"><i class="fab fa-java" style="color:#f89820;"></i></a></li>
+        <li><a href="python.html" title="Python"><i class="fab fa-python" style="color:#3776ab;"></i></a></li>
+        <li><a href="jsquiz.html" title="Quizzes"><i class="fas fa-question-circle" style="color:#ffcc00;"></i></a></li>
+        <li><a href="jsnote.html" title="Notes"><i class="fas fa-sticky-note" style="color:#29b6f6;"></i></a></li>  
+      </ul>
+  
+  </nav>
+</header>
+
+   <!-- Sidebar Navigation (Hidden by Default) -->
+<nav class="sidebar" id="sidebar">
+  <ul>
+    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="htmlpage.html"><i class="fab fa-html5"></i> HTML</a></li>
+    <li><a href="css.html"><i class="fab fa-css3-alt"></i> CSS</a></li>
+
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle"><i class="fab fa-js-square"></i> JS Topics ⌵</a>
+      <ul class="dropdown-menu">
+        <li><a href="#intro"><i class="fas fa-book-open"></i> Introduction</a></li>
+        <li><a href="#syntax"><i class="fas fa-code"></i> JavaScript Syntax</a></li>
+        <li><a href="#datatypes"><i class="fas fa-database"></i> Variables & Data Types</a></li>
+        <li><a href="#operators"><i class="fas fa-plus-square"></i> Operators</a></li>
+        <li><a href="#functions"><i class="fas fa-functions"></i> Functions</a></li>
+        <li><a href="#scope"><i class="fas fa-shield-alt"></i> Scope & Closures</a></li>
+        <li><a href="#objects"><i class="fas fa-cube"></i> Objects & Prototypes</a></li>
+        <li><a href="#arrays"><i class="fas fa-layer-group"></i> Arrays & Methods</a></li>
+        <li><a href="#eventloops"><i class="fas fa-sync-alt"></i> Event Loop</a></li>
+        <li><a href="#promises"><i class="fas fa-forward"></i> Promises & Async</a></li>
+        <li><a href="#dom"><i class="fas fa-sitemap"></i> DOM Manipulation</a></li>
+        <li><a href="#es6"><i class="fas fa-star"></i> ES6+ Features</a></li>
+      </ul>
+    </li>
+
+    <li><a href="c.html"><i class="fas fa-code"></i> C</a></li>
+    <li><a href="c++.html"><i class="fas fa-code-branch"></i> C++</a></li>
+    <li><a href="java.html"><i class="fab fa-java"></i> Java</a></li>
+    <li><a href="python.html"><i class="fab fa-python"></i> Python</a></li>
+    <li><a href="jsquiz.html"><i class="fas fa-question-circle"></i> Quizzes</a></li>
+    <li><a href="jsnote.html"><i class="fas fa-sticky-note"></i> Notes</a></li>
+  </ul>
+</nav>
+
+
+    <!-- Main Content with Left Menu & Right Output Section -->
+    <div class="main-container">
+      <aside class="left-menu">
+        <h2><i class="fab fa-js-square"></i> JavaScript Topics</h2>
+        <ul>
+          <li><a href="#intro"><i class="fas fa-book-open"></i> Introduction</a></li>
+          <li><a href="#syntax"><i class="fas fa-code"></i> JavaScript Syntax</a></li>
+          <li><a href="#datatypes"><i class="fas fa-database"></i> Variables & Data Types</a></li>
+          <li><a href="#operators"><i class="fas fa-sliders-h"></i> Operators</a></li>
+          <li><a href="#functions"><i class="fas fa-code-branch"></i> Functions</a></li>
+          <li><a href="#scope"><i class="fas fa-shield-alt"></i> Scope & Closures</a></li>
+          <li><a href="#objects"><i class="fas fa-cube"></i> Objects & Prototypes</a></li>
+          <li><a href="#arrays"><i class="fas fa-layer-group"></i> Arrays & Methods</a></li>
+          <li><a href="#eventloops"><i class="fas fa-sync-alt"></i> Event Loop</a></li>
+          <li><a href="#promises"><i class="fas fa-forward"></i> Promises & Async/Await</a></li>
+          <li><a href="#dom"><i class="fas fa-sitemap"></i> DOM Manipulation</a></li>
+          <li><a href="#es6"><i class="fas fa-star"></i> ES6+ Features</a></li>
+        </ul>
+      </aside>
+      
+      <!-- Right Section: Output -->
+      <section class="right-output" id="content-area">
+        <h2>Welcome to JavaScript Tutorials</h2>
+        <p>Select a topic from the left menu to see its content here.</p>
+
+
+
+<!-- JavaScript Introduction -->
+<div id="intro" class="rightside-content">
+  <h2>JavaScript</h2>
+  <p>JavaScript is a scripting language used to make web pages interactive. It works alongside HTML and CSS.
+    It's the backbone of dynamic functionality on websites, allowing you to control behavior, interactivity, and data.</p>
+
+  <ul type="square" id="ul1">
+    <li>Stands for JavaScript.</li>
+    <li>Client-side scripting language (runs in browser).</li>
+    <li>Can also run on server using Node.js.</li>
+    <li>Makes web pages interactive (sliders, forms, popups, etc).</li>
+    <li>Used in both frontend and backend development.</li>
+    <li>Supported by all modern browsers.</li>
+    <li>Works with HTML and CSS to build full websites.</li>
+  </ul>
+
+  <h2>JavaScript Features:</h2>
+  <ul type="square" id="ul1">
+    <li>Lightweight, interpreted language.</li>
+    <li>Object-Oriented Programming support.</li>
+    <li>Event-driven programming (responds to user actions).</li>
+    <li>Supports functional programming style too.</li>
+    <li>Dynamic typing — no need to declare data types.</li>
+    <li>Platform independent (runs on any browser).</li>
+    <li>Used to build web apps, mobile apps, games, servers, etc.</li>
+    <li>Integrates well with other languages/APIs.</li>
+  </ul>
+
+  <h2>JavaScript Editors:</h2>
+  <ul type="square" id="ul1">
+    <li>Notepad</li>
+    <li>Notepad++</li>
+    <li>Visual Studio Code</li>
+    <li>Sublime Text</li>
+    <li>Brackets</li>
+    <li>WebStorm</li>
+  </ul>
+
+  <h2>JavaScript Versions:</h2>
+  <table>
+    <tr>
+      <th>Version</th>
+      <th>Year</th>
+    </tr>
+    <tr>
+      <td>ECMAScript 1</td>
+      <td>1997</td>
+    </tr>
+    <tr>
+      <td>ECMAScript 3</td>
+      <td>1999</td>
+    </tr>
+    <tr>
+      <td>ECMAScript 5</td>
+      <td>2009</td>
+    </tr>
+    <tr>
+      <td>ECMAScript 6 (ES6)</td>
+      <td>2015</td>
+    </tr>
+    <tr>
+      <td>ES7 to ES14</td>
+      <td>2016 - 2023</td>
+    </tr>
+  </table>
+
+  <h2>What is a scripting language?</h2>
+  <p>A scripting language is used to automate tasks that could alternatively be executed one by one by a human operator.
+    JavaScript is a scripting language that runs inside the browser and allows you to add dynamic behavior to your website.
+    It does not need compilation and runs directly in the browser.</p>
+</div>
+
+<!-- Basic Syntax Section -->
+<div id="syntax" class="rightside-content">
+  <h2>JavaScript Syntax</h2>
+  <div class="tag" data-code="let message = 'Hello, JavaScript!';&#10;document.write(message);">
+        <ul>
+      <li>JavaScript syntax is the set of rules that define a correctly structured JavaScript program.</li>
+      <li>It includes how to declare variables using <code>var</code>, <code>let</code>, and <code>const</code>.</li>
+      <li>JavaScript supports different data types like strings, numbers, booleans, arrays, and objects.</li>
+      <li>Statements are the building blocks and usually end with a semicolon (<code>;</code>).</li>
+      <li>JavaScript is case-sensitive: <code>MyVar</code> and <code>myvar</code> are different.</li>
+      <li>Comments can be added using <code>//</code> for single-line or <code>/* */</code> for multi-line.</li>
+      <li>Functions are defined using the <code>function</code> keyword and allow code reuse.</li>
+      <li>JavaScript runs in browsers and can also be used on servers with Node.js.</li>
+      <li>Code can be placed inside the <code>&lt;script&gt;</code> tag in HTML or in separate .js files.</li>
+      <li>Understanding syntax is key to writing clean, error-free JavaScript code.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+<!-- JavaScript Statements -->
+<div class="tag" data-code="let x = 5;&#10;let y = 10;&#10;let z = x + y;&#10;document.write(z);">
+  <h2>JavaScript Statements</h2>
+  <ul style="line-height: 1.3; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <li>JavaScript programs are built using individual commands called statements.</li>
+    <li>A statement might declare a variable, perform a calculation, or call a function.</li>
+    <li>Each statement ends with a semicolon `;` (optional, but recommended).</li>
+    <li>Statements are executed top to bottom, in the order they appear.</li>
+    <li>You can write multiple statements on separate lines for readability.</li>
+    <li>JavaScript automatically adds semicolons in some cases, but it's not always reliable.</li>
+    <li>Statements can include loops, conditions, assignments, or function calls.</li>
+    <li>Grouping statements together in functions helps organize your code.</li>
+    <li>Misplacing a statement or semicolon might break your code or cause unexpected results.</li>
+    <li>In the example, each line performs a step: declare, calculate, and display a result.</li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+
+<!-- 2. Semicolons -->
+<div class="tag" data-code="let x = 100;&#10;let y = 200;&#10;document.write(x + y);">
+  <h2>Semicolons</h2>
+  <ul>
+    <li>Semicolons (`;`) in JavaScript mark the end of a statement.</li>
+    <li>While they are optional in many cases, using them prevents ambiguous code.</li>
+    <li>JavaScript has a feature called <strong>Automatic Semicolon Insertion</strong>.</li>
+    <li>This means the interpreter adds semicolons where it thinks they belong.</li>
+    <li>However, this guess can fail and result in logic or syntax errors.</li>
+    <li>Using semicolons manually ensures your code behaves as expected.</li>
+    <li>Every line in the example below ends with a semicolon for clarity and safety.</li>
+    <li>Some minifiers and build tools may require semicolons to function properly.</li>
+    <li>It’s considered good coding style and a best practice to always use them.</li>
+    <li>Remember, clear code avoids bugs — semicolons make code easier to read too.</li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+
+<!-- 3. Comments --> 
+<div class="tag" data-code="// This is a single-line comment;&#10;/* This is a;&#10;multi-line comment */;&#10;let msg = 'Hello';&#10;document.write(msg);">
+  <h2>Comments</h2>
+  <ul>
+    <li>Comments are used to explain code and are ignored by the JavaScript engine.</li>
+    <li>They help make the code easier to read and understand later.</li>
+    <li>Single-line comments begin with <code>//</code> and go to the end of the line.</li>
+    <li>Multi-line comments start with <code>/*</code> and end with <code>*/</code>.</li>
+    <li>They can span multiple lines and are good for longer notes or instructions.</li>
+    <li>Use comments to describe what blocks of code are doing or why a line exists.</li>
+    <li>Comments are also useful when debugging or testing your code.</li>
+    <li>You can temporarily disable a line by turning it into a comment.</li>
+    <li>Good commenting improves collaboration, especially in team projects.</li>
+    <li>Remember not to over-comment obvious code — balance is key.</li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<!-- 4. Identifiers -->
+<div class="tag" data-code="let myVariable = 10;&#10;document.write(myVariable);">
+  <h2>Identifiers</h2>
+  <ul>
+    <li>Identifiers are the names used to identify variables, functions, arrays, objects, etc.</li>
+    <li>They must begin with a letter (a-z or A-Z), underscore (_) or dollar sign ($).</li>
+    <li>Identifiers cannot begin with a digit (0-9).</li>
+    <li>JavaScript identifiers are case-sensitive; <code>value</code> and <code>Value</code> are different.</li>
+    <li>You can use letters, digits, underscores, and dollar signs in identifiers after the first character.</li>
+    <li>Using meaningful identifiers improves code readability and maintenance.</li>
+    <li>Reserved keywords like <code>var</code>, <code>function</code>, etc., cannot be used as identifiers.</li>
+    <li>A good identifier name should describe the purpose of the variable or function.</li>
+    <li>Avoid very short names like <code>x</code> unless in small loops or temporary values.</li>
+    <li>Consistent naming conventions (like camelCase) are recommended in JavaScript.</li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+
+<!-- 5. Case Sensitivity -->
+<div class="tag" data-code="let num = 10;&#10;document.write(num);">
+  <h2>Case Sensitivity</h2>
+  <ul>
+    <li>JavaScript is case-sensitive, which means <code>Name</code> and <code>name</code> are considered different.</li>
+    <li>This rule applies to all identifiers like variables, functions, and object properties.</li>
+    <li>If you declare <code>let total = 100;</code> and later write <code>Total</code>, it will be undefined.</li>
+    <li>Inconsistent casing often causes bugs, especially in large applications.</li>
+    <li>Always stick to a consistent naming convention like <code>camelCase</code> in JavaScript.</li>
+    <li>Case sensitivity also applies to built-in objects and methods like <code>Math</code> vs <code>math</code>.</li>
+    <li>When using DOM elements, <code>getElementById</code> must be spelled exactly with proper case.</li>
+    <li>Errors due to casing are common in beginners, so reviewing names carefully is crucial.</li>
+    <li>Editors with autocomplete features help avoid these casing issues.</li>
+    <li>Using a linter tool can also help catch mismatched cases in variable names.</li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+
+<!-- 6. Whitespace & Line Breaks -->
+<div class="tag" data-code="let a = 1;&#10;let b = 2;&#10;document.write(a + b);">
+  <h2>Whitespace & Line Breaks</h2>
+  <ul>
+    <li>Whitespace includes spaces, tabs, and line breaks in your code.</li>
+    <li>JavaScript usually ignores whitespace, so it's used mostly for readability.</li>
+    <li>Code with good spacing is easier to read and maintain.</li>
+    <li>You can break code into multiple lines for better visual structure.</li>
+    <li>Example: <code>let x = 5;</code> and <code>let   x=5;</code> work the same.</li>
+    <li>Extra spaces inside variable names are not allowed (e.g., <code>let my var</code> is invalid).</li>
+    <li>Consistent indentation improves collaboration in teams.</li>
+    <li>Whitespace does matter inside strings and regular expressions.</li>
+    <li>Tools like Prettier can auto-format whitespace for you.</li>
+    <li>Clean spacing helps prevent logical errors during debugging.</li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+
+<!-- 7. Literals -->
+<div class="tag" data-code="let str = 'JavaScript';&#10;let num = 123;&#10;document.write(str + ' ' + num);">
+  <h2>Literals</h2>
+  <ul>
+    <li>Literals are fixed values written directly into the JavaScript code.</li>
+    <li>Common literals include numbers (e.g., <code>10</code>), strings (e.g., <code>"Hello"</code>), booleans (e.g., <code>true</code>), etc.</li>
+    <li>String literals are enclosed in single or double quotes.</li>
+    <li>Numeric literals include integers and floating-point numbers.</li>
+    <li>Boolean literals are either <code>true</code> or <code>false</code>.</li>
+    <li>Array literals are enclosed in square brackets like <code>[1, 2, 3]</code>.</li>
+    <li>Object literals use curly braces with key-value pairs.</li>
+    <li>Null and undefined are also considered literals in JavaScript.</li>
+    <li>Literals are used in assignments and function arguments frequently.</li>
+    <li>They help form the structure of expressions in JavaScript.</li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+
+<!-- 8. Keywords -->
+<div class="tag" data-code="let a = 5;&#10;const b = 10;&#10;if (a < b) { document.write('a is smaller'); }">
+  <h2>Keywords</h2>
+  <ul>
+    <li>Keywords are reserved words in JavaScript with special meanings.</li>
+    <li>You cannot use them as variable or function names.</li>
+    <li>Examples include <code>let</code>, <code>const</code>, <code>var</code>, <code>if</code>, <code>else</code>, etc.</li>
+    <li>They are the building blocks of the JavaScript language.</li>
+    <li><code>let</code> and <code>const</code> are used for declaring variables.</li>
+    <li><code>if</code> and <code>else</code> are used for decision-making.</li>
+    <li><code>function</code> is used to declare a function.</li>
+    <li>Using a keyword incorrectly results in a syntax error.</li>
+    <li>Some old keywords like <code>var</code> are still supported for backward compatibility.</li>
+    <li>Always check for updated reserved words in modern JavaScript versions.</li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+
+<!-- 9. Expressions -->
+<div class="tag" data-code="let x = 10;&#10;let y = 20;&#10;let result = x + y;&#10;document.write(result);">
+  <h2>Expressions</h2>
+  <ul>
+    <li>Expressions are combinations of values, variables, and operators that evaluate to a single result.</li>
+    <li>They form the building blocks of JavaScript logic and computation.</li>
+    <li>An example is <code>5 + 2</code>, which returns <code>7</code>.</li>
+    <li>Expressions can be arithmetic (<code>a * b</code>), string (<code>'Hello' + 'World'</code>), or logical (<code>a && b</code>).</li>
+    <li>They can also include function calls like <code>Math.max(5, 10)</code>.</li>
+    <li>JavaScript evaluates expressions from left to right using operator precedence.</li>
+    <li>You can assign the result of an expression to a variable: <code>let total = price + tax;</code>.</li>
+    <li>Expressions are used everywhere: in conditionals, loops, returns, and DOM operations.</li>
+    <li>Some expressions don’t use operators directly, like <code>'Hi'</code> or <code>true</code>.</li>
+    <li>Understanding expressions is key to writing functional JavaScript code.</li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+
+<!-- 10. Code Blocks -->
+<div class="tag" data-code="if (true) {&#10;  let msg = 'Hello';&#10;  document.write(msg);&#10;}">
+  <h2>Code Blocks</h2>
+  <ul>
+    <li>Code blocks are groups of one or more statements enclosed in curly braces <code>{ }</code>.</li>
+    <li>They are used to define the scope of execution in structures like <code>if</code>, <code>for</code>, and <code>while</code>.</li>
+    <li>Each block runs only when its condition or logic is met.</li>
+    <li>A block can contain variable declarations, function calls, or other control structures.</li>
+    <li>JavaScript treats code inside a block as a single unit.</li>
+    <li>Variables declared inside a block are only accessible within that block (block scope).</li>
+    <li>Blocks help organize logic and improve code readability.</li>
+    <li>You can also use nested code blocks inside other blocks or functions.</li>
+    <li>Functions themselves are also a type of code block.</li>
+    <li>Using code blocks is essential for controlling the flow and structure of your code.</li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+;
+</div>
+
+
+
+
+<!-- Basic Syntax Section -->
+<div id="datatypes" class="rightside-content"> 
+  <h2>Variables and Data Types</h2>
+  <ul>
+    <li>Variables in JavaScript are used to store data values that can be used and changed later in the program.</li>
+    <li>You can declare variables using <code>var</code> (old), <code>let</code> (modern), or <code>const</code> (constant).</li>
+    <li><code>let</code> and <code>const</code> are block-scoped and safer to use in modern code.</li>
+    <li>Data types define the type of value a variable holds, such as number, string, or boolean.</li>
+    <li>Common primitive data types in JavaScript include: <code>Number</code>, <code>String</code>, <code>Boolean</code>, <code>Undefined</code>, and <code>Null</code>.</li>
+    <li>JavaScript also supports complex types like <code>Object</code> and <code>Array</code> for storing multiple values.</li>
+    <li>Example of a string: <code>let name = "John";</code>, a number: <code>let age = 25;</code>.</li>
+    <li>Use the <code>typeof</code> operator to check the data type of a variable (e.g., <code>typeof name</code>).</li>
+    <li>Variables must be named using letters, <code>$</code>, or <code>_</code>, and cannot start with numbers.</li>
+    <li>Understanding variables and data types helps you build flexible and error-free programs.</li>
+  </ul>
+
+
+  <div class="tag" data-code="let name = &quot;John&quot;;&#10;document.write(name);">
+    <h2>Declaring Variables</h2>
+    <p>Use <code>var</code>, <code>let</code>, or <code>const</code> to declare variables.</p>
+    <ul>
+      <li><code>var</code> is function scoped and was used in older JavaScript versions.</li>
+      <li><code>let</code> is block scoped and recommended for modern usage when values may change.</li>
+      <li><code>const</code> is also block scoped and used for values that should not change.</li>
+      <li>Variables declared with <code>let</code> or <code>const</code> are not hoisted like <code>var</code>.</li>
+      <li>Variable names must begin with a letter, <code>$</code>, or <code>_</code>.</li>
+      <li>JavaScript variables are case-sensitive: <code>name</code> and <code>Name</code> are different.</li>
+      <li>You can store different types of values: strings, numbers, booleans, arrays, and objects.</li>
+      <li><code>let</code> is ideal when the variable's value will be updated later.</li>
+      <li><code>const</code> is ideal for fixed values like configurations.</li>
+      <li>Using <code>let</code> and <code>const</code> improves code safety and readability.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+
+  <div class="tag" data-code="let name = &quot;John&quot;;&#10;document.write(name);">
+    <h2>Variables in JavaScript</h2>
+    <p>JavaScript variables are used to store data that can be reused or changed in a program.</p>
+    <ul>
+      <li><strong>var</strong> – Function-scoped, used in older versions. Example: <code>var age = 30;</code></li>
+      <li><strong>let</strong> – Block-scoped, allows reassignment. Example: <code>let name = "John";</code></li>
+      <li><strong>const</strong> – Block-scoped, used for constant values. Example: <code>const pi = 3.14;</code></li>
+      <li>Variables can store different types of values like strings, numbers, booleans, arrays, and objects.</li>
+      <li>Variable names must start with a letter, <code>$</code>, or <code>_</code> and are case-sensitive.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  
+  <div class="tag" data-code="var x = 10;&#10;document.write(x);">
+    <h2>var</h2>
+    <p><code>var</code> is the oldest way to declare a variable in JavaScript.</p>
+    <ul>
+      <li><code>var</code> is function-scoped, not block-scoped.</li>
+      <li>It can be redeclared and updated in the same scope.</li>
+      <li>Hoisted to the top with an initial value of <code>undefined</code>.</li>
+      <li>Not recommended for modern JavaScript due to scope issues.</li>
+      <li>Example: <code>var name = "John";</code></li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  
+  <div class="tag" data-code="let name = &quot;Alice&quot;;&#10;document.write(name);">
+    <h2>let</h2>
+    <p><code>let</code> is used to declare variables that can be changed later.</p>
+    <ul>
+      <li><code>let</code> is block-scoped and doesn’t allow redeclaration in the same scope.</li>
+      <li>Best for variables whose values will change.</li>
+      <li>Hoisted but not initialized (gives ReferenceError if accessed before declaration).</li>
+      <li>Improves code readability and reduces bugs.</li>
+      <li>Example: <code>let count = 5;</code></li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  
+  <div class="tag" data-code="const pi = 3.14;&#10;document.write(pi);">
+    <h2>const</h2>
+    <p><code>const</code> is used to declare variables whose value should never change.</p>
+    <ul>
+      <li><code>const</code> is block-scoped like <code>let</code>.</li>
+      <li>Must be assigned a value during declaration.</li>
+      <li>Once assigned, its value cannot be changed or reassigned.</li>
+      <li>Used for constants like configuration or fixed values.</li>
+      <li>Example: <code>const appName = "MyApp";</code></li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  
+
+  <div class="tag" data-code="let age = 20;&#10;document.write(typeof age);">
+    <h2>Data Types in JavaScript</h2>
+    <p>JavaScript supports numbers, strings, booleans, objects, arrays, etc.</p>
+    <ul>
+      <li>JavaScript is a dynamically typed language, which means variables can hold any data type.</li>
+      <li><strong>Number</strong> includes both integers and floating-point values (e.g., <code>5</code>, <code>3.14</code>).</li>
+      <li><strong>String</strong> represents text and is enclosed in quotes (e.g., <code>"Hello"</code> or <code>'World'</code>).</li>
+      <li><strong>Boolean</strong> has only two values: <code>true</code> or <code>false</code>, used for logical decisions.</li>
+      <li><strong>Object</strong> is a collection of key-value pairs (e.g., <code>{name: "John", age: 30}</code>).</li>
+      <li><strong>Array</strong> is an ordered list of values (e.g., <code>[1, 2, 3]</code>), which can be mixed types.</li>
+      <li><strong>Undefined</strong> means a variable has been declared but has not yet been assigned a value.</li>
+      <li><strong>Null</strong> represents an intentionally empty value or "no value."</li>
+      <li>Use the <code>typeof</code> operator to check the type of a variable at runtime.</li>
+      <li>Understanding data types is essential for writing accurate and bug-free JavaScript code.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+
+  <div class="tag" data-code="let age = 25;&#10;document.write(typeof age);">
+    <h2>Number</h2>
+    <p>Number is used for any numeric value, including decimals and negatives.</p>
+    <ul>
+      <li>Can be integers or floating-point numbers.</li>
+      <li>Example: <code>let price = 99.99;</code></li>
+      <li>Arithmetic operations can be performed: <code>+, -, *, /</code></li>
+      <li><code>typeof price</code> gives <code>"number"</code></li>
+      <li>Infinity and NaN (Not a Number) are special number values.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  
+  <div class="tag" data-code="let name = &quot;Alice&quot;;&#10;document.write(typeof name);">
+    <h2>String</h2>
+    <p>String represents text and is written in quotes (single or double).</p>
+    <ul>
+      <li>Used to store words, sentences, or characters.</li>
+      <li>Example: <code>let city = "Delhi";</code></li>
+      <li>Use <code>typeof</code> to check: <code>typeof city</code> gives <code>"string"</code>.</li>
+      <li>Can include escape characters like <code>\n</code> for newline or <code>\t</code> for tab.</li>
+      <li>Concatenate strings using <code>+</code>: <code>"Hello " + "World"</code></li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  
+ 
+  <div class="tag" data-code="let isLoggedIn = true;&#10;document.write(typeof isLoggedIn);">
+    <h2>Boolean</h2>
+    <p>Boolean represents only two values: <code>true</code> or <code>false</code>.</p>
+    <ul>
+      <li>Used in conditional logic and comparisons.</li>
+      <li>Example: <code>let isOnline = false;</code></li>
+      <li><code>5 > 3</code> returns <code>true</code></li>
+      <li><code>typeof isOnline</code> gives <code>"boolean"</code></li>
+      <li>Very useful in if-else statements and loops.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  
+  <div class="tag" data-code="let user = { name: &quot;John&quot;, age: 25 };&#10;document.write(typeof user);">
+    <h2>Object</h2>
+    <p>Object stores data in key-value pairs using curly braces.</p>
+    <ul>
+      <li>Example: <code>let car = { brand: "Toyota", year: 2023 };</code></li>
+      <li>Access with dot or bracket notation: <code>car.brand</code> or <code>car["brand"]</code></li>
+      <li>Used to structure related data together.</li>
+      <li><code>typeof car</code> gives <code>"object"</code></li>
+      <li>Nested objects and arrays are also allowed.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+
+  <div class="tag" data-code="let colors = [&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;];&#10;document.write(typeof colors);">
+    <h2>Array</h2>
+    <p>Array stores multiple values in a single variable using square brackets.</p>
+    <ul>
+      <li>Example: <code>let fruits = ["apple", "banana", "cherry"];</code></li>
+      <li>Access elements by index: <code>fruits[0]</code> gives <code>"apple"</code></li>
+      <li>Arrays are a type of object, so <code>typeof fruits</code> gives <code>"object"</code></li>
+      <li>Can store mixed data types: <code>[1, "two", true]</code></li>
+      <li>Used for loops, lists, and bulk data management.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  
+ 
+  
+  <div class="tag" data-code="let test;&#10;document.write(typeof test);">
+    <h2>Undefined</h2>
+    <p>When a variable is declared but no value is assigned, it's <code>undefined</code>.</p>
+    <ul>
+      <li>Example: <code>let score;</code></li>
+      <li><code>typeof score</code> gives <code>"undefined"</code></li>
+      <li>Commonly seen in functions with no return value.</li>
+      <li>Helps check if a value has been set or not.</li>
+      <li>Avoid using it as a manual value.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  
+  <div class="tag" data-code="let nothing = null;&#10;document.write(typeof nothing);">
+    <h2>Null</h2>
+    <p><code>null</code> is an intentional absence of any object value.</p>
+    <ul>
+      <li>Used to reset or clear variables manually.</li>
+      <li>Example: <code>let result = null;</code></li>
+      <li><code>typeof null</code> returns <code>"object"</code> (this is a known JS quirk)</li>
+      <li>Different from <code>undefined</code>, which means "not assigned"</li>
+      <li>Helps represent empty or unknown data explicitly.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+</div>
+  
+  <!-- Operators Section -->
+<div id="operators" class="rightside-content">
+  <h2>JavaScript Operators</h2>
+  <p>
+    JavaScript operators are symbols used to perform operations on variables and values.
+    They are essential in every JavaScript program, and understanding them helps you write
+    better and more logical code. There are various types of operators, including arithmetic,
+    comparison, assignment, logical, bitwise, string, typeof, and ternary.
+  </p>
+
+  <div class="tag" data-code="let a = 10;&#10;let b = 5;&#10;document.write(a + b);">
+    <h2>Arithmetic Operators</h2>
+    <p>Used to perform mathematical operations like addition, subtraction, etc.</p>
+    <ul>
+      <li>Examples: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code></li>
+      <li>These operators work with numeric values.</li>
+      <li><code>+</code> adds two numbers; <code>*</code> multiplies them.</li>
+      <li>They return a numeric result based on the operation.</li>
+      <li>Example: <code>let sum = 5 + 3;</code></li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  
+  <div class="tag" data-code="let x = 20;&#10;x += 5;&#10;document.write(x);">
+    <h2>Assignment Operators</h2>
+    <p>Used to assign values to variables.</p>
+    <ul>
+      <li>Main operator is <code>=</code> (assignment).</li>
+      <li>Compound assignment: <code>+=</code>, <code>-=</code>, <code>*=</code> etc.</li>
+      <li><code>x += 5</code> is same as <code>x = x + 5</code>.</li>
+      <li>Useful for quick updates to variables.</li>
+      <li>Example: <code>let x = 10; x *= 2;</code></li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  
+  <div class="tag" data-code="let a = 10;&#10;let b = 5;&#10;document.write(a > b);">
+    <h2>Comparison Operators</h2>
+    <p>Used to compare two values and return a boolean result.</p>
+    <ul>
+      <li>Examples: <code>==</code>, <code>===</code>, <code>!=</code>, <code>></code>, <code><</code>, <code>>=</code></li>
+      <li><code>==</code> checks value only, <code>===</code> checks value and type.</li>
+      <li>Returns <code>true</code> or <code>false</code>.</li>
+      <li>Used often in conditions and loops.</li>
+      <li>Example: <code>5 < 10</code> returns <code>true</code>.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  
+  <div class="tag" data-code="let a = true;&#10;let b = false;&#10;document.write(a && b);">
+    <h2>Logical Operators</h2>
+    <p>Used to combine multiple conditions (booleans).</p>
+    <ul>
+      <li><code>&&</code> is AND, <code>||</code> is OR, <code>!</code> is NOT.</li>
+      <li><code>&&</code> returns true only if both conditions are true.</li>
+      <li><code>||</code> returns true if at least one condition is true.</li>
+      <li><code>!</code> reverses the boolean value.</li>
+      <li>Example: <code>true && false</code> returns <code>false</code>.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  
+  <div class="tag" data-code="let a = 5;&#10;let result = (a > 0) ? 'Positive' : 'Negative';&#10;document.write(result);">
+    <h2>Conditional (Ternary) Operator</h2>
+    <p>A shorthand way of writing if-else condition in a single line.</p>
+    <ul>
+      <li>Syntax: <code>condition ? trueResult : falseResult</code></li>
+      <li>Returns one of two values depending on the condition.</li>
+      <li>Useful for quick decisions inside expressions.</li>
+      <li>Example: <code>(x > 10) ? "Big" : "Small"</code></li>
+      <li>Helps reduce multiple lines of code.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  <div class="tag" data-code="let a = 10;&#10;let b = 3;&#10;document.write(a % b);">
+    <h2>Modulus Operator</h2>
+    <p>Used to find the remainder of a division operation.</p>
+    <ul>
+      <li>Syntax: <code>a % b</code></li>
+      <li>Returns the remainder when <code>a</code> is divided by <code>b</code>.</li>
+      <li>Example: <code>10 % 3</code> returns <code>1</code> (10 divided by 3 leaves remainder 1).</li>
+      <li>Used to check for even or odd numbers or cycle through an array.</li>
+      <li>Example: <code>5 % 2</code> returns <code>1</code>.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  
+  <div class="tag" data-code="let a = 5;&#10;a++;&#10;document.write(a);">
+    <h2>Increment and Decrement Operators</h2>
+    <p>Used to increase or decrease the value of a variable.</p>
+    <ul>
+      <li><code>++</code> is the increment operator (increases the value by 1).</li>
+      <li><code>--</code> is the decrement operator (decreases the value by 1).</li>
+      <li>Can be used in both prefix and postfix forms.</li>
+      <li>Example: <code>a++</code> increases the value of <code>a</code> by 1.</li>
+      <li>Example: <code>a--</code> decreases the value of <code>a</code> by 1.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  
+  <div class="tag" data-code="let x = 5;&#10;let y = 10;&#10;document.write(x === y);">
+    <h2>Equality Operators</h2>
+    <p>Used to compare values and return a boolean result.</p>
+    <ul>
+      <li><code>==</code> (loose equality): compares values, ignores type.</li>
+      <li><code>===</code> (strict equality): compares both value and type.</li>
+      <li><code>!=</code> (loose inequality): checks if values are not equal.</li>
+      <li><code>!==</code> (strict inequality): checks if both value and type are different.</li>
+      <li>Example: <code>5 == '5'</code> returns <code>true</code>, but <code>5 === '5'</code> returns <code>false</code>.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  
+  <div class="tag" data-code="let obj = {name: 'John', age: 25};&#10;delete obj.age;&#10;document.write(obj.age);">
+    <h2>Delete Operator</h2>
+    <p>Used to delete properties from objects.</p>
+    <ul>
+      <li>Syntax: <code>delete object.property</code></li>
+      <li>Removes a property from an object.</li>
+      <li>Returns <code>true</code> if the property is successfully deleted.</li>
+      <li>Does not affect the object's prototype chain.</li>
+      <li>Example: <code>delete obj.age</code> removes the "age" property.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  
+  
+  
+  <div class="tag" data-code="let a = 3;&#10;let b = '5';&#10;document.write(a + +b);">
+    <h2>Unary Operators</h2>
+    <p>Used to perform operations on a single operand.</p>
+    <ul>
+      <li><code>+</code> can also be used as a unary operator to convert a string to a number.</li>
+      <li><code>-</code> can be used to negate a number.</li>
+      <li><code>++</code> increases the operand by 1.</li>
+      <li><code>--</code> decreases the operand by 1.</li>
+      <li>Example: <code>+ '10'</code> converts the string to number <code>10</code>.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  
+  <div class="tag" data-code="let x = 10;&#10;let y = 5;&#10;document.write(x ** y);">
+    <h2>Exponentiation Operator</h2>
+    <p>Used to raise the left operand to the power of the right operand.</p>
+    <ul>
+      <li>Syntax: <code>a ** b</code></li>
+      <li>Returns <code>a</code> raised to the power of <code>b</code>.</li>
+      <li>Example: <code>2 ** 3</code> returns <code>8</code> (2 raised to the power 3).</li>
+      <li>This operator is similar to the <code>Math.pow()</code> method.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  
+  <div class="tag" data-code="let a = 10;&#10;let b = 3;&#10;document.write(a / b);">
+    <h2>Division Operator</h2>
+    <p>Used to divide the left operand by the right operand.</p>
+    <ul>
+      <li>Syntax: <code>a / b</code></li>
+      <li>Returns the result of <code>a</code> divided by <code>b</code>.</li>
+      <li>Example: <code>10 / 3</code> returns <code>3.3333</code> (result of division).</li>
+      <li>If division by zero occurs, the result will be <code>Infinity</code> or <code>-Infinity</code>.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  
+  <div class="tag" data-code="let a = 10;&#10;let b = 5;&#10;document.write(a * b);">
+    <h2>Multiplication Operator</h2>
+    <p>Used to multiply two operands.</p>
+    <ul>
+      <li>Syntax: <code>a * b</code></li>
+      <li>Returns the result of multiplying <code>a</code> and <code>b</code>.</li>
+      <li>Example: <code>10 * 5</code> returns <code>50</code>.</li>
+      <li>Used for mathematical operations involving multiplication.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  
+  <div class="tag" data-code="let x = 20;&#10;let y = 5;&#10;document.write(x - y);">
+    <h2>Subtraction Operator</h2>
+    <p>Used to subtract the right operand from the left operand.</p>
+    <ul>
+      <li>Syntax: <code>a - b</code></li>
+      <li>Returns the result of subtracting <code>b</code> from <code>a</code>.</li>
+      <li>Example: <code>20 - 5</code> returns <code>15</code>.</li>
+      <li>Used to calculate differences between numbers.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  
+  <div class="tag" data-code="let a = 'Hello';&#10;let b = 'World';&#10;document.write(a + ' ' + b);">
+    <h2>Concatenation Operator</h2>
+    <p>Used to join two strings together.</p>
+    <ul>
+      <li>Syntax: <code>a + b</code></li>
+      <li>Returns the concatenated result of two strings.</li>
+      <li>Example: <code>'Hello' + ' ' + 'World'</code> returns <code>'Hello World'</code>.</li>
+      <li>This operator is primarily used for string operations.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  
+  <div class="tag" data-code="let name = 'John';&#10;let length = name.length;&#10;document.write(length);">
+    <h2>String Properties and Methods</h2>
+    <p>JavaScript provides various operators and methods to manipulate strings.</p>
+    <ul>
+      <li><code>.length</code> property returns the number of characters in a string.</li>
+      <li><code>.charAt()</code> method returns the character at a specified index.</li>
+      <li><code>.toUpperCase()</code> converts a string to uppercase.</li>
+      <li><code>.toLowerCase()</code> converts a string to lowercase.</li>
+      <li>Example: <code>'hello'.toUpperCase()</code> returns <code>HELLO</code>.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>  
+  </div>
+
+  <!-- Conditional Statements -->
+  <div id="conditional" class="rightside-content">
+  <div class="tag" data-code="let age = 18;&#10;if (age >= 18) {&#10;  document.write('You are an adult.');&#10;} else {&#10;  document.write('You are a minor.');&#10;}">
+    <h2>Conditional Statements</h2>
+    <p>Conditional statements allow you to execute code based on whether a condition is true or false.</p>
+    <ul>
+      <li><strong><code>if</code> statement:</strong> Checks if a condition is true, and if it is, the block of code inside the <code>if</code> statement is executed.</li>
+      <li><strong><code>else</code> statement:</strong> Executes code if the <code>if</code> condition is false.</li>
+      <li>Syntax: <code>if (condition) { // execute code } else { // execute code }</code></li>
+      <li>Example: If the condition <code>age >= 18</code> is true, it will display <code>'You are an adult.'</code>. Otherwise, it will display <code>'You are a minor.'</code>.</li>
+      <li><strong>Comparison operators:</strong> You can use comparison operators like <code>==</code>, <code>!=</code>, <code>></code>, <code><</code>, etc., to check conditions.</li>
+      <li>Conditional statements are essential for making decisions in your code based on dynamic inputs.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code="let age = 20;&#10;if(age &gt;= 18){&#10;  document.write('Adult');&#10;}">
+  <h2>if Statement</h2>
+  <p>Executes a block of code if a specified condition is true.</p>
+  <ul>
+    <li><strong><code>if</code> statement:</strong> It checks whether a condition is true and, if it is, runs the block of code inside the <code>if</code> statement.</li>
+    <li>Example: <code>if (age &gt;= 18)</code> checks if the age is greater than or equal to 18. If true, it will display <code>'Adult'</code>.</li>
+    <li>Syntax: <code>if (condition) { // code to run if true }</code></li>
+    <li>This statement is often used when you want to check if something is true and take action accordingly.</li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code="let age = 18;&#10;if(age &gt;= 18){&#10;  document.write('Adult');&#10;} else {&#10;  document.write('Minor');&#10;}">
+  <h2>2. if-else Statement</h2>
+  <p>Executes a block of code if a specified condition is true, otherwise executes an alternative block of code.</p>
+  <ul>
+    <li><strong><code>if</code> statement:</strong> It checks if a condition is true and, if it is, executes the block of code inside the <code>if</code> block.</li>
+    <li><strong><code>else</code> statement:</strong> If the condition in the <code>if</code> statement is false, it executes the block of code inside the <code>else</code> block.</li>
+    <li>Example: <code>if (age &gt;= 18)</code> checks if age is greater than or equal to 18. If true, it displays <code>'Adult'</code>, otherwise it displays <code>'Minor'</code>.</li>
+    <li>Syntax: <code>if (condition) { // code to run if true } else { // code to run if false }</code></li>
+    <li>Used when you need two possibilities: one for true and one for false.</li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code="let age = 20;&#10;if(age &gt;= 18){&#10;  document.write('Adult');&#10;} else if(age &gt;= 13){&#10;  document.write('Teenager');&#10;} else {&#10;  document.write('Child');&#10;}">
+  <h2>3. if-else if-else Statement</h2>
+  <p>Used when you have multiple conditions to check. Executes the block of code corresponding to the first true condition.</p>
+  <ul>
+    <li><strong><code>if</code> statement:</strong> Checks the first condition, and if true, runs the associated block of code.</li>
+    <li><strong><code>else if</code> statement:</strong> If the first condition is false, it checks the next condition.</li>
+    <li><strong><code>else</code> statement:</strong> If all previous conditions are false, it runs the block of code inside the <code>else</code> block.</li>
+    <li>Example: <code>if (age &gt;= 18)</code> checks if age is greater than or equal to 18. If not, it checks if the age is between 13 and 18, and if neither is true, it considers the person a child.</li>
+    <li>Syntax: <code>if (condition) { // code } else if (condition) { // code } else { // code }</code></li>
+    <li>This statement is used when there are more than two conditions to evaluate.</li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+
+<div class="tag" data-code="let day = 3;&#10;switch(day) {&#10;  case 1:&#10;    document.write('Monday');&#10;    break;&#10;  case 2:&#10;    document.write('Tuesday');&#10;    break;&#10;  case 3:&#10;    document.write('Wednesday');&#10;    break;&#10;  default:&#10;    document.write('Invalid day');&#10;}">
+  <h2>4. Switch Statement</h2>
+  <p>Used to execute one of many code blocks based on different conditions.</p>
+  <ul>
+    <li><strong><code>switch</code> statement:</strong> Evaluates an expression once and matches the result with each <code>case</code>.</li>
+    <li><strong><code>case</code> statement:</strong> Each <code>case</code> represents a possible value of the expression being evaluated. The corresponding block is executed if it matches.</li>
+    <li><strong><code>default</code> statement:</strong> This block executes if none of the <code>case</code> values match.</li>
+    <li>Example: <code>switch(day)</code> checks the value of <code>day</code> and prints the corresponding day name.</li>
+    <li>Syntax: <code>switch (expression) { case value: // code break; ... default: // code }</code></li>
+    <li>This is useful when checking multiple values of the same variable.</li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+  </div>
+  
+
+  
+  <!-- Functions Section -->
+  <div id="functions" class="rightside-content">
+  <div class="tag" data-code="function greet(name) {&#10;  return 'Hello, ' + name;&#10;}&#10;let message = greet('John');&#10;document.write(message);">
+    <h2>Functions in JavaScript</h2>
+    <p>Functions are reusable blocks of code that can take inputs (called parameters), perform a task, and optionally return a result. Functions help to avoid code repetition and make programs more modular and easier to maintain.</p>
+    <ul>
+      <li><strong><code>function</code> declaration:</strong> You define a function using the <code>function</code> keyword, followed by the function name, parentheses, and curly braces for the code block.</li>
+      <li><strong>Parameters:</strong> These are values passed into the function, allowing you to make the function more flexible and reusable with different inputs.</li>
+      <li><strong>Return Value:</strong> A function can return a result to the calling code using the <code>return</code> statement.</li>
+      <li><strong>Syntax:</strong> <code>function functionName(parameters) { // code }</code></li>
+      <li><strong>Function Invocation:</strong> To use the function, you invoke it by calling its name and passing values for the parameters.</li>
+    </ul> 
+     
+    
+    <h2>Parts of a Function</h2>
+    <ul>
+      <li><strong>Function Declaration:</strong> This is where the function is defined with a name, parameters (optional), and the task it should perform. Example: <code>function greet(name) { return 'Hello, ' + name; }</code></li>
+      <li><strong>Parameters:</strong> These are placeholders inside the parentheses where values are passed into the function when it is called. For example, in <code>function greet(name)</code>, <code>name</code> is a parameter.</li>
+      <li><strong>Return Value:</strong> A function can send a result back to the caller using the <code>return</code> keyword. For example, <code>return 'Hello, ' + name</code> returns the greeting message to the caller.</li>
+      <li><strong>Function Invocation:</strong> To execute the function, you invoke it by calling its name and providing the necessary arguments for the parameters. Example: <code>greet('John')</code> calls the function with 'John' as the argument.</li>
+    </ul>
+  
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+
+  
+  <!-- Regular Function -->
+<div class="tag" data-code="function greet() {&#10;  return 'Hello, World!';&#10;}&#10;greet();">
+  <h2>Regular Function</h2>
+  <p>A regular function is declared using the <code>function</code> keyword. It can accept parameters and return a value.</p>
+  <ul>
+    <li><strong>Syntax:</strong> <code>function functionName(parameters) { // code }</code></li>
+    <li><strong>Usage:</strong> Regular functions are used when you need reusable code.</li>
+    <li><strong>Example:</strong> <code>function greet() { return 'Hello, World!'; }</code></li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<!-- Anonymous Function -->
+<div class="tag" data-code="let greet = function() {&#10;  return 'Hello, World!';&#10;}&#10;greet();">
+  <h2>Anonymous Function</h2>
+  <p>An anonymous function is a function without a name. It is often assigned to a variable or passed as an argument.</p>
+  <ul>
+    <li><strong>Syntax:</strong> <code>let functionName = function() { // code }</code></li>
+    <li><strong>Usage:</strong> Used for short, temporary tasks like event handlers or passing as arguments.</li>
+    <li><strong>Example:</strong> <code>let greet = function() { return 'Hello, World!'; }</code></li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<div class="tag" data-code="const square = (x) =&gt; x * x;&#10;document.write(square(4));">
+  <h2>Arrow Function</h2>
+  <p>Arrow functions provide a more concise way to write functions, especially for simple tasks and callbacks.</p>
+  <ul>
+    <li><strong>Syntax:</strong> <code>const functionName = () => { // code }</code></li>
+    <li><strong>Usage:</strong> Often used for short functions or callbacks.</li>
+    <li><strong>Example:</strong> <code>const greet = () => { return 'Hello, World!'; }</code></li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<!-- IIFE (Immediately Invoked Function Expression) -->
+<div class="tag" data-code="(function() {&#10;  document.write('I am an IIFE');&#10;})();">
+  <h2>Immediately Invoked Function Expression (IIFE)</h2>
+  <p>An IIFE is a function that is executed immediately after it is defined. It helps avoid polluting the global namespace.</p>
+  <ul>
+    <li><strong>Syntax:</strong> <code>(function() { // code })();</code></li>
+    <li><strong>Usage:</strong> Used to run code once and create private scopes.</li>
+    <li><strong>Example:</strong> <code>(function() { console.log('I am an IIFE'); })();</code></li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<!-- Constructor Function -->
+<div class="tag" data-code="function Person(name, age) {&#10;  this.name = name;&#10;  this.age = age;&#10;}&#10;const person1 = new Person('John', 30);">
+  <h2>Constructor Function</h2>
+  <p>Constructor functions are used to create new objects. They serve as a blueprint for creating instances with similar properties.</p>
+  <ul>
+    <li><strong>Syntax:</strong> <code>function Person(name, age) { // code }</code></li>
+    <li><strong>Usage:</strong> Used to create objects with similar structures.</li>
+    <li><strong>Example:</strong> <code>function Person(name, age) { this.name = name; }</code></li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<!-- Generator Function -->
+<div class="tag" data-code="function* greet() {&#10;  yield 'Hello';&#10;  yield 'World';&#10;}&#10;const generator = greet();">
+  <h2>Generator Function</h2>
+  <p>Generator functions allow you to pause and resume execution, yielding multiple values over time.</p>
+  <ul>
+    <li><strong>Syntax:</strong> <code>function* functionName() { // code }</code></li>
+    <li><strong>Usage:</strong> Used for handling asynchronous code or iterating over large data sets.</li>
+    <li><strong>Example:</strong> <code>function* greet() { yield 'Hello'; }</code></li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<!-- Recursive Function -->
+<div class="tag" data-code="function factorial(n) {&#10;  if (n === 0) return 1;&#10;  return n * factorial(n - 1);&#10;}&#10;document.write(factorial(5));">
+  <h2>Recursive Function</h2>
+  <p>A recursive function calls itself in order to break down a complex task into simpler tasks.</p>
+  <ul>
+    <li><strong>Syntax:</strong> <code>function functionName() { // code }</code></li>
+    <li><strong>Usage:</strong> Used when a problem can be broken down into smaller, similar sub-problems.</li>
+    <li><strong>Example:</strong> <code>function factorial(n) { if (n === 0) return 1; }</code></li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<!-- Callback Function -->
+<div class="tag" data-code="function greet(name, callback) {&#10;  document.write('Hello, ' + name);&#10;  callback();&#10;}&#10;function sayGoodbye() {&#10;  console.log('Goodbye!');&#10;}&#10;greet('John', sayGoodbye);">
+  <h2>Callback Function</h2>
+  <p>Callback functions are functions that are passed as arguments to other functions and are executed after the completion of the main function.</p>
+  <ul>
+    <li><strong>Syntax:</strong> <code>function functionName(callback) { // code }</code></li>
+    <li><strong>Usage:</strong> Commonly used for handling asynchronous tasks or event-driven programming.</li>
+    <li><strong>Example:</strong> <code>function greet(name, callback) { callback(); }</code></li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+<!-- Function Types with Arguments and Return Values -->
+<div class="tag" data-code="function add(a, b) {&#10;  return a + b;&#10;}&#10;let result = add(5, 3);&#10;document.write(result);">
+  <h2>Function with Arguments and Return Value</h2>
+  <p>This function accepts arguments and returns a value after performing an operation.</p>
+  <ul>
+    <li><strong>Arguments:</strong> Values passed into the function when it is called.</li>
+    <li><strong>Return Value:</strong> The result of the function, sent back to the caller.</li>
+    <li>Example: The function <code>add(a, b)</code> takes two arguments and returns their sum.</li>
+    <li>Syntax: <code>function functionName(arguments) { return value; }</code></li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<!-- Function with Arguments but No Return Value -->
+<div class="tag" data-code="function greet(name) {&#10;  document.write('Hello, ' + name);&#10;}&#10;greet('John');">
+  <h2>Function with Arguments but No Return Value</h2>
+  <p>This function accepts arguments but does not return a value.</p>
+  <ul>
+    <li><strong>Arguments:</strong> Values passed into the function when it is called.</li>
+    <li><strong>No Return Value:</strong> The function performs an action but doesn't return a value.</li>
+    <li>Example: The function <code>greet(name)</code> takes a name as an argument and logs a greeting message.</li>
+    <li>Syntax: <code>function functionName(arguments) { // perform action }</code></li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<!-- Function without Arguments but with Return Value -->
+<div class="tag" data-code="function getPi() {&#10;  return 3.14;&#10;}&#10;let pi = getPi();&#10;document.write(pi);">
+  <h2>Function without Arguments but with Return Value</h2>
+  <p>This function does not accept arguments but returns a value when called.</p>
+  <ul>
+    <li><strong>No Arguments:</strong> The function does not require any input.</li>
+    <li><strong>Return Value:</strong> The function returns a value to the caller.</li>
+    <li>Example: The function <code>getPi()</code> returns the value of pi (3.14).</li>
+    <li>Syntax: <code>function functionName() { return value; }</code></li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+<!-- Function without Arguments and No Return Value -->
+<div class="tag" data-code="function sayHello() {&#10;  document.write('Hello, World!');&#10;}&#10;sayHello();">
+  <h2>Function without Arguments and No Return Value</h2>
+  <p>This function does not accept arguments and does not return any value.</p>
+  <ul>
+    <li><strong>No Arguments:</strong> The function does not require any input.</li>
+    <li><strong>No Return Value:</strong> The function performs an action but does not return a value.</li>
+    <li>Example: The function <code>sayHello()</code> logs "Hello, World!" to the console.</li>
+    <li>Syntax: <code>function functionName() { // perform action }</code></li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+
+  </div>
+  <div id="scope" class="rightside-content">
+    <div class="tag" data-code="let globalVar = 'I am global';&#10;function testScope() {&#10;  let localVar = 'I am local';&#10;  document.write(globalVar);&#10;  document.write(localVar);&#10;}&#10;testScope();&#10;console.log(localVar);">
+      <h2>Scope</h2>
+      <p>Scope defines the context in which variables are accessible. It determines where a variable can be accessed in the code.</p>
+      <ul>
+        <li><strong>Global Scope:</strong> Variables declared outside any function can be accessed from anywhere in the code.</li>
+        <li><strong>Local Scope:</strong> Variables declared inside a function can only be accessed within that function.</li>
+        <li><strong>Block Scope:</strong> Variables declared with <code>let</code> and <code>const</code> inside a block (e.g., inside an <code>if</code> or <code>for</code> loop) are only accessible within that block.</li>
+        <li><strong>Example:</strong> The variable <code>globalVar</code> is accessible inside the function <code>testScope</code>, but <code>localVar</code> is not accessible outside the function.</li>
+      </ul>
+      <button class="try-btn">Try it Yourself</button>
+    </div>
+    <div class="tag" data-code="function outer() {&#10;  let outerVar = 'I am outer!';&#10;  return function inner() {&#10;    document.write(outerVar);&#10;  };&#10;}&#10;const closureFunc = outer();&#10;closureFunc();">
+      <h2>Closure</h2>
+      <p>A closure is created when an inner function retains access to the variables of its outer function, even after the outer function has finished executing.</p>
+      <ul>
+        <li><strong>Definition:</strong> Closures allow inner functions to "remember" the scope in which they were created, even if the outer function has already completed.</li>
+        <li><strong>Example:</strong> The inner function <code>inner()</code> can access the variable <code>outerVar</code>, even after <code>outer()</code> has finished executing.</li>
+        <li><strong>Usage:</strong> Closures are used for creating private variables or maintaining state between function calls.</li>
+      </ul>
+      <button class="try-btn">Try it Yourself</button>
+    </div>
+</div>        
+
+<!-- objects and prototypes -->
+<div id="objects" class="rightside-content">
+<div class="tag" data-code="let person = { name: 'John', age: 30, greet: function() { document.write('Hello, ' + this.name); }}; person.greet();">
+  <h2>Objects and Prototypes</h2>
+  <p>In JavaScript, objects are collections of key-value pairs, where each key (or property) is associated with a value (could be any data type).</p>
+  <ul>
+    <li><strong>Objects:</strong> Objects are used to store collections of data and more complex entities.</li>
+    <li><strong>Example:</strong> <code>let person = { name: 'John', age: 30, greet: function() { document.write('Hello, ' + this.name); }};</code></li>
+    <li><strong>Prototypes:</strong> Every JavaScript object has a prototype, which is another object. Prototypes allow objects to inherit methods and properties from other objects.</li>
+    <li><strong>Example:</strong> A prototype can be used to share properties or methods across instances of objects, reducing redundancy.</li>
+    <li>This is useful for creating more efficient and maintainable code by reusing common functionality across multiple objects.</li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+ 
+</div>
+
+  <!-- Arrays and Objects Section -->
+  <div id="arrays" class="rightside-content">
+    <div class="tag" data-code="let fruits = ['apple', 'banana', 'orange']; document.write(fruits.join(', '));">
+      <h2>Arrays and Methods</h2>
+      <p>JavaScript arrays store multiple values in a single variable. Arrays are ordered collections, where each value can be accessed using an index starting from 0.</p>
+      <ul>
+        <li><strong>Arrays:</strong> Arrays allow storing of different data types, including strings, numbers, and objects.</li>
+        <li><strong>Methods:</strong> Methods are built-in functions that allow you to manipulate or retrieve information from an array.</li>
+        <li><strong>Example:</strong> <code>fruits.join(', ')</code> converts the array into a string with each item separated by a comma.</li>
+        <li>Arrays are essential for storing and organizing data, and methods like <code>push()</code>, <code>pop()</code>, and <code>shift()</code> are commonly used to modify arrays.</li>
+        <li>This is just one example of how methods interact with arrays to return a new representation or modify its contents.</li>
+      </ul>
+      <button class="try-btn">Try it Yourself</button>
+    </div>
+    
+  
+    <div class="tag" data-code="let fruits = ['apple', 'banana', 'cherry'];&#10;document.write(fruits[0]);&#10;document.write(fruits[1]);">
+      <h2>Arrays</h2>
+      <p>An array is a special type of object used to store multiple values in a single variable. Arrays are ordered collections of data.</p>
+      <ul>
+        <li><strong>Syntax:</strong> <code>let arrayName = [value1, value2, value3];</code></li>
+        <li><strong>Accessing Elements:</strong> You can access individual elements using their index, starting from 0.</li>
+        <li><strong>Example:</strong> <code>let fruits = ['apple', 'banana', 'cherry'];</code> <code>document.write(fruits[0]);</code> displays <code>apple</code>, and <code>document.write(fruits[1]);</code> displays <code>banana</code>.</li>
+        <li><strong>Methods:</strong> Arrays have built-in methods like <code>push()</code>, <code>pop()</code>, <code>shift()</code>, <code>unshift()</code>, <code>concat()</code>, and <code>slice()</code>.</li>
+      </ul>
+      <button class="try-btn">Try it Yourself</button>
+    </div>
+
+   <div class="tag" data-code="let fruits = ['apple', 'banana']; fruits.push('cherry'); document.write(fruits);">
+  <h2>push() Method</h2>
+  <ul>
+    <li><strong>push()</strong> adds one or more elements to the end of an array.</li>
+    <li>Syntax: <code>array.push(element1, element2, ...);</code></li>
+    <li>It returns the new length of the array.</li>
+    <li>Example: <code>fruits.push('cherry')</code> adds 'cherry' to the end.</li>
+    <li>Commonly used to add items to an array dynamically.</li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+<div class="tag" data-code="let fruits = ['apple', 'banana', 'cherry']; fruits.pop(); document.write(fruits);">
+  <h2>pop() Method</h2>
+  <ul>
+    <li><strong>pop()</strong> removes the last element from an array.</li>
+    <li>Syntax: <code>array.pop();</code></li>
+    <li>The method returns the removed element.</li>
+    <li>Example: <code>fruits.pop()</code> removes 'cherry' from the array.</li>
+    <li>Used to remove items from the end of an array.</li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+<div class="tag" data-code="let fruits = ['apple', 'banana', 'cherry']; fruits.shift(); document.write(fruits);">
+  <h2>shift() Method</h2>
+  <ul>
+    <li><strong>shift()</strong> removes the first element from an array.</li>
+    <li>Syntax: <code>array.shift();</code></li>
+    <li>The method returns the removed element.</li>
+    <li>Example: <code>fruits.shift()</code> removes 'apple' from the array.</li>
+    <li>Used to remove the first item of an array.</li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+<div class="tag" data-code="let fruits = ['banana', 'cherry']; fruits.unshift('apple'); document.write(fruits);">
+  <h2>unshift() Method</h2>
+  <ul>
+    <li><strong>unshift()</strong> adds one or more elements to the beginning of an array.</li>
+    <li>Syntax: <code>array.unshift(element1, element2, ...);</code></li>
+    <li>The method returns the new length of the array.</li>
+    <li>Example: <code>fruits.unshift('apple')</code> adds 'apple' to the start.</li>
+    <li>Commonly used to prepend items to an array.</li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+<div class="tag" data-code="let fruits = ['apple', 'banana']; let moreFruits = ['cherry', 'date']; let allFruits = fruits.concat(moreFruits); document.write(allFruits);">
+  <h2>concat() Method</h2>
+  <ul>
+    <li><strong>concat()</strong> combines two or more arrays into a new array.</li>
+    <li>Syntax: <code>array1.concat(array2, array3, ...);</code></li>
+    <li>The method returns a new array without modifying the original arrays.</li>
+    <li>Example: <code>fruits.concat(moreFruits)</code> merges two arrays.</li>
+    <li>Used to merge multiple arrays into one array.</li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div> 
+  </div>
+  
+  <!-- Loops Section -->
+  <div id="eventloops" class="rightside-content">
+    <div class="tag" data-code="for(let i = 0; i < 5; i++){&#10;  document.write(i);&#10;}">
+      <h2>For Loop</h2>
+      <p>Executes a block of code a specified number of times.</p>
+      <ul>
+        <li><strong><code>for</code> loop:</strong> This loop is used when you know in advance how many times you want to execute a statement or a block of code.</li>
+        <li>Syntax: <code>for(initialization; condition; increment/decrement)</code></li>
+        <li>Example: The loop <code>for(let i = 0; i < 5; i++)</code> will run the code inside the loop 5 times (from 0 to 4).</li>
+        <li>This loop is particularly useful when you want to iterate over an array or perform a task a certain number of times.</li>
+      </ul>
+      <button class="try-btn">Try it Yourself</button>
+  </div>
+  
+  
+  <div class="tag" data-code="let i = 0;&#10;while(i < 5){&#10;  document.write(i);&#10;  i++;&#10;}">
+    <h2>While Loop</h2>
+    <p>Executes a block of code as long as a specified condition is true.</p>
+    <ul>
+      <li><strong><code>while</code> loop:</strong> This loop runs the code block as long as the condition evaluates to true.</li>
+      <li>Syntax: <code>while(condition) { // code }</code></li>
+      <li>Example: The loop <code>while(i < 5)</code> will run as long as <code>i</code> is less than 5.</li>
+      <li>Unlike the <code>for</code> loop, you don’t define the iteration inside the loop itself. You need to manually update the loop counter (e.g., <code>i++</code>).</li>
+      <li>Useful when you don’t know exactly how many times you need to iterate, but you have a condition to check.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+</div>
+<div class="tag" data-code="let i = 0;&#10;do{&#10;  document.write(i);&#10;  i++;&#10;} while(i < 5);">
+  <h2>Do-While Loop</h2>
+  <p>Executes a block of code once before checking the condition, and then repeats the loop as long as the condition is true.</p>
+  <ul>
+    <li><strong><code>do-while</code> loop:</strong> This loop is similar to the <code>while</code> loop, but the block of code is executed at least once before the condition is tested.</li>
+    <li>Syntax: <code>do { // code } while(condition);</code></li>
+    <li>Example: The loop will first execute the code block and then check the condition. If <code>i</code> is less than 5, it will continue.</li>
+    <li>Useful when you want the code to run at least once, regardless of whether the condition is true.</li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+<div class="tag" data-code="let person = {name: 'John', age: 30, city: 'New York'};&#10;for(let key in person) {&#10;  document.write(key + ': ' + person[key] + '<br>');&#10;}">
+  <h2>For...in Loop</h2>
+  <p>Used to loop through the properties of an object.</p>
+  <ul>
+    <li><strong><code>for...in</code> loop:</strong> This loop is used for iterating over the properties of an object.</li>
+    <li>Syntax: <code>for (let key in object) { // code }</code></li>
+    <li>Example: The loop will iterate over the properties of the <code>person</code> object and print each key and its corresponding value.</li>
+    <li>This loop is useful when you need to access both the property names and their values in an object.</li>
+  </ul>
+  <button class="try-btn">Try it Yourself</button>
+</div>
+  </div>
+
+
+  
+ 
+ 
+
+  <div id="promises" class="rightside-content">
+    <div class="tag" data-code="let myPromise = new Promise((resolve, reject) => {&#10;  let success = true;&#10;  if (success) {&#10;    resolve('Operation successful!');&#10;  } else {&#10;    reject('Operation failed.');&#10;  }&#10;});&#10;myPromise.then(result => {&#10;  document.write(result);&#10;}).catch(error => {&#10;  document.write(error);&#10;});">
+      <h2>Promises</h2>
+      <p>A <code>Promise</code> is an object that represents the eventual completion or failure of an asynchronous operation.</p>
+      <ul>
+        <li><code>Promise</code> has three states: <strong>pending</strong>, <strong>fulfilled</strong>, and <strong>rejected</strong>.</li>
+        <li><strong>then()</strong> is used for handling success (fulfilled state).</li>
+        <li><strong>catch()</strong> is used for handling failure (rejected state).</li>
+        <li>Example: <code>let myPromise = new Promise((resolve, reject) => { // code })</code></li>
+        <li>Promises are especially useful when working with asynchronous operations like API calls or setTimeout.</li>
+      </ul>
+      <button class="try-btn">Try it Yourself</button>
+    </div>
+    <div class="tag" data-code="async function myAsyncFunction() {&#10;  const result = await myPromise;&#10;  document.write(result);&#10;}&#10;myAsyncFunction();">
+      <h2>Async/Await</h2>
+      <p><code>async</code> functions always return a Promise, and <code>await</code> pauses the execution of the function until the Promise is resolved or rejected.</p>
+      <ul>
+        <li><code>async</code> makes a function return a promise, and <code>await</code> waits for the promise to resolve or reject.</li>
+        <li>Syntax: <code>async function functionName() { await somePromise }</code></li>
+        <li><strong>Example:</strong> The code below uses <code>await</code> to wait for the promise to resolve before continuing.</li>
+        <li><strong>Benefit:</strong> Makes asynchronous code look more like synchronous code, which improves readability.</li>
+      </ul>
+      <button class="try-btn">Try it Yourself</button>
+    </div>
+    <div class="tag" data-code="async function fetchData() {&#10;  try {&#10;    let result = await fetch('https://api.example.com/data');&#10;    let data = await result.json();&#10;    document.write(data);&#10;  } catch (error) {&#10;    document.write('Error occurred: ' + error);&#10;  }&#10;}&#10;fetchData();">
+      <h2>Error Handling in Async/Await</h2>
+      <p>Use <code>try...catch</code> to handle errors when using <code>await</code> in asynchronous functions.</p>
+      <ul>
+        <li><strong>try:</strong> Contains the code that might throw an error.</li>
+        <li><strong>catch:</strong> Catches any error that occurs inside the <code>try</code> block.</li>
+        <li>Example: The code below handles errors that may occur when fetching data from an API.</li>
+      </ul>
+      <button class="try-btn">Try it Yourself</button>
+    </div>
+    </div>
+         
+    
+ <!-- DOM Section -->
+ <div id="dom" class="rightside-content">
+  <div class="tag" data-code="document.getElementById('myButton').addEventListener('click', function() {&#10;  document.getElementById('myText').textContent = 'Text has been changed!';&#10;});">
+    <h2>DOM Manipulation: Changing Text</h2>
+    <p>DOM manipulation allows you to change the content and structure of a webpage dynamically.</p>
+    <ul>
+      <li><strong>getElementById:</strong> Retrieves an element by its unique ID.</li>
+      <li><strong>addEventListener:</strong> Attaches an event to an element (e.g., a button click).</li>
+      <li><strong>textContent:</strong> Sets or gets the text content of an element.</li>
+      <li>Example: The code below changes the text of a paragraph when a button is clicked.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  <div class="tag" data-code="let element = document.getElementById('myElement');&#10;document.write(element);">
+    <h2>getElementById()</h2>
+    <p><code>getElementById()</code> is used to select an element by its unique ID attribute.</p>
+    <ul>
+      <li><strong>Returns:</strong> The element with the specified ID or <code>null</code> if no element is found.</li>
+      <li><strong>Usage:</strong> You can use this method to access elements and then modify their properties or content.</li>
+      <li><strong>Example:</strong> <code>let element = document.getElementById('myElement');</code> selects the element with the ID of 'myElement'.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  <div class="tag" data-code="let elements = document.getElementsByClassName('myClass');&#10;document.write(elements.length);">
+    <h2>getElementsByClassName()</h2>
+    <p><code>getElementsByClassName()</code> is used to select all elements with a specified class name.</p>
+    <ul>
+      <li><strong>Returns:</strong> A live HTMLCollection of elements with the given class name.</li>
+      <li><strong>Usage:</strong> It is used when you want to select multiple elements with the same class.</li>
+      <li><strong>Example:</strong> <code>let elements = document.getElementsByClassName('myClass');</code> selects all elements with the class `myClass`.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  <div class="tag" data-code="let element = document.querySelector('.myClass');&#10;document.write(element);">
+    <h2>querySelector()</h2>
+    <p><code>querySelector()</code> returns the first element that matches a specified CSS selector.</p>
+    <ul>
+      <li><strong>Returns:</strong> The first matching element or <code>null</code> if no match is found.</li>
+      <li><strong>Usage:</strong> You can pass any valid CSS selector to target an element.</li>
+      <li><strong>Example:</strong> <code>let element = document.querySelector('.myClass');</code> selects the first element with the class `myClass`.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  <div class="tag" data-code="let elements = document.querySelectorAll('.myClass');&#10;document.write(elements.length);">
+    <h2>querySelectorAll()</h2>
+    <p><code>querySelectorAll()</code> returns a **NodeList** of all elements that match the given CSS selector.</p>
+    <ul>
+      <li><strong>Returns:</strong> A static NodeList containing all matching elements.</li>
+      <li><strong>Usage:</strong> Use this method when you need to select multiple elements that match a CSS selector.</li>
+      <li><strong>Example:</strong> <code>let elements = document.querySelectorAll('.myClass');</code> selects all elements with the class `myClass`.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  <div class="tag" data-code="let newElement = document.createElement('p');&#10;newElement.textContent = 'This is a new paragraph!';&#10;document.body.appendChild(newElement);">
+    <h2>createElement()</h2>
+    <p><code>createElement()</code> creates a new HTML element dynamically.</p>
+    <ul>
+      <li><strong>Returns:</strong> A new element object, not yet part of the DOM.</li>
+      <li><strong>Usage:</strong> Use this method to create new HTML elements in JavaScript.</li>
+      <li><strong>Example:</strong> <code>let newElement = document.createElement('p');</code> creates a new `<p>` element.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  <div class="tag" data-code="let newElement = document.createElement('p');&#10;newElement.textContent = 'This is a new paragraph!';&#10;document.body.appendChild(newElement);">
+    <h2>appendChild()</h2>
+    <p><code>appendChild()</code> is used to add a new child element to an existing element in the DOM.</p>
+    <ul>
+      <li><strong>Usage:</strong> Use this method to add a node as the last child of a parent node.</li>
+      <li><strong>Example:</strong> <code>document.body.appendChild(newElement);</code> adds the `newElement` to the end of the body element.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  <div class="tag" data-code="let element = document.getElementById('myElement');&#10;element.removeChild(element.firstChild);">
+    <h2>removeChild()</h2>
+    <p><code>removeChild()</code> removes a child element from a specified parent element.</p>
+    <ul>
+      <li><strong>Usage:</strong> Use this method to remove an element from the DOM.</li>
+      <li><strong>Example:</strong> <code>parent.removeChild(child);</code> removes the `child` from the `parent` element.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  <div class="tag" data-code="let element = document.getElementById('myElement');&#10;element.innerHTML = 'This is new content!';">
+    <h2>innerHTML</h2>
+    <p><code>innerHTML</code> allows you to get or set the HTML content inside an element.</p>
+    <ul>
+      <li><strong>Usage:</strong> Use <code>innerHTML</code> to change the content of an element.</li>
+      <li><strong>Example:</strong> <code>element.innerHTML = 'New Content';</code> replaces the current content of the element with 'New Content'.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  <div class="tag" data-code="let element = document.getElementById('myElement');&#10;element.textContent = 'This is text content!';">
+    <h2>textContent</h2>
+    <p><code>textContent</code> allows you to get or set the textual content inside an element.</p>
+    <ul>
+      <li><strong>Usage:</strong> Use <code>textContent</code> to update only the text within an element, without affecting the HTML structure.</li>
+      <li><strong>Example:</strong> <code>element.textContent = 'New Text';</code> replaces the text inside the element with 'New Text'.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  <div class="tag" data-code="let element = document.getElementById('myElement');&#10;element.setAttribute('class', 'newClass');">
+    <h2>setAttribute()</h2>
+    <p><code>setAttribute()</code> is used to set or update an attribute of an HTML element.</p>
+    <ul>
+      <li><strong>Usage:</strong> Use <code>setAttribute()</code> to set or change attributes like <code>class</code>, <code>id</code>, <code>href</code>, etc.</li>
+      <li><strong>Example:</strong> <code>element.setAttribute('class', 'newClass');</code> sets the class of the element to 'newClass'.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  <div class="tag" data-code="let element = document.getElementById('myElement');&#10;let value = element.getAttribute('class');&#10;document.write(value);">
+    <h2>getAttribute()</h2>
+    <p><code>getAttribute()</code> is used to get the value of a specified attribute of an element.</p>
+    <ul>
+      <li><strong>Usage:</strong> Use <code>getAttribute()</code> to retrieve the value of an element's attribute.</li>
+      <li><strong>Example:</strong> <code>let value = element.getAttribute('class');</code> gets the value of the `class` attribute of the element.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  <div class="tag" data-code="let element = document.getElementById('myElement');&#10;element.removeAttribute('class');">
+    <h2>removeAttribute()</h2>
+    <p><code>removeAttribute()</code> removes the specified attribute from an element.</p>
+    <ul>
+      <li><strong>Usage:</strong> Use <code>removeAttribute()</code> to completely remove an attribute from an element.</li>
+      <li><strong>Example:</strong> <code>element.removeAttribute('class');</code> removes the `class` attribute of the element.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  <div class="tag" data-code="let element = document.getElementById('myElement');&#10;element.classList.add('newClass');">
+    <h2>classList</h2>
+    <p><code>classList</code> is an object that provides methods to manipulate the class of an element.</p>
+    <ul>
+      <li><strong>Usage:</strong> Use <code>classList</code> to add, remove, or toggle classes of an element.</li>
+      <li><strong>Example:</strong> <code>element.classList.add('newClass');</code> adds the class 'newClass' to the element.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  <div class="tag" data-code="let element = document.getElementById('myElement');&#10;element.style.backgroundColor = 'blue';">
+    <h2>style</h2>
+    <p><code>style</code> allows you to manipulate inline styles of an element directly through JavaScript.</p>
+    <ul>
+      <li><strong>Usage:</strong> Use <code>style</code> to change the CSS styles of an element dynamically.</li>
+      <li><strong>Example:</strong> <code>element.style.backgroundColor = 'blue';</code> sets the background color of the element to blue.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+                              
+  <div class="tag" data-code="document.getElementById('demo').innerText = 'Hello DOM';">
+    <h3>1. Accessing Elements</h3>
+    <p>Use methods like <code>getElementById</code>, <code>querySelector</code>, etc.</p>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+
+  <div class="tag" data-code="document.querySelector('p').style.color = 'red';">
+    <h3>2. Changing Styles</h3>
+    <p>You can modify the CSS of elements via JavaScript.</p>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+</div>
+
+
+<!-- Final Note -->
+<div id="es6" class="rightside-content">
+  <div class="tag" data-code="let x = 10; const y = 20; document.write('x: ' + x + ', y: ' + y);">
+    <h2>let and const</h2>
+    <p><code>let</code> and <code>const</code> are used to declare variables in modern JavaScript.</p>
+    <ul>
+      <li><code>let</code> allows you to declare a block-scoped variable that can be reassigned.</li>
+      <li><code>const</code> creates a block-scoped variable that cannot be reassigned after being initialized.</li>
+      <li>Example: <code>let x = 10;</code>, <code>const y = 20;</code></li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  
+  <div class="tag" data-code="const sum = (a, b) => a + b; document.write('Sum: ' + sum(5, 3));">
+    <h2>Arrow Functions</h2>
+    <p>Arrow functions provide a more concise syntax for writing functions.</p>
+    <ul>
+      <li>They are anonymous functions and do not have their own <code>this</code>.</li>
+      <li>Example: <code>const sum = (a, b) => a + b;</code></li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  
+  <div class="tag" data-code="let name = 'John'; let greeting = `Hello, ${name}!`; document.write(greeting);">
+    <h2>Template Literals</h2>
+    <p>Template literals provide a way to embed expressions inside strings.</p>
+    <ul>
+      <li>They are wrapped in backticks <code>``</code> instead of quotes.</li>
+      <li>Variables or expressions can be embedded using <code>${}</code>.</li>
+      <li>Example: <code>let greeting = `Hello, ${name}!`;</code></li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  
+  <div class="tag" data-code="const person = {name: 'John', age: 30}; const {name, age} = person; document.write('Name: ' + name + ', Age: ' + age);">
+    <h2>Destructuring Assignment</h2>
+    <p>Destructuring allows you to unpack values from arrays or properties from objects into variables.</p>
+    <ul>
+      <li>For objects: <code>const {name, age} = person;</code></li>
+      <li>For arrays: <code>const [first, second] = array;</code></li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  
+  <div class="tag" data-code="const arr1 = [1, 2, 3]; const arr2 = [...arr1, 4, 5]; document.write('Arr2: ' + arr2.join(', '));">
+    <h2>Spread and Rest Operators</h2>
+    <p>The <code>...</code> operator has two purposes: spreading and collecting values.</p>
+    <ul>
+      <li><code>Spread</code>: Used to spread elements of an array or object. Example: <code>const arr2 = [...arr1, 4, 5];</code></li>
+      <li><code>Rest</code>: Used to collect remaining elements into a single variable. Example: <code>const [first, ...rest] = arr;</code></li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  
+  <div class="tag" data-code="function greet(name = 'Guest') { return `Hello, ${name}!`; } document.write(greet());">
+    <h2>Default Parameters</h2>
+    <p>Function parameters can have default values if no argument is passed.</p>
+    <ul>
+      <li>Example: <code>function greet(name = 'Guest') { ... }</code></li>
+      <li>If no value is provided for <code>name</code>, it will default to <code>'Guest'</code>.</li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  
+  <div class="tag" data-code="class Person { constructor(name, age) { this.name = name; this.age = age; } } const person = new Person('John', 30); document.write(person.name + ' is ' + person.age + ' years old.');">
+    <h2>Classes</h2>
+    <p>Classes are a blueprint for creating objects in JavaScript. They were introduced in ES6.</p>
+    <ul>
+      <li><code>class</code> allows you to define a template for objects.</li>
+      <li>Example: <code>class Person { constructor(name, age) { this.name = name; this.age = age; } }</code></li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  
+  <div class="tag" data-code="import { greet } from './greet.js'; document.write(greet());">
+    <h2>Modules</h2>
+    <p>Modules allow you to split your code into reusable components.</p>
+    <ul>
+      <li><code>import</code> allows you to load functions, objects, or variables from other files.</li>
+      <li><code>export</code> makes code available to other files.</li>
+      <li>Example: <code>import { greet } from './greet.js';</code></li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  
+  <div class="tag" data-code="let promise = new Promise((resolve, reject) => { resolve('Success!'); }); promise.then(result => { document.write(result); }).catch(error => { document.write('Error: ' + error); });">
+    <h2>Promises</h2>
+    <p>Promises represent the completion or failure of an asynchronous operation.</p>
+    <ul>
+      <li><code>new Promise()</code> takes two functions: <code>resolve</code> and <code>reject</code>.</li>
+      <li>Example: <code>let promise = new Promise((resolve, reject) => { resolve('Success!'); });</code></li>
+    </ul>
+    <button class="try-btn">Try it Yourself</button>
+  </div>
+  
+                  
+</div>
+
+
+
+      <!-- Live Editor Modal -->
+      <div id="modalOverlay"></div>
+      <div id="liveEditorModal">
+        <span class="close-btn">&times;</span> <!-- Close Button -->
+        <h2>Try it Yourself</h2>
+        <textarea id="editorArea">// Your example code goes here</textarea>
+        <br>
+        <button id="runEditorBtn">Run Code</button>
+        <iframe id="editorOutput"></iframe>
+      </div>
+      </section>
+    </div>
+
+    <footer>
+      <button class="assistant-btn" id="btn">🎤</button>
+      <img src="voice.gif" alt="voice" id="voice">
+      <button id="bttn"><span id="content">..</span></button>
+    
+      <!-- Game Index Button with Custom Image Icon -->
+      <a href="game.html" class="game-icon-btn">
+        <i class="fas fa-gamepad"></i> <!-- Font Awesome Game Icon -->
+      </a>
+    </footer>
+  
+
+    
+    <!-- JavaScript -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const dropdownToggle = document.querySelector(".dropdown-toggle");
+
+        dropdownToggle.addEventListener("click", function (event) {
+          event.preventDefault();
+          this.parentElement.classList.toggle("active");
+        });
+      });
+
+      function loadContent(topic) {
+        const contentArea = document.getElementById("content-area");
+        contentArea.innerHTML = `<h2>${topic.replace(
+          "-",
+          " "
+        )}</h2><p>Content for ${topic} will appear here.</p>`;
+      }
+
+
+
+
+
+// Selecting elements
+const modalOverlay = document.getElementById('modalOverlay');
+const liveEditorModal = document.getElementById('liveEditorModal');
+const editorArea = document.getElementById('editorArea');
+const runEditorBtn = document.getElementById('runEditorBtn');
+const editorOutput = document.getElementById('editorOutput');
+const closeBtn = document.querySelector('.close-btn'); // Close Button
+
+// Function to open modal with code
+function openModal(exampleCode) {
+  // Clear previous output
+  const doc = editorOutput.contentWindow.document;
+  doc.open();
+  doc.write(''); // Clear previous output
+  doc.close();
+
+  // Set code in textarea
+  editorArea.value = exampleCode;
+
+  // Show modal
+  liveEditorModal.style.display = "block";
+  modalOverlay.style.display = "block";
+
+  // Add animation class
+  setTimeout(() => {
+    liveEditorModal.classList.add("active");
+    modalOverlay.classList.add("active");
+  }, 10);
+}
+
+// Function to close modal
+function closeModal() {
+  liveEditorModal.classList.remove("active");
+  modalOverlay.classList.remove("active");
+
+  setTimeout(() => {
+    liveEditorModal.style.display = "none";
+    modalOverlay.style.display = "none";
+  }, 300);
+}
+
+// Attach click events to all try buttons
+document.querySelectorAll('.try-btn').forEach(button => {
+  button.addEventListener('click', function (e) {
+    e.stopPropagation();
+    const exampleCode = this.parentElement.getAttribute('data-code');
+    openModal(exampleCode);
+  });
+});
+
+runEditorBtn.addEventListener('click', function (e) {
+  e.stopPropagation();
+  const code = editorArea.value;
+  const iframe = editorOutput;
+  const doc = iframe.contentDocument || iframe.contentWindow.document;
+
+  try {
+    const hasHTML = /<html|<body|<head/i.test(code);
+
+    if (hasHTML) {
+      doc.open();
+      doc.write(code);
+      doc.close();
+    } else {
+      doc.open();
+      doc.write(`
+        <body>
+          <script>
+            try {
+              ${code}
+            } catch (error) {
+              document.body.innerHTML = "<pre style='color: red;'>⚠️ You wrote wrong code. Correct it to run properly.<br><br>💡 Tip: Add valid HTML structure like &lt;html&gt; or &lt;body&gt; if needed.<br><br>Error: " + error.message + "</pre>";
+              console.error(error);
+            }
+          <\/script>
+        </body>
+      `);
+      doc.close();
+    }
+  } catch (error) {
+    doc.open();
+    doc.write(`
+      <pre style="color: red; padding: 10px;">
+        ⚠️ You wrote wrong code. Correct it to run properly.<br><br>
+        💡 Tip: Add valid HTML structure like &lt;html&gt; or &lt;body&gt; if needed.<br><br>
+        Error: ${error.message}
+      </pre>
+    `);
+    doc.close();
+    console.error(error);
+  }
+});
+
+
+// Hide modal on overlay click
+modalOverlay.addEventListener('click', closeModal);
+
+// Close modal when close button is clicked
+closeBtn.addEventListener('click', closeModal);
+
+// Prevent closing modal when clicking inside modal
+liveEditorModal.addEventListener('click', function (e) {
+  e.stopPropagation();
+});
+
+
+  </script>
+  <script src="game.js"></script>
+  <script src="script.js"></script>
+  <script src="assistant.js"></script>
+  </body>
+</html>

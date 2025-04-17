@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Learning Hub</title>
+    <link href="logo3.png" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- CSS Styling -->
+    <style>
+          body {
+            overflow-y: hidden;
+        }
+    </style>
+</head>
+
+<body>
+     <!-- Top Navbar -->
+     <header class="navbar">
+        <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+        <h1 class="site-title">
+          <i class="fas fa-book-reader"></i>
+          <span><strong>Smart</strong> Learning Hub</span>
+        </h1>
+
+        <div class="search-container">
+            <input type="text" class="search-box" id="search" placeholder="Search study materials...">
+            <span class="search-icon" id="search-icon"><i class="fas fa-search"></i></span>
+          </div>
+
+        <!-- Nav Menu for Large Screens -->
+        <nav class="nav-menu">
+            <ul class="nav-icons">
+              <li><a href="index.html" title="Home"><i class="fas fa-home" style="color:#fff;"></i></a></li>
+              <li><a href="htmlpage.html" title="HTML"><i class="fab fa-html5" style="color:#e34c26;"></i></a></li>
+              <li><a href="css.html" title="CSS"><i class="fab fa-css3-alt" style="color:#264de4;"></i></a></li>
+              <li><a href="javascript.html" title="JavaScript"><i class="fab fa-js-square" style="color:#f0db4f;"></i></a></li>
+              <li><a href="c++.html" title="C++"><i class="fas fa-laptop-code" style="color:#a259ff;"></i></a></li>
+              <li><a href="java.html" title="Java"><i class="fab fa-java" style="color:#f89820;"></i></a></li>
+              <li><a href="python.html" title="Python"><i class="fab fa-python" style="color:#3776ab;"></i></a></li>
+              <li><a href="cquiz.html" title="Quizzes"><i class="fas fa-question-circle" style="color:#ffcc00;"></i></a></li>
+              <li><a href="cnote.html" title="Notes"><i class="fas fa-sticky-note" style="color:#29b6f6;"></i></a></li>
+            </ul>
+          </nav>
+
+        </nav>
+    </header>
+
+    <!-- Sidebar Navigation (Hidden by Default) -->
+    <!-- ✅ Sidebar Navigation -->
+<nav class="sidebar" id="sidebar">
+  <ul>
+    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="htmlpage.html"><i class="fab fa-html5"></i> HTML</a></li>
+    <li><a href="css.html"><i class="fab fa-css3-alt"></i> CSS</a></li>
+    <li><a href="javascript.html"><i class="fab fa-js-square"></i> JavaScript</a></li>
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle"><i class="fas fa-code"></i> C Topics ⌵</a>
+      <ul class="dropdown-menu">
+        <li><a href="#" onclick="loadContent('c-introduction')"><i class="fas fa-book-open"></i> Introduction</a></li>
+        <li><a href="#" onclick="loadContent('c-syntax')"><i class="fas fa-code"></i> Syntax</a></li>
+        <li><a href="#" onclick="loadContent('c-datatypes')"><i class="fas fa-database"></i> Data Types</a></li>
+        <li><a href="#" onclick="loadContent('c-variables')"><i class="fas fa-cube"></i> Variables</a></li>
+        <li><a href="#" onclick="loadContent('c-operators')"><i class="fas fa-plus-square"></i> Operators</a></li>
+        <li><a href="#" onclick="loadContent('c-control')"><i class="fas fa-random"></i> Control Statements</a></li>
+        <li><a href="#" onclick="loadContent('c-loops')"><i class="fas fa-sync-alt"></i> Loops</a></li>
+        <li><a href="#" onclick="loadContent('c-functions')"><i class="fas fa-project-diagram"></i> Functions</a></li>
+        <li><a href="#" onclick="loadContent('c-arrays')"><i class="fas fa-th"></i> Arrays</a></li>
+        <li><a href="#" onclick="loadContent('c-pointers')"><i class="fas fa-location-arrow"></i> Pointers</a></li>
+        <li><a href="#" onclick="loadContent('c-structs')"><i class="fas fa-boxes"></i> Structures</a></li>
+        <li><a href="#" onclick="loadContent('c-file')"><i class="fas fa-file-alt"></i> File Handling</a></li>
+      </ul>
+    </li>
+
+    <li><a href="c++.html"><i class="fas fa-laptop-code"></i> C++</a></li>
+    <li><a href="java.html"><i class="fab fa-java"></i> Java</a></li>
+    <li><a href="python.html"><i class="fab fa-python"></i> Python</a></li>
+    <li><a href="cquiz.html"><i class="fas fa-question-circle"></i> Quizzes</a></li>
+    <li><a href="cnote.html"><i class="fas fa-sticky-note"></i> Notes</a></li>
+  </ul>
+</nav>
+
+
+    <!-- Main Content with Left Menu & Right Output Section -->
+    <div class="main-container">
+        <!-- Left Section: Menu -->
+        <aside class="left-menu">
+          <h2><i class="fas fa-code"></i> C Topics</h2>
+                <ul>
+                    <li><a href="#" onclick="loadContent('c-introduction')"><i class="fas fa-book-open"></i> Introduction</a></li>
+                    <li><a href="#" onclick="loadContent('c-syntax')"><i class="fas fa-code"></i> Syntax</a></li>
+                    <li><a href="#" onclick="loadContent('c-datatypes')"><i class="fas fa-database"></i> Data Types</a></li>
+                    <li><a href="#" onclick="loadContent('c-variables')"><i class="fas fa-cube"></i> Variables</a></li>
+                    <li><a href="#" onclick="loadContent('c-operators')"><i class="fas fa-plus-square"></i> Operators</a></li>
+                    <li><a href="#" onclick="loadContent('c-control')"><i class="fas fa-random"></i> Control Statements</a></li>
+                    <li><a href="#" onclick="loadContent('c-loops')"><i class="fas fa-sync-alt"></i> Loops</a></li>
+                    <li><a href="#" onclick="loadContent('c-functions')"><i class="fas fa-project-diagram"></i> Functions</a></li>
+                    <li><a href="#" onclick="loadContent('c-arrays')"><i class="fas fa-th"></i> Arrays</a></li>
+                    <li><a href="#" onclick="loadContent('c-pointers')"><i class="fas fa-location-arrow"></i> Pointers</a></li>
+                    <li><a href="#" onclick="loadContent('c-structs')"><i class="fas fa-boxes"></i> Structures</a></li>
+                    <li><a href="#" onclick="loadContent('c-file')"><i class="fas fa-file-alt"></i> File Handling</a></li>
+                </ul>
+        </aside>
+        <!-- Right Section: Output -->
+        <section class="right-output" id="content-area">
+            <h2>Welcome to C Tutorials</h2>
+            <p>Select a topic from the left menu to see its content here.</p>
+
+            <div class="tag" data-code="/* C programming language is a powerful general-purpose language. */">
+              <h2>Introduction to C</h2>
+              <p>C is a general-purpose, procedural programming language. It is known for its efficiency and control over system resources. Initially developed by Dennis Ritchie at AT&T Bell Labs in the 1970s, C is widely used for system programming, embedded systems, and applications requiring high performance.</p>
+              <ul>
+                <li>C is compiled and provides low-level memory access.</li>
+                <li>It is the foundation for many modern programming languages like C++, Java, and Python.</li>
+                <li>Syntax is simple and straightforward, making it a good language for beginners.</li>
+              </ul>
+              <button class="try-btn">Try it Yourself</button>
+            </div>
+
+            <div class="tag" data-code="int num = 10;&#10;float pi = 3.14;&#10;char letter = 'A';">
+              <h2>Data Types in C</h2>
+              <p>C has several built-in data types for storing different kinds of values. These data types include:</p>
+              <ul>
+                <li><strong>int:</strong> Used for integers, e.g., <code>int num = 10;</code></li>
+                <li><strong>float:</strong> Used for decimal numbers, e.g., <code>float pi = 3.14;</code></li>
+                <li><strong>char:</strong> Used for single characters, e.g., <code>char letter = 'A';</code></li>
+              </ul>
+              <button class="try-btn">Try it Yourself</button>
+            </div>
+            
+
+            <div class="tag" data-code="int num = 10;&#10;float pi = 3.14;&#10;char letter = 'A';">
+              <h2>Data Types in C</h2>
+              <p>C has several built-in data types for storing different kinds of values. These data types include:</p>
+              <ul>
+                <li><strong>int:</strong> Used for integers, e.g., <code>int num = 10;</code></li>
+                <li><strong>float:</strong> Used for decimal numbers, e.g., <code>float pi = 3.14;</code></li>
+                <li><strong>char:</strong> Used for single characters, e.g., <code>char letter = 'A';</code></li>
+              </ul>
+              <button class="try-btn">Try it Yourself</button>
+            </div>
+            
+            <div class="tag" data-code="int x = 5;&#10;float y = 4.5;&#10;char letter = 'Z';">
+              <h2>Variables in C</h2>
+              <p>A variable is a named storage location in memory used to hold a value. The value of a variable can be changed during the execution of the program.</p>
+              <ul>
+                <li><strong>Declaration:</strong> To declare a variable, specify its data type and name.</li>
+                <li><strong>Initialization:</strong> You can also initialize a variable with a value at the time of declaration.</li>
+                <li><strong>Example:</strong> <code>int num = 10;</code></li>
+              </ul>
+              <button class="try-btn">Try it Yourself</button>
+            </div>
+
+            <div class="tag" data-code="int x = 10;&#10;int y = 5;&#10;int sum = x + y;">
+              <h2>Operators in C</h2>
+              <p>C provides a wide range of operators for performing operations on variables and values:</p>
+              <ul>
+                <li><strong>Arithmetic Operators:</strong> <code>+, -, *, /, %</code> for mathematical operations.</li>
+                <li><strong>Relational Operators:</strong> <code>==, !=, <, >, <=, >=</code> for comparisons.</li>
+                <li><strong>Logical Operators:</strong> <code>&&</code> (AND), <code>||</code> (OR), <code>!</code> (NOT).</li>
+                <li><strong>Assignment Operators:</strong> <code>=, +=, -=, *=, /=</code> for assigning values.</li>
+              </ul>
+              <button class="try-btn">Try it Yourself</button>
+            </div>
+
+            <div class="tag" data-code="if(x > y) {&#10;  printf('x is greater than y');&#10;} else {&#10;  printf('y is greater than x');&#10;}">
+              <h2>Control Statements</h2>
+              <p>Control statements allow you to control the flow of execution in a program based on conditions:</p>
+              <ul>
+                <li><strong>if</strong>: Executes a block of code if a condition is true.</li>
+                <li><strong>else</strong>: Executes an alternate block of code if the <code>if</code> condition is false.</li>
+                <li><strong>else if</strong>: Adds more conditions to check multiple possibilities.</li>
+              </ul>
+              <button class="try-btn">Try it Yourself</button>
+            </div>
+
+            <div class="tag" data-code="for(int i = 0; i < 5; i++) {&#10;  printf('Value of i: %d', i);&#10;}">
+              <h2>Loops in C</h2>
+              <p>Loops are used to repeat a block of code multiple times:</p>
+              <ul>
+                <li><strong>for loop:</strong> Used when the number of iterations is known.</li>
+                <li><strong>while loop:</strong> Used when the number of iterations is not known.</li>
+                <li><strong>do-while loop:</strong> Executes the block at least once, and then repeats while the condition is true.</li>
+              </ul>
+              <button class="try-btn">Try it Yourself</button>
+            </div>
+
+            <div class="tag" data-code="int add(int a, int b) {&#10;  return a + b;&#10;}&#10;int result = add(5, 7);">
+              <h2>Functions in C</h2>
+              <p>A function is a block of code that performs a specific task. It can be called from other parts of the program to execute the task:</p>
+              <ul>
+                <li><strong>Function Declaration:</strong> Specifies the function name, return type, and parameters.</li>
+                <li><strong>Function Definition:</strong> The actual code of the function.</li>
+                <li><strong>Function Call:</strong> Calls the function to execute its code.</li>
+              </ul>
+              <button class="try-btn">Try it Yourself</button>
+            </div>
+
+            <div class="tag" data-code="int arr[5] = {1, 2, 3, 4, 5};">
+              <h2>Arrays in C</h2>
+              <p>An array is a collection of variables of the same type stored at contiguous memory locations:</p>
+              <ul>
+                <li><strong>Declaration:</strong> An array can be declared with a specific size, e.g., <code>int arr[5];</code></li>
+                <li><strong>Initialization:</strong> Arrays can be initialized at the time of declaration, e.g., <code>int arr[] = {1, 2, 3};</code></li>
+                <li><strong>Access:</strong> Elements can be accessed using their index, e.g., <code>arr[0]</code>.</li>
+              </ul>
+              <button class="try-btn">Try it Yourself</button>
+            </div>
+
+            <div class="tag" data-code="int x = 10;&#10;int *ptr = &x;&#10;printf('%d', *ptr);">
+              <h2>Pointers in C</h2>
+              <p>A pointer is a variable that stores the memory address of another variable:</p>
+              <ul>
+                <li><strong>Declaration:</strong> <code>int *ptr;</code> declares a pointer to an integer.</li>
+                <li><strong>Dereferencing:</strong> <code>*ptr</code> accesses the value stored at the address.</li>
+                <li><strong>Address-of Operator:</strong> <code>&</code> is used to get the address of a variable.</li>
+              </ul>
+              <button class="try-btn">Try it Yourself</button>
+            </div>
+
+            <div class="tag" data-code="struct Person {&#10;  char name[50];&#10;  int age;&#10;};&#10;struct Person person1 = {'John', 25};">
+              <h2>Structures in C</h2>
+              <p>Structures are used to group variables of different data types together:</p>
+              <ul>
+                <li><strong>Declaration:</strong> A structure is declared using the <code>struct</code> keyword.</li>
+                <li><strong>Accessing Members:</strong> Members of a structure can be accessed using the dot operator, e.g., <code>person1.age</code>.</li>
+              </ul>
+              <button class="try-btn">Try it Yourself</button>
+            </div>
+
+            <div class="tag" data-code="FILE *file = fopen('example.txt', 'w');&#10;fprintf(file, 'Hello, World!');&#10;fclose(file);">
+              <h2>File Handling in C</h2>
+              <p>C provides functions to handle files. You can read from and write to files using functions like <code>fopen()</code>, <code>fwrite()</code>, and <code>fclose()</code>.</p>
+              <ul>
+                <li><strong>fopen:</strong> Opens a file. Syntax: <code>FILE *fopen('filename', 'mode');</code></li>
+                <li><strong>fwrite:</strong> Writes data to a file.</li>
+                <li><strong>fclose:</strong> Closes a file when done.</li>
+              </ul>
+              <button class="try-btn">Try it Yourself</button>
+            </div>
+            
+        </section>
+    </div>
+
+     <!-- Live Editor Modal -->
+     <div id="modalOverlay"></div>
+     <div id="liveEditorModal">
+       <span class="close-btn">&times;</span> <!-- Close Button -->
+       <h2>Try it Yourself</h2>
+       <textarea id="editorArea">// Your example code goes here</textarea>
+       <br>
+       <button id="runEditorBtn">Run Code</button>
+       <iframe id="editorOutput"></iframe>
+     </div>
+     </section>
+   </div>
+
+
+    <footer>
+      <button class="assistant-btn" id="btn">🎤</button>
+      <img src="voice.gif" alt="voice" id="voice">
+      <button id="bttn"><span id="content">..</span></button>
+    
+      <!-- Game Index Button with Custom Image Icon -->
+      <a href="game.html" class="game-icon-btn">
+        <i class="fas fa-gamepad"></i> <!-- Font Awesome Game Icon -->
+      </a>
+    </footer>
+  
+    <!-- JavaScript for Loading Content -->
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdownToggle = document.querySelector(".dropdown-toggle");
+
+            dropdownToggle.addEventListener("click", function (event) {
+                event.preventDefault();
+                this.parentElement.classList.toggle("active");
+            });
+        });
+
+      // Selecting elements
+const modalOverlay = document.getElementById('modalOverlay');
+const liveEditorModal = document.getElementById('liveEditorModal');
+const editorArea = document.getElementById('editorArea');
+const runEditorBtn = document.getElementById('runEditorBtn');
+const editorOutput = document.getElementById('editorOutput');
+const closeBtn = document.querySelector('.close-btn'); // Close Button
+
+// Function to open modal with code
+function openModal(exampleCode) {
+  // Clear previous output
+  const doc = editorOutput.contentWindow.document;
+  doc.open();
+  doc.write(''); // Clear previous output
+  doc.close();
+
+  // Set code in textarea
+  editorArea.value = exampleCode;
+
+  // Show modal
+  liveEditorModal.style.display = "block";
+  modalOverlay.style.display = "block";
+
+  // Add animation class
+  setTimeout(() => {
+    liveEditorModal.classList.add("active");
+    modalOverlay.classList.add("active");
+  }, 10);
+}
+
+// Function to close modal
+function closeModal() {
+  liveEditorModal.classList.remove("active");
+  modalOverlay.classList.remove("active");
+
+  setTimeout(() => {
+    liveEditorModal.style.display = "none";
+    modalOverlay.style.display = "none";
+  }, 300);
+}
+
+// Attach click events to all try buttons
+document.querySelectorAll('.try-btn').forEach(button => {
+  button.addEventListener('click', function (e) {
+    e.stopPropagation();
+    const exampleCode = this.parentElement.getAttribute('data-code');
+    openModal(exampleCode);
+  });
+});
+
+runEditorBtn.addEventListener('click', function (e) {
+  e.stopPropagation();
+  const code = editorArea.value;
+  const iframe = editorOutput;
+  const doc = iframe.contentDocument || iframe.contentWindow.document;
+
+  try {
+    const hasHTML = /<html|<body|<head/i.test(code);
+
+    if (hasHTML) {
+      doc.open();
+      doc.write(code);
+      doc.close();
+    } else {
+      doc.open();
+      doc.write(`
+        <body>
+          <script>
+            try {
+              ${code}
+            } catch (error) {
+              document.body.innerHTML = "<pre style='color: red;'>⚠️ You wrote wrong code. Correct it to run properly.<br><br>💡 Tip: Add valid HTML structure like &lt;html&gt; or &lt;body&gt; if needed.<br><br>Error: " + error.message + "</pre>";
+              console.error(error);
+            }
+          <\/script>
+        </body>
+      `);
+      doc.close();
+    }
+  } catch (error) {
+    doc.open();
+    doc.write(`
+      <pre style="color: red; padding: 10px;">
+        ⚠️ You wrote wrong code. Correct it to run properly.<br><br>
+        💡 Tip: Add valid HTML structure like &lt;html&gt; or &lt;body&gt; if needed.<br><br>
+        Error: ${error.message}
+      </pre>
+    `);
+    doc.close();
+    console.error(error);
+  }
+});
+
+
+// Hide modal on overlay click
+modalOverlay.addEventListener('click', closeModal);
+
+// Close modal when close button is clicked
+closeBtn.addEventListener('click', closeModal);
+
+// Prevent closing modal when clicking inside modal
+liveEditorModal.addEventListener('click', function (e) {
+  e.stopPropagation();
+});
+
+
+  </script>
+  <script src="game.js"></script>
+  <script src="script.js"></script>
+  <script src="assistant.js"></script>
+  </body>
+</html>

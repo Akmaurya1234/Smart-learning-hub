@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Learning Hub</title>
+    <link href="logo3.png" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+/* --- Layout Backgrounds --- */
+body {
+  background-color: #111;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* --- Container --- */
+.container {
+  display: flex;
+  margin-top: 70px;
+  height: calc(100vh - 70px);
+  gap: 20px;
+  box-sizing: border-box;
+  padding: 0 15px;
+  overflow: hidden;
+}
+
+/* --- Left Section --- */
+.left {
+  width: 30%;
+  background: #1c1c1c;
+  padding: 30px;
+  border-right: 1px solid #2e2e2e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* --- Right Section --- */
+.right {
+  width: 70%;
+  background: #111;
+  padding: 30px 50px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* --- Headings --- */
+h1 {
+  color: #00e5ff;
+  margin-bottom: 20px;
+}
+
+/* --- Form Groups --- */
+.form-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.form-group i {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 12px 12px 38px;
+  border: none;
+  border-radius: 6px;
+  background: #2a2a2a;
+  color: white;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  outline: 2px solid #00e5ff;
+}
+
+/* --- Buttons --- */
+.btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 14px;
+  width: 100%;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #0056b3, #003f7f);
+}
+
+.logout-btn {
+  background: #444;
+  margin-top: 12px;
+}
+
+.toggle-link {
+  color: #00e5ff;
+  text-align: center;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  display: block;
+}
+
+.error {
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* --- Note Section --- */
+.note-message {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+  color: #ccc;
+  margin-top: 20px;
+}
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.note-header h1 {
+  color: #00e5ff;
+  margin: 0;
+}
+
+.note-btns button {
+  margin-left: 10px;
+  padding: 6px 10px;
+  border: none;
+  background: #2a2a2a;
+  color: #00e5ff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.note-btns button:hover {
+  background: #00e5ff;
+  color: #111;
+}
+
+/* --- Code Block Styling --- */
+.exercise-block {
+  background: #1a1a1a;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-left: 4px solid #00e5ff;
+  border-radius: 10px;
+}
+
+.code-editor {
+  width: 100%;
+  background: #111;
+  color: #00e5ff;
+  border: 1px solid #333;
+  padding: 10px;
+  font-family: monospace;
+  border-radius: 8px;
+  margin-top: 10px;
+  resize: vertical;
+}
+
+.output-box {
+  margin-top: 10px;
+}
+
+.solution {
+  background: #111;
+  color: #ccc;
+  padding: 10px;
+  border-left: 3px solid #00e5ff;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-family: monospace;
+  white-space: pre-wrap;
+}
+
+/* --- Profile Section --- */
+#profileSection {
+  text-align: center;
+  width: 100%;
+}
+
+#profileImage {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 20px auto 10px;
+  display: block;
+  border: 3px solid #0ef;
+  background-color: #222;
+}
+
+#changeProfilePicInput {
+  display: none;
+}
+
+#profileSection .btn {
+  width: auto;
+  padding: 8px 18px;
+  margin: 10px auto;
+  display: inline-block;
+}
+
+/* --- Video Styling --- */
+.note-message iframe,
+.note-message video{
+  width: 100%;
+  height: 450px;
+  border-radius: 10px;
+  background: #000;
+ 
+}
+ 
+
+/* --- Responsive --- */
+
+@media (max-width: 768px) {
+  html, body {
+    height: auto;
+    overflow-y: auto;
+    scroll-behavior: smooth; /* smooth scroll */
+  }
+
+  .container {
+    flex-direction: column;
+    height: auto;
+    overflow: visible;
+  }
+
+  .left {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #2e2e2e;
+    padding: 20px;
+    max-height: none;
+    overflow-y: auto;
+  }
+
+  .right {
+    width: 100%;
+    padding: 20px;
+    height: auto;
+    overflow: visible;
+  }
+
+  .note-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .note-btns {
+    margin-top: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .note-btns button {
+    margin: 5px 0;
+    width: 100%;
+  }
+
+  #profileImage {
+    width: 100px;
+    height: 100px;
+  }
+
+  .note-message iframe,
+  .note-message video {
+    height: 250px;
+  }
+}
+
+/* Custom Scrollbar (for .left section scroll) */
+.left::-webkit-scrollbar {
+  width: 6px;
+}
+
+.left::-webkit-scrollbar-thumb {
+  background-color: #00e5ff;
+  border-radius: 6px;
+}
+
+.left::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+    </style>
+  </head>
+  <body>
+   <!-- ✅ Top Navbar -->
+<header class="navbar">
+  <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+  <h1 class="site-title">
+    <i class="fas fa-book-reader"></i>
+    <span><strong>Smart</strong> Learning Hub</span>
+  </h1>
+  
+  <div class="search-container">
+    <input type="text" class="search-box" id="search" placeholder="Search study materials...">
+    <span class="search-icon" id="search-icon"><i class="fas fa-search"></i></span>
+  </div>
+
+  <!-- Nav Menu for Large Screens -->
+  <nav class="nav-menu">
+    <ul class="nav-icons">
+      <li><a href="index.html" title="Home"><i class="fas fa-home" style="color:#fff;"></i></a></li>
+      <li><a href="htmlpage.html" title="HTML"><i class="fab fa-html5" style="color:#e34c26;"></i></a></li>
+      <li><a href="css.html" title="CSS"><i class="fab fa-css3-alt" style="color:#264de4;"></i></a></li>
+      <li><a href="javascript.html" title="JavaScript"><i class="fab fa-js-square" style="color:#f0db4f;"></i></a></li>
+      <li><a href="c.html" title="C"><i class="fas fa-code" style="color:#00bcd4;"></i></a></li>
+      <li><a href="c++.html" title="C++"><i class="fas fa-laptop-code" style="color:#a259ff;"></i></a></li>
+      <li><a href="java.html" title="Java"><i class="fab fa-java" style="color:#f89820;"></i></a></li>
+      <li><a href="python.html" title="Python"><i class="fab fa-python" style="color:#3776ab;"></i></a></li>
+      <li><a href="cquiz.html" title="Quizzes"><i class="fas fa-question-circle" style="color:#ffcc00;"></i></a></li>
+      <li><a href="cnote.html" title="Notes"><i class="fas fa-sticky-note" style="color:#29b6f6;"></i></a></li>
+      
+    </ul>
+
+</nav>
+</header>
+
+
+<!-- Sidebar Navigation (Hidden by Default) -->
+<nav class="sidebar" id="sidebar">
+  <ul>
+    <li><a href="index.html" title="Home"><i class="fas fa-home" style="color:#fff;"></i>Home</a></li>
+    <li><a href="htmlpage.html" title="HTML"><i class="fab fa-html5" style="color:#e34c26;"></i>HTML</a></li>
+      <li><a href="css.html" title="CSS"><i class="fab fa-css3-alt" style="color:#264de4;"></i>CSS</a></li>
+      <li><a href="javascript.html" title="JavaScript"><i class="fab fa-js-square" style="color:#f0db4f;"></i>JavaScript</a></li>
+      <li><a href="c.html" title="C"><i class="fas fa-code" style="color:#00bcd4;"></i>C</a></li>
+      <li><a href="c++.html" title="C++"><i class="fas fa-laptop-code" style="color:#a259ff;"></i>C++</a></li>
+      <li><a href="java.html" title="Java"><i class="fab fa-java" style="color:#f89820;"></i>Java</a></li>
+      <li><a href="python.html" title="Python"><i class="fab fa-python" style="color:#3776ab;"></i>Python</a></li>
+      <li><a href="cquiz.html" title="Quizzes"><i class="fas fa-question-circle" style="color:#ffcc00;"></i>Quizzes</a></li>
+      <li><a href="cnote.html" title="Notes"><i class="fas fa-sticky-note" style="color:#29b6f6;"></i>Notes</a></li>
+  </ul>
+</nav>
+
+
+<footer>
+  <button class="assistant-btn" id="btn">🎤</button>
+  <img src="voice.gif" alt="voice" id="voice">
+  <button id="bttn"><span id="content">..</span></button>
+
+  <!-- Game Index Button with Custom Image Icon -->
+  <a href="game.html" class="game-icon-btn">
+    <i class="fas fa-gamepad"></i> <!-- Font Awesome Game Icon -->
+  </a>
+</footer>
+ 
+  <div class="container">
+    
+  
+  <!-- Left Section -->
+  <div class="left" id="authContainer">
+    <h1 id="formTitle">Sign Up</h1>
+
+   <!-- Signup -->
+<div id="signupForm">
+  <!-- Name -->
+  <div class="form-group">
+    <i class="fas fa-user"></i>
+    <input type="text" id="signupName" placeholder="Your Name">
+  </div>
+
+  <!-- Email -->
+  <div class="form-group">
+    <i class="fas fa-envelope"></i>
+    <input type="email" id="signupEmail" placeholder="Your Email">
+  </div>
+
+  <!-- Password -->
+  <div class="form-group">
+    <i class="fas fa-lock"></i>
+    <input type="password" id="signupPassword" placeholder="Create Password">
+  </div>
+
+  <!-- Mobile -->
+  <div class="form-group">
+    <i class="fas fa-phone"></i>
+    <input type="text" id="signupMobile" placeholder="Mobile Number">
+  </div>
+
+  <!-- Profile Picture -->
+  <div class="form-group">
+    <i class="fas fa-image"></i>
+    <input type="file" id="profilePic" accept="image/*" style="padding: 6px;">
+  </div>
+
+  <!-- Error message -->
+  <p class="error" id="signupError"></p>
+
+  <button class="btn" onclick="signup()">Sign Up</button>
+  <span class="toggle-link" onclick="toggleForm()">Already have an account? Login</span>
+</div>
+
+    
+
+    <!-- Login -->
+    <div id="loginForm" style="display: none;">
+     
+      <div class="form-group">
+        <i class="fas fa-envelope"></i>
+        <input type="email" id="loginEmail" placeholder="Your Email">
+      </div>
+      <div class="form-group">
+        <i class="fas fa-lock"></i>
+        <input type="password" id="loginPassword" placeholder="Your Password">
+      </div>
+      <p class="error" id="loginError"></p>
+      <button class="btn" onclick="login()">Login</button>
+      <span class="toggle-link" onclick="toggleForm()">Don't have an account? Sign Up</span>
+    </div>
+
+    <!-- Logout -->
+    <div id="profileSection" style="display: none;">
+      <img id="profileImage" src="" alt="Profile Picture" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover;" />
+    
+      <input type="file" id="changeProfilePicInput" accept="image/*" style="display: none;" />
+      <button class="btn" onclick="document.getElementById('changeProfilePicInput').click()">Change Profile Picture</button>
+    
+      <h1>Welcome, <span id="userName"></span></h1>
+      <p>Email: <span id="userEmail"></span></p>
+      <p>Mobile: <span id="userMobile"></span></p>
+      <button class="btn logout-btn" onclick="logout()">Logout</button>
+    </div>
+    
+    
+  </div>
+
+  <!-- Right Section -->
+  <div class="right">
+    <div class="note-header">
+      <h1>C Notes</h1>
+      <div class="note-btns">
+        <button><i class="fas fa-pencil-alt"></i> Exercise</button>
+        <button><i class="fas fa-file-pdf"></i> PDF Notes</button>
+        <button><i class="fas fa-video"></i> Videos</button>
+      </div>
+    </div>
+
+    <div class="note-message" id="noteMessage">
+     
+    </div>
+  </div>
+</div>
+  <script>
+
+function toggleForm() {
+  const loginForm = document.getElementById('loginForm');
+  const signupForm = document.getElementById('signupForm');
+  const title = document.getElementById('formTitle');
+
+  if (loginForm.style.display === 'none') {
+    loginForm.style.display = 'block';
+    signupForm.style.display = 'none';
+    title.innerText = 'Login';
+  } else {
+    loginForm.style.display = 'none';
+    signupForm.style.display = 'block';
+    title.innerText = 'Sign Up';
+  }
+
+  document.getElementById('loginError').innerText = '';
+  document.getElementById('signupError').innerText = '';
+}
+
+function signup() {
+  const name = document.getElementById('signupName').value.trim();
+  const email = document.getElementById('signupEmail').value.trim().toLowerCase();
+  const password = document.getElementById('signupPassword').value;
+  const mobile = document.getElementById('signupMobile').value.trim();
+  const profilePicInput = document.getElementById('profilePic');
+  const errorBox = document.getElementById('signupError');
+
+  // Validation
+  if (!name || !email || !password || !mobile) {
+    errorBox.innerText = "All fields are required!";
+    return;
+  }
+
+  if (!/^\d{10}$/.test(mobile)) {
+    errorBox.innerText = "Mobile number must be 10 digits!";
+    return;
+  }
+
+  const file = profilePicInput.files[0];
+  const reader = new FileReader();
+
+  reader.onload = function () {
+    const profileImage = reader.result;
+
+    const user = { name, email, password, mobile, profileImage };
+    localStorage.setItem('user', JSON.stringify(user));
+    alert("Signup successful! Please login.");
+    toggleForm();
+  };
+
+  if (file) {
+    reader.readAsDataURL(file); // convert image to base64
+  } else {
+    const user = { name, email, password, mobile, profileImage: '' };
+    localStorage.setItem('user', JSON.stringify(user));
+    alert("Signup successful! Please login.");
+    toggleForm();
+  }
+}
+
+
+function login() {
+  const email = document.getElementById('loginEmail').value.trim().toLowerCase();
+  const password = document.getElementById('loginPassword').value;
+
+  const user = JSON.parse(localStorage.getItem('user'));
+
+  if (!user || user.email !== email || user.password !== password) {
+    document.getElementById('loginError').innerText = "Invalid email or password!";
+    return;
+  }
+
+  localStorage.setItem('isLoggedIn', 'true');
+  showDashboard(user);
+}
+
+function showDashboard(user) {
+  document.getElementById('signupForm').style.display = 'none';
+  document.getElementById('loginForm').style.display = 'none';
+  document.getElementById('profileSection').style.display = 'block';
+  document.getElementById('formTitle').innerText = ' ';
+
+  document.getElementById('userName').innerText = user.name;
+  document.getElementById('userEmail').innerText = user.email;
+  document.getElementById('userMobile').innerText = user.mobile || '';
+
+  const img = document.getElementById('profileImage');
+  if (user.profileImage) {
+    img.src = user.profileImage; // ✅ User-selected image
+    img.style.display = 'block';
+  } else {
+    img.src = 'logo3.png'; // ✅ Default image if none selected
+    img.style.display = 'block';
+  }
+
+  document.getElementById('noteMessage').innerHTML = `
+    <p style="font-style: italic; color: #ccc;">Please choose a section above to begin learning!</p>
+  `;
+}
+
+
+
+
+function logout() {
+  localStorage.removeItem('isLoggedIn');
+ // localStorage.removeItem('user');
+  location.reload();
+}
+
+
+window.onload = () => {
+  const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+  const user = JSON.parse(localStorage.getItem('user'));
+
+  document.getElementById('signupForm').style.display = 'none';
+
+  if (isLoggedIn && user) {
+    showDashboard(user);
+  } else {
+    document.getElementById('profileSection').style.display = 'none';
+    document.getElementById('loginForm').style.display = 'block';
+    document.getElementById('formTitle').innerText = 'Login';
+  }
+};
+
+
+document.getElementById('changeProfilePicInput').addEventListener('change', function () {
+  const file = this.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = function () {
+    const newImg = reader.result;
+    document.getElementById('profileImage').src = newImg;
+
+    // Update localStorage
+    const user = JSON.parse(localStorage.getItem('user'));
+    user.profileImage = newImg;
+    localStorage.setItem('user', JSON.stringify(user));
+  };
+
+  reader.readAsDataURL(file);
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelector('.note-btns').addEventListener('click', function (e) {
+    if (e.target.closest('button')) {
+      const btnText = e.target.innerText.trim();
+      const noteBox = document.getElementById('noteMessage');
+
+      const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+
+      if (!isLoggedIn) {
+        noteBox.innerHTML = `
+          <p style="color: #f44336;">⚠️ Please login to access this content.</p>
+        `;
+        return;
+      }
+
+      if (btnText.includes("Exercise")) {
+    noteBox.innerHTML = `
+      <h3 style="color:#0ef;"><i class="fas fa-pencil-alt"></i> C Practice Exercises</h3>
+
+<div class="exercise-block">
+  <p><strong>Exercise 1:</strong> Style a div with blue background and white text.</p>
+  <textarea class="code-editor" rows="8" placeholder="Write your CSS code here..."></textarea>
+  <button class="btn run-btn">Run Code</button>
+  <div class="output-box"></div>
+  <button class="btn solution-btn">Show Solution</button>
+  <pre class="solution" style="display:none;" oncopy="return false" oncut="return false" onpaste="return false">&lt;div style="background-color: blue; color: white; padding: 10px;"&gt;Blue Background Box&lt;/div&gt;</pre>
+</div>
+
+<div class="exercise-block">
+  <p><strong>Exercise 2:</strong> Create a link that opens Google in a new tab.</p>
+  <textarea class="code-editor" rows="5" placeholder="Write your HTML code here..."></textarea>
+  <button class="btn run-btn">Run Code</button>
+  <div class="output-box"></div>
+  <button class="btn solution-btn">Show Solution</button>
+  <pre class="solution" style="display:none;" oncopy="return false" oncut="return false" onpaste="return false">&lt;a href="https://google.com" target="_blank"&gt;Visit Google&lt;/a&gt;</pre>
+</div>
+
+<h3 style="color:#0ef;"><i class="fas fa-fill-drip"></i> CSS Practice Exercises</h3>
+
+<div class="exercise-block">
+  <p><strong>Exercise 3:</strong> Style a paragraph to be red and center aligned.</p>
+  <textarea class="code-editor" rows="7" placeholder="Write your HTML + CSS code here..."></textarea>
+  <button class="btn run-btn">Run Code</button>
+  <div class="output-box"></div>
+  <button class="btn solution-btn">Show Solution</button>
+  <pre class="solution" style="display:none;" oncopy="return false" oncut="return false" onpaste="return false">&lt;p style="color: red; text-align: center;"&gt;This is a styled paragraph.&lt;/p&gt;</pre>
+</div>
+
+<div class="exercise-block">
+  <p><strong>Exercise 4:</strong> Make a div with blue background and white text.</p>
+  <textarea class="code-editor" rows="7" placeholder="Write your HTML + CSS code here..."></textarea>
+  <button class="btn run-btn">Run Code</button>
+  <div class="output-box"></div>
+  <button class="btn solution-btn">Show Solution</button>
+  <pre class="solution" style="display:none;" oncopy="return false" oncut="return false" onpaste="return false">&lt;div style="background-color: blue; color: white; padding: 10px;"&gt;Blue Background Box&lt;/div&gt;</pre>
+</div>
+
+<div class="exercise-block">
+  <p><strong>Exercise 5:</strong> Create a box with 2px solid green border and 10px padding.</p>
+  <textarea class="code-editor" rows="7" placeholder="Write your HTML + CSS code here..."></textarea>
+  <button class="btn run-btn">Run Code</button>
+  <div class="output-box"></div>
+  <button class="btn solution-btn">Show Solution</button>
+  <pre class="solution" style="display:none;" oncopy="return false" oncut="return false" onpaste="return false">&lt;div style="border: 2px solid green; padding: 10px;"&gt;Box with Border and Padding&lt;/div&gt;</pre>
+</div>
+
+<div class="exercise-block">
+  <p><strong>Exercise 6:</strong> Add a background image to a div.</p>
+  <textarea class="code-editor" rows="7" placeholder="Write your HTML + CSS code here..."></textarea>
+  <button class="btn run-btn">Run Code</button>
+  <div class="output-box"></div>
+  <button class="btn solution-btn">Show Solution</button>
+  <pre class="solution" style="display:none;" oncopy="return false" oncut="return false" onpaste="return false">&lt;div style="background-image: url('https://via.placeholder.com/150'); height: 150px; background-size: cover;"&gt;&lt;/div&gt;</pre>
+</div>
+
+<div class="exercise-block">
+  <p><strong>Exercise 7:</strong> Style text with a custom font size and font family.</p>
+  <textarea class="code-editor" rows="7" placeholder="Write your HTML + CSS code here..."></textarea>
+  <button class="btn run-btn">Run Code</button>
+  <div class="output-box"></div>
+  <button class="btn solution-btn">Show Solution</button>
+  <pre class="solution" style="display:none;" oncopy="return false" oncut="return false" onpaste="return false">&lt;p style="font-size: 24px; font-family: Arial;"&gt;Styled text with custom font&lt;/p&gt;</pre>
+</div>
+    `;
+
+    // Add functionality for run and solution buttons
+    document.querySelectorAll('.run-btn').forEach((btn, index) => {
+      btn.addEventListener('click', () => {
+        const textarea = document.querySelectorAll('.code-editor')[index];
+        const output = document.querySelectorAll('.output-box')[index];
+        const code = textarea.value.trim();
+        if (code === '') {
+          output.innerHTML = `<p style="color:red;">⚠️ Please write some code before running.</p>`;
+        } else {
+          output.innerHTML = `<iframe style="width:100%;height:150px;border:1px solid #555;background:#111;" sandbox="allow-scripts allow-same-origin" srcdoc="${code}"></iframe>`;
+        }
+      });
+    });
+
+    document.querySelectorAll('.solution-btn').forEach((btn, index) => {
+      btn.addEventListener('click', () => {
+        const solution = document.querySelectorAll('.solution')[index];
+        if (solution.style.display === 'none') {
+          solution.style.display = 'block';
+          btn.innerText = 'Hide Solution';
+        } else {
+          solution.style.display = 'none';
+          btn.innerText = 'Show Solution';
+        }
+      });
+    });
+}
+ else if (btnText.includes("PDF Notes")) {
+        noteBox.innerHTML = `
+           <h3 style="color:#0ef;"><i class="fas fa-file-pdf"></i> Downloadable PDF Notes</h3>
+          <p>Click below to download:</p>
+         <table border='2px'><tr><td>C Basic Notes</td>
+        <td><a href='allnotes/cssbasic.pdf' class='pdfnotes' target='_blank'>Download PDF</a></td></tr>
+        <tr><td>C Cheat Sheet</td><td><a href='allnotes/csscheatsheet.pdf' class='pdfnotes' target='_blank'>Download PDF</a></td></tr>
+        <tr><td>C Handwritten Notes</td><td><a href='allnotes/csshandwritten.pdf' class='pdfnotes' target='_blank'>Download PDF</a></td></tr>
+        <tr><td>C Notes</td><td><a href='allnotes/cssnotes.pdf' class='pdfnotes' target='_blank'>Download PDF</a></td></tr>
+        `;
+      } else if (btnText.includes("Videos")) {
+        noteBox.innerHTML = `
+        <h3 style="color:#0ef;"><i class="fas fa-video"></i> C Video Tutorials</h3>
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/ajdRvxDWH4w?si=PzIIj9eUBPrGS9pV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Zg4-uSjxosE?si=EPQYrxTqVFPjm17a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/UmRtFFSDSFo?si=5e4tDAZJZZ-uTL02" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/gFWhbjzowrM?si=nSopHMkR4fyYHgrQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/P0XMXqDGttU?si=FK-2D5fBdpfRsFd3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/7zcXPCt8Ck0?si=dj0QIYKginZL0BUH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        `;
+      }
+    }
+  });
+});
+
+  </script>
+  <script src="game.js"></script>
+<script src="script.js"></script>
+<script src="assistant.js"></script>
+</body>
+</html>

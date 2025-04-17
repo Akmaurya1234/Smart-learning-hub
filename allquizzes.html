@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Learning Hub</title>
+    <link href="logo3.png" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    
+    <!-- Top Navbar -->
+    <header class="navbar">
+      <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+      <h1 class="site-title">
+        <i class="fas fa-book-reader"></i>
+        <span><strong>Smart</strong> Learning Hub</span>
+      </h1>
+      
+      <div class="search-container">
+        <input type="text" class="search-box" id="search" placeholder="Search study materials...">
+        <span class="search-icon" id="search-icon"><i class="fas fa-search"></i></span>
+      </div>
+    
+
+      <!-- Nav Menu for Large Screens -->
+      <nav class="nav-menu">
+          <ul class="nav-icons">
+            <li><a href="index.html" title="Home"><i class="fas fa-home" style="color:#fff;"></i></a></li>
+            <li><a href="htmlpage.html" title="HTML"><i class="fab fa-html5" style="color:#e34c26;"></i></a></li>
+            <li><a href="css.html" title="CSS"><i class="fab fa-css3-alt" style="color:#264de4;"></i></a></li>
+            <li><a href="javascript.html" title="JavaScript"><i class="fab fa-js-square" style="color:#f0db4f;"></i></a></li>
+            <li><a href="c.html" title="C"><i class="fas fa-code" style="color:#00bcd4;"></i></a></li>
+            <li><a href="c++.html" title="C++"><i class="fas fa-laptop-code" style="color:#a259ff;"></i></a></li>
+            <li><a href="java.html" title="Java"><i class="fab fa-java" style="color:#f89820;"></i></a></li>
+            <li><a href="python.html" title="Python"><i class="fab fa-python" style="color:#3776ab;"></i></a></li>
+            <li><a href="allquizzes.html" title="Quizzes"><i class="fas fa-question-circle" style="color:#ffcc00;"></i></a></li>
+            <li><a href="allnotes.html" title="Notes"><i class="fas fa-sticky-note" style="color:#29b6f6;"></i></a></li>
+            
+          </ul>
+      
+      </nav>
+    </header>
+
+    <!-- Sidebar Navigation (Hidden by Default) -->
+    <nav class="sidebar" id="sidebar">
+        <ul>
+    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="htmlpage.html"><i class="fab fa-html5"></i> HTML</a></li>
+    <li><a href="css.html"><i class="fab fa-css3-alt"></i> CSS</a></li>
+    <li><a href="javascript.html"><i class="fab fa-js-square"></i> JavaScript</a></li>
+    <li><a href="c.html"><i class="fas fa-code"></i> C</a></li>
+    <li><a href="c++.html"><i class="fas fa-laptop-code"></i> C++</a></li>
+    <li><a href="java.html"><i class="fab fa-java"></i> Java</a></li>
+    <li><a href="python.html"><i class="fab fa-python"></i> Python</a></li>
+    <li><a href="allquizzes.html"><i class="fas fa-question-circle"></i> Quizzes</a></li>
+    <li><a href="allnotes.html"><i class="fas fa-sticky-note"></i> Notes</a></li>        </ul>
+    
+    </nav>
+
+    <!-- Main Content with Left Menu & Right Output Section -->
+    <div class="main-container">
+        <!-- Left Section: Menu -->
+
+        <div class="left-section">
+            <h1>Questions</h1>
+            <div class="question-numbers" id="question-numbers"></div>
+        </div>
+
+        <!-- Right Section: Output -->
+        <div class="right-section">
+            <h1>All Quiz</h1>
+            <div id="timer">Time Left: <span id="time-left">20</span> sec</div>
+            <h3 id="question-text"></h3>
+            <div id="answer-buttons"></div>
+            <button id="next-btn">Skip</button>
+            <button id="submit-btn" onclick="finishQuiz()">Submit Quiz</button>
+            <button id="dark-mode-toggle">Dark Mode</button>
+        </div>
+    </div>
+
+  
+    <footer>
+        <button class="assistant-btn" id="btn">🎤</button>
+        <img src="voice.gif" alt="voice" id="voice">
+        <button id="bttn"><span id="content">..</span></button>
+      
+        <!-- Game Index Button with Custom Image Icon -->
+        <a href="game.html" class="game-icon-btn">
+          <i class="fas fa-gamepad"></i> <!-- Font Awesome Game Icon -->
+        </a>
+      </footer>
+    
+  
+
+    <script>
+        const questions = [
+            { question: "What does JavaScript primarily do?", answers: ["Makes web pages interactive", "Styles web pages", "Defines web page structure"], correct: 0 },
+            { question: "Which keyword is used to declare a variable in JavaScript?", answers: ["var", "let", "Both"], correct: 2 },
+            { question: "Which symbol is used for single-line comments in JavaScript?", answers: ["//", "/*", "#"], correct: 0 },
+            { question: "Which function is used to display text in an alert box?", answers: ["alert()", "msg()", "popup()"], correct: 0 },
+            { question: "How do you write 'Hello World' in an alert box?", answers: ["alert('Hello World');", "msg('Hello World');", "alertBox('Hello World');"], correct: 0 },
+            { question: "Which function is used to print something to the console?", answers: ["console.log()", "print()", "log()"], correct: 0 },
+            { question: "Which keyword is used to define a constant variable?", answers: ["const", "var", "let"], correct: 0 },
+            { question: "Which method is used to remove the last element from an array?", answers: ["pop()", "push()", "shift()"], correct: 0 },
+            { question: "Which method is used to add a new element to the end of an array?", answers: ["push()", "add()", "append()"], correct: 0 },
+            { question: "Which loop is used to iterate over an array?", answers: ["for", "forEach", "Both"], correct: 2 },
+            { question: "Which method is used to join two arrays?", answers: ["concat()", "join()", "merge()"], correct: 0 },
+            { question: "Which JavaScript object is used for handling dates?", answers: ["Date", "Time", "Clock"], correct: 0 },
+            { question: "Which JavaScript loop executes at least once before checking the condition?", answers: ["do...while", "while", "for"], correct: 0 },
+            { question: "Which method is used to remove the first element from an array?", answers: ["shift()", "pop()", "slice()"], correct: 0 },
+            { question: "Which method is used to check if an array contains a specific element?", answers: ["includes()", "contains()", "exists()"], correct: 0 },
+            { question: "What does C language primarily focus on?", answers: ["Structured Programming", "Object-Oriented Programming", "Functional Programming"], correct: 0 },
+            { question: "Which symbol is used to end a statement in C?", answers: [";", ":", "."], correct: 0 },
+            { question: "Which format specifier is used for a float value?", answers: ["%f", "%d", "%lf"], correct: 0 },
+            { question: "Which loop is used to execute a block of code multiple times?", answers: ["for", "while", "Both"], correct: 2 },
+            { question: "Which keyword is used to declare a function in C?", answers: ["void", "func", "function"], correct: 0 },
+            { question: "Which symbol is used to represent a single-line comment in C?", answers: ["//", "/*", "#"], correct: 0 },
+            { question: "Which operator is used for multiplication in C?", answers: ["*", "x", "/"], correct: 0 },
+            { question: "Which operator is used to assign a value in C?", answers: ["=", "==", ":="], correct: 0 },
+            { question: "Which keyword is used to define a structure in C?", answers: ["struct", "class", "structure"], correct: 0 },
+            { question: "Which function is used to allocate memory dynamically?", answers: ["malloc()", "alloc()", "new()"], correct: 0 },
+            { question: "Which function is used to free allocated memory?", answers: ["free()", "delete()", "clear()"], correct: 0 },
+            { question: "Which loop ensures execution at least once?", answers: ["do...while", "while", "for"], correct: 0 },
+            { question: "Which header file is needed for mathematical functions?", answers: ["math.h", "stdio.h", "stdlib.h"], correct: 0 },
+            { question: "Which data type is used for single characters?", answers: ["char", "string", "character"], correct: 0 },
+            { question: "Which keyword is used to declare a pointer?", answers: ["*", "&", "^"], correct: 0 },
+            { question: "What does HTML stand for?", answers: ["Hyper Text Markup Language", "Home Tool Markup Language", "Hyperlinks and Text Markup Language"], correct: 0 },
+            { question: "Which tag is used to define a paragraph?", answers: ["<p>", "<para>", "<paragraph>"], correct: 0 },
+            { question: "Which HTML element is used to specify a footer?", answers: ["<footer>", "<bottom>", "<end>"], correct: 0 },
+            { question: "What is the correct HTML element for inserting a line break?", answers: ["<br>", "<lb>", "<break>"], correct: 0 },
+            { question: "Which tag is used to create a hyperlink?", answers: ["<link>", "<a>", "<href>"], correct: 1 },
+            { question: "Which attribute provides alternative text for images?", answers: ["alt", "title", "src"], correct: 0 },
+            { question: "Which tag is used to define a table row?", answers: ["<tr>", "<td>", "<th>"], correct: 0 },
+            { question: "Which tag is used for the largest heading?", answers: ["<h6>", "<h1>", "<header>"], correct: 1 },
+            { question: "Which doctype is correct for HTML5?", answers: ["<!DOCTYPE html>", "<!DOCTYPE HTML PUBLIC>", "<!DOCTYPE HTML SYSTEM>"], correct: 0 },
+            { question: "Which HTML element is used for inserting JavaScript?", answers: ["<script>", "<js>", "<javascript>"], correct: 0 },
+            { question: "Which HTML attribute specifies an input field must be filled?", answers: ["required", "validate", "mandatory"], correct: 0 },
+            { question: "Which HTML element is used to play video files?", answers: ["<video>", "<media>", "<movie>"], correct: 0 },
+            { question: "What is the correct HTML for creating a checkbox?", answers: ["<input type='check'>", "<checkbox>", "<input type='checkbox'>"], correct: 2 },
+            { question: "Which attribute is used to open a link in a new tab?", answers: ["target='_new'", "target='_self'", "target='_blank'"], correct: 2 },
+            { question: "Which tag is used to create a dropdown list?", answers: ["<dropdown>", "<select>", "<option>"], correct: 1 },
+            { question: "Which tag is used for italic text?", answers: ["<i>", "<italic>", "<em>"], correct: 0 },
+            { question: "Which HTML element is used to define important text?", answers: ["<important>", "<b>", "<strong>"], correct: 2 },
+            { question: "Which tag is used to create a definition list?", answers: ["<dl>", "<list>", "<dt>"], correct: 0 },
+            { question: "Which HTML element is used for displaying preformatted text?", answers: ["<pre>", "<p>", "<text>"], correct: 0 },
+            { question: "Which tag is used to insert an inline frame?", answers: ["<iframe>", "<frame>", "<window>"], correct: 0 },
+            { question: "Which tag is used to define a form?", answers: ["<form>", "<forms>", "<input>"], correct: 0 },
+            { question: "What does CSS stand for?", answers: ["Cascading Style Sheets", "Colorful Style Sheets", "Computer Style Sheets"], correct: 0 },
+            { question: "Which property is used to change the text color?", answers: ["color", "text-color", "foreground"], correct: 0 },
+            { question: "Which CSS property controls the text size?", answers: ["font-size", "text-size", "size"], correct: 0 },
+            { question: "Which property is used to set the background color?", answers: ["background-color", "color", "bgcolor"], correct: 0 },
+            { question: "Which CSS property is used to set the font of a text?", answers: ["font-family", "text-style", "font-style"], correct: 0 },
+            { question: "Which property is used to make text bold?", answers: ["font-weight", "bold", "text-bold"], correct: 0 },
+            { question: "Which CSS property controls the space between lines of text?", answers: ["line-height", "spacing", "text-gap"], correct: 0 },
+            { question: "Which tag is used to apply internal CSS?", answers: ["<style>", "<css>", "<stylesheet>"], correct: 0 },
+            { question: "What is the correct CSS syntax for making all <p> elements red?", answers: ["p {color: red;}", "{p: red;}", "p:color=red;"], correct: 0 },
+            { question: "Which property is used to set the width of an element?", answers: ["width", "element-width", "size"], correct: 0 },
+            { question: "Which property is used to set the height of an element?", answers: ["height", "element-height", "size"], correct: 0 },
+            { question: "Which CSS property is used to create space inside an element?", answers: ["padding", "margin", "spacing"], correct: 0 },
+            { question: "Which CSS property is used to create space outside an element?", answers: ["margin", "padding", "border"], correct: 0 },
+            { question: "Which CSS property makes an element invisible?", answers: ["visibility: hidden", "display: none", "Both"], correct: 2 },
+            { question: "Which CSS property is used for setting the shadow of a text?", answers: ["text-shadow", "shadow-text", "font-shadow"], correct: 0 },
+            { question: "Which CSS property is used to set the maximum width of an element?", answers: ["max-width", "element-max", "width-max"], correct: 0 },
+            { question: "Which property is used to set the gap between columns in a grid layout?", answers: ["grid-gap", "column-gap", "gap"], correct: 2 },
+            { question: "Which CSS property is used to add animation effects?", answers: ["animation", "transition", "animate"], correct: 0 },
+            { question: "Which function is used to print output in C?", answers: ["printf()", "cout<<", "print()"], correct: 0 },
+            { question: "Which format specifier is used for an integer?", answers: ["%d", "%f", "%c"], correct: 0 },
+            { question: "Which format specifier is used for a float value?", answers: ["%f", "%d", "%lf"], correct: 0 },
+            { question: "Which loop is used to execute a block of code multiple times?", answers: ["for", "while", "Both"], correct: 2 },
+            { question: "Which keyword is used to define a structure in C?", answers: ["struct", "class", "structure"], correct: 0 },
+            { question: "Which function is used to allocate memory dynamically?", answers: ["malloc()", "alloc()", "new()"], correct: 0 },
+            { question: "Which function is used to free allocated memory?", answers: ["free()", "delete()", "clear()"], correct: 0 },
+            { question: "Which loop ensures execution at least once?", answers: ["do...while", "while", "for"], correct: 0 },
+            { question: "Which header file is needed for mathematical functions?", answers: ["math.h", "stdio.h", "stdlib.h"], correct: 0 },
+            { question: "Which function is used to find the length of a string in C?", answers: ["strlen()", "size()", "length()"], correct: 0 },
+            { question: "Which function is used to copy a string?", answers: ["strcpy()", "copy()", "strcopy()"], correct: 0 },
+            { question: "Which operator is used to access members of a structure?", answers: [".", "->", ":"], correct: 0 },
+            { question: "Which operator is used to access members of a structure using a pointer?", answers: ["->", ".", ":"], correct: 0 },
+            { question: "Which function is used to concatenate two strings?", answers: ["strcat()", "append()", "concat()"], correct: 0 },
+            { question: "Which data type is used for single characters?", answers: ["char", "string", "character"], correct: 0 },
+            { question: "Which keyword is used to return a value from a function?", answers: ["return", "output", "send"], correct: 0 },
+            { question: "Which operator is used to compare two values for equality?", answers: ["==", "=", "==="], correct: 0 },
+            { question: "Which keyword is used to define a constant in C?", answers: ["const", "final", "constant"], correct: 0 },
+            { question: "Which function is used to convert a string to an integer?", answers: ["atoi()", "int()", "parseInt()"], correct: 0 },
+            { question: "Which function is used to generate a random number?", answers: ["rand()", "random()", "generate()"], correct: 0 },
+            { question: "Which data type is used to store a single character in Java?", answers: ["char", "string", "character"], correct: 0 },
+            { question: "Which symbol is used to end a statement in Java?", answers: [";", ":", "."], correct: 0 },
+            { question: "Which class is the parent class of all Java classes?", answers: ["Object", "Super", "Main"], correct: 0 },
+            { question: "Which function is used to convert a string to an integer?", answers: ["Integer.parseInt()", "int()", "atoi()"], correct: 0 },
+            { question: "Which function is used to generate a random number?", answers: ["Math.random()", "rand()", "random()"], correct: 0 },
+            { question: "Which access modifier makes a variable accessible only within the same class?", answers: ["private", "protected", "public"], correct: 0 },
+            { question: "Which keyword is used to create an interface in Java?", answers: ["interface", "implements", "abstract"], correct: 0 },
+            { question: "Which keyword is used to inherit a class?", answers: ["extends", "implements", "inherits"], correct: 0 },
+            { question: "Which keyword is used to implement an interface?", answers: ["implements", "extends", "inherits"], correct: 0 },
+            { question: "Which function is used to remove an element from an ArrayList?", answers: ["remove()", "delete()", "pop()"], correct: 0 },
+            { question: "Which package is automatically imported in every Java program?", answers: ["java.lang", "java.util", "java.io"], correct: 0 },
+            { question: "Which keyword is used to handle exceptions?", answers: ["try", "catch", "throw"], correct: 0 },
+            { question: "Which keyword is used to raise an exception?", answers: ["throw", "raise", "exception"], correct: 0 },
+            { question: "Which method is used to start a thread in Java?", answers: ["start()", "run()", "begin()"], correct: 0 },
+            { question: "Which keyword is used to refer to the current instance of a class?", answers: ["this", "self", "current"], correct: 0 },
+            { question: "Which function is used to sort a list in Java?", answers: ["Collections.sort()", "sort()", "arrange()"], correct: 0 },
+            { question: "Which keyword is used to create a loop in Python?", answers: ["for", "loop", "foreach"], correct: 0 },
+            { question: "Which function is used to take input from the user?", answers: ["input()", "scanf()", "cin>>"], correct: 0 },
+            { question: "Which keyword is used to declare a variable in Python?", answers: ["No keyword needed", "var", "let"], correct: 0 },
+            { question: "Which operator is used for exponentiation in Python?", answers: ["**", "^", "*"], correct: 0 },
+            { question: "Which module is used to work with mathematical functions?", answers: ["math", "cmath", "random"], correct: 0 },
+            { question: "Which function is used to convert a string to an integer?", answers: ["int()", "atoi()", "parseInt()"], correct: 0 },
+            { question: "Which function is used to generate a random number?", answers: ["random()", "rand()", "generate()"], correct: 0 },
+            { question: "Which keyword is used to create an infinite loop?", answers: ["while True", "for infinity", "loop forever"], correct: 0 },
+            { question: "Which function is used to remove an element from a list?", answers: ["remove()", "delete()", "pop()"], correct: 0 },
+            { question: "Which method is used to split a string into a list?", answers: ["split()", "divide()", "explode()"], correct: 0 },
+            { question: "Which keyword is used to handle exceptions?", answers: ["try", "catch", "handle"], correct: 0 },
+            { question: "Which method is used to check if a string starts with a specific value?", answers: ["startswith()", "begin()", "startswithvalue()"], correct: 0 },
+            { question: "Which function is used to sort a list?", answers: ["sort()", "sorted()", "arrange()"], correct: 1 },
+            { question: "Which keyword is used to exit a loop?", answers: ["break", "exit", "stop"], correct: 0 },
+            { question: "Which function is used to create a range of numbers?", answers: ["range()", "list()", "span()"], correct: 0 }
+
+        ];
+
+
+        let shuffledQuestions = [], currentQuestionIndex = 0, score = 0;
+        let questionTime = 20;
+        let questionTimer;
+
+        document.addEventListener("DOMContentLoaded", () => {
+            shuffledQuestions = [...questions].sort(() => Math.random() - 0.5);
+            displayQuestionNumbers();
+            startQuiz();
+        });
+
+        function displayQuestionNumbers() {
+            const container = document.getElementById("question-numbers");
+            for (let i = 1; i <= questions.length; i++) {
+                const div = document.createElement("div");
+                div.classList.add("question-number");
+                div.innerText = i;
+                container.appendChild(div);
+            }
+        }
+
+        function startQuiz() {
+            nextQuestion();
+        }
+
+        function nextQuestion() {
+            if (currentQuestionIndex >= shuffledQuestions.length) {
+                document.getElementById("submit-btn").style.display = "block";
+                document.getElementById("next-btn").style.display = "none";
+                return;
+            }
+            resetTimer();
+            showQuestion(shuffledQuestions[currentQuestionIndex]);
+        }
+
+        function showQuestion(question) {
+            document.getElementById("question-text").innerText = question.question;
+            const answerButtons = document.getElementById("answer-buttons");
+            answerButtons.innerHTML = "";
+
+            question.answers.forEach((answer, index) => {
+                const btn = document.createElement("button");
+                btn.innerText = answer;
+                btn.onclick = () => selectAnswer(index === question.correct);
+                answerButtons.appendChild(btn);
+            });
+        }
+
+        function selectAnswer(isCorrect) {
+            if (isCorrect) score++;
+            markQuestionAnswered(currentQuestionIndex);
+            currentQuestionIndex++;
+            nextQuestion();
+        }
+
+        function markQuestionAnswered(index) {
+            document.querySelectorAll(".question-number")[index].classList.add("answered");
+        }
+
+        function markQuestionSkipped(index) {
+            document.querySelectorAll(".question-number")[index].classList.add("skipped");
+        }
+
+        function resetTimer() {
+            clearTimeout(questionTimer);
+            document.getElementById("time-left").innerText = questionTime;
+            questionTimer = setInterval(() => {
+                let timeLeft = parseInt(document.getElementById("time-left").innerText);
+                if (timeLeft > 0) {
+                    document.getElementById("time-left").innerText = timeLeft - 1;
+                } else {
+                    clearInterval(questionTimer);
+                    markQuestionSkipped(currentQuestionIndex);
+                    currentQuestionIndex++;
+                    nextQuestion();
+                }
+            }, 1000);
+        }
+
+        // ** Fix for Skip Button **
+        document.getElementById("next-btn").addEventListener("click", () => {
+            markQuestionSkipped(currentQuestionIndex);
+            currentQuestionIndex++;
+            nextQuestion();
+        });
+
+        function finishQuiz() {
+            // Result display in right-section div
+            const rightSection = document.querySelector(".right-section");
+            rightSection.innerHTML = `
+        <h1>Quiz Completed</h1>
+        <h2>Your Score: ${score} / ${shuffledQuestions.length}</h2>
+        <button onclick="location.reload()">Restart Quiz</button>
+    `;
+        }
+
+        document.getElementById("dark-mode-toggle").addEventListener("click", () => {
+            document.body.classList.toggle("dark");
+        });
+
+
+
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdownToggle = document.querySelector(".dropdown-toggle");
+
+            dropdownToggle.addEventListener("click", function (event) {
+                event.preventDefault();
+                this.parentElement.classList.toggle("active");
+            });
+        });
+
+        function loadContent(topic) {
+            const contentArea = document.getElementById("content-area");
+            contentArea.innerHTML = `<h2>${topic.replace('-', ' ')}</h2><p>Content for ${topic} will appear here.</p>`;
+        }
+
+    </script>
+    <script src="game.js"></script>
+    <script src="script.js"></script>
+    <script src="assistant.js"></script>
+</body>
+
+</html>

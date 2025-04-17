@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Learning Hub</title>
+    <link href="logo3.png" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="game.css" />
+  </head>
+  <body class="typing-game-body">
+    
+    <!-- Top Navbar -->
+    <header class="navbar">
+      <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+      <h1 class="site-title">
+        <i class="fas fa-book-reader"></i>
+        <span><strong>Smart</strong> Learning Hub</span>
+      </h1>
+      
+      <div class="search-container">
+        <input type="text" class="search-box" id="search" placeholder="Search study materials...">
+        <span class="search-icon" id="search-icon"><i class="fas fa-search"></i></span>
+      </div>
+    
+
+      <!-- Nav Menu for Large Screens -->
+      <nav class="nav-menu">
+          <ul class="nav-icons">
+            <li><a href="index.html" title="Home"><i class="fas fa-home" style="color:#fff;"></i></a></li>
+            <li><a href="htmlpage.html" title="HTML"><i class="fab fa-html5" style="color:#e34c26;"></i></a></li>
+            <li><a href="css.html" title="CSS"><i class="fab fa-css3-alt" style="color:#264de4;"></i></a></li>
+            <li><a href="javascript.html" title="JavaScript"><i class="fab fa-js-square" style="color:#f0db4f;"></i></a></li>
+            <li><a href="c.html" title="C"><i class="fas fa-code" style="color:#00bcd4;"></i></a></li>
+            <li><a href="c++.html" title="C++"><i class="fas fa-laptop-code" style="color:#a259ff;"></i></a></li>
+            <li><a href="java.html" title="Java"><i class="fab fa-java" style="color:#f89820;"></i></a></li>
+            <li><a href="python.html" title="Python"><i class="fab fa-python" style="color:#3776ab;"></i></a></li>
+            <li><a href="allquizzes.html" title="Quizzes"><i class="fas fa-question-circle" style="color:#ffcc00;"></i></a></li>
+            <li><a href="allnotes.html" title="Notes"><i class="fas fa-sticky-note" style="color:#29b6f6;"></i></a></li>
+            
+          </ul>
+      
+      </nav>
+    </header>
+
+    <!-- Sidebar Navigation (Hidden by Default) -->
+    <nav class="sidebar" id="sidebar">
+        <ul>
+    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="htmlpage.html"><i class="fab fa-html5"></i> HTML</a></li>
+    <li><a href="css.html"><i class="fab fa-css3-alt"></i> CSS</a></li>
+    <li><a href="javascript.html"><i class="fab fa-js-square"></i> JavaScript</a></li>
+    <li><a href="c.html"><i class="fas fa-code"></i> C</a></li>
+    <li><a href="c++.html"><i class="fas fa-laptop-code"></i> C++</a></li>
+    <li><a href="java.html"><i class="fab fa-java"></i> Java</a></li>
+    <li><a href="python.html"><i class="fab fa-python"></i> Python</a></li>
+    <li><a href="allquizzes.html"><i class="fas fa-question-circle"></i> Quizzes</a></li>
+    <li><a href="allnotes.html"><i class="fas fa-sticky-note"></i> Notes</a></li>
+        </ul>
+    
+    </nav>
+
+    <div class="typing-header">
+      <h1><i class="fas fa-brain"></i> Flashcard Memory Game</h1>
+      <p class="typing-subtitle">Type the code below as fast and accurately as you can!</p>
+  </div>
+  
+  <div id="timer">Time Left: <span id="time">60</span>s</div>
+  <div class="game-board" id="game-board"></div>
+  <div id="explanation">Match a pair to see the explanation here.</div>
+  <button onclick="startGame()" class="restart">Play Again</button>
+
+  <audio id="matchSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_19ed7a5112.mp3"></audio>
+  <audio id="winSound" src="https://cdn.pixabay.com/download/audio/2021/08/09/audio_68e2f3d0a6.mp3"></audio>
+
+  <footer>
+    <button class="assistant-btn" id="btn">🎤</button>
+    <img src="voice.gif" alt="voice" id="voice">
+    <button id="bttn"><span id="content">..</span></button>
+  
+    <!-- Game Index Button with Custom Image Icon -->
+    <a href="game.html" class="game-icon-btn">
+      <i class="fas fa-gamepad"></i> <!-- Font Awesome Game Icon -->
+    </a>
+  </footer> 
+
+  <script>
+    const terms = [
+      { term: "<div>", desc: "Defines a division or section in HTML.", explanation: "'<div>' is a block-level container used to group elements." },
+      { term: "<span>", desc: "Inline container for text in HTML.", explanation: "'<span>' is used for styling small sections of text inline." },
+      { term: "color", desc: "Sets text color in CSS.", explanation: "'color' defines the color of the text in an element." },
+      { term: "margin", desc: "Creates space outside elements.", explanation: "'margin' sets outer spacing of an element in CSS." },
+      { term: "let", desc: "Declares a block-scoped JS variable.", explanation: "'let' allows you to declare a variable in JavaScript." },
+      { term: "console.log", desc: "Logs output to JS console.", explanation: "'console.log()' is used for debugging in JavaScript." },
+      { term: "print()", desc: "Displays output in Python.", explanation: "'print()' is a built-in Python function to show output." },
+      { term: "def", desc: "Defines a function in Python.", explanation: "'def' is used to declare functions in Python." }
+    ];
+
+    let cards = [], flipped = [], matchedPairs = 0;
+    let timeLeft = 60, timerInterval;
+    const board = document.getElementById("game-board");
+    const explanationBox = document.getElementById("explanation");
+    const matchSound = document.getElementById("matchSound");
+    const winSound = document.getElementById("winSound");
+    const timeDisplay = document.getElementById("time");
+
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+
+    function startGame() {
+      clearInterval(timerInterval);
+      timeLeft = 60;
+      timeDisplay.textContent = timeLeft;
+      matchedPairs = 0;
+      explanationBox.textContent = "Match a pair to see the explanation here.";
+      board.innerHTML = "";
+
+      cards = [];
+      terms.forEach(item => {
+        cards.push({ text: item.term, type: "term", explanation: item.explanation });
+        cards.push({ text: item.desc, type: "desc", explanation: item.explanation });
+      });
+
+      shuffle(cards);
+
+      cards.forEach((card, i) => {
+        const div = document.createElement("div");
+        div.className = "card";
+        div.dataset.index = i;
+        div.dataset.text = card.text;
+        div.dataset.type = card.type;
+        div.dataset.explanation = card.explanation;
+        div.textContent = card.text;
+        div.onclick = () => flipCard(div);
+        board.appendChild(div);
+      });
+
+      // Hide content initially
+      setTimeout(() => {
+        board.querySelectorAll('.card').forEach(card => {
+          card.classList.remove("flipped");
+          card.textContent = "";
+        });
+      }, 500);
+
+      timerInterval = setInterval(() => {
+        timeLeft--;
+        timeDisplay.textContent = timeLeft;
+        if (timeLeft <= 0) {
+          clearInterval(timerInterval);
+          explanationBox.textContent = "Time's up! Try again.";
+          board.querySelectorAll('.card').forEach(card => card.onclick = null);
+        }
+      }, 1000);
+    }
+
+    function flipCard(card) {
+      if (card.classList.contains("matched") || flipped.includes(card) || flipped.length === 2) return;
+
+      card.classList.add("flipped");
+      card.textContent = card.dataset.text;
+      flipped.push(card);
+
+      if (flipped.length === 2) {
+        const [first, second] = flipped;
+        const match = first.dataset.explanation === second.dataset.explanation &&
+                      first.dataset.type !== second.dataset.type;
+
+        if (match) {
+          matchSound.play();
+          first.classList.add("matched");
+          second.classList.add("matched");
+          matchedPairs++;
+          explanationBox.textContent = first.dataset.explanation;
+          flipped = [];
+
+          if (matchedPairs === terms.length) {
+            clearInterval(timerInterval);
+            winSound.play();
+            explanationBox.textContent = "Great job! You matched all cards!";
+          }
+        } else {
+          setTimeout(() => {
+            flipped.forEach(card => {
+              card.classList.remove("flipped");
+              card.textContent = "";
+            });
+            flipped = [];
+          }, 800);
+        }
+      }
+    }
+
+    window.onload = startGame;
+  </script>
+
+  <script src="script.js"></script>
+  <script src="assistant.js"></script>
+</body>
+</html>
+
+
+
+
+ 

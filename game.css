@@ -1,0 +1,579 @@
+/* Basic Dark Theme */
+body.dark-theme {
+    background-color: #111;
+    color: #eee;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+/* Flexbox Layout */
+.games-grid {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 2.5rem;  
+  padding: 2rem;
+}
+
+/* Game Card Style */
+.game-card {
+  background-color: #1e1e1e;
+  padding: 1.2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(0,0,0,0.6);
+  transition: transform 0.3s, box-shadow 0.3s;
+  max-width: 280px; 
+  flex: 1 1 250px;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Hover Effect on Card */
+.game-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(255,255,255,0.08);
+}
+
+.game-card h3 {
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-size: 22px;
+}
+
+.game-card p {
+  color: #ccc;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.game-card button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+.game-card button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design Adjustments for Mobile */
+@media (max-width: 768px) {
+  .games-grid {
+    flex-direction: column;  
+    gap: 1.5rem;
+  }
+
+  .game-card {
+    max-width: 100%; 
+    padding: 1rem; 
+  }
+}
+
+
+/*============ typing css =============*/
+
+body.typing-game-body {
+    background: #121212;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .typing-header h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+  .typing-header{
+    margin-top: 70px;
+    padding: 1.5rem;
+    background-color: #1e1e1e;
+    text-align: center;
+    border-bottom: 2px solid #333;
+  }
+  
+  .typing-subtitle {
+    color: #aaa;
+  }
+  
+  .typing-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1rem;
+  }
+  
+  .typing-box {
+    background: #222;
+    padding: 2rem;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 0 15px rgba(255,255,255,0.1);
+  }
+  
+  #typing-text {
+    background: #111;
+    padding: 1rem;
+    white-space: pre-wrap;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #333;
+    font-family: monospace;
+    font-size: 16px;
+  }
+  
+  #typing-input {
+    width: 100%;
+    height: 150px;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 10px;
+    background: #1c1c1c;
+    color: #fff;
+    resize: none;
+    margin-bottom: 1rem;
+  }
+  
+  .typing-controls button {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    margin-right: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Like voice assistant */
+    color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+    will-change: transform, box-shadow;
+  }
+  
+  .typing-controls button:hover {
+    background: linear-gradient(135deg, #0056b3, #004494);
+    transform: translateY(-2px);
+  }
+  
+  /* Reset Button Styling */
+  #typing-reset-btn {
+    background: linear-gradient(135deg, #f5a623, #f39c12); /* soft vibrant orange gradient */
+    color: white;
+    box-shadow: 0 3px 10px rgba(243, 156, 18, 0.3);
+    transition: all 0.4s ease;
+  }
+  
+  #typing-reset-btn:hover {
+    background: linear-gradient(135deg, #f39c12, #e67e22); /* slightly deeper orange tones */
+    transform: translateY(-2px);
+  }
+  
+  
+  .typing-stats {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    color: #eeeeee;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+  }
+  
+  @media (max-width: 768px) {
+    .typing-controls button {
+      padding: 0.4rem 1rem;
+      font-size: 0.85rem;
+      margin-right: 0.7rem;
+    }
+  
+    .typing-controls button:hover {
+      transform: scale(1.02); /* Slight scale for smaller screens */
+    }
+  
+    .typing-stats {
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+  
+
+  /* Mobile Styles */
+@media (max-width: 768px) {
+  /* Header Layout */
+  .typing-header {
+      padding: 1rem;
+      text-align: center;
+  }
+
+  .typing-header h1 {
+      font-size: 1.5rem;
+  }
+
+}
+
+
+/*============ dragdrop css =============*/
+
+/* Basic Dark Theme */
+body.dark-theme {
+  background-color: #111;
+  color: #eee;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Center the question text */
+.game-instructions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: auto; /* You can adjust this height */
+  padding: 10px;
+  font-size: 20px;
+}
+
+/* Score board styling */
+.score-board {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
+/* Drag and Drop Container */
+.drag-drop-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin: 3rem 0;
+  padding: 0 1.5rem;
+}
+
+.draggable-blocks,
+.drop-zone {
+  width: 45%;
+  min-height: 200px;
+  padding: 1rem;
+  background-color: #222;
+  border-radius: 10px;
+  border: 2px dashed #444;
+}
+
+.drop-zone p {
+  text-align: center;
+  color: #ccc;
+}
+
+.draggable-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.draggable {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: move;
+  text-align: center;
+}
+
+/* Button Styling */
+.submit-btn {
+  display: block;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #0056b3, #004494);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design Adjustments for Tablet and Mobile */
+@media (max-width: 768px) {
+  .drag-drop-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .draggable-blocks,
+  .drop-zone {
+    width: 90%; /* Adjust width for mobile */
+    margin-bottom: 1.5rem;
+  }
+
+  .submit-btn {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .typing-header h1 {
+    font-size: 2rem;
+  }
+
+  .typing-header .typing-subtitle {
+    font-size: 1rem;
+  }
+
+  .score-board {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  .typing-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .typing-header .typing-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .score-board {
+    font-size: 1rem;
+  }
+
+  .submit-btn {
+    font-size: 1rem;
+  }
+
+  .game-instructions p {
+    font-size: 0.9rem;
+  }
+}
+
+
+/*=============== hangman css =============== */
+
+    .hangman-container {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 900px;
+      margin-top: 50px;
+    }
+    canvas {
+      background-color: #222;
+      border: 2px solid #00bcd4;
+      height: 350px;
+    }
+    .word {
+      font-size: 36px;
+      margin: 20px 0;
+      letter-spacing: 10px;
+      word-wrap: break-word;
+    }
+    .keyboard {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+      gap: 10px;
+      max-width: 500px;
+      margin: 20px auto;
+    }
+    .keyboard button {
+      padding: 10px;
+      font-size: 18px;
+      background: #1e1e1e;
+      color: #00bcd4;
+      border: 1px solid #00bcd4;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .keyboard button:disabled {
+      background-color: #444;
+      color: #888;
+      cursor: not-allowed;
+    }
+    .keyboard button:hover:not(:disabled) {
+      background-color: #00bcd4;
+      color: #000;
+    }
+    #message {
+      font-size: 24px;
+      margin: 20px 0;
+      color: #00bcd4;
+      font-weight: bold;
+      text-align: center;
+    }
+    #restart {
+      padding: 10px 20px;
+      background-color: #00bcd4;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      display: none;
+      margin-top: 10px;
+    }
+    #restart:hover {
+      background-color: #0097a7;
+    }
+
+    #wordInfo {
+      background: #1e1e1e;
+      border: 1px solid #00bcd4;
+      border-radius: 8px;
+      padding: 15px;
+      margin-top: 20px;
+      display: none;
+      max-width: 500px;
+    }
+    #wordInfo h2 {
+      color: #00bcd4;
+      margin-bottom: 10px;
+    }
+    #wordInfo p {
+      line-height: 1.5;
+    }
+
+    @media (max-width: 700px) {
+      .hangman-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+      }
+      canvas {
+        width: 90%;
+        height: auto;
+        max-height: 300px;
+       
+      }
+      .word {
+        font-size: 28px;
+        text-align: center;
+        letter-spacing: 8px;
+      }
+      .keyboard {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 8px;
+        width: 90%;
+      }
+      .keyboard button {
+        padding: 8px;
+        font-size: 16px;
+        
+      }
+    }
+
+
+
+
+/*===========  flashcard css============== */
+
+  body {
+          font-family: 'Segoe UI', sans-serif;
+          background-color: #111;
+          color: #eee;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 20px;
+        }
+    
+        h1 {
+          color: #00bcd4;
+        }
+    
+        #timer {
+          font-size: 18px;
+          margin-bottom: 15px;
+          background: #222;
+          padding: 10px 20px;
+          border-radius: 10px;
+        }
+    
+        .game-board {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+          gap: 15px;
+          width: 100%;
+          max-width: 900px;
+          margin-top: 10px;
+        }
+    
+        .card {
+          background-color: #333;
+          color: transparent;
+          border-radius: 12px;
+          height: 100px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          font-weight: bold;
+          transition: 0.4s ease;
+          user-select: none;
+          font-size: 15px;
+          padding: 10px;
+          text-align: center;
+          position: relative;
+        }
+    
+        .card.flipped, .card.matched {
+          color: #fff;
+          background-color: #00bcd4;
+        }
+    
+        .card.matched {
+          cursor: default;
+          font-weight: bold;
+          color: #000;
+        }
+    
+        #explanation {
+          margin-top: 20px;
+          background-color: #222;
+          padding: 15px;
+          border-radius: 10px;
+          width: 90%;
+          max-width: 800px;
+          text-align: center;
+        }
+    
+       .restart{
+          margin-top: 20px;
+          padding: 12px 25px;
+          font-size: 16px;
+          border: none;
+          background-color: #00bcd4;
+          color: #111;
+          border-radius: 10px;
+          cursor: pointer;
+          transition: 0.3s ease;
+        }
+    
+       .restart:hover {
+          background-color: #0097a7;
+        }
+    
+        @media (max-width: 600px) {
+          .card {
+            font-size: 13px;
+            height: 80px;
+          }
+        }

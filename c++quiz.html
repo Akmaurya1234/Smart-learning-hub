@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A1 Study Material</title>
+    <link href="logo1.png" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- CSS Styling -->
+    <style>
+        .main-container {
+            display: flex;
+            height: calc(100vh - 60px);
+            margin-top: 60px;
+        }
+
+
+
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+        <!-- Top Navbar -->
+        <header class="navbar">
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+            <h1 class="site-title">
+              <i class="fas fa-book-reader"></i>
+              <span><strong>A1</strong> Study Materials</span>
+            </h1>
+    
+            <div class="search-container">
+                <input type="text" class="search-box" id="search" placeholder="Search study materials...">
+                <span class="search-icon" id="search-icon"><i class="fas fa-search"></i></span>
+              </div>
+    
+            <!-- Nav Menu for Large Screens -->
+            <nav class="nav-menu">
+                <ul class="nav-icons">
+                  <li><a href="index.html" title="Home"><i class="fas fa-home" style="color:#fff;"></i></a></li>
+                  <li><a href="htmlpage.html" title="HTML"><i class="fab fa-html5" style="color:#e34c26;"></i></a></li>
+                  <li><a href="css.html" title="CSS"><i class="fab fa-css3-alt" style="color:#264de4;"></i></a></li>
+                  <li><a href="javascript.html" title="JavaScript"><i class="fab fa-js-square" style="color:#f0db4f;"></i></a></li>
+                  <li><a href="c.html" title="C"><i class="fas fa-code" style="color:#00bcd4;"></i></a></li>
+                  <li><a href="c++.html" title="C++"><i class="fas fa-laptop-code" style="color:#a259ff;"></i></a></li>
+                  <li><a href="java.html" title="Java"><i class="fab fa-java" style="color:#f89820;"></i></a></li>
+                  <li><a href="python.html" title="Python"><i class="fab fa-python" style="color:#3776ab;"></i></a></li>
+                  <li><a href="c++quiz.html" title="Quizzes"><i class="fas fa-question-circle" style="color:#ffcc00;"></i></a></li>
+                  <li><a href="c++note.html" title="Notes"><i class="fas fa-sticky-note" style="color:#29b6f6;"></i></a></li>
+                </ul>
+              </nav>
+    
+            </nav>
+        </header>
+    
+        <nav class="sidebar" id="sidebar">
+            <ul>
+              <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+              <li><a href="htmlpage.html"><i class="fab fa-html5"></i> HTML</a></li>
+              <li><a href="css.html"><i class="fab fa-css3-alt"></i> CSS</a></li>
+              <li><a href="javascript.html"><i class="fab fa-js-square"></i> JavaScript</a></li>
+              <li><a href="c.html"><i class="fas fa-code"></i> C</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle"><i class="fas fa-laptop-code"></i></i> C++ Topics ⌵</a>
+                <ul class="dropdown-menu">
+                  <li><a href="cpp-introduction.html"><i class="fas fa-book-open"></i> Introduction</a></li>
+                  <li><a href="cpp-syntax.html"><i class="fas fa-code"></i> Syntax</a></li>
+                  <li><a href="cpp-datatypes.html"><i class="fas fa-database"></i> Data Types</a></li>
+                  <li><a href="cpp-variables.html"><i class="fas fa-cube"></i> Variables</a></li>
+                  <li><a href="cpp-operators.html"><i class="fas fa-plus-square"></i> Operators</a></li>
+                  <li><a href="cpp-control.html"><i class="fas fa-random"></i> Control Statements</a></li>
+                  <li><a href="cpp-loops.html"><i class="fas fa-sync-alt"></i> Loops</a></li>
+                  <li><a href="cpp-functions.html"><i class="fas fa-project-diagram"></i> Functions</a></li>
+                  <li><a href="cpp-arrays.html"><i class="fas fa-th"></i> Arrays</a></li>
+                  <li><a href="cpp-pointers.html"><i class="fas fa-location-arrow"></i> Pointers</a></li>
+                  <li><a href="cpp-structs.html"><i class="fas fa-boxes"></i> Structures</a></li>
+                  <li><a href="cpp-file.html"><i class="fas fa-file-alt"></i> File Handling</a></li>
+                  <li><a href="cpp-oop.html"><i class="fas fa-puzzle-piece"></i> Object-Oriented Programming</a></li>
+                  <li><a href="cpp-classes.html"><i class="fas fa-cogs"></i> Classes & Objects</a></li>
+                  <li><a href="cpp-inheritance.html"><i class="fas fa-sitemap"></i> Inheritance</a></li>
+                  <li><a href="cpp-polymorphism.html"><i class="fas fa-random"></i> Polymorphism</a></li>
+                  <li><a href="cpp-encapsulation.html"><i class="fas fa-lock"></i> Encapsulation</a></li>
+                  <li><a href="cpp-abstraction.html"><i class="fas fa-eye-slash"></i> Abstraction</a></li>
+                  <li><a href="cpp-exceptions.html"><i class="fas fa-exclamation-triangle"></i> Exception Handling</a></li>
+                </ul>
+              </li>
+          
+              <li><a href="java.html"><i class="fab fa-java"></i> Java</a></li>
+              <li><a href="python.html"><i class="fab fa-python"></i> Python</a></li>
+              <li><a href="cquiz.html"><i class="fas fa-question-circle"></i> Quizzes</a></li>
+              <li><a href="cnote.html"><i class="fas fa-sticky-note"></i> Notes</a></li>
+            </ul>
+          </nav>
+          
+    
+
+    <!-- Main Content with Left Menu & Right Output Section -->
+    <div class="main-container">
+        <!-- Left Section: Menu -->
+       
+            <div class="left-section">
+                <h1>Questions</h1>
+                <div class="question-numbers" id="question-numbers"></div>
+            </div>
+      
+        <!-- Right Section: Output -->
+        <div class="right-section">
+            <h1>C++ Quiz</h1>
+            <div id="timer">Time Left: <span id="time-left">20</span> sec</div>
+            <h3 id="question-text"></h3>
+            <div id="answer-buttons"></div>
+            <button id="next-btn">Skip</button>
+            <button id="submit-btn" onclick="finishQuiz()">Submit Quiz</button>
+            <button id="dark-mode-toggle">Dark Mode</button>
+        </div>
+    </div>
+
+    <footer>
+        <button class="assistant-btn" id="btn">🎤</button>
+        <img src="voice.gif" alt="voice" id="voice">
+        <button id="bttn"><span id="content">..</span></button>
+      
+        <!-- Game Index Button with Custom Image Icon -->
+        <a href="game.html" class="game-icon-btn">
+          <i class="fas fa-gamepad"></i> <!-- Font Awesome Game Icon -->
+        </a>
+      </footer>
+    
+
+
+
+    <script>
+
+const questions = [
+  { question: "What does C language primarily focus on?", answers: ["Structured Programming", "Object-Oriented Programming", "Functional Programming"], correct: 0 },
+  { question: "Which symbol is used to end a statement in C?", answers: [";", ":", "."], correct: 0 },
+  { question: "Which function is used to print output in C?", answers: ["printf()", "cout<<", "print()"], correct: 0 },
+  { question: "Which function is used to take input in C?", answers: ["scanf()", "input()", "cin>>"], correct: 0 },
+  { question: "Which header file is required for input and output functions in C?", answers: ["stdio.h", "iostream", "stdlib.h"], correct: 0 },
+  { question: "Which keyword is used to define a constant in C?", answers: ["const", "final", "constant"], correct: 0 },
+  { question: "Which format specifier is used for an integer?", answers: ["%d", "%f", "%c"], correct: 0 },
+  { question: "Which format specifier is used for a float value?", answers: ["%f", "%d", "%lf"], correct: 0 },
+  { question: "Which loop is used to execute a block of code multiple times?", answers: ["for", "while", "Both"], correct: 2 },
+  { question: "Which keyword is used to declare a function in C?", answers: ["void", "func", "function"], correct: 0 },
+  { question: "Which symbol is used to represent a single-line comment in C?", answers: ["//", "/*", "#"], correct: 0 },
+  { question: "Which operator is used for multiplication in C?", answers: ["*", "x", "/"], correct: 0 },
+  { question: "Which operator is used to assign a value in C?", answers: ["=", "==", ":="], correct: 0 },
+  { question: "Which keyword is used to define a structure in C?", answers: ["struct", "class", "structure"], correct: 0 },
+  { question: "Which function is used to allocate memory dynamically?", answers: ["malloc()", "alloc()", "new()"], correct: 0 },
+  { question: "Which function is used to free allocated memory?", answers: ["free()", "delete()", "clear()"], correct: 0 },
+  { question: "Which loop ensures execution at least once?", answers: ["do...while", "while", "for"], correct: 0 },
+  { question: "Which header file is needed for mathematical functions?", answers: ["math.h", "stdio.h", "stdlib.h"], correct: 0 },
+  { question: "Which function is used to find the length of a string in C?", answers: ["strlen()", "size()", "length()"], correct: 0 },
+  { question: "Which function is used to copy a string?", answers: ["strcpy()", "copy()", "strcopy()"], correct: 0 },
+  { question: "Which operator is used to access members of a structure?", answers: [".", "->", ":"], correct: 0 },
+  { question: "Which operator is used to access members of a structure using a pointer?", answers: ["->", ".", ":"], correct: 0 },
+  { question: "Which function is used to concatenate two strings?", answers: ["strcat()", "append()", "concat()"], correct: 0 },
+  { question: "Which data type is used for single characters?", answers: ["char", "string", "character"], correct: 0 },
+  { question: "Which keyword is used to return a value from a function?", answers: ["return", "output", "send"], correct: 0 },
+  { question: "Which operator is used to compare two values for equality?", answers: ["==", "=", "==="], correct: 0 },
+  { question: "Which keyword is used to define a constant in C?", answers: ["const", "final", "constant"], correct: 0 },
+  { question: "Which function is used to convert a string to an integer?", answers: ["atoi()", "int()", "parseInt()"], correct: 0 },
+  { question: "Which function is used to generate a random number?", answers: ["rand()", "random()", "generate()"], correct: 0 },
+  { question: "Which keyword is used to declare a pointer?", answers: ["*", "&", "^"], correct: 0 }
+];
+
+let shuffledQuestions = [], currentQuestionIndex = 0, score = 0;
+let questionTime = 20;
+let questionTimer;
+
+document.addEventListener("DOMContentLoaded", () => {
+    shuffledQuestions = [...questions].sort(() => Math.random() - 0.5);
+    displayQuestionNumbers();
+    startQuiz();
+});
+
+function displayQuestionNumbers() {
+    const container = document.getElementById("question-numbers");
+    for (let i = 1; i <= questions.length; i++) {
+        const div = document.createElement("div");
+        div.classList.add("question-number");
+        div.innerText = i;
+        container.appendChild(div);
+    }
+}
+
+function startQuiz() {
+    nextQuestion();
+}
+
+function nextQuestion() {
+    if (currentQuestionIndex >= shuffledQuestions.length) {
+        document.getElementById("submit-btn").style.display = "block";
+        document.getElementById("next-btn").style.display = "none";
+        return;
+    }
+    resetTimer();
+    showQuestion(shuffledQuestions[currentQuestionIndex]);
+}
+
+function showQuestion(question) {
+    document.getElementById("question-text").innerText = question.question;
+    const answerButtons = document.getElementById("answer-buttons");
+    answerButtons.innerHTML = "";
+
+    question.answers.forEach((answer, index) => {
+        const btn = document.createElement("button");
+        btn.innerText = answer;
+        btn.onclick = () => selectAnswer(index === question.correct);
+        answerButtons.appendChild(btn);
+    });
+}
+
+function selectAnswer(isCorrect) {
+    if (isCorrect) score++;
+    markQuestionAnswered(currentQuestionIndex);
+    currentQuestionIndex++;
+    nextQuestion();
+}
+
+function markQuestionAnswered(index) {
+    document.querySelectorAll(".question-number")[index].classList.add("answered");
+}
+
+function markQuestionSkipped(index) {
+    document.querySelectorAll(".question-number")[index].classList.add("skipped");
+}
+
+function resetTimer() {
+    clearTimeout(questionTimer);
+    document.getElementById("time-left").innerText = questionTime;
+    questionTimer = setInterval(() => {
+        let timeLeft = parseInt(document.getElementById("time-left").innerText);
+        if (timeLeft > 0) {
+            document.getElementById("time-left").innerText = timeLeft - 1;
+        } else {
+            clearInterval(questionTimer);
+            markQuestionSkipped(currentQuestionIndex);
+            currentQuestionIndex++;
+            nextQuestion();
+        }
+    }, 1000);
+}
+
+// ** Fix for Skip Button **
+document.getElementById("next-btn").addEventListener("click", () => {
+    markQuestionSkipped(currentQuestionIndex);
+    currentQuestionIndex++;
+    nextQuestion();
+});
+
+function finishQuiz() {
+    // Result display in right-section div
+    const rightSection = document.querySelector(".right-section");
+    rightSection.innerHTML = `
+        <h1>Quiz Completed</h1>
+        <h2>Your Score: ${score} / ${shuffledQuestions.length}</h2>
+        <button onclick="location.reload()">Restart Quiz</button>
+    `;
+}
+
+document.getElementById("dark-mode-toggle").addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+});
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdownToggle = document.querySelector(".dropdown-toggle");
+
+            dropdownToggle.addEventListener("click", function (event) {
+                event.preventDefault();
+                this.parentElement.classList.toggle("active");
+            });
+        });
+
+        function loadContent(topic) {
+            const contentArea = document.getElementById("content-area");
+            contentArea.innerHTML = `<h2>${topic.replace('-', ' ')}</h2><p>Content for ${topic} will appear here.</p>`;
+        }
+    </script>
+ <script src="game.js"></script>
+ <script src="script.js"></script>
+ <script src="assistant.js"></script>
+</body>
+
+</html>
